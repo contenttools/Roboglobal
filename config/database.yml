@@ -50,5 +50,5 @@ test:
 production:
   <<: *default
   database: robostox_production
-  username: robostox
-  password: <%= ENV['ROBOSTOX_DATABASE_PASSWORD'] %>
+  username: root
+  password: 
