@@ -1,3 +1,6 @@
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
 .navbar-brand {
   height: auto;
   line-height: normal;
@@ -58,6 +61,9 @@
   top: -14px;
   left: 284px;
 }
+/* ==========================================================================
+   Bammer
+   ========================================================================== */
 .main-banner {
 	background: url("banner.jpg") no-repeat center top;
 	width: 100%;
@@ -90,4 +96,37 @@
   line-height: normal;
   text-align: center;
   color: white;
+}
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+#footer {
+  background: #2a2a2b;
+  width: 100%;
+  float: left;
+  min-height: 250px;
+  clear: both;
+}
+.footer-inner {
+  background: url("footer-bg.jpg") no-repeat -33px -1px;
+  min-height: 250px;
+  max-width: 1500px;
+}
+.footer-logo {
+  float: left;
+}
+.logo-container {
+  float: left;
+  padding-top: 50px;
+}
+.s-icons {
+  float: right;
+  margin-top: -5px;
+  margin-left: 15px;
+}
+.copyrights {
+  font-size: 11px;
+  float: left;
+  text-align: left;
+  padding-top: 180px;
 }
