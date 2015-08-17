@@ -5,3 +5,7 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+user =  User.where(email: 'admin@robostox.com').first_or_initialize
+user.password = 'password'
+user.save!
+puts 'New Admin created: ' << user.email
