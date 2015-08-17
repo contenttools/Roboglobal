@@ -1,3 +1,6 @@
+/* ==========================================================================
+   Navigation
+   ========================================================================== */
 .navbar-brand {
   height: auto;
   line-height: normal;
@@ -6,6 +9,9 @@
 .navbar-default {
 	background-color: #f4f4f4;
 	border: 0px;
+}
+.navbar {
+	margin-bottom: 0px;
 }
 .main-navigation {
 	margin-top: 32px;
@@ -54,4 +60,73 @@
   border-color: transparent transparent #23d74d transparent;
   top: -14px;
   left: 284px;
+}
+/* ==========================================================================
+   Bammer
+   ========================================================================== */
+.main-banner {
+	background: url("banner.jpg") no-repeat center top;
+	width: 100%;
+	float: left;
+	min-height: 920px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+.text-container {
+  float: left;
+  padding-top: 250px;
+  text-align: center;
+  width: 100%;
+}
+.main-banner h1 {
+  font-size: 50px;
+  line-height: normal;
+  text-align: center;
+  color: white;
+  text-transform: capitalize;
+}
+.main-banner .punch-line {
+  font-size: 20px;
+  line-height: normal;
+  text-align: center;
+  color: white;
+}
+/* ==========================================================================
+   Footer
+   ========================================================================== */
+#footer {
+  background: #2a2a2b;
+  width: 100%;
+  float: left;
+  min-height: 250px;
+  clear: both;
+}
+.footer-inner {
+  background: url("footer-bg.jpg") no-repeat -33px -1px;
+  min-height: 250px;
+  max-width: 1500px;
+}
+.footer-logo {
+  float: left;
+}
+.logo-container {
+  float: left;
+  padding-top: 50px;
+}
+.s-icons {
+  float: right;
+  margin-top: -5px;
+  margin-left: 15px;
+}
+.copyrights {
+  font-size: 11px;
+  float: left;
+  text-align: left;
+  padding-top: 180px;
 }
