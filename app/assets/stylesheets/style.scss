@@ -65,7 +65,7 @@
    Bammer
    ========================================================================== */
 .main-banner {
-	background: url("banner.jpg") no-repeat center top;
+	background: image-url("banner.jpg") no-repeat center top;
 	width: 100%;
 	float: left;
 	min-height: 920px;
@@ -108,7 +108,7 @@
   clear: both;
 }
 .footer-inner {
-  background: url("footer-bg.jpg") no-repeat -33px -1px;
+  background: image-url("footer-bg.jpg") no-repeat -33px -1px;
   min-height: 250px;
   max-width: 1500px;
 }
