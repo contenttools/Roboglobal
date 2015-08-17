@@ -7,6 +7,9 @@
 	background-color: #f4f4f4;
 	border: 0px;
 }
+.navbar {
+	margin-bottom: 0px;
+}
 .main-navigation {
 	margin-top: 32px;
 }
@@ -54,4 +57,37 @@
   border-color: transparent transparent #23d74d transparent;
   top: -14px;
   left: 284px;
+}
+.main-banner {
+	background: url("banner.jpg") no-repeat center top;
+	width: 100%;
+	float: left;
+	min-height: 920px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.col-centered {
+  float: none;
+  margin: 0 auto;
+}
+.text-container {
+  float: left;
+  padding-top: 250px;
+  text-align: center;
+  width: 100%;
+}
+.main-banner h1 {
+  font-size: 50px;
+  line-height: normal;
+  text-align: center;
+  color: white;
+  text-transform: capitalize;
+}
+.main-banner .punch-line {
+  font-size: 20px;
+  line-height: normal;
+  text-align: center;
+  color: white;
 }
