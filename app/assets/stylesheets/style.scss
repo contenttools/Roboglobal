@@ -157,6 +157,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 .footer-nav ul {
   float: left;
+  padding: 0px;
 }
 .footer-nav ul li {
   float: left;
@@ -340,7 +341,7 @@ h1, h2, h3, h4, h5, h6 {
    ========================================================================== */
 .heighlights-section {
   float: left;
-  background: url("harmonic.jpg") no-repeat center;
+  background: image-url("harmonic.jpg") no-repeat center;
   width: 100%;
   min-height: 568px;
 }
