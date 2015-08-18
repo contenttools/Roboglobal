@@ -62,13 +62,17 @@ h1, h2, h3, h4, h5, h6 {
 	top: 47px;
 }
 .dropdown-menu > li > a {
-	color: white;
+	color: #777;
 }
 .navbar-nav > li > .dropdown-menu {
 	border-radius: 5px;
 }
 .dropdown-menu .divider {
 	display: none;
+}
+.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+  background-color: transparent;
+  color: white;
 }
 .navbar-nav > li > .dropdown-menu:after {
   content: "";
