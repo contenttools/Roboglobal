@@ -1,5 +1,12 @@
 Rails.application.routes.draw do
+  scope '/admin' do
+    resources :attachments
+  end
+
+  get 'admin/dashboard'
+
   devise_for :users
+
   get 'home' => 'pages#home'
 
   get 'about_us' => 'pages#about_us'
@@ -10,8 +17,13 @@ Rails.application.routes.draw do
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
-  root 'pages#home'
-
+  #root 'pages#home'
+  authenticated :user do
+    root to: "admin#dashboard", as: :authenticated_root
+  end
+  unauthenticated do
+    root to: "pages#home", as: :unauthenticated_root
+  end
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

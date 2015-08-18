@@ -1,0 +1,5 @@
+<%= form_for @attachment, :html => { :multipart => true } do |form| %>
+  <%= form.file_field :image, required: true %>
+  <%= form.submit nil, :class => 'btn btn-success' %>
+<% end %>
+<%= link_to 'back', attachments_path, :class => 'btn btn-default' %>
