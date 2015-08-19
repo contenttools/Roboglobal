@@ -1,0 +1,2 @@
+module PdfAttachmentsHelper
+end

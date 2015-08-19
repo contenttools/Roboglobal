@@ -1,0 +1,16 @@
+<%- model_class = PdfAttachment -%>
+
+<p>
+  <strong>Doc:</strong>
+  <%= link_to @pdf_attachment.document.url, target: "_blank" do %>
+    <%= image_tag @pdf_attachment.document.url(:pdf_mini) %>
+<% end %>
+</p>
+
+<p>
+  <strong>Doc type:</strong>
+  <%= @pdf_attachment.document_file_name %>
+</p>
+
+<%= link_to 'Edit', edit_pdf_attachment_path(@pdf_attachment) %> |
+<%= link_to 'Back', pdf_attachments_path %>
