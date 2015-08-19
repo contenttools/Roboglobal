@@ -15,6 +15,9 @@ Rails.application.routes.draw do
 
   get 'legal_information' => 'pages#legal_information'
 
+  get 'us-index' => 'pages#us_index'
+  get 'eu-index' => 'pages#eu_index'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
