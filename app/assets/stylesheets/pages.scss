@@ -1,0 +1,22 @@
+nav.white-header {
+  background-color: white;
+  -webkit-transition: .3s;
+  transition: .3s;
+  .navbar-nav{
+    li{
+      a{
+        color: black;
+      }
+    }
+  }
+}
+
+.dropdown:hover {
+    background: #23d74d;
+    color: white;
+    border-radius: 5px;
+  .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+ }

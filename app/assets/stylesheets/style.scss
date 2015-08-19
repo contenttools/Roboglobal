@@ -100,13 +100,23 @@ h1, h2, h3, h4, h5, h6 {
   left: 250px;
 }
 /* ==========================================================================
-   Bammer
+   Main Banner
    ========================================================================== */
 .main-banner {
 	background: image-url("banner.jpg") no-repeat center top;
 	width: 100%;
 	float: left;
 	min-height: 920px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.us-banner {
+  background: image-url("robo-us-banner.jpg") no-repeat center top;
+  width: 100%;
+  float: left;
+  min-height: 427px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -122,7 +132,13 @@ h1, h2, h3, h4, h5, h6 {
   text-align: center;
   width: 100%;
 }
-.main-banner h1 {
+.us-heading-container {
+  text-align: center;
+  display: block;
+  padding-top: 90px;
+}
+.main-banner h1,
+.us-banner h1 {
   font-size: 50px;
   line-height: normal;
   text-align: center;
@@ -296,6 +312,11 @@ h1, h2, h3, h4, h5, h6 {
   float: left;
   width: 100%;
   margin-bottom: 30px;
+}
+.latest-blog-shell {
+  float: left;
+  width: 100%;
+  padding-top: 30px;
 }
 .post-img {
   float: left;
@@ -590,4 +611,280 @@ a.white-btn:hover {
 .button-area {
   float: left;
   padding-top: 15px;
+}
+/* ==========================================================================
+   Age of Automation
+   ========================================================================== */
+.age-auto-section {
+  float: left;
+  width: 100%;
+  padding: 70px 0px 70px 0px;
+}
+.age-auto-section h2 {
+  text-transform: uppercase;
+}
+.tipping-points {
+  float: left;
+  width: 100%;
+  margin: 25px 0px;
+}
+.tipping-points img {
+  width: 100%;
+}
+.automation-wrapper {
+  float: left;
+  width: 100%;
+  padding: 25px 0px 0px 0px;
+}
+/* ==========================================================================
+   Technology Section
+   ========================================================================== */
+.tech-tab-section {
+  float: left;
+  width: 100%;
+  padding: 45px 0px;
+  min-height: 813px;
+  background: -moz-linear-gradient(top,  #ebebeb 0%, #eeeeee 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#ebebeb), color-stop(100%,#eeeeee)); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top,  #ebebeb 0%,#eeeeee 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top,  #ebebeb 0%,#eeeeee 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top,  #ebebeb 0%,#eeeeee 100%); /* IE10+ */
+  background: linear-gradient(to bottom,  #ebebeb 0%,#eeeeee 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#ebebeb', endColorstr='#eeeeee',GradientType=0 ); /* IE6-9 */
+}
+.tabs-effect {
+  background:  image-url("sides-effects.png") no-repeat center top;
+  width: 100%;
+  float: left;
+  min-height: 813px;
+}
+.tech-tab-section h2,
+.application-tabs-section h2,
+.protfolio-section h2,
+.holding-metho-section h2,
+.index-perfor-section h2 {
+  text-transform: uppercase;
+}
+.tabs-container {
+  float: left;
+  width: 100%;
+  padding-top: 25px;
+}
+ul.tech-tabs {
+  padding: 0px;
+  max-width: 500px;
+  margin: 0 auto;
+  width: 100%;
+}
+ul.tech-tabs li {
+  float: left;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  width: 66px;
+  margin-right: 15px;
+  height: 108px;
+  cursor: pointer;
+}
+ul.tech-tabs li.models {
+  background:  image-url("technology-tabs.png") no-repeat  0px -112px;
+  float: left;
+}
+ul.tech-tabs li.auto-processing {
+  background:  image-url("technology-tabs.png") no-repeat  -80px -112px;
+  float: left;
+}
+ul.tech-tabs li.analytics {
+  background:  image-url("technology-tabs.png") no-repeat  -160px -112px;
+  float: left;
+}
+ul.tech-tabs li.speed-testing {
+  background:  image-url("technology-tabs.png") no-repeat  -240px -112px;
+  float: left;
+}
+ul.tech-tabs li.robo-champ {
+  background:  image-url("technology-tabs.png") no-repeat  -317px -112px;
+  float: left;
+}
+ul.tech-tabs li.butterfly {
+  background:  image-url("technology-tabs.png") no-repeat  -395px -112px;
+  float: left;
+}
+/*============================HOVER=======================================*/
+ul.tech-tabs li.models:hover {
+  background:  image-url("technology-tabs.png") no-repeat  0px 0px;
+  float: left;
+}
+ul.tech-tabs li.auto-processing:hover {
+  background:  image-url("technology-tabs.png") no-repeat  -80px 0px;
+  float: left;
+}
+ul.tech-tabs li.analytics:hover {
+  background:  image-url("technology-tabs.png") no-repeat  -160px 0px;
+  float: left;
+}
+ul.tech-tabs li.speed-testing:hover {
+  background:  image-url("technology-tabs.png") no-repeat  -240px 0px;
+  float: left;
+}
+ul.tech-tabs li.robo-champ:hover {
+  background:  image-url("technology-tabs.png") no-repeat  -317px 0px;
+  float: left;
+}
+ul.tech-tabs li.butterfly:hover {
+  background:  image-url("technology-tabs.png") no-repeat  -395px 0px;
+  float: left;
+}
+.tech-info {
+  float: left;
+  width: 100%;
+}
+.tab-info-wrapper {
+  float: left;
+  padding-top: 114px;
+  width: 100%;
+}
+.tab-info-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  padding-bottom: 15px;
+}
+/* ==========================================================================
+   Application Section
+   ========================================================================== */
+.application-tabs-section {
+  float: left;
+  width: 100%;
+  padding: 45px 0px;
+}
+ul.app-tabs {
+  padding: 0px;
+  max-width: 570px;
+  margin: 0 auto;
+  width: 100%;
+}
+ul.app-tabs li {
+  float: left;
+  padding: 0px;
+  margin: 0px;
+  list-style: none;
+  width: 66px;
+  margin-right: 15px;
+  height: 108px;
+  cursor: pointer;
+}
+ul.app-tabs li.models {
+  background:  image-url("application-tabs.png") no-repeat  0px -112px;
+  float: left;
+}
+ul.app-tabs li.auto-processing {
+  background:  image-url("application-tabs.png") no-repeat  -80px -112px;
+  float: left;
+}
+ul.app-tabs li.analytics {
+  background:  image-url("application-tabs.png") no-repeat  -160px -112px;
+  float: left;
+}
+ul.app-tabs li.speed-testing {
+  background:  image-url("application-tabs.png") no-repeat  -238px -112px;
+  float: left;
+}
+ul.app-tabs li.robo-champ {
+  background:  image-url("application-tabs.png") no-repeat  -317px -112px;
+  float: left;
+}
+ul.app-tabs li.butterfly {
+  background:  image-url("application-tabs.png") no-repeat  -395px -112px;
+  float: left;
+}
+ul.app-tabs li.epr {
+  background:  image-url("application-tabs.png") no-repeat  -473px -112px;
+  float: left;
+}
+/*============================HOVER=======================================*/
+ul.app-tabs li.models:hover {
+  background:  image-url("application-tabs.png") no-repeat  0px 0px;
+  float: left;
+}
+ul.app-tabs li.auto-processing:hover {
+  background:  image-url("application-tabs.png") no-repeat  -80px 0px;
+  float: left;
+}
+ul.app-tabs li.analytics:hover {
+  background:  image-url("application-tabs.png") no-repeat  -160px 0px;
+  float: left;
+}
+ul.app-tabs li.speed-testing:hover {
+  background:  image-url("application-tabs.png") no-repeat  -238px 0px;
+  float: left;
+}
+ul.app-tabs li.robo-champ:hover {
+  background:  image-url("application-tabs.png") no-repeat  -317px 0px;
+  float: left;
+}
+ul.app-tabs li.butterfly:hover {
+  background:  image-url("application-tabs.png") no-repeat  -395px 0px;
+  float: left;
+}
+ul.app-tabs li.epr:hover {
+  background:  image-url("application-tabs.png") no-repeat  -473px 0px;
+  float: left;
+}
+.app-info {
+  float: left;
+  width: 100%;
+  padding-top: 50px;
+}
+.app-info-wrapper {
+  float: left;
+  padding-top: 70px;
+  width: 100%;
+  padding-left: 44px;
+}
+.app-info-title {
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  padding-bottom: 15px;
+}
+/* ==========================================================================
+   Portfolio Composition
+   ========================================================================== */
+.protfolio-section {
+  float: left;
+  width: 100%;
+  padding: 45px 0px;
+}
+.portfolio-des {
+  float: left;
+  width: 100%;
+  padding: 25px 0px;
+}
+.composition-img {
+  float: left;
+  width: 100%;
+}
+/* ==========================================================================
+   Holdeing Section
+   ========================================================================== */
+.holding-metho-section {
+  float: left;
+  width: 100%;
+  padding: 45px 0px;
+}
+.bellweather {
+  background: #efefef;
+  float: left;
+  width: 100%;
+  padding: 212px 100px;
+  font-size: 34px;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 50px;
+}
+.index-perfor-section {
+  float: left;
+  width: 100%;
+  padding: 45px 0px;
 }
