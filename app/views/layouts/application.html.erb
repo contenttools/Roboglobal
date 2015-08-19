@@ -73,3 +73,10 @@
     </div>
   </body>
 </html>
+<script type="text/javascript">
+  <%= yield :js_end %>
+
+  $(function() {
+    <%= yield :js_init %>
+  });
+</script>

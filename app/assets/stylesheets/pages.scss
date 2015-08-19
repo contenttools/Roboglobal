@@ -1,0 +1,14 @@
+nav.white-header {
+  background-color: white;
+  -webkit-transition: .3s;
+  transition: .3s;
+  .navbar-nav{
+    li{
+      a{
+        color: black;
+        -webkit-transition: .3s;
+        transition: .3s;
+      }
+    }
+  }
+}
