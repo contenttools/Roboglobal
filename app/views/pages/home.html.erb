@@ -81,7 +81,7 @@
           <%= image_tag("video.jpg", :alt => "video") %>
         </div>
         <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-          <h2>OUR LATEST BLOG POSTS</h2>
+          <h3>OUR LATEST BLOG POSTS</h3>
           <p>This is just a dummy tect to have  demo for the sub heading here that will have some value  for the overall website info purposes and section.</p>
           <div class="post-wrapper">
             <div class="post-img"><%= image_tag("thumb-1.jpg", :alt => "thumb") %></div>
@@ -112,7 +112,7 @@
   <div class="container">
     <div class="row">
       <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-centered">
-        <h2>OUR SECTOR</h2>
+        <h2>OUR SECTORS</h2>
       </div>
       <div class="clearfix"></div>
       <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-centered">
@@ -125,11 +125,11 @@
       </div>
       <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
         <div class="tab-img"><%= image_tag("hand.png", :alt => "hand") %></div>
-        <div class="mecahnics"><h5>Mecahnics Build Up</h5></div>
+        <div class="sector-title"><h5>Mecahnics Build Up</h5></div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...</p>
         <div class="clearfix"></div>
         <div class="news-section">
-          <h5>In the NewS Headlines</h5>
+          <h5>In the News Headlines</h5>
           <div class="clearfix"></div>
           <%= link_to "Read More", "#" %>
         </div>
@@ -150,6 +150,13 @@
         <h3>HARMONIC DRIVE SYSTEM INC</h3>
         <div class="index-title">This is jsut a dummy tect to have  demo for the sub heading here that will be.</div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <div class="row">
+          <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+            <div class="about-btn-shell">
+              <%= link_to "About Us", "#", class: "white-btn" %>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -233,11 +240,12 @@
       </div>
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <div class="brand-section">
+          <%= image_tag("usa-today.jpg", :alt => "usa-today") %>
           <%= image_tag("barrons.jpg", :alt => "barrons") %>
           <%= image_tag("bus-week.jpg", :alt => "bus-week") %>
           <%= image_tag("cnbc.jpg", :alt => "cnbc") %>
           <%= image_tag("forbes.jpg", :alt => "forbes") %>
-          <%= image_tag("invest-daily.jpg", :alt => "invest-daily") %>
+          <%= image_tag("invest-day.jpg", :alt => "invest-day") %>
           <%= image_tag("market-watch.jpg", :alt => "market-watch") %>
         </div>
       </div>
@@ -254,12 +262,13 @@
             <div class="news-sub-title">Get latest news in biotech and robicts</div>
             <div class="clearfix"></div>
               <input id="email" name="eamil" placeholder="Enter your Email" type="email" />
+              <a href="#" class="input-arrow"></a>
           </div>
         </div>
       </div>
       <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-        <h2>Questions</h2>
-        <h4>Let us know we can help!</h4>
+        <h2>Questions?</h2>
+        <h4>Let us know how we can help!</h4>
         <div class="question-form">
           <form action="" method="POST" role="form">
             <div class="form-group">
@@ -271,7 +280,7 @@
             <div class="form-group">
               <input type="text" class="form-control" id="" placeholder="Phone">
             </div>
-            <textarea class="form-control" rows="3"></textarea>
+            <textarea class="form-control" rows="3" placeholder="Message"></textarea>
             <div class="row">
               <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 button-area">
                 <button type="submit" class="default-buttons">Submit</button>
