@@ -38,10 +38,13 @@ h1, h2, h3, h4, h5, h6 {
 	margin-bottom: 0px;
 }
 .main-navigation {
-	margin-top: 37px;
+	margin-top: 10px;
 }
 .nav > li a {
   border-radius: 5px;
+}
+.navbar-brand > img {
+  margin-top: -26px;
 }
 .navbar-default .navbar-nav > li > a {
   color: white;
