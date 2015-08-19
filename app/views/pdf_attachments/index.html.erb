@@ -1,0 +1,30 @@
+<%- model_class = PdfAttachment -%>
+<h1>Listing Pdf Attachments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th><%= model_class.human_attribute_name(:document_file_name) %></th>
+      <th><%= model_class.human_attribute_name(:document) %></th>
+      <th><%= model_class.human_attribute_name(:created_at) %></th>
+      <th colspan="3">Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @pdf_attachments.each do |pdf_attachment| %>
+      <tr>
+        <td><%= pdf_attachment.document_file_name %></td>
+        <td><%= image_tag pdf_attachment.document.url(:pdf_mini) %></td>
+        <td><%= pdf_attachment.created_at.to_s(:short) %></td>
+        <td><%= link_to 'Show', pdf_attachment %></td>
+        <td><%= link_to 'Edit', edit_pdf_attachment_path(pdf_attachment) %></td>
+        <td><%= link_to 'Destroy', pdf_attachment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Pdf attachment', new_pdf_attachment_path %>

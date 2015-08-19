@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
+
   scope '/admin' do
     resources :attachments
+    resources :pdf_attachments
   end
 
   get 'admin/dashboard'
