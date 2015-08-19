@@ -6,9 +6,17 @@ nav.white-header {
     li{
       a{
         color: black;
-        -webkit-transition: .3s;
-        transition: .3s;
       }
     }
   }
 }
+
+.dropdown:hover {
+    background: #23d74d;
+    color: white;
+    border-radius: 5px;
+  .dropdown-menu {
+    display: block;
+    margin-top: 0;
+  }
+ }
