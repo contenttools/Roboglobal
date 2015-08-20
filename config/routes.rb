@@ -11,9 +11,9 @@ Rails.application.routes.draw do
 
   get 'home' => 'pages#home'
 
-  get 'about_us' => 'pages#about_us'
+  get 'about-us' => 'pages#about_us'
 
-  get 'legal_information' => 'pages#legal_information'
+  get 'legal-information' => 'pages#legal_information'
 
   get 'us-index' => 'pages#us_index'
   get 'eu-index' => 'pages#eu_index'
