@@ -1,0 +1,21 @@
+<%= form_for(@embedded_attachment) do |f| %>
+  <% if @embedded_attachment.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@embedded_attachment.errors.count, "error") %> prohibited this embedded_attachment from being saved:</h2>
+
+      <ul>
+      <% @embedded_attachment.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :embed_code %><br>
+    <%= f.text_area :embed_code %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>
