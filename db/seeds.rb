@@ -9,3 +9,10 @@ user =  User.where(email: 'admin@robostox.com').first_or_initialize
 user.password = 'password'
 user.save!
 puts 'New Admin created: ' << user.email
+
+
+pages = ['home', 'about_us', 'legal_information', 'us_index', 'eu_index']
+pages.each do |page|
+  Page.where(title: page).first_or_create
+end
+puts 'Pages created'
