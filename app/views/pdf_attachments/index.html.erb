@@ -19,7 +19,7 @@
         <td><%= pdf_attachment.created_at.to_s(:short) %></td>
         <td><%= link_to 'Show', pdf_attachment %></td>
         <td><%= link_to 'Edit', edit_pdf_attachment_path(pdf_attachment) %></td>
-        <td><%= link_to 'Destroy', pdf_attachment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', pdf_attachment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>
