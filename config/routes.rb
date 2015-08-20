@@ -6,7 +6,7 @@ Rails.application.routes.draw do
     resources :embedded_attachments
   end
 
-  get 'admin/dashboard'
+  get '/admin' => 'admin#dashboard'
 
   devise_for :users
 
