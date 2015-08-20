@@ -9,12 +9,12 @@ a {
    Heading
    ========================================================================== */
 h1 {
-  color:  black;
+  color: black;
   line-height: 50px;
   text-align: center;
 }
 h2 {
-  color:  black;
+  color: black;
   line-height: 50px;
   text-align: center;
   font-size: 36px;
@@ -138,15 +138,17 @@ nav.white-header {
 .us-heading-container {
   text-align: center;
   display: block;
-  padding-top: 90px;
+  padding-top: 80px;
 }
 .main-banner h1,
-.us-banner h1 {
+.us-banner h1,
+.about-banner h1 {
   font-size: 50px;
   line-height: normal;
   text-align: center;
   color: white;
-  text-transform: capitalize;
+  text-transform: uppercase;
+  font-size: 75px;
 }
 .main-banner .punch-line {
   font-size: 20px;
@@ -534,8 +536,11 @@ a.white-btn:hover {
   padding-bottom: 15px;
 }
 .brand-section img {
-  width: 13%;
   cursor: pointer;
+  margin-right: 35px;
+}
+.brand-section img:last-child {
+  margin-right: 0px;
 }
 /* ==========================================================================
    Question
@@ -661,11 +666,14 @@ a.white-btn:hover {
   float: left;
   min-height: 813px;
 }
+/*Default Heading*/
 .tech-tab-section h2,
 .application-tabs-section h2,
 .protfolio-section h2,
 .holding-metho-section h2,
-.index-perfor-section h2 {
+.index-perfor-section h2,
+.management-section h2,
+.advisory-section h2 {
   text-transform: uppercase;
 }
 .tabs-container {
@@ -890,4 +898,174 @@ ul.app-tabs li.epr:hover {
   float: left;
   width: 100%;
   padding: 45px 0px;
+}
+/* ==========================================================================
+   About Page
+   ========================================================================== */
+.about-banner-title {
+  float: left;
+  width: 100%;
+  text-align: center;
+  font-size: 26px;
+  color: white;
+  line-height: normal;
+}
+.robo-about-top {
+  float: left;
+  width: 100%;
+  padding: 70px 0px 80px 0px;
+}
+.robo-about-top p {
+  font-size: 18px;
+}
+.about-banner {
+  background: image-url("about-banner.jpg") no-repeat center top;
+  width: 100%;
+  float: left;
+  min-height: 427px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+/* ==========================================================================
+   Management Section
+   ========================================================================== */
+.management-section {
+  float: left;
+  width: 100%;
+}
+.about-wrapper {
+  float: left;
+  width: 100%;
+  padding-top: 30px;
+  min-height: 480px;
+}
+.about-team-img {
+  border: 1px solid #000;
+  float: left;
+  border-radius: 1000px;
+  width: 180px;
+  height: 180px;
+  padding: 8px;
+  margin-right: 15px;
+  margin-left: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.about-team-img img {
+  border-radius: 1000px;
+  width: 100%;
+}
+.about-wrapper h3 {
+  margin-bottom: 0px;
+  margin-top: 60px;
+  text-transform: capitalize;
+}
+.about-wrapper h4 {
+  margin: 4px 0px;
+}
+.about-social {
+  float: left;
+}
+.about-email {
+  font-size: 12px;
+  padding-bottom: 10px;
+}
+.about-des-wrapper {
+  float: left;
+  width: 100%;
+  padding: 40px 0px 0px 0px;
+}
+/* ==========================================================================
+   Advisory Section
+   ========================================================================== */
+.advisory-section {
+  background: #f7f7f7;
+  float: left;
+  width: 100%;
+  padding: 60px 0px 260px 0px;
+}
+.advisory-section h2 {
+  padding-bottom: 30px;
+}
+.advisory-wrapper {
+  float: left;
+  padding: 35px 0px 0px 0px;
+  width: 100%;
+}
+.ad-right-side {
+  float: left;
+  max-width: 220px;
+}
+.advisory-team-img {
+  border: 1px solid #000;
+  float: left;
+  border-radius: 1000px;
+  width: 180px;
+  height: 180px;
+  padding: 8px;
+  margin-right: 15px;
+  margin-left: 30px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.advisory-team-img img {
+  border-radius: 1000px;
+  width: 100%;
+}
+.advisory-wrapper h3 {
+  margin-bottom: 25px;
+  margin-top: 0px;
+}
+/* ==========================================================================
+   Get in Touch
+   ========================================================================== */
+.get-touch-section {
+  float: left;
+  width: 100%;
+  margin-top: -186px;
+  position: relative;
+  margin-bottom: 65px;
+}
+.get-touch-right {
+  float: left;
+  background: image-url("get-touch.png") no-repeat left;
+  width: 369px;
+  height: 299px;
+  padding: 45px 30px 0px 40px;
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+.get-touch-right .title {
+  font-size: 24px;
+  color: white;
+  padding-bottom: 10px;
+}
+.get-touch-right .call-us {
+  font-size: 16px;
+  color: white;
+  padding-bottom: 5px;
+}
+.get-touch-right .phone {
+  font-size: 16px;
+  color: white;
+  padding-bottom: 0px;
+}
+.our-office {
+  float: left;
+  padding-top: 25px;
+  width: 100%;
+}
+.about-map {
+  float: left;
+  width: 100%;
+  height: 299px;
+}
+.about-map img {
+  width: 100%;
+  height: 299px;
 }
