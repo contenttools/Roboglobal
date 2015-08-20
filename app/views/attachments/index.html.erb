@@ -19,6 +19,7 @@
         <td><%= image_tag attachment.image.url(:thumb) %></td>
         <td><%= attachment.created_at %></td>
         <td>
+          <%= link_to "Show", attachment_path(attachment) %>
           <%= link_to "Edit", edit_attachment_path(attachment) %>
           <%= link_to "Delete", attachment_path(attachment),
                       :title => "Delete",
