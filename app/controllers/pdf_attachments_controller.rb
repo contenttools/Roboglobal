@@ -1,4 +1,5 @@
 class PdfAttachmentsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_pdf_attachment, only: [:show, :edit, :update, :destroy]
 
   # GET /pdf_attachments

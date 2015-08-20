@@ -1,4 +1,5 @@
 class EmbeddedAttachmentsController < ApplicationController
+  before_action :authenticate_user!
   before_action :set_embedded_attachment, only: [:show, :edit, :update, :destroy]
 
   # GET /embedded_attachments
