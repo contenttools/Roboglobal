@@ -1,0 +1,29 @@
+<h1>Listing Embedded Attachments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Embed code</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @embedded_attachments.each do |embedded_attachment| %>
+      <tr>
+        <td>
+          <div class="embed-container">
+            <%= raw embedded_attachment.embed_code %>
+          </div>
+        </td>
+        <td><%= link_to 'Show', embedded_attachment %></td>
+        <td><%= link_to 'Edit', edit_embedded_attachment_path(embedded_attachment) %></td>
+        <td><%= link_to 'Destroy', embedded_attachment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Embedded attachment', new_embedded_attachment_path %>
