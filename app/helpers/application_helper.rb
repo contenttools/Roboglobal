@@ -16,4 +16,9 @@ module ApplicationHelper
   def add_admin_class
     "white-header" if request.original_url =~ /admin/
   end
+
+  def submit_text(object, action)
+    return ["Update ", action].join if object.persisted?
+    return ["Add ", action].join
+  end
 end

@@ -12,6 +12,6 @@
   <% end %>
   <%= f.file_field :document, required: true %>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit submit_text(f.object, "File") %>
   </div>
 <% end %>

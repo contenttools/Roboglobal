@@ -43,7 +43,7 @@
     <%= f.text_field :published_date, class: "datepicker", required: true %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit submit_text(f.object, "Blog Post") %>
   </div>
 <% end %>
 <% content_for :js_init do %>

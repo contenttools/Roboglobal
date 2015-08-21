@@ -11,5 +11,5 @@
     </div>
   <% end %>
   <%= form.file_field :image, required: true %>
-  <%= form.submit nil, :class => 'btn btn-success' %>
+  <%= form.submit submit_text(form.object, "Image"), :class => 'btn btn-success' %>
 <% end %>
