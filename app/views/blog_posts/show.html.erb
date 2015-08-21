@@ -1,0 +1,27 @@
+<p>
+  <strong>Title:</strong>
+  <%= @blog_post.title %>
+</p>
+
+<p>
+  <strong>Description:</strong>
+  <%= raw @blog_post.description %>
+</p>
+
+<p>
+  <strong>Tags:</strong>
+  <%= @blog_post.tags %>
+</p>
+
+<p>
+  <strong>Published date:</strong>
+  <%= @blog_post.published_date %>
+</p>
+
+<p>
+  <strong>Views:</strong>
+  <%= @blog_post.views %>
+</p>
+
+<%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
+<%= link_to 'Back', blog_posts_path %>

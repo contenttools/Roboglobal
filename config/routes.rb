@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
 
+  mount Ckeditor::Engine => '/ckeditor'
+
   scope '/admin' do
+    resources :blog_posts
     resources :attachments
     resources :pdf_attachments
     resources :embedded_attachments
