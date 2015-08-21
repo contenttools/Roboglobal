@@ -12,4 +12,8 @@ module ApplicationHelper
     return nil unless original_date.present?
     original_date.strftime('%d %b %Y')
   end
+
+  def add_admin_class
+    "white-header" if request.original_url =~ /admin/
+  end
 end
