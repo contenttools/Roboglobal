@@ -6,6 +6,9 @@ class PdfAttachment < ActiveRecord::Base
   validates_attachment_presence :document
   validates_attachment_size :document, :less_than => 5.megabytes
 
+  PER_PAGE_RECORDS = 10
+  paginates_per PER_PAGE_RECORDS
+
   def url(*args)
     photo.url(*args)
   end

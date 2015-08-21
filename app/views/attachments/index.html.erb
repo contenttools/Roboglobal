@@ -3,6 +3,7 @@
   <h1>All Images</h1>
   <%= link_to 'Create Attachment', new_attachment_path, :class => 'btn btn-primary' %>
 </div>
+<%= paginate @attachments %>
 <table class="table table-striped">
   <thead>
     <tr>

@@ -4,7 +4,7 @@ class AttachmentsController < ApplicationController
   respond_to :html
 
   def index
-    @attachments = Attachment.all
+    @attachments = Attachment.page params[:page]
     respond_with(@attachments)
   end
 
