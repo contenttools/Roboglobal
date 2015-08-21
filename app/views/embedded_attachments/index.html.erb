@@ -1,7 +1,7 @@
 <h1>All Videos</h1>
 <%= link_to 'Add Video', new_embedded_attachment_path, :class => 'btn btn-primary' %>
 <%= paginate @embedded_attachments %>
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Preview</th>

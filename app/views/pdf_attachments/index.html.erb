@@ -2,7 +2,7 @@
 <h1>All Files</h1>
 <%= link_to 'Add File', new_pdf_attachment_path, :class => 'btn btn-primary' %>
 <%= paginate @pdf_attachments %>
-<table>
+<table class="table table-striped">
   <thead>
     <tr>
       <th>File Name</th>
