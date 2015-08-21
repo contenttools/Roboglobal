@@ -1,5 +1,7 @@
 <h1>All Blogs</h1>
-<%= link_to 'Add Blog Post', new_blog_post_path, :class => 'btn btn-primary' %>
+<div data-no-turbolink>
+  <%= link_to 'Add Blog Post', new_blog_post_path, :class => 'btn btn-primary' %>
+</div>
 <%= paginate @blog_posts %>
 <table class="table table-striped">
   <thead>
@@ -20,7 +22,7 @@
         <td><%= date_format(blog_post.published_date) %></td>
         <td><%= blog_post.views %></td>
         <td><%= link_to 'Show', blog_post %></td>
-        <td><%= link_to 'Edit', edit_blog_post_path(blog_post) %></td>
+        <td data-no-turbolink><%= link_to 'Edit', edit_blog_post_path(blog_post) %></td>
         <td><%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
