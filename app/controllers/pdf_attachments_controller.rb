@@ -5,7 +5,7 @@ class PdfAttachmentsController < ApplicationController
   # GET /pdf_attachments
   # GET /pdf_attachments.json
   def index
-    @pdf_attachments = PdfAttachment.all
+    @pdf_attachments = PdfAttachment.page params[:page]
   end
 
   # GET /pdf_attachments/1

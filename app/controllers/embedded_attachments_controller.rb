@@ -5,7 +5,7 @@ class EmbeddedAttachmentsController < ApplicationController
   # GET /embedded_attachments
   # GET /embedded_attachments.json
   def index
-    @embedded_attachments = EmbeddedAttachment.all
+    @embedded_attachments = EmbeddedAttachment.page params[:page]
   end
 
   # GET /embedded_attachments/1
