@@ -18,7 +18,7 @@
       <tr>
         <td><%= attachment.image_file_name %></td>
         <td><%= image_tag attachment.image.url(:thumb) %></td>
-        <td><%= attachment.created_at %></td>
+        <td><%= date_format(attachment.created_at) %></td>
         <td>
           <%= link_to "Show", attachment_path(attachment) %>
           <%= link_to "Edit", edit_attachment_path(attachment) %>
