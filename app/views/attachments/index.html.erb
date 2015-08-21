@@ -1,7 +1,7 @@
 <%- model_class = Attachment -%>
 <div class="page-header">
   <h1>All Images</h1>
-  <%= link_to 'Create Attachment', new_attachment_path, :class => 'btn btn-primary' %>
+  <%= link_to 'Add Image', new_attachment_path, :class => 'btn btn-primary' %>
 </div>
 <%= paginate @attachments %>
 <table class="table table-striped">

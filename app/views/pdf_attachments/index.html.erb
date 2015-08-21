@@ -1,5 +1,6 @@
 <%- model_class = PdfAttachment -%>
 <h1>All Files</h1>
+<%= link_to 'Add File', new_pdf_attachment_path, :class => 'btn btn-primary' %>
 <%= paginate @pdf_attachments %>
 <table>
   <thead>
@@ -24,7 +25,3 @@
     <% end %>
   </tbody>
 </table>
-
-<br>
-
-<%= link_to 'New Pdf attachment', new_pdf_attachment_path %>
