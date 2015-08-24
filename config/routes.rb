@@ -3,7 +3,11 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
 
   scope '/admin' do
-    resources :blog_posts
+    resources :blog_posts do
+      member do
+        get 'remove_image'
+      end
+    end
     resources :attachments
     resources :pdf_attachments
     resources :embedded_attachments

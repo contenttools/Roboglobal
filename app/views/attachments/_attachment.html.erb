@@ -1,0 +1,8 @@
+<tr>
+  <td><%= attachment.image_file_name %></td>
+  <td><%= image_tag attachment.image.url(:thumb) %></td>
+  <td><%= date_format(attachment.created_at) %></td>
+  <td>
+    <%= link_to "Choose", "#", class: "chosen_attachment", id: attachment.id %>
+  </td>
+</tr>

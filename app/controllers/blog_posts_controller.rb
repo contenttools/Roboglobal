@@ -1,6 +1,6 @@
 class BlogPostsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_blog_post, only: [:show, :edit, :update, :destroy]
+  before_action :set_blog_post, only: [:show, :edit, :update, :destroy, :remove_image]
 
   # GET /blog_posts
   # GET /blog_posts.json
@@ -16,19 +16,26 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts/new
   def new
     @blog_post = BlogPost.new
+    @current_attachment = Attachment.new
+    @attachment = Attachment.new
+    @attachments = Attachment.page(params[:page]).per(10)
   end
 
   # GET /blog_posts/1/edit
   def edit
+    @current_attachment = @blog_post.attachment
+    @attachment = Attachment.new
+    @attachments = Attachment.page(params[:page]).per(10)
   end
 
   # POST /blog_posts
   # POST /blog_posts.json
   def create
     @blog_post = BlogPost.new(blog_post_params)
-
+    @attachment = params[:attached_image_id].present? ? Attachment.find(params[:attached_image_id]) : nil
     respond_to do |format|
       if @blog_post.save
+        @blog_post.attachment = @attachment if @attachment.present?
         format.html { redirect_to @blog_post, notice: 'Blog post was successfully created.' }
         format.json { render :show, status: :created, location: @blog_post }
       else
@@ -41,8 +48,10 @@ class BlogPostsController < ApplicationController
   # PATCH/PUT /blog_posts/1
   # PATCH/PUT /blog_posts/1.json
   def update
+    @attachment = params[:attached_image_id].present? ? Attachment.find(params[:attached_image_id]) : nil
     respond_to do |format|
       if @blog_post.update(blog_post_params)
+        @blog_post.attachment = @attachment if @attachment.present?
         format.html { redirect_to @blog_post, notice: 'Blog post was successfully updated.' }
         format.json { render :show, status: :ok, location: @blog_post }
       else
@@ -60,6 +69,11 @@ class BlogPostsController < ApplicationController
       format.html { redirect_to blog_posts_url, notice: 'Blog post was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def remove_image
+    @blog_post.image_correlation.destroy if @blog_post.image_correlation.present?
+    render nothing: true
   end
 
   private

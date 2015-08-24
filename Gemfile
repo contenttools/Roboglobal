@@ -38,6 +38,8 @@ gem "paperclip", "~> 4.3"
 gem 'ckeditor'
 gem 'bootstrap-datepicker-rails'
 gem 'kaminari'
+gem 'colorbox-rails'
+gem 'remotipart', '~> 1.2'
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console

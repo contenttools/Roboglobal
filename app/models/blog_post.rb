@@ -3,6 +3,9 @@ class BlogPost < ActiveRecord::Base
 
   serialize :tags
 
+  has_one :image_correlation, as: :imageable
+  has_one :attachment, through: :image_correlation, as: :imageable
+
   TOKENS = ['Technology', 'Events', 'Video', 'Healthcare', 'Drones', 'Manufacturing', 'Logistics Automation', 'Remotely Operated Vehicles', 'Self Driving Cars', 'Agriculture', 'Consumer Products', '3D Printing']
   PER_PAGE_RECORDS = 10
 

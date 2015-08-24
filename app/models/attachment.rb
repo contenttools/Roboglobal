@@ -1,5 +1,7 @@
 class Attachment < ActiveRecord::Base
   belongs_to :imageable, :polymorphic => true
+  has_many :image_correlations
+  has_many :blog_posts, :through => :image_correlations, :source => :imageable, :source_type => 'BlogPost'
 
   has_attached_file :image, :styles => {large: "900x", thumb: "100x100#" }, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :image, :content_type => /\Aimage\/.*\Z/
@@ -8,6 +10,8 @@ class Attachment < ActiveRecord::Base
 
   PER_PAGE_RECORDS = 10
   paginates_per PER_PAGE_RECORDS
+
+  VALID_ATTACHABLE_TYPE = ["BlogPost", "Page"]
 
   def url(*args)
     photo.url(*args)

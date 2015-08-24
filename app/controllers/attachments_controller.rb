@@ -24,8 +24,9 @@ class AttachmentsController < ApplicationController
     @attachment = Attachment.new(attachment_params)
     respond_to do |format|
       if @attachment.save
+        @url = @attachment.image.url(:thumb)
         format.html { redirect_to @attachment, notice: 'Attachment was successfully created.' }
-        format.json { render :show, status: :created, location: @attachment }
+        format.js
       else
         format.html { render :new }
         format.json { render json: @attachment.errors, status: :unprocessable_entity }

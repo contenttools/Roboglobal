@@ -1,0 +1,10 @@
+$('tbody#attachments').html('<%= escape_javascript render(@attachments) %>');
+
+$('#paginator').html('<%= escape_javascript(paginate(@attachments, :remote => true).to_s) %>');
+
+$('.chosen_attachment').click(function() {
+  $('#attached_image_id').val($(this).attr('id'));
+  $.colorbox.close();
+  $('.attached_image').attr('src', $(this).parent().parent().find('img').attr('src'));
+  $('.remove_image').removeClass("hide")
+});

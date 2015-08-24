@@ -13,8 +13,10 @@
 //= require jquery
 //= require bootstrap-sprockets
 //= require jquery_ujs
+//= require jquery.remotipart
 //= require ckeditor/init
 //= require bootstrap-datepicker
+//= require colorbox-rails
 //= require turbolinks
 //= require_tree .
 //= style
