@@ -1,0 +1,47 @@
+<div style="display:none;">
+  <div id="featured_file_model">
+    <div class="tabbable">
+      <ul class="nav nav-pills">
+        <li class="active" role="presentation"><a href="#file_one" data-toggle="tab">Select File</a></li>
+        <li><a href="#file_two" data-toggle="tab" role="presentation">Add New File</a></li>
+      </ul>
+      <div class="tab-content">
+        <div class="tab-pane active" id="file_one">
+          <div class="select-file">
+            <%- model_class = Attachment -%>
+            <div id="paginator_file">
+              <%= paginate @pdf_attachments, remote: true, param_name: 'page_doc' %>
+            </div>
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>File</th>
+                  <th>Thumbnail</th>
+                  <th>Date</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
+              <tbody id="pdf_attachments">
+                <% @pdf_attachments.each do |attachment| %>
+                  <tr>
+                    <td><%= attachment.document_file_name %></td>
+                    <td><%= image_tag attachment.document.url(:pdf_mini) %></td>
+                    <td><%= date_format(attachment.created_at) %></td>
+                    <td>
+                      <%= link_to "Select", "#", class: "chosen_pdf_attachment", id: attachment.id %>
+                    </td>
+                  </tr>
+                <% end %>
+              </tbody>
+            </table>
+          </div>
+        </div>
+        <div class="tab-pane" id="file_two">
+          <div class="create-new-file">
+            <%= render :partial => "pdf_attachments/form", :locals => {remote: true} %>
+          </div>
+        </div>
+       </div>
+    </div>
+  </div>
+</div>

@@ -6,6 +6,7 @@ Rails.application.routes.draw do
     resources :blog_posts do
       member do
         get 'remove_image'
+        get 'remove_file'
       end
     end
     resources :attachments

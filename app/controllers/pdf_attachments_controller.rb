@@ -29,8 +29,9 @@ class PdfAttachmentsController < ApplicationController
 
     respond_to do |format|
       if @pdf_attachment.save
+        @url = @pdf_attachment.document.url(:pdf_mini)
         format.html { redirect_to @pdf_attachment, notice: 'Pdf attachment was successfully created.' }
-        format.json { render :show, status: :created, location: @pdf_attachment }
+        format.js
       else
         format.html { render :new }
         format.json { render json: @pdf_attachment.errors, status: :unprocessable_entity }

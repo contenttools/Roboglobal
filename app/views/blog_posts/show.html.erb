@@ -28,5 +28,14 @@
   <%= image_tag(@blog_post.attachment.image.url(:thumb)) if @blog_post.attachment.present? %><br>
 </p>
 
+<p>
+  <strong>Featured File:</strong>
+  <% if @blog_post.pdf_attachment.present? %>
+    <%= link_to @blog_post.pdf_attachment.document.url, target: "_blank" do %>
+      <%= image_tag @blog_post.pdf_attachment.document.url(:pdf_mini) %>
+    <% end %>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
 <%= link_to 'Back', blog_posts_path %>

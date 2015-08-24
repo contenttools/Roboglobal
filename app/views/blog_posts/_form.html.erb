@@ -1,5 +1,6 @@
 <%= form_for(@blog_post) do |f| %>
   <%= hidden_field_tag 'attached_image_id' %>
+  <%= hidden_field_tag 'attached_file_id' %>
   <% if @blog_post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@blog_post.errors.count, "error") %> prohibited this blog_post from being saved:</h2>
@@ -43,6 +44,7 @@
     <%= f.label :published_date %><br>
     <%= f.text_field :published_date, class: "datepicker", required: true %>
   </div><br>
+
   <div class="field" data-no-turbolink>
     <%= label_tag 'Featured Image' %><br>
     <% if @current_attachment.present? %>
@@ -54,11 +56,25 @@
 
     <%= link_to "Remove Attachment", remove_image_route, class: "btn btn-danger remove_image" + show_remove_attachment_link, remote: true %>
   </div><br>
+
+  <div class="field" data-no-turbolink>
+    <%= label_tag 'Featured File' %><br>
+    <% if @current_pdf_attachment.present? %>
+      <%= image_tag(@current_pdf_attachment.document.url(:pdf_mini), class: "attached_file_pdf") %><br>
+    <% else %>
+      <%= image_tag('', class: "attached_file_pdf") %><br>
+    <% end %>
+    <%= link_to "Attach Featured File", "#featured_file_model", :data => { :colorbox => true, :colorbox_height => '800px', :colorbox_width => '900px', colorbox_inline:true }, class: "colorbox-inline btn btn-primary" %>
+
+    <%= link_to "Remove File", remove_file_route, class: "btn btn-danger remove_file" + show_file_attachment_link, remote: true %>
+  </div><br>
+
   <div class="actions">
     <%= f.submit submit_text(f.object, "Blog Post"), class: "btn btn-success" %>
   </div>
 <% end %>
 <%= render 'feature_image_colorbox' %>
+<%= render 'feature_file_colorbox' %>
 <% content_for :js_init do %>
   Blog.init();
 <% end %>

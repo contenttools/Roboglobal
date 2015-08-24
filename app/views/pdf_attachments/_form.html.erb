@@ -1,4 +1,4 @@
-<%= form_for(@pdf_attachment) do |f| %>
+<%= form_for(@pdf_attachment, remote: remote, authenticity_token: true)  do |f| %>
   <% if @pdf_attachment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@pdf_attachment.errors.count, "error") %> prohibited this pdf_attachment from being saved:</h2>
