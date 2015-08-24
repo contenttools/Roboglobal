@@ -15,16 +15,20 @@ class BlogPostsController < ApplicationController
 
   # GET /blog_posts/new
   def new
-    @blog_post = BlogPost.new
-    @current_attachment = Attachment.new
-    @attachment = Attachment.new
+    if request.format.html?
+      @blog_post = BlogPost.new
+      @current_attachment = Attachment.new
+      @attachment = Attachment.new
+    end
     @attachments = Attachment.page(params[:page]).per(10)
   end
 
   # GET /blog_posts/1/edit
   def edit
-    @current_attachment = @blog_post.attachment
-    @attachment = Attachment.new
+    if request.format.html?
+      @current_attachment = @blog_post.attachment
+      @attachment = Attachment.new
+    end
     @attachments = Attachment.page(params[:page]).per(10)
   end
 
