@@ -104,7 +104,7 @@ class BlogPostsController < ApplicationController
     @blog_post.video_correlation.destroy if @blog_post.video_correlation.present?
     @blog_post.destroy
     respond_to do |format|
-      format.html { redirect_to blog_posts_url, notice: 'Blog post was successfully destroyed.' }
+      format.html { redirect_to blog_posts_url, notice: 'Blog post was successfully deleted.' }
       format.json { head :no_content }
     end
   end

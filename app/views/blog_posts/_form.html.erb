@@ -16,7 +16,7 @@
 
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title, required: true %>
+    <%= f.text_field :title, required: true, maxlength: "255", size: "40" %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
@@ -71,7 +71,7 @@
   </div><br>
 
   <div class="field" data-no-turbolink>
-    <%= label_tag 'Featured File' %><br>
+    <%= label_tag 'Featured Video' %><br>
       <div class="attached_video_embedded">
         <% if @current_embedded_attachment.present? && @current_embedded_attachment.embed_code.present? %>
           <%= raw(@current_embedded_attachment.embed_code) %>

@@ -30,7 +30,7 @@ class EmbeddedAttachmentsController < ApplicationController
     respond_to do |format|
       if @embedded_attachment.save
         @url = @embedded_attachment.embed_code
-        format.html { redirect_to @embedded_attachment, notice: 'Embedded attachment was successfully created.' }
+        format.html { redirect_to @embedded_attachment, notice: 'Video was successfully created.' }
         format.js
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class EmbeddedAttachmentsController < ApplicationController
   def update
     respond_to do |format|
       if @embedded_attachment.update(embedded_attachment_params)
-        format.html { redirect_to @embedded_attachment, notice: 'Embedded attachment was successfully updated.' }
+        format.html { redirect_to @embedded_attachment, notice: 'Video was successfully updated.' }
         format.json { render :show, status: :ok, location: @embedded_attachment }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class EmbeddedAttachmentsController < ApplicationController
   def destroy
     @embedded_attachment.destroy
     respond_to do |format|
-      format.html { redirect_to embedded_attachments_url, notice: 'Embedded attachment was successfully destroyed.' }
+      format.html { redirect_to embedded_attachments_url, notice: 'Video was successfully deleted.' }
       format.json { head :no_content }
     end
   end
