@@ -29,8 +29,9 @@ class EmbeddedAttachmentsController < ApplicationController
 
     respond_to do |format|
       if @embedded_attachment.save
+        @url = @embedded_attachment.embed_code
         format.html { redirect_to @embedded_attachment, notice: 'Embedded attachment was successfully created.' }
-        format.json { render :show, status: :created, location: @embedded_attachment }
+        format.js
       else
         format.html { render :new }
         format.json { render json: @embedded_attachment.errors, status: :unprocessable_entity }

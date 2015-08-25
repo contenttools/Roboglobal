@@ -1,0 +1,11 @@
+<tr>
+  <td>
+    <div class="embed-container">
+      <%= raw embedded_attachment.embed_code %>
+    </div>
+  </td>
+  <td><%= date_format(embedded_attachment.created_at) %></td>
+  <td>
+    <%= link_to "Select", "#", class: "chosen_embedded_attachment", id: embedded_attachment.id %>
+  </td>
+</tr>

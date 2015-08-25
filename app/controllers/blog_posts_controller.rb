@@ -1,6 +1,6 @@
 class BlogPostsController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_blog_post, only: [:show, :edit, :update, :destroy, :remove_image, :remove_file]
+  before_action :set_blog_post, only: [:show, :edit, :update, :destroy, :remove_image, :remove_file, :remove_video]
 
   # GET /blog_posts
   # GET /blog_posts.json
@@ -23,9 +23,13 @@ class BlogPostsController < ApplicationController
 
       @current_pdf_attachment = PdfAttachment.new
       @pdf_attachment = PdfAttachment.new
+
+      @current_embedded_attachment = EmbeddedAttachment.new
+      @embedded_attachment = EmbeddedAttachment.new
     end
     @attachments = Attachment.page(params[:page]).per(10)
     @pdf_attachments = PdfAttachment.page(params[:page_doc]).per(10)
+    @embedded_attachments = EmbeddedAttachment.page(params[:page_vid]).per(10)
   end
 
   # GET /blog_posts/1/edit
@@ -36,9 +40,13 @@ class BlogPostsController < ApplicationController
 
       @current_pdf_attachment = @blog_post.pdf_attachment
       @pdf_attachment = PdfAttachment.new
+
+      @current_embedded_attachment = @blog_post.embedded_attachment
+      @embedded_attachment = EmbeddedAttachment.new
     end
     @attachments = Attachment.page(params[:page]).per(10)
     @pdf_attachments = PdfAttachment.page(params[:page_doc]).per(10)
+    @embedded_attachments = EmbeddedAttachment.page(params[:page_vid]).per(10)
   end
 
   # POST /blog_posts
@@ -47,12 +55,14 @@ class BlogPostsController < ApplicationController
     @blog_post = BlogPost.new(blog_post_params)
     @attachment = params[:attached_image_id].present? ? Attachment.find(params[:attached_image_id]) : nil
     @pdf_attachment = params[:attached_file_id].present? ? PdfAttachment.find(params[:attached_file_id]) : nil
+    @embedded_attachment = params[:attached_video_id].present? ? EmbeddedAttachment.find(params[:attached_video_id]) : nil
 
     respond_to do |format|
       if @blog_post.save
 
         @blog_post.attachment = @attachment if @attachment.present?
         @blog_post.pdf_attachment = @pdf_attachment if @pdf_attachment.present?
+        @blog_post.embedded_attachment = @embedded_attachment if @embedded_attachment.present?
 
         format.html { redirect_to @blog_post, notice: 'Blog post was successfully created.' }
         format.json { render :show, status: :created, location: @blog_post }
@@ -68,12 +78,14 @@ class BlogPostsController < ApplicationController
   def update
     @attachment = params[:attached_image_id].present? ? Attachment.find(params[:attached_image_id]) : nil
     @pdf_attachment = params[:attached_file_id].present? ? PdfAttachment.find(params[:attached_file_id]) : nil
+    @embedded_attachment = params[:attached_video_id].present? ? EmbeddedAttachment.find(params[:attached_video_id]) : nil
 
     respond_to do |format|
       if @blog_post.update(blog_post_params)
 
         @blog_post.attachment = @attachment if @attachment.present?
         @blog_post.pdf_attachment = @pdf_attachment if @pdf_attachment.present?
+        @blog_post.embedded_attachment = @embedded_attachment if @embedded_attachment.present?
 
         format.html { redirect_to @blog_post, notice: 'Blog post was successfully updated.' }
         format.json { render :show, status: :ok, location: @blog_post }
@@ -103,6 +115,11 @@ class BlogPostsController < ApplicationController
 
   def remove_file
     @blog_post.file_correlation.destroy if @blog_post.file_correlation.present?
+    render nothing: true
+  end
+
+  def remove_video
+    @blog_post.video_correlation.destroy if @blog_post.video_correlation.present?
     render nothing: true
   end
 

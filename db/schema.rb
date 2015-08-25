@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150824201402) do
+ActiveRecord::Schema.define(version: 20150825060709) do
 
   create_table "attachments", force: :cascade do |t|
     t.string   "image_file_name",    limit: 255
@@ -118,5 +118,15 @@ ActiveRecord::Schema.define(version: 20150824201402) do
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "video_correlations", force: :cascade do |t|
+    t.integer  "embedded_attachment_id", limit: 4
+    t.integer  "video_id",               limit: 4
+    t.string   "video_type",             limit: 255
+    t.datetime "created_at",                         null: false
+    t.datetime "updated_at",                         null: false
+  end
+
+  add_index "video_correlations", ["video_type", "video_id"], name: "index_video_correlations_on_video_type_and_video_id", using: :btree
 
 end

@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       member do
         get 'remove_image'
         get 'remove_file'
+        get 'remove_video'
       end
     end
     resources :attachments

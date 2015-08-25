@@ -1,4 +1,4 @@
-<%= form_for(@embedded_attachment) do |f| %>
+<%= form_for(@embedded_attachment, remote: remote, authenticity_token: true) do |f| %>
   <% if @embedded_attachment.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@embedded_attachment.errors.count, "error") %> prohibited this embedded_attachment from being saved:</h2>

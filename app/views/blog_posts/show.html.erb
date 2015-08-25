@@ -37,5 +37,14 @@
   <% end %>
 </p>
 
+<p>
+  <strong>Featured Video:</strong>
+  <% if @blog_post.embedded_attachment.present? %>
+    <div class="embed-container">
+      <%= raw @blog_post.embedded_attachment.embed_code %>
+    </div>
+  <% end %>
+</p>
+
 <%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
 <%= link_to 'Back', blog_posts_path %>

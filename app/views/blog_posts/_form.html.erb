@@ -1,6 +1,7 @@
 <%= form_for(@blog_post) do |f| %>
   <%= hidden_field_tag 'attached_image_id' %>
   <%= hidden_field_tag 'attached_file_id' %>
+  <%= hidden_field_tag 'attached_video_id' %>
   <% if @blog_post.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@blog_post.errors.count, "error") %> prohibited this blog_post from being saved:</h2>
@@ -69,12 +70,27 @@
     <%= link_to "Remove File", remove_file_route, class: "btn btn-danger remove_file" + show_file_attachment_link, remote: true %>
   </div><br>
 
+  <div class="field" data-no-turbolink>
+    <%= label_tag 'Featured File' %><br>
+      <div class="attached_video_embedded">
+        <% if @current_embedded_attachment.present? && @current_embedded_attachment.embed_code.present? %>
+          <%= raw(@current_embedded_attachment.embed_code) %>
+        <% else %>
+          <iframe src="about:blank"></iframe>
+        <% end %>
+      </div>
+    <%= link_to "Attach Featured Video", "#featured_video_model", :data => { :colorbox => true, :colorbox_height => '800px', :colorbox_width => '900px', colorbox_inline:true }, class: "colorbox-inline btn btn-primary" %>
+
+    <%= link_to "Remove Video", remove_video_route, class: "btn btn-danger remove_video" + show_video_attachment_link, remote: true %>
+  </div><br>
+
   <div class="actions">
     <%= f.submit submit_text(f.object, "Blog Post"), class: "btn btn-success" %>
   </div>
 <% end %>
 <%= render 'feature_image_colorbox' %>
 <%= render 'feature_file_colorbox' %>
+<%= render 'feature_video_colorbox' %>
 <% content_for :js_init do %>
   Blog.init();
 <% end %>
