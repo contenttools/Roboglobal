@@ -128,7 +128,7 @@ nav.white-header {
 	background: image-url("banner.jpg") no-repeat center top;
 	width: 100%;
 	float: left;
-	min-height: 920px;
+	min-height: 665px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -150,7 +150,7 @@ nav.white-header {
 }
 .text-container {
   float: left;
-  padding-top: 250px;
+  padding-top: 180px;
   text-align: center;
   width: 100%;
 }
@@ -639,6 +639,17 @@ a.white-btn:hover {
 .button-area {
   float: left;
   padding-top: 15px;
+}
+.us-banner-bottom {
+  float: left;
+  width: 100%;
+  padding: 60px 0px 10px 0px;
+}
+.us-banner-bottom-text {
+  font-size: 20px;
+  padding-top: 120px;
+  text-align: center;
+  background:  image-url("face-sheet.jpg") no-repeat center;
 }
 /* ==========================================================================
    Age of Automation
