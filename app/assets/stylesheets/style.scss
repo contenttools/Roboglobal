@@ -22,6 +22,12 @@ h2 {
 h1, h2, h3, h4, h5, h6 {
   color: black;
 }
+#root-container .alert {
+  margin-top: 65px;
+  width: 100%;
+  position: absolute;
+  opacity: 0.7;
+}
 /* ==========================================================================
    Navigation
    ========================================================================== */
@@ -41,16 +47,29 @@ nav.white-header {
 	margin-bottom: 0px;
 }
 .main-navigation {
-	margin-top: 10px;
+	margin-top: 12px;
 }
 .nav > li a {
   border-radius: 5px;
 }
 .navbar-brand > img {
+  margin-top: 11px;
+}
+.not-show {
+  display: none;
+}
+.white-header .navbar-brand.not-show  {
+  display: block;
+}
+.white-header .navbar-brand.not-show img {
   margin-top: -26px;
+}
+.white-header .navbar-brand.show {
+  display: none !important;
 }
 .navbar-default .navbar-nav > li > a {
   color: white;
+  font-size: 16px;
 }
 .navbar-default .navbar-nav li a:hover,
 .navbar-default .navbar-nav > .open > a,
@@ -68,7 +87,7 @@ nav.white-header {
 .nav > li {
 	margin-right: 20px;
 }
-.dropdown-menu {
+.main-navigation .dropdown-menu {
 	background: #23d74d;
 	border-radius: 5px;
 	color: white;
@@ -76,7 +95,7 @@ nav.white-header {
 	min-width: 300px;
 	top: 44px;
 }
-.dropdown-menu > li > a {
+.main-navigation .dropdown-menu > li > a {
 	color: #777;
   text-align: right;
   font-size: 13px;
@@ -87,7 +106,7 @@ nav.white-header {
 .dropdown-menu .divider {
 	display: none;
 }
-.dropdown-menu>li>a:hover, .dropdown-menu>li>a:focus {
+.main-navigation .dropdown-menu>li>a:hover, .main-navigation .dropdown-menu>li>a:focus {
   background-color: transparent;
   color: white;
 }
@@ -109,11 +128,7 @@ nav.white-header {
 	background: image-url("banner.jpg") no-repeat center top;
 	width: 100%;
 	float: left;
-	min-height: 920px;
-  -webkit-background-size: cover;
-  -moz-background-size: cover;
-  -o-background-size: cover;
-  background-size: cover;
+	min-height: 710px;
 }
 .us-banner {
   background: image-url("robo-us-banner.jpg") no-repeat center top;
@@ -131,7 +146,7 @@ nav.white-header {
 }
 .text-container {
   float: left;
-  padding-top: 250px;
+  padding-top: 170px;
   text-align: center;
   width: 100%;
 }
@@ -182,6 +197,26 @@ nav.white-header {
   float: right;
   margin-top: -5px;
   margin-left: 15px;
+}
+.footer-social-icon {
+  float: left;
+  padding-left: 33px;
+  padding-top: 52px;
+}
+.footer-social-icon i {
+  font-size: 22px;
+  color: white;
+  margin-left: 5px;
+  cursor: pointer;
+}
+.footer-social-icon i.fa-linkedin-square:hover {
+  color: #3b5998;
+}
+.footer-social-icon i.fa-twitter-square:hover {
+  color: #4099ff;
+}
+.footer-social-icon i.fa-google-plus-square:hover {
+  color: #d34836;
 }
 .copyrights {
   font-size: 11px;
@@ -620,6 +655,17 @@ a.white-btn:hover {
 .button-area {
   float: left;
   padding-top: 15px;
+}
+.us-banner-bottom {
+  float: left;
+  width: 100%;
+  padding: 60px 0px 10px 0px;
+}
+.us-banner-bottom-text {
+  font-size: 20px;
+  padding-top: 120px;
+  text-align: center;
+  background:  image-url("face-sheet.jpg") no-repeat center;
 }
 /* ==========================================================================
    Age of Automation
