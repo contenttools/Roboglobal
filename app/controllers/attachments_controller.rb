@@ -25,7 +25,7 @@ class AttachmentsController < ApplicationController
     respond_to do |format|
       if @attachment.save
         @url = @attachment.image.url(:thumb)
-        format.html { redirect_to @attachment, notice: 'Attachment was successfully created.' }
+        format.html { redirect_to @attachment, notice: 'Image was successfully created.' }
         format.js
       else
         format.html { render :new }
@@ -37,7 +37,7 @@ class AttachmentsController < ApplicationController
   def update
     respond_to do |format|
       if @attachment.update(attachment_params)
-        format.html { redirect_to @attachment, notice: 'Attachment was successfully updated.' }
+        format.html { redirect_to @attachment, notice: 'Image was successfully updated.' }
         format.json { render :show, status: :ok, location: @attachment }
       else
         format.html { render :edit }
@@ -48,7 +48,10 @@ class AttachmentsController < ApplicationController
 
   def destroy
     @attachment.destroy
-    respond_with(@attachment)
+    respond_to do |format|
+      format.html { redirect_to attachments_url, notice: 'Image was successfully deleted.' }
+      format.json { head :no_content }
+    end
   end
 
   private

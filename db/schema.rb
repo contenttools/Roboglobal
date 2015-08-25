@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150825102301) do
+ActiveRecord::Schema.define(version: 20150825123811) do
 
   create_table "attachments", force: :cascade do |t|
     t.string   "image_file_name",    limit: 255
@@ -30,7 +30,10 @@ ActiveRecord::Schema.define(version: 20150825102301) do
     t.integer  "views",          limit: 4
     t.datetime "created_at",                   null: false
     t.datetime "updated_at",                   null: false
+    t.string   "slug",           limit: 255
   end
+
+  add_index "blog_posts", ["slug"], name: "index_blog_posts_on_slug", using: :btree
 
   create_table "ckeditor_assets", force: :cascade do |t|
     t.string   "data_file_name",    limit: 255, null: false

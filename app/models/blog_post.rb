@@ -1,6 +1,8 @@
 class BlogPost < ActiveRecord::Base
+  extend FriendlyId
   validates :title, :published_date , presence: true
 
+  friendly_id :title, use: [:slugged, :finders]
   serialize :tags
 
   has_one :image_correlation, as: :imageable

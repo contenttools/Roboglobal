@@ -23,7 +23,7 @@
         <td><%= blog_post.views %></td>
         <td><%= link_to 'Show', blog_post %></td>
         <td data-no-turbolink><%= link_to 'Edit', edit_blog_post_path(blog_post) %></td>
-        <td><%= link_to 'Destroy', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Delete', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
   </tbody>

@@ -30,7 +30,7 @@ class PdfAttachmentsController < ApplicationController
     respond_to do |format|
       if @pdf_attachment.save
         @url = @pdf_attachment.document.url(:pdf_mini)
-        format.html { redirect_to @pdf_attachment, notice: 'Pdf attachment was successfully created.' }
+        format.html { redirect_to @pdf_attachment, notice: 'File was successfully created.' }
         format.js
       else
         format.html { render :new }
@@ -44,7 +44,7 @@ class PdfAttachmentsController < ApplicationController
   def update
     respond_to do |format|
       if @pdf_attachment.update(pdf_attachment_params)
-        format.html { redirect_to @pdf_attachment, notice: 'Pdf attachment was successfully updated.' }
+        format.html { redirect_to @pdf_attachment, notice: 'File was successfully updated.' }
         format.json { render :show, status: :ok, location: @pdf_attachment }
       else
         format.html { render :edit }
@@ -58,7 +58,7 @@ class PdfAttachmentsController < ApplicationController
   def destroy
     @pdf_attachment.destroy
     respond_to do |format|
-      format.html { redirect_to pdf_attachments_url, notice: 'Pdf attachment was successfully destroyed.' }
+      format.html { redirect_to pdf_attachments_url, notice: 'File was successfully deleted.' }
       format.json { head :no_content }
     end
   end
