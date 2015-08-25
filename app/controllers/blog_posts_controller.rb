@@ -99,8 +99,9 @@ class BlogPostsController < ApplicationController
   # DELETE /blog_posts/1
   # DELETE /blog_posts/1.json
   def destroy
-    @blog_post.image_correlation.destroy
-    @blog_post.file_correlation.destroy
+    @blog_post.image_correlation.destroy if @blog_post.image_correlation.present?
+    @blog_post.file_correlation.destroy if @blog_post.file_correlation.present?
+    @blog_post.video_correlation.destroy if @blog_post.video_correlation.present?
     @blog_post.destroy
     respond_to do |format|
       format.html { redirect_to blog_posts_url, notice: 'Blog post was successfully destroyed.' }
