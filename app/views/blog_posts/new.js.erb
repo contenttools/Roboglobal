@@ -25,7 +25,6 @@ $('.chosen_embedded_attachment').click(function() {
   $('#attached_video_id').val($(this).attr('id'));
   $.colorbox.close();
   $('.attached_video_embedded').children().first().attr('src', $(this).parent().parent().find('iframe').attr('src'));
-  alert($(this).parent().parent().find('iframe').attr('src'));
   $('.attached_video_embedded').show();
   $('.remove_video').removeClass("hide");
 });
