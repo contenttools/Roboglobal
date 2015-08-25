@@ -1,5 +1,4 @@
 class Attachment < ActiveRecord::Base
-  belongs_to :imageable, :polymorphic => true
   has_many :image_correlations
   has_many :blog_posts, :through => :image_correlations, :source => :imageable, :source_type => 'BlogPost'
 
