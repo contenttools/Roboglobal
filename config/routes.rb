@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
 
   scope '/admin' do
-    resources :blog_posts do
+    resources :blog_posts, except: :show do
       member do
         get 'remove_image'
         get 'remove_file'
@@ -87,4 +87,5 @@ Rails.application.routes.draw do
   #     # (app/controllers/admin/products_controller.rb)
   #     resources :products
   #   end
+  match '/:id', to: 'blog_posts#show', via: :get
 end

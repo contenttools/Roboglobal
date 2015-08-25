@@ -1,5 +1,5 @@
 class BlogPostsController < ApplicationController
-  before_action :authenticate_user!
+  before_action :authenticate_user!, except: :show
   before_action :set_blog_post, only: [:show, :edit, :update, :destroy, :remove_image, :remove_file, :remove_video]
 
   # GET /blog_posts
@@ -11,42 +11,18 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts/1
   # GET /blog_posts/1.json
   def show
+    BlogPost.update_counters(@blog_post.id, views: 1)
   end
 
   # GET /blog_posts/new
   def new
-    if request.format.html?
-      @blog_post = BlogPost.new
-
-      @current_attachment = Attachment.new
-      @attachment = Attachment.new
-
-      @current_pdf_attachment = PdfAttachment.new
-      @pdf_attachment = PdfAttachment.new
-
-      @current_embedded_attachment = EmbeddedAttachment.new
-      @embedded_attachment = EmbeddedAttachment.new
-    end
-    @attachments = Attachment.page(params[:page]).per(10)
-    @pdf_attachments = PdfAttachment.page(params[:page_doc]).per(10)
-    @embedded_attachments = EmbeddedAttachment.page(params[:page_vid]).per(10)
+    @blog_post = BlogPost.new if request.format.html?
+    initialize_new_variables
   end
 
   # GET /blog_posts/1/edit
   def edit
-    if request.format.html?
-      @current_attachment = @blog_post.attachment
-      @attachment = Attachment.new
-
-      @current_pdf_attachment = @blog_post.pdf_attachment
-      @pdf_attachment = PdfAttachment.new
-
-      @current_embedded_attachment = @blog_post.embedded_attachment
-      @embedded_attachment = EmbeddedAttachment.new
-    end
-    @attachments = Attachment.page(params[:page]).per(10)
-    @pdf_attachments = PdfAttachment.page(params[:page_doc]).per(10)
-    @embedded_attachments = EmbeddedAttachment.page(params[:page_vid]).per(10)
+    initialize_edit_variables
   end
 
   # POST /blog_posts
@@ -64,10 +40,11 @@ class BlogPostsController < ApplicationController
         @blog_post.pdf_attachment = @pdf_attachment if @pdf_attachment.present?
         @blog_post.embedded_attachment = @embedded_attachment if @embedded_attachment.present?
 
-        format.html { redirect_to @blog_post, notice: 'Blog post was successfully created.' }
+        format.html { redirect_to "/#{@blog_post.slug}", notice: 'Blog post was successfully created.' }
         format.json { render :show, status: :created, location: @blog_post }
       else
-        format.html { render :new }
+        initialize_new_variables
+        format.html { render :new}
         format.json { render json: @blog_post.errors, status: :unprocessable_entity }
       end
     end
@@ -87,9 +64,10 @@ class BlogPostsController < ApplicationController
         @blog_post.pdf_attachment = @pdf_attachment if @pdf_attachment.present?
         @blog_post.embedded_attachment = @embedded_attachment if @embedded_attachment.present?
 
-        format.html { redirect_to @blog_post, notice: 'Blog post was successfully updated.' }
+        format.html { redirect_to "/#{@blog_post.slug}", notice: 'Blog post was successfully updated.' }
         format.json { render :show, status: :ok, location: @blog_post }
       else
+        initialize_edit_variables
         format.html { render :edit }
         format.json { render json: @blog_post.errors, status: :unprocessable_entity }
       end
@@ -127,11 +105,47 @@ class BlogPostsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_blog_post
-      @blog_post = BlogPost.find(params[:id])
+      begin
+        @blog_post = BlogPost.find(params[:id])
+      rescue
+        render file: "#{Rails.root}/public/404", layout: false, status: :not_found
+        return false
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def blog_post_params
       params.require(:blog_post).permit(:title, :description, :published_date, :views, {:tags => []})
+    end
+
+    def initialize_new_variables
+      if request.format.html?
+        @attachment = Attachment.new
+
+        @current_pdf_attachment = @blog_post.pdf_attachment
+        @pdf_attachment = PdfAttachment.new
+
+        @current_embedded_attachment = @blog_post.embedded_attachment
+        @embedded_attachment = EmbeddedAttachment.new
+      end
+      @attachments = Attachment.page(params[:page]).per(10)
+      @pdf_attachments = PdfAttachment.page(params[:page_doc]).per(10)
+      @embedded_attachments = EmbeddedAttachment.page(params[:page_vid]).per(10)
+    end
+
+    def initialize_edit_variables
+      if request.format.html?
+        @current_attachment = @blog_post.attachment
+        @attachment = Attachment.new
+
+        @current_pdf_attachment = @blog_post.pdf_attachment
+        @pdf_attachment = PdfAttachment.new
+
+        @current_embedded_attachment = @blog_post.embedded_attachment
+        @embedded_attachment = EmbeddedAttachment.new
+      end
+      @attachments = Attachment.page(params[:page]).per(10)
+      @pdf_attachments = PdfAttachment.page(params[:page_doc]).per(10)
+      @embedded_attachments = EmbeddedAttachment.page(params[:page_vid]).per(10)
     end
 end
