@@ -22,6 +22,9 @@ h2 {
 h1, h2, h3, h4, h5, h6 {
   color: black;
 }
+h2 {
+  line-height: 40px;
+}
 #root-container .alert {
   margin-top: 65px;
   width: 100%;
@@ -155,6 +158,11 @@ nav.white-header {
   display: block;
   padding-top: 80px;
 }
+.blog-heading-container {
+  text-align: center;
+  display: block;
+  padding-top: 80px;
+}
 .main-banner h1,
 .us-banner h1,
 .about-banner h1,
@@ -166,7 +174,7 @@ nav.white-header {
   text-transform: uppercase;
   font-size: 75px;
 }
-.main-banner .punch-line {
+.punch-line {
   font-size: 20px;
   line-height: normal;
   text-align: center;
@@ -321,8 +329,16 @@ nav.white-header {
   text-align: center;
   width: 100%;
   margin-top: 25px;
+  position: relative;
+  height: 770px;
 }
 .map-img img {
+  width: 100%;
+}
+div#map {
+  position: absolute;
+  top: 0;
+  bottom: 0;
   width: 100%;
 }
 /* ==========================================================================
@@ -636,20 +652,25 @@ a.white-btn:hover {
   color: white;
   font-size: 12px;
 }
-.news-wrapper input[type="email"]:focus {
+.news-wrapper input[type="email"]:focus,
+.post-right-section input[type="email"]:focus {
   border: 1px solid white;
   color: #fff;
 }
-.news-wrapper ::-webkit-input-placeholder {
+.news-wrapper ::-webkit-input-placeholder,
+.post-right-section ::-webkit-input-placeholder {
    color: #fff;
 }
-.news-wrapper :-moz-placeholder { /* Firefox 18- */
+.news-wrapper :-moz-placeholder,
+.post-right-section :-moz-placeholder { /* Firefox 18- */
    color: #fff;
 }
-.news-wrapper ::-moz-placeholder {  /* Firefox 19+ */
+.news-wrapper ::-moz-placeholder,
+.post-right-section ::-moz-placeholder {  /* Firefox 19+ */
    color: #fff;
 }
-.news-wrapper :-ms-input-placeholder {
+.news-wrapper :-ms-input-placeholder,
+.post-right-section :-ms-input-placeholder {
    color: #fff;
 }
 .button-area {
@@ -1135,4 +1156,187 @@ ul.app-tabs li.epr:hover {
   float: left;
   padding-bottom: 28px;
   width: 100%;
+}
+/* ==========================================================================
+   Post
+   ========================================================================== */
+.post-section {
+  float: left;
+  width: 100%;
+  padding-top: 50px;
+}
+.post-section h2 {
+  text-align: left;
+}
+.post-share-bar {
+  margin-top: 35px;
+}
+.post-tags {
+  border: 1px solid #000;
+  border-radius: 5px;
+  padding: 6px 15px;
+  background: white;
+  font-size: 14px;
+  color: black;
+  text-align: center;
+  margin-right: 8px;
+  float: left;
+  min-width: 90px;
+   -webkit-transition: all .25s ease;
+  -moz-transition: all .25s ease;
+  -ms-transition: all .25s ease;
+  -o-transition: all .25s ease;
+  transition: all .25s ease;
+}
+.post-tags:hover {
+  text-decoration: none;
+  background: #f5f5f5;
+}
+.post-date {
+  font-size: 13px;
+  color: #aaa;
+}
+.featured-content {
+  float: left;
+  width: 100%;
+  padding-top: 10px;
+}
+.featured-content img {
+  width: 100%;
+}
+.featured-content iframe {
+  width: 100% !important;
+}
+.description-section img {
+  width: 100% !important;
+  height: auto !important;
+} 
+.recommendet-content {
+  float: left;
+  width: 100%;
+  margin: 20px 0px 40px 0px;
+}
+.recommendet-content img {
+  width: 100%;
+}
+.post-pre {
+  background: image-url("post-pre.png") no-repeat left;
+  float: left;
+  padding-left: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: black;
+}
+.post-next {
+  background: image-url("post-next.png") no-repeat right;
+  float: left;
+  padding-right: 20px;
+  font-size: 20px;
+  text-transform: uppercase;
+  color: black;
+}
+.post-pre:hover,
+.post-next:hover {
+  color: black;
+}
+.page-controller {
+  float: left;
+  width: 100%;
+  padding: 30px 0px;
+  border-bottom: 1px solid #000;
+}
+.post-right-section {
+  float: left;
+  width: 100%;
+  padding-top: 113px;
+}
+.post-subscribe {
+  float: left;
+  width: 286px;
+  background: image-url("post-susbcribe.jpg") no-repeat left;
+  height: 437px;
+  padding-right: 35px;
+  padding-left: 15px;
+}
+.sub-wrapper {
+  position: relative;
+  top: 280px;
+  padding: 0px 10px;
+}
+.post-subscribe-title {
+  text-align: center;
+  color: white;
+  font-size: 32px;
+  text-transform: uppercase;
+  line-height: 26px;
+}
+.post-subscribe-subs {
+  color: white;
+  text-align: center;
+  padding: 5px 15px 25px 15px;
+}
+.post-right-section input[type="email"] {
+  border: 1px solid white;
+  border-radius: 5px;
+  padding: 14px 46px 14px 14px;
+  width: 100%;
+  background: transparent;
+  color: white;
+  font-size: 12px;
+}
+.post-right-section .input-arrow {
+  background: image-url("input-arrow.png") no-repeat 7px 18px;
+  width: 40px;
+  height: 43px;
+  position: absolute;
+  left: 194px;
+  bottom: 3px;
+}
+.papulor-article,
+.archive-section {
+  float: left;
+  width: 100%;
+  padding: 26px 35px 0px 15px;
+}
+.papulor-article .article-wrap {
+  float: left;
+  width: 100%;
+  padding-bottom: 15px;
+}
+.papulor-article h4,
+.archive-section h4 {
+  font-size: 24px;
+  text-align: left;
+  padding-bottom: 10px;
+}
+.papulor-article .article-img {
+  width: 39px;
+  height: 38px;
+  float: left;
+  margin-right: 10px;
+}
+.papulor-article .article-title {
+  font-size: 14px;
+  padding-bottom: 0px;
+}
+.papulor-article .article-date {
+  font-size: 12px;
+  color: #aaa;
+}
+.archive-section ul {
+  float: left;
+  padding: 0px;
+  margin: 0px;
+}
+.archive-section ul li {
+  float: left;
+  padding: 0px 0px 4px 0px;
+  margin: 0px;
+  width: 100%;
+  list-style: none;
+}
+.right-recommended {
+  float: left;
+  width: 100%;
+  padding: 26px 35px 0px 15px;
 }

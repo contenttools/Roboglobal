@@ -1,50 +1,126 @@
-<p>
-  <strong>Title:</strong>
-  <%= @blog_post.title %>
-</p>
-
-<p>
-  <strong>Description:</strong>
-  <%= raw @blog_post.description %>
-</p>
-
-<p>
-  <strong>Tags:</strong>
-  <%= @blog_post.tags %>
-</p>
-
-<p>
-  <strong>Published date:</strong>
-  <%= @blog_post.published_date %>
-</p>
-
-<p>
-  <strong>Views:</strong>
-  <%= @blog_post.views %>
-</p>
-
-<p>
-  <strong>Featured Image:</strong>
-  <%= image_tag(@blog_post.attachment.image.url(:thumb)) if @blog_post.attachment.present? %><br>
-</p>
-
-<p>
-  <strong>Featured File:</strong>
-  <% if @blog_post.pdf_attachment.present? %>
-    <%= link_to @blog_post.pdf_attachment.document.url, target: "_blank" do %>
-      <%= image_tag @blog_post.pdf_attachment.document.url(:pdf_mini) %>
-    <% end %>
-  <% end %>
-</p>
-
-<p>
-  <strong>Featured Video:</strong>
-  <% if @blog_post.embedded_attachment.present? %>
-    <div class="embed-container">
-      <%= raw @blog_post.embedded_attachment.embed_code %>
+<div class="legal-banner">
+  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-centered">
+    <div class="blog-heading-container">
+      <h1>POST</h1>
+      <div class="punch-line"> <%= @blog_post.title %></div>
     </div>
-  <% end %>
-</p>
-
-<%= link_to 'Edit', edit_blog_post_path(@blog_post) %> |
-<%= link_to 'Back', blog_posts_path %>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+      <div class="post-section">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <% @blog_post.tags.each do |tag| %>
+              <%= link_to "#{tag}", "#", class: "post-tags" %>
+            <% end %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+            <h2><%= @blog_post.title %></h2>
+          </div>
+          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+            <div class="post-share-bar"><%= image_tag("share-bar.jpg") %></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="post-date"><%= @blog_post.published_date %></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="featured-content">
+              <%= image_tag(@blog_post.attachment.image.url(:large)) if @blog_post.attachment.present? %>
+              <% if @blog_post.pdf_attachment.present? %>
+              <%= link_to @blog_post.pdf_attachment.document.url, target: "_blank" do %>
+              <%= image_tag @blog_post.pdf_attachment.document.url(:pdf_mini) %>
+              <% end %>
+              <% end %>
+              <% if @blog_post.embedded_attachment.present? %>
+              <div class="embed-container">
+                <%= raw @blog_post.embedded_attachment.embed_code %>
+              </div>
+              <% end %>
+            </div>
+          </div>
+        </div>
+        <div class="description-section">
+          <%= raw @blog_post.description %>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="page-controller">
+              <div class="pull-left"><%= link_to "Prev Article", "#", class: "post-pre" %></div>
+              <div class="pull-right"><%= link_to "Next Article", "#", class: "post-next" %></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="recommendet-content"><%= image_tag("recommended-content.jpg") %></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+      <div class="post-right-section">
+        <div class="post-subscribe">
+          <div class="sub-wrapper">
+            <div class="post-subscribe-title">subscribe</div>
+            <div class="post-subscribe-subs">Get Latest News in biotech and robotics</div>
+              <input id="email" name="eamil" placeholder="Enter your Email" type="email" />
+              <a href="#" class="input-arrow"></a>
+          </div>
+        </div>
+        <div class="papulor-article">
+          <h4>Popular Articles</h4>
+          <div class="article-wrap">
+            <div class="article-img"><%= image_tag("post-ar-1.jpg") %></div>
+            <div class="article-title">Making the best pract...</div>
+            <div class="article-date">June 14,2015</div>
+          </div>
+          <div class="article-wrap">
+            <div class="article-img"><%= image_tag("post-ar-2.jpg") %></div>
+            <div class="article-title">DARPA Robotics Challen...</div>
+            <div class="article-date">June 14,2015</div>
+          </div>
+          <div class="article-wrap">
+            <div class="article-img"><%= image_tag("post-ar-3.jpg") %></div>
+            <div class="article-title">New Product research is...</div>
+            <div class="article-date">June 14,2015</div>
+          </div>
+          <div class="article-wrap">
+            <div class="article-img"><%= image_tag("post-ar-4.jpg") %></div>
+            <div class="article-title">Reflection on the fiber...</div>
+            <div class="article-date">June 14,2015</div>
+          </div>
+          <div class="article-wrap">
+            <div class="article-img"><%= image_tag("post-ar-5.jpg") %></div>
+            <div class="article-title">OB-RYT0 Product Specs ..</div>
+            <div class="article-date">June 14,2015</div>
+          </div>
+        </div>
+        <div class="archive-section">
+          <h4>Archives</h4>
+          <ul>
+            <li>June, 2015 (1)</li>
+            <li>August, 2015 (4)</li>
+            <li>September, 2015 (1)</li>
+            <li>July, 2015 (5)</li>
+            <li>January, 2015 (1)</li>
+            <li>December, 2015 (8)</li>
+            <li>Octobor, 2015 (1)</li>
+            <li>November, 2015 (3)</li>
+            <li>March, 2015 (0)</li>
+            <li>April, 2015 (8)</li>
+          </ul>
+        </div>
+        <div class="right-recommended"><%= image_tag("recommended-sidebar.jpg") %></div>
+      </div>
+    </div>
+  </div>
+</div>
