@@ -107,16 +107,9 @@
         <div class="archive-section">
           <h4>Archives</h4>
           <ul>
-            <li>June, 2015 (1)</li>
-            <li>August, 2015 (4)</li>
-            <li>September, 2015 (1)</li>
-            <li>July, 2015 (5)</li>
-            <li>January, 2015 (1)</li>
-            <li>December, 2015 (8)</li>
-            <li>Octobor, 2015 (1)</li>
-            <li>November, 2015 (3)</li>
-            <li>March, 2015 (0)</li>
-            <li>April, 2015 (8)</li>
+            <% @archives.each do |archive| %>
+              <li><%= show_archive(archive) %></li>
+            <% end %>
           </ul>
         </div>
         <div class="right-recommended"><%= image_tag("recommended-sidebar.jpg") %></div>
