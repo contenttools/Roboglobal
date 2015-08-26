@@ -1,7 +1,6 @@
 bind_scroll_bar = ->
   window.addEventListener 'scroll', (e) ->
     distanceY = window.pageYOffset || document.documentElement.scrollTop
-    console.log distanceY
     if distanceY > 0
       $('.navbar-fixed-top').addClass('white-header')
     else
