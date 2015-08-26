@@ -21,4 +21,8 @@ module ApplicationHelper
     return ["Update ", action].join if object.persisted?
     return ["Add ", action].join
   end
+
+  def show_archive(archive)
+    "#{Date::MONTHNAMES[archive[0][1]]}, #{archive[0][0]} (#{archive[1]})"
+  end
 end
