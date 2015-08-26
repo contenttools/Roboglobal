@@ -1,5 +1,5 @@
 class BlogPostsController < ApplicationController
-  before_action :authenticate_user!, except: :show
+  before_action :authenticate_user!, except: [:show, :robo_news]
   before_action :set_blog_post, only: [:show, :edit, :update, :destroy, :remove_image, :remove_file, :remove_video]
 
   # GET /blog_posts
@@ -100,6 +100,10 @@ class BlogPostsController < ApplicationController
   def remove_video
     @blog_post.video_correlation.destroy if @blog_post.video_correlation.present?
     render nothing: true
+  end
+
+  def robo_news
+    @blog_posts = BlogPost.page params[:page]
   end
 
   private
