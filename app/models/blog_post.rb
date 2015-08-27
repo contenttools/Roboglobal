@@ -17,4 +17,9 @@ class BlogPost < ActiveRecord::Base
   PER_PAGE_RECORDS = 10
 
   paginates_per PER_PAGE_RECORDS
+
+  def self.archives_list
+    hash = BlogPost.group("year(published_date)").group("month(published_date)").count
+    Hash[hash.to_a.reverse] if hash.present?
+  end
 end
