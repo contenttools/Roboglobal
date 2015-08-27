@@ -231,6 +231,7 @@ nav.white-header {
   line-height: normal;
   text-align: center;
   color: white;
+  text-transform: capitalize;
 }
 /* ==========================================================================
    Footer
@@ -705,24 +706,24 @@ a.white-btn:hover {
   font-size: 12px;
 }
 .news-wrapper input[type="email"]:focus,
-.post-right-section input[type="email"]:focus {
+.post-subscribe input[type="email"]:focus {
   border: 1px solid white;
   color: #fff;
 }
 .news-wrapper ::-webkit-input-placeholder,
-.post-right-section ::-webkit-input-placeholder {
+.post-subscribe ::-webkit-input-placeholder {
    color: #fff;
 }
 .news-wrapper :-moz-placeholder,
-.post-right-section :-moz-placeholder { /* Firefox 18- */
+.post-subscribe :-moz-placeholder { /* Firefox 18- */
    color: #fff;
 }
 .news-wrapper ::-moz-placeholder,
-.post-right-section ::-moz-placeholder {  /* Firefox 19+ */
+.post-subscribe ::-moz-placeholder {  /* Firefox 19+ */
    color: #fff;
 }
 .news-wrapper :-ms-input-placeholder,
-.post-right-section :-ms-input-placeholder {
+.post-subscribe :-ms-input-placeholder {
    color: #fff;
 }
 .button-area {
@@ -1219,14 +1220,15 @@ ul.app-tabs li.epr:hover {
 }
 .post-section h2 {
   text-align: left;
+  text-transform: uppercase;
 }
 .post-share-bar {
   margin-top: 35px;
 }
-.post-tags {
+a.post-tags {
   border: 1px solid #000;
   border-radius: 5px;
-  padding: 6px 15px;
+  padding: 4px 8px;
   background: white;
   font-size: 14px;
   color: black;
@@ -1234,16 +1236,17 @@ ul.app-tabs li.epr:hover {
   margin-right: 8px;
   margin-bottom: 10px;
   float: left;
-  min-width: 90px;
    -webkit-transition: all .25s ease;
   -moz-transition: all .25s ease;
   -ms-transition: all .25s ease;
   -o-transition: all .25s ease;
   transition: all .25s ease;
 }
-.post-tags:hover {
+a.post-tags:hover {
   text-decoration: none;
-  background: #f5f5f5;
+  background: #00aff0;
+  color: white;
+  border: 1px solid #00658a;
 }
 .post-date {
   font-size: 13px;
@@ -1257,12 +1260,16 @@ ul.app-tabs li.epr:hover {
 .featured-content img {
   width: 100%;
 }
-.featured-content iframe {
+.featured-video iframe {
   width: 100% !important;
+  margin-top: 20px;
+}
+.featured-file {
+  padding-top: 20px;
+  float: left;
 }
 .description-section img {
-  width: 100% !important;
-  height: auto !important;
+  margin: 0px 10px;
 } 
 .recommendet-content {
   float: left;
@@ -1328,7 +1335,7 @@ ul.app-tabs li.epr:hover {
   text-align: center;
   padding: 5px 15px 25px 15px;
 }
-.post-right-section input[type="email"] {
+.post-subscribe input[type="email"] {
   border: 1px solid white;
   border-radius: 5px;
   padding: 14px 46px 14px 14px;
@@ -1337,7 +1344,7 @@ ul.app-tabs li.epr:hover {
   color: white;
   font-size: 12px;
 }
-.post-right-section .input-arrow {
+.post-subscribe .input-arrow {
   background: image-url("input-arrow.png") no-repeat 7px 18px;
   width: 40px;
   height: 43px;
@@ -1392,4 +1399,70 @@ ul.app-tabs li.epr:hover {
   float: left;
   width: 100%;
   padding: 26px 35px 0px 15px;
+}
+/* ==========================================================================
+   News and Research
+   ========================================================================== */
+.latest-article-section {
+  float: left;
+  width: 100%;
+  padding-top: 54px;
+}
+.latest-article-section .sub-heading {
+  font-size: 16px;
+  color: black;
+}
+.news-section {
+  float: left;
+  width: 100%;
+  padding: 25px 0px;
+}
+.blog-news-img {
+  float: left;
+  width: 100%;
+}
+.blog-news-img img {
+  width: 100%;
+}
+.blog-news-post {
+  width: 100%;
+  float: left;
+  padding: 18px 0px 0px 0px;
+}
+.blog-new-title {
+  font-size: 18px;
+  text-align: left;
+}
+.blog-news-social {
+  float: left;
+}
+.blog-news-des {
+  float: left;
+  width: 100%;
+  padding-top: 20px;
+}
+.blog-news-right {
+  float: left;
+  width: 100%;
+  padding-top: 60px;
+}
+.blog-news-right h4 {
+  font-size: 24px;
+  text-align: left;
+  padding-bottom: 10px;
+  margin-top: 0px;
+}
+.blog-news-right-section {
+  float: left;
+  width: 100%;
+  padding: 0px 0px 35px 0px;
+}
+.tweets-section {
+  float: left;
+  width: 100%;
+  margin-bottom: 25px;
+}
+.blog-news-subscribe {
+  float: left;
+  margin-top: 70px;
 }
