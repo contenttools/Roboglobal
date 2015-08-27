@@ -12,7 +12,7 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts/1.json
   def show
     BlogPost.update_counters(@blog_post.id, views: 1)
-    @archives = BlogPost.group("year(created_at)").group("month(created_at)").count
+    @archives = BlogPost.archives_list
   end
 
   # GET /blog_posts/new
