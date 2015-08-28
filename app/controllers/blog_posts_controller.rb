@@ -1,6 +1,7 @@
 class BlogPostsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :robo_news]
   before_action :set_blog_post, only: [:show, :edit, :update, :destroy, :remove_image, :remove_file, :remove_video]
+  before_action :set_subscriber, only: [:show, :robo_news]
 
   # GET /blog_posts
   # GET /blog_posts.json
@@ -151,5 +152,9 @@ class BlogPostsController < ApplicationController
       @attachments = Attachment.page(params[:page]).per(10)
       @pdf_attachments = PdfAttachment.page(params[:page_doc]).per(10)
       @embedded_attachments = EmbeddedAttachment.page(params[:page_vid]).per(10)
+    end
+
+    def set_subscriber
+      @subscriber = Subscriber.new
     end
 end
