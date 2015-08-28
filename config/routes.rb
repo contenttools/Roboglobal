@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    resources :subscribers, only: :index
+  end
+
   mount Ckeditor::Engine => '/ckeditor'
 
   scope '/admin' do
@@ -41,6 +45,10 @@ Rails.application.routes.draw do
   unauthenticated do
     root to: "pages#home", as: :unauthenticated_root
   end
+
+  resources :subscribers, only: :create
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

@@ -1,6 +1,7 @@
 class PagesController < ApplicationController
   def home
     @video = Page.home.embedded_attachment.try(:embed_code)
+    @subscriber = Subscriber.new
   end
 
   def about_us

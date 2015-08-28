@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150825123811) do
+ActiveRecord::Schema.define(version: 20150828064707) do
 
   create_table "attachments", force: :cascade do |t|
     t.string   "image_file_name",    limit: 255
@@ -99,6 +99,14 @@ ActiveRecord::Schema.define(version: 20150825123811) do
   end
 
   add_index "pdf_attachments", ["doc_type", "doc_id"], name: "index_pdf_attachments_on_doc_type_and_doc_id", using: :btree
+
+  create_table "subscribers", force: :cascade do |t|
+    t.string   "email",      limit: 50, null: false
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
+
+  add_index "subscribers", ["email"], name: "index_subscribers_on_email", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false

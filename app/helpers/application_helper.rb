@@ -25,4 +25,21 @@ module ApplicationHelper
   def show_archive(archive)
     "#{Date::MONTHNAMES[archive[0][1]]}, #{archive[0][0]} (#{archive[1]})"
   end
+
+  def field_class(resource, field_name)
+    return unless resource.errors.any?
+    if resource.errors[field_name]
+      return "error-field".html_safe
+    else
+      return "".html_safe
+    end
+  end
+
+  def error_message_for(resource, field_name, options = {:prepend_text => ""})
+    return unless resource.errors.any?
+    error_message = resource.errors[field_name]
+    if error_message
+      "<span class='field-error-message'>#{field_name.to_s.humanize} #{options[:prepend_text]} #{error_message.last}</span>".html_safe
+    end
+  end
 end
