@@ -1,0 +1,8 @@
+<% if @subscriber.valid? %>
+  $('.home-subscriber-form')[0].reset();
+  $('.field-error-message').html('');
+  $('#subscriber_email').removeClass('error-field');
+  $('.subscriber-success').text("Subscribed successfully!")
+<% else %>
+  $('.home-subsriber').replaceWith("<%= escape_javascript(render('subscribers/home_form')) %>")
+<% end %>

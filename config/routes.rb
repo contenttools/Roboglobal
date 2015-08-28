@@ -41,6 +41,10 @@ Rails.application.routes.draw do
   unauthenticated do
     root to: "pages#home", as: :unauthenticated_root
   end
+
+  resources :subscribers, only: :create
+
+
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 

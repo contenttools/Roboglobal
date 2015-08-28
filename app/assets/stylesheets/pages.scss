@@ -19,4 +19,16 @@ nav.white-header {
     display: block;
     margin-top: 0;
   }
- }
+}
+
+.error-field {
+  border: 1px solid #a94442 !important;
+}
+
+.field-error-message {
+  color: #a94442 !important;
+}
+
+.subscriber-success {
+  color: #3c763d;
+}
