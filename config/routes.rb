@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
 
+  namespace :admin do
+    resources :subscribers, only: :index
+  end
+
   mount Ckeditor::Engine => '/ckeditor'
 
   scope '/admin' do
