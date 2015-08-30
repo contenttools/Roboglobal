@@ -31,7 +31,7 @@
     <%= select_tag 'blog_post[tags][]', options_for_select(BlogPost::TOKENS, f.object.tags), {:multiple => true} %>
   </div>
   <div class="field">
-    <%= f.label :published_date %><br>
+    <%= f.label :published_date, 'Published Date' %><br>
     <%= f.text_field :published_date, class: "datepicker", required: true %>
   </div><br>
 

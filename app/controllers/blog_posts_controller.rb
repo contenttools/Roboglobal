@@ -42,7 +42,7 @@ class BlogPostsController < ApplicationController
         @blog_post.pdf_attachment = @pdf_attachment if @pdf_attachment.present?
         @blog_post.embedded_attachment = @embedded_attachment if @embedded_attachment.present?
 
-        format.html { redirect_to "/#{@blog_post.slug}", notice: 'Blog post was successfully created.' }
+        format.html { redirect_to blog_posts_path, notice: 'Blog post was successfully created.' }
         format.json { render :show, status: :created, location: @blog_post }
       else
         initialize_new_variables
@@ -67,7 +67,7 @@ class BlogPostsController < ApplicationController
         @blog_post.pdf_attachment = @pdf_attachment if @pdf_attachment.present?
         @blog_post.embedded_attachment = @embedded_attachment if @embedded_attachment.present?
 
-        format.html { redirect_to "/#{@blog_post.slug}", notice: 'Blog post was successfully updated.' }
+        format.html { redirect_to blog_posts_path, notice: 'Blog post was successfully updated.' }
         format.json { render :show, status: :ok, location: @blog_post }
       else
         initialize_edit_variables
