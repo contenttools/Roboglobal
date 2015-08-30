@@ -46,7 +46,8 @@ class BlogPostsController < ApplicationController
         format.json { render :show, status: :created, location: @blog_post }
       else
         initialize_new_variables
-        format.html { render :new}
+        flash.now[:error] = @blog_post.errors.full_messages.to_sentence
+        format.html { render :new }
         format.json { render json: @blog_post.errors, status: :unprocessable_entity }
       end
     end
@@ -70,6 +71,7 @@ class BlogPostsController < ApplicationController
         format.json { render :show, status: :ok, location: @blog_post }
       else
         initialize_edit_variables
+        flash.now[:error] = @blog_post.errors.full_messages.to_sentence
         format.html { render :edit }
         format.json { render json: @blog_post.errors, status: :unprocessable_entity }
       end

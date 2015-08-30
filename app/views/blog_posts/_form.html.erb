@@ -2,21 +2,10 @@
   <%= hidden_field_tag 'attached_image_id' %>
   <%= hidden_field_tag 'attached_file_id' %>
   <%= hidden_field_tag 'attached_video_id' %>
-  <% if @blog_post.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@blog_post.errors.count, "error") %> prohibited this blog_post from being saved:</h2>
-
-      <ul>
-      <% @blog_post.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
 
   <div class="field">
     <%= f.label :title %><br>
-    <%= f.text_field :title, required: true, maxlength: "255", size: "40" %>
+    <%= f.text_field :title, required: true %>
   </div>
   <div class="field">
     <%= f.label :description %><br>
