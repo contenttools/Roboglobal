@@ -10,7 +10,7 @@ module ApplicationHelper
 
   def date_format(original_date)
     return nil unless original_date.present?
-    original_date.strftime('%d %b %Y')
+    original_date.strftime('%b %d, %Y')
   end
 
   def add_admin_class
