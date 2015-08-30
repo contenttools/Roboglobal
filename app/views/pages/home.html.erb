@@ -84,24 +84,14 @@
           <h3>OUR LATEST BLOG POSTS</h3>
           <p>This is just a dummy tect to have  demo for the sub heading here that will have some value  for the overall website info purposes and section.</p>
           <div class="latest-blog-shell">
-            <div class="post-wrapper">
-              <div class="post-img"><%= image_tag("thumb-1.jpg", :alt => "thumb") %></div>
-              <div class="post-title">Robo Weekly Wrap Up</div>
-              <div class="post-description">This is just a dummy tect to have  demo for the sub heading here that will have some value  for the overall website...</div>
-              <div class="post-date">June 14, 2015</div>
-            </div>
-            <div class="post-wrapper">
-              <div class="post-img"><%= image_tag("thumb-2.jpg", :alt => "thumb") %></div>
-              <div class="post-title">First AUV Airport Opening this Summer</div>
-              <div class="post-description">This is just a dummy tect to have  demo for the sub heading here that will have some value  for the overall website...</div>
-              <div class="post-date">June 14, 2015</div>
-            </div>
-            <div class="post-wrapper">
-              <div class="post-img"><%= image_tag("thumb-3.jpg", :alt => "thumb") %></div>
-              <div class="post-title">DARPA Robotics CAmp Challenge</div>
-              <div class="post-description">This is just a dummy tect to have  demo for the sub heading here that will have some value  for the overall website...</div>
-              <div class="post-date">June 14, 2015</div>
-            </div>
+            <% @latest_blogs.each do |blog| %>
+              <div class="post-wrapper">
+                <div class="post-img"><%= image_tag("#{blogs_image(blog)}", :alt => "thumb") %></div>
+                <div class="post-title"><%= blog.title %></div>
+                <div class="post-description"><%= blog_description(blog) %></div>
+                <div class="post-date"><%= date_format blog.published_date %></div>
+              </div>
+            <% end %>
           </div>
           <div class="research-news"><%= link_to "More News & Research", "#" %></div>
         </div>
