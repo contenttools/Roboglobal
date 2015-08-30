@@ -1,6 +1,7 @@
 class BlogPost < ActiveRecord::Base
   extend FriendlyId
-  validates :title, uniqueness: true, length: { maximum: 255 }
+  validates :title, uniqueness: true
+  validates :title, length: { maximum: 255, message: " with more than 255 characters isn't suitable for a post" }
   validates :title, :published_date , presence: true
 
   friendly_id :title, use: [:slugged, :finders]
