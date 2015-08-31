@@ -19,7 +19,6 @@
 //= require colorbox-rails
 //= require underscore
 //= require gmaps/google
-//= require turbolinks
 //= require_tree .
 //= style
 
