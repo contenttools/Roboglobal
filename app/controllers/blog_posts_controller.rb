@@ -108,7 +108,7 @@ class BlogPostsController < ApplicationController
   end
 
   def robo_news
-    @latest_blogs = BlogPost.includes(:attachment, :pdf_attachment).where("tags LIKE ?", "%#{@token}\n%").order("published_date DESC").first(6)
+    @latest_blogs = BlogPost.includes(:attachment, :pdf_attachment).where("tags LIKE ?", "%#{@token}\n%").published_ordered.ordered.first(6)
   end
 
   private

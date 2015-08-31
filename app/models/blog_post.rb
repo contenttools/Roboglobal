@@ -14,6 +14,9 @@ class BlogPost < ActiveRecord::Base
   has_one :video_correlation, as: :video
   has_one :embedded_attachment, through: :video_correlation, as: :video
 
+  scope :published_ordered, -> { order('blog_posts.published_date DESC') }
+  scope :ordered, -> { order('blog_posts.created_at DESC') }
+
   TOKENS = ['Technology', 'Events', 'Video', 'Healthcare', 'Drones', 'Manufacturing', 'Logistics Automation', 'Remotely Operated Vehicles', 'Self Driving Cars', 'Agriculture', 'Consumer Products', '3D Printing']
   PER_PAGE_RECORDS = 10
 
