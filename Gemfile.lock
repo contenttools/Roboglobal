@@ -82,6 +82,7 @@ GEM
       activerecord (>= 4.0.0)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
+    gmaps4rails (2.1.2)
     i18n (0.7.0)
     jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
@@ -178,6 +179,7 @@ GEM
     uglifier (2.7.1)
       execjs (>= 0.3.0)
       json (>= 1.8.0)
+    underscore-rails (1.8.3)
     warden (1.2.3)
       rack (>= 1.0)
     web-console (2.2.1)
@@ -198,6 +200,7 @@ DEPENDENCIES
   devise (~> 3.2)
   font-awesome-sass (~> 4.4.0)
   friendly_id
+  gmaps4rails
   jbuilder (~> 2.0)
   jquery-rails
   kaminari
@@ -212,4 +215,5 @@ DEPENDENCIES
   therubyracer
   turbolinks
   uglifier (>= 1.3.0)
+  underscore-rails
   web-console (~> 2.0)
