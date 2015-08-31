@@ -2,6 +2,7 @@ class BlogPostsController < ApplicationController
   before_action :authenticate_user!, except: [:show, :robo_news]
   before_action :set_blog_post, only: [:show, :edit, :update, :destroy, :remove_image, :remove_file, :remove_video]
   before_action :set_subscriber, only: [:show, :robo_news]
+  before_action :set_token, only: :robo_news
 
   # GET /blog_posts
   # GET /blog_posts.json
@@ -107,7 +108,7 @@ class BlogPostsController < ApplicationController
   end
 
   def robo_news
-    @latest_blogs = BlogPost.includes(:attachment, :pdf_attachment).order("published_date DESC").first(6)
+    @latest_blogs = BlogPost.includes(:attachment, :pdf_attachment).where("tags LIKE ?", "%#{@token}\n%").order("published_date DESC").first(6)
   end
 
   private
@@ -159,5 +160,16 @@ class BlogPostsController < ApplicationController
 
     def set_subscriber
       @subscriber = Subscriber.new
+    end
+
+    def set_token
+      if params[:token].present? && params[:token].in?(BlogPost::TOKENS)
+        @token = params[:token]
+      elsif params[:token].present? && !(params[:token].in?(BlogPost::TOKENS))
+        flash[:error] = "Invalid Token provided."
+        redirect_to robo_news_path
+      else
+        @token = ''
+      end
     end
 end

@@ -19,6 +19,9 @@
             <div class="latest-article-section">
               <h2>LATEST RESEARCH ARTICLES</h2>
               <div class="sub-heading">This is jsut a dummy tect to have  demo for the sub heading here that will have some value  for the overall website info </div>
+              <% if @latest_blogs.length == 0 %>
+                <h3>No Blog posts match searched criteria.</h3>
+              <% end %>
               <% @latest_blogs.each_with_index do |blog, index| %>
                 <% if index.in? [0,2,4] %>
                   <div class="blog-news-section">
@@ -30,6 +33,10 @@
                   </div>
                 <% end %>
               <% end %>
+              <% if @latest_blogs.length.in? [1,3,5] %>
+                  </div>
+                </div>
+              <% end %>
             </div>
           </div>
         </div>
@@ -39,19 +46,9 @@
       <div class="blog-news-right">
         <div class="blog-news-right-section">
           <h4>Filter</h4>
-          <%= link_to "Technology", "#", class: "post-tags" %>
-          <%= link_to "Events", "#", class: "post-tags" %>
-          <%= link_to "Video", "#", class: "post-tags" %>
-          <%= link_to "Healthcare", "#", class: "post-tags" %>
-          <%= link_to "Drones", "#", class: "post-tags" %>
-          <%= link_to "Manufacturing", "#", class: "post-tags" %>
-          <%= link_to "Logistics", "#", class: "post-tags" %>
-          <%= link_to "Automation", "#", class: "post-tags" %>
-          <%= link_to "Remotely Operated Vehicles", "#", class: "post-tags" %>
-          <%= link_to "Self Driving Cars", "#", class: "post-tags" %>
-          <%= link_to "Agriculture", "#", class: "post-tags" %>
-          <%= link_to "Consumer Products", "#", class: "post-tags" %>
-          <%= link_to "3D Printing", "#", class: "post-tags" %>
+          <% BlogPost::TOKENS.each do |token| %>
+            <%= link_to "#{token}", robo_news_path(token: token), class: "post-tags" %>
+          <% end %>
         </div>
         <div class="tweets-section"><%= image_tag("twitter.jpg") %></div>
         <div class="archive-section">

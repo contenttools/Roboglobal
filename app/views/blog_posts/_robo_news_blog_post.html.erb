@@ -2,7 +2,7 @@
   <div class="blog-news-img"><%= robo_news_blog_attachment(blog) %></div>
   <div class="blog-news-post">
     <% blog.tags.each do |tag| %>
-    <%= link_to "#{tag}", "#", class: "post-tags" %>
+    <%= link_to "#{tag}", robo_news_path(token: tag), class: "post-tags" %>
     <% end %>
   </div>
   <div class="blog-new-title"><%= robo_news_blog_title(blog) %></div>
