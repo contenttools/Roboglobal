@@ -35,7 +35,7 @@ module BlogPostsHelper
 
   def robo_news_blog_description(blog)
     doc = Nokogiri(blog.description.gsub('&nbsp;', ' '))
-    truncate(doc.text.squeeze, length: 180)
+    truncate(doc.text.squeeze, length: 300)
   end
 
   def robo_news_blog_attachment(blog)
