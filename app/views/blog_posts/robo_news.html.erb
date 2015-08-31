@@ -1,6 +1,3 @@
-<% content_for :js_init do %>
-HeaderScroll.init();
-<% end %>
 <div class="legal-banner">
   <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-centered">
     <div class="blog-heading-container">
@@ -22,114 +19,17 @@ HeaderScroll.init();
             <div class="latest-article-section">
               <h2>LATEST RESEARCH ARTICLES</h2>
               <div class="sub-heading">This is jsut a dummy tect to have  demo for the sub heading here that will have some value  for the overall website info </div>
-              <div class="blog-news-section">
-                <div class="row">
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <div class="blog-news-img"><%= image_tag("latest-1.jpg") %></div>
-                    <div class="blog-news-post">
-                      <%= link_to "Science", "#", class: "post-tags" %>
-                      <%= link_to "News", "#", class: "post-tags" %>
-                      <%= link_to "News", "#", class: "post-tags" %>
+              <% @latest_blogs.each_with_index do |blog, index| %>
+                <% if index.in? [0,2,4] %>
+                  <div class="blog-news-section">
+                    <div class="row">
+                <% end %>
+                    <%= render partial: 'robo_news_blog_post', locals: {blog: blog} %>
+                <% if index.in? [1,3,5] %>
                     </div>
-                    <div class="blog-new-title">DARPA Robotics Challenge Gives Glim...</div>
-                    <div class="post-date">June 17, 2015</div>
-                    <div class="blog-news-des">
-                      <p>Nestled in the valley of a Californian mountain range, you can find the grounds that are famously known for the Los Angeles County Fair. At a base line, this past weekend was similar to any other on the grounds; people from all over the world gathering to marvel over metal machines. Yet, this time those machines were robots rather than rides.</p>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="blog-news-social"><%= image_tag("share-bar.jpg") %></div>
-                    <div class="pull-right news-read-more"><%= link_to "Read more", "#" %></div>
                   </div>
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <div class="blog-news-img"><%= image_tag("latest-1.jpg") %></div>
-                    <div class="blog-news-post">
-                      <%= link_to "Science", "#", class: "post-tags" %>
-                      <%= link_to "News", "#", class: "post-tags" %>
-                      <%= link_to "News", "#", class: "post-tags" %>
-                    </div>
-                    <div class="blog-new-title">DARPA Robotics Challenge Gives Glim...</div>
-                    <div class="post-date">June 17, 2015</div>
-                    <div class="blog-news-des">
-                      <p>Nestled in the valley of a Californian mountain range, you can find the grounds that are famously known for the Los Angeles County Fair. At a base line, this past weekend was similar to any other on the grounds; people from all over the world gathering to marvel over metal machines. Yet, this time those machines were robots rather than rides.</p>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="blog-news-social"><%= image_tag("share-bar.jpg") %></div>
-                    <div class="pull-right news-read-more"><%= link_to "Read more", "#" %></div>
-                  </div>
-                </div>
-              </div>
-              <div class="blog-news-section">
-                <div class="row">
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <div class="blog-news-img"><%= image_tag("latest-1.jpg") %></div>
-                    <div class="blog-news-post">
-                      <%= link_to "Science", "#", class: "post-tags" %>
-                      <%= link_to "News", "#", class: "post-tags" %>
-                      <%= link_to "News", "#", class: "post-tags" %>
-                    </div>
-                    <div class="blog-new-title">DARPA Robotics Challenge Gives Glim...</div>
-                    <div class="post-date">June 17, 2015</div>
-                    <div class="blog-news-des">
-                      <p>Nestled in the valley of a Californian mountain range, you can find the grounds that are famously known for the Los Angeles County Fair. At a base line, this past weekend was similar to any other on the grounds; people from all over the world gathering to marvel over metal machines. Yet, this time those machines were robots rather than rides.</p>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="blog-news-social"><%= image_tag("share-bar.jpg") %></div>
-                    <div class="pull-right news-read-more"><%= link_to "Read more", "#" %></div>
-                  </div>
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <div class="blog-news-img"><%= image_tag("latest-1.jpg") %></div>
-                    <div class="blog-news-post">
-                      <%= link_to "Science", "#", class: "post-tags" %>
-                      <%= link_to "News", "#", class: "post-tags" %>
-                      <%= link_to "News", "#", class: "post-tags" %>
-                    </div>
-                    <div class="blog-new-title">DARPA Robotics Challenge Gives Glim...</div>
-                    <div class="post-date">June 17, 2015</div>
-                    <div class="blog-news-des">
-                      <p>Nestled in the valley of a Californian mountain range, you can find the grounds that are famously known for the Los Angeles County Fair. At a base line, this past weekend was similar to any other on the grounds; people from all over the world gathering to marvel over metal machines. Yet, this time those machines were robots rather than rides.</p>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="blog-news-social"><%= image_tag("share-bar.jpg") %></div>
-                    <div class="pull-right news-read-more"><%= link_to "Read more", "#" %></div>
-                  </div>
-                </div>
-              </div>
-              <div class="blog-news-section">
-                <div class="row">
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <div class="blog-news-img"><%= image_tag("latest-1.jpg") %></div>
-                    <div class="blog-news-post">
-                      <%= link_to "Science", "#", class: "post-tags" %>
-                      <%= link_to "News", "#", class: "post-tags" %>
-                      <%= link_to "News", "#", class: "post-tags" %>
-                    </div>
-                    <div class="blog-new-title">DARPA Robotics Challenge Gives Glim...</div>
-                    <div class="post-date">June 17, 2015</div>
-                    <div class="blog-news-des">
-                      <p>Nestled in the valley of a Californian mountain range, you can find the grounds that are famously known for the Los Angeles County Fair. At a base line, this past weekend was similar to any other on the grounds; people from all over the world gathering to marvel over metal machines. Yet, this time those machines were robots rather than rides.</p>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="blog-news-social"><%= image_tag("share-bar.jpg") %></div>
-                    <div class="pull-right news-read-more"><%= link_to "Read more", "#" %></div>
-                  </div>
-                  <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                    <div class="blog-news-img"><%= image_tag("latest-1.jpg") %></div>
-                    <div class="blog-news-post">
-                      <%= link_to "Science", "#", class: "post-tags" %>
-                      <%= link_to "News", "#", class: "post-tags" %>
-                      <%= link_to "News", "#", class: "post-tags" %>
-                    </div>
-                    <div class="blog-new-title">DARPA Robotics Challenge Gives Glim...</div>
-                    <div class="post-date">June 17, 2015</div>
-                    <div class="blog-news-des">
-                      <p>Nestled in the valley of a Californian mountain range, you can find the grounds that are famously known for the Los Angeles County Fair. At a base line, this past weekend was similar to any other on the grounds; people from all over the world gathering to marvel over metal machines. Yet, this time those machines were robots rather than rides.</p>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="blog-news-social"><%= image_tag("share-bar.jpg") %></div>
-                    <div class="pull-right news-read-more"><%= link_to "Read more", "#" %></div>
-                  </div>
-                </div>
-              </div>
+                <% end %>
+              <% end %>
             </div>
           </div>
         </div>
@@ -184,3 +84,6 @@ HeaderScroll.init();
     </div>
   </div>
 </div>
+<% content_for :js_init do %>
+HeaderScroll.init();
+<% end %>

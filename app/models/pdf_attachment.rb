@@ -2,7 +2,7 @@ class PdfAttachment < ActiveRecord::Base
   has_many :file_correlations
   has_many :blog_posts, :through => :file_correlations, :source => :document, :source_type => 'BlogPost'
 
-  has_attached_file :document, :styles => {:pdf_mini => ["100x100#", :png]}, :default_url => "/images/:style/missing.png"
+  has_attached_file :document, :styles => {:pdf_mini => ["100x100#", :png], :pdf_normal => ["400x400#", :png]}, :default_url => "/images/:style/missing.png"
   validates_attachment_content_type :document, :content_type => ["application/pdf", "application/x-pdf"]
   validates_attachment_presence :document
   validates_attachment_size :document, :less_than => 5.megabytes

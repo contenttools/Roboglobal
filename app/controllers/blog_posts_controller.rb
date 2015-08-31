@@ -107,6 +107,7 @@ class BlogPostsController < ApplicationController
   end
 
   def robo_news
+    @latest_blogs = BlogPost.includes(:attachment, :pdf_attachment).order("published_date DESC").first(6)
   end
 
   private

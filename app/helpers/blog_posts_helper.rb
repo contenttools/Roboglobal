@@ -28,4 +28,19 @@ module BlogPostsHelper
     return remove_video_blog_post_path(@blog_post) if @blog_post.persisted?
     return '#'
   end
+
+  def robo_news_blog_title(blog)
+    truncate(blog.title, length: 30)
+  end
+
+  def robo_news_blog_description(blog)
+    doc = Nokogiri(blog.description.gsub('&nbsp;', ' '))
+    truncate(doc.text.squeeze, length: 180)
+  end
+
+  def robo_news_blog_attachment(blog)
+    return image_tag("#{blog.attachment.image}") if blog.attachment.present?
+    return image_tag("#{blog.pdf_attachment.document.url(:pdf_normal)}") if blog.pdf_attachment.present?
+    return image_tag('/robo_missing_400.jpeg')
+  end
 end
