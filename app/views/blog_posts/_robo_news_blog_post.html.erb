@@ -11,6 +11,8 @@
     <p><%= robo_news_blog_description(blog) %></p>
   </div>
   <div class="clearfix"></div>
-  <div class="blog-news-social"><%= image_tag("share-bar.jpg") %></div>
-  <div class="pull-right news-read-more"><%= link_to "Read more", "/#{blog.title}" %></div>
+  <div class="blog-news-social">
+    <div class="addthis_sharing_toolbox"></div>
+  </div>
+  <div class="pull-right news-read-more"><%= link_to "Read more", "/#{blog.slug}" %></div>
 </div>
