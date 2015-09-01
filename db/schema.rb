@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150828064707) do
+ActiveRecord::Schema.define(version: 20150901075300) do
 
   create_table "attachments", force: :cascade do |t|
     t.string   "image_file_name",    limit: 255
@@ -50,6 +50,15 @@ ActiveRecord::Schema.define(version: 20150828064707) do
 
   add_index "ckeditor_assets", ["assetable_type", "assetable_id"], name: "idx_ckeditor_assetable", using: :btree
   add_index "ckeditor_assets", ["assetable_type", "type", "assetable_id"], name: "idx_ckeditor_assetable_type", using: :btree
+
+  create_table "contacts", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "email",      limit: 255
+    t.string   "phone",      limit: 255
+    t.text     "message",    limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
+  end
 
   create_table "embedded_attachments", force: :cascade do |t|
     t.text     "embed_code",      limit: 65535

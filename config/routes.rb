@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :contacts, only: :create
+
   namespace :admin do
     resources :subscribers, only: :index
   end
