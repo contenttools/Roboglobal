@@ -262,25 +262,7 @@
       <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
         <h2>Questions?</h2>
         <h4>Let us know how we can help!</h4>
-        <div class="question-form">
-          <form action="" method="POST" role="form">
-            <div class="form-group">
-              <input type="text" class="form-control" id="" placeholder="Name">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" id="" placeholder="Email">
-            </div>
-            <div class="form-group">
-              <input type="text" class="form-control" id="" placeholder="Phone">
-            </div>
-            <textarea class="form-control" rows="3" placeholder="Message"></textarea>
-            <div class="row">
-              <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 button-area">
-                <button type="submit" class="default-buttons">Submit</button>
-              </div>
-            </div>
-          </form>
-        </div>
+        <%= render 'contacts/form' %>
       </div>
     </div>
   </div>
