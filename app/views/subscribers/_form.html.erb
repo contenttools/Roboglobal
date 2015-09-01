@@ -1,5 +1,5 @@
 <div class="subsribers-container" >
-  <%= form_for @subscriber, remote: true, html: {class: "subscriber-form"} do |f| %>
+  <%= form_for @subscriber, remote: true, :authenticity_token => true, html: {class: "subscriber-form"} do |f| %>
     <%= error_message_for(@subscriber, :email) %>
     <span class="subscriber-success"></span>
     <%= f.email_field :email, placeholder: "Enter your Email", class: field_class(@subscriber, :email) %>
