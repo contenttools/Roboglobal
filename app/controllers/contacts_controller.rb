@@ -4,7 +4,7 @@ class ContactsController < ApplicationController
     respond_to do |format|
       if @contact.save
         ContactNotificationMailer.contact_notification(@contact).deliver
-        format.html { redirect_to :back, notice: 'Contact successfully Created' }
+        format.html { redirect_to :back, notice: 'Contact request sent.' }
       else
         format.html { redirect_to :back, notice: @contact.errors.full_messages.to_sentence }
       end
