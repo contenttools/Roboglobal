@@ -87,9 +87,11 @@
             <% @latest_blogs.each do |blog| %>
               <div class="post-wrapper">
                 <div class="post-img"><%= image_tag("#{blogs_image(blog)}", :alt => "thumb") %></div>
-                <div class="post-title"><%= blog.title %></div>
-                <div class="post-description"><%= blog_description(blog) %></div>
-                <div class="post-date"><%= date_format blog.published_date %></div>
+                <div class="post-inner">
+                  <div class="post-title"><%= blog.title %></div>
+                  <div class="post-description"><%= blog_description(blog) %></div>
+                  <div class="post-date"><%= date_format blog.published_date %></div>
+                </div>
               </div>
             <% end %>
           </div>
