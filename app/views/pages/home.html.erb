@@ -86,16 +86,24 @@
           <div class="latest-blog-shell">
             <% @latest_blogs.each do |blog| %>
               <div class="post-wrapper">
-                <div class="post-img"><%= image_tag("#{blogs_image(blog)}", :alt => "thumb") %></div>
+                <div class="post-img">
+                  <%= link_to "/#{blog.slug}" do %>
+                    <%= image_tag("#{blogs_image(blog)}", :alt => "thumb") %>
+                  <% end %>
+                </div>
                 <div class="post-inner">
-                  <div class="post-title"><%= blog.title %></div>
+                  <div class="post-title">
+                    <%= link_to "/#{blog.slug}" do %>
+                      <%= blog.title %>
+                    <% end %>
+                  </div>
                   <div class="post-description"><%= blog_description(blog) %></div>
                   <div class="post-date"><%= date_format blog.published_date %></div>
                 </div>
               </div>
             <% end %>
           </div>
-          <div class="research-news"><%= link_to "More News & Research", "#" %></div>
+          <div class="research-news"><%= link_to "More News & Research", robo_news_path %></div>
         </div>
       </div>
     </div>
