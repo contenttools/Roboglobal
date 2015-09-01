@@ -25,7 +25,7 @@
           </div>
           <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
             <div class="post-share-bar">
-              <div class="addthis_sharing_toolbox"></div>
+              <div class="addthis_sharing_toolbox" data-url="<%= [request.domain, "/", @blog_post.slug].join %>" data-title="<%= @blog_post.title %>"></div>
             </div>
           </div>
         </div>

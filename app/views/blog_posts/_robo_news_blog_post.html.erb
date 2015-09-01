@@ -20,7 +20,7 @@
   </div>
   <div class="clearfix"></div>
   <div class="blog-news-social">
-    <div class="addthis_sharing_toolbox"></div>
+    <div class="addthis_sharing_toolbox" data-url="<%= [request.domain, "/", blog.slug].join %>" data-title="<%= blog.title %>"></div>
   </div>
   <div class="pull-right news-read-more"><%= link_to "Read more", "/#{blog.slug}" %></div>
 </div>
