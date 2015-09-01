@@ -1,11 +1,19 @@
 <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-  <div class="blog-news-img"><%= robo_news_blog_attachment(blog) %></div>
+  <div class="blog-news-img">
+    <%= link_to "/#{blog.slug}" do %>
+      <%= robo_news_blog_attachment(blog) %>
+    <% end %>
+  </div>
   <div class="blog-news-post">
     <% blog.tags.each do |tag| %>
     <%= link_to "#{tag}", robo_news_path(token: tag), class: "post-tags" %>
     <% end %>
   </div>
-  <div class="blog-new-title"><%= robo_news_blog_title(blog) %></div>
+  <div class="blog-new-title">
+    <%= link_to "/#{blog.slug}" do %>
+      <%= robo_news_blog_title(blog) %>
+    <% end %>
+  </div>
   <div class="post-date"><%= date_format blog.published_date %></div>
   <div class="blog-news-des">
     <p><%= robo_news_blog_description(blog) %></p>
