@@ -1556,16 +1556,18 @@ a.post-tags:hover {
   .white-header.navbar-default .navbar-toggle .icon-bar {
     background-color: black;
   }
-  .white-header.navbar-default .navbar-toggle:hover .icon-bar,
-  .white-header.navbar-default .navbar-toggle:focus .icon-bar {
-    background-color: white;
+  .navbar-default .navbar-toggle:focus {
+    background: transparent;
   }
-  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
-    background: #23d74d;
+  .navbar-default .navbar-toggle:hover span.icon-bar {
+    background: #000;
   }
   .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     background: white;
-    opacity: 0.9;
+    border-bottom: 1px solid #ccc;
+  }
+  .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+    background: transparent;
   }
   .navbar-default .navbar-nav > li > a {
     color: black;
@@ -1600,6 +1602,30 @@ a.post-tags:hover {
   ul.app-tabs li,
   ul.tech-tabs li {
     margin-bottom: 25px;
+  }
+  .navbar-default .navbar-toggle {
+    border: 0px;
+  }
+  .nav-mobile-menu ul.dropdown-menu {
+    position: static;
+  }
+  .nav-mobile-menu .main-navigation .dropdown-menu {
+    background: transparent;
+    border-radius: 0px;
+    color: white;
+    border: 0px;
+    min-width: 0;
+    width: 100%;
+    text-align: left;
+  }
+  .nav-mobile-menu .main-navigation .dropdown-menu > li > a {
+    text-align: left;
+  }
+  .nav-mobile-menu .main-navigation.navbar-nav > li > .dropdown-menu:after {
+    display: none;
+  }
+  .nav-mobile-menu .main-navigation .dropdown-menu > li > a:hover, .main-navigation .dropdown-menu > li > a:focus {
+    color: #000;
   }
 }/*End 768*/
 
@@ -1658,14 +1684,17 @@ a.post-tags:hover {
     padding: 4px;
     font-size: 10px;
   }
+  .logo-container,
+  .footer-nav {
+    padding-top: 20px;
+  }
   .footer-social-icon {
     padding-left: 0px;
-    float: left;
-    clear: both;
-    padding-top: 15px;
+    float: right;
+    padding-top: 20px;
   }
   .copyrights-small {
-    margin-top: 20px;
+    margin-top: 50px;
   }
   .footer-dropdown .dropdown-menu {
     width: 240px;
@@ -1679,6 +1708,20 @@ a.post-tags:hover {
   }
   .footer-nav .dropdown-menu:after {
     left: 206px;
+  }
+  .footer-logo {
+    width: 150px;
+  }
+  #footer,
+  .footer-inner {
+    min-height: 180px;
+  }
+  .age-auto-section,
+  .application-tabs-section {
+    padding: 20px 0px 20px 0px;
+  }
+  .bellweather {
+    margin: 0px;
   }
 }
 
