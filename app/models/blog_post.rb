@@ -16,6 +16,7 @@ class BlogPost < ActiveRecord::Base
 
   scope :published_ordered, -> { order('blog_posts.published_date DESC') }
   scope :ordered, -> { order('blog_posts.created_at DESC') }
+  scope :asc_ordered, -> { order('blog_posts.created_at ASC') }
   scope :views_ordered, -> { order('blog_posts.views DESC') }
   scope :last_month, -> { where("blog_posts.published_date > ?", Date.today - 30.days) }
 
@@ -33,5 +34,45 @@ class BlogPost < ActiveRecord::Base
 
   def set_content
     self.tags ||= []
+  end
+
+  def should_generate_new_friendly_id?
+    title_changed?
+  end
+
+  def next_and_previous_blogs
+    next_blog = nil
+    previous_blog = nil
+
+    current_date_blogs = BlogPost.where("published_date = ?", self.published_date).asc_ordered
+
+    if current_date_blogs.count > 1
+      current_index = current_date_blogs.collect(&:id).index(self.id)
+
+      next_blog = current_date_blogs[current_index + 1]
+      previous_blog = current_date_blogs[current_index - 1] if (current_index - 1) >= 0
+    end
+
+    if next_blog.blank?
+      next_blog = self.get_next_blog
+    end
+
+    if previous_blog.blank?
+      previous_blog = self.get_previous_blog
+    end
+
+    return next_blog, previous_blog
+  end
+
+  def get_next_blog
+    next_blog = BlogPost.where("published_date > ?", self.published_date).published_ordered.last
+    return self if next_blog.blank?
+    return next_blog
+  end
+
+  def get_previous_blog
+    previous_blog = BlogPost.where("published_date < ?", self.published_date).published_ordered.ordered.first
+    return self if previous_blog.blank?
+    return previous_blog
   end
 end
