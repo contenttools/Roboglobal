@@ -29,8 +29,8 @@ module BlogPostsHelper
     return '#'
   end
 
-  def robo_news_blog_title(blog)
-    truncate(blog.title, length: 30)
+  def robo_news_blog_title(blog, length)
+    truncate(blog.title, length: length)
   end
 
   def robo_news_blog_description(blog)

@@ -86,31 +86,15 @@
         </div>
         <div class="papulor-article">
           <h4>Popular Articles</h4>
-          <div class="article-wrap">
-            <div class="article-img"><%= image_tag("post-ar-1.jpg") %></div>
-            <div class="article-title">Making the best pract...</div>
-            <div class="article-date">June 14,2015</div>
-          </div>
-          <div class="article-wrap">
-            <div class="article-img"><%= image_tag("post-ar-2.jpg") %></div>
-            <div class="article-title">DARPA Robotics Challen...</div>
-            <div class="article-date">June 14,2015</div>
-          </div>
-          <div class="article-wrap">
-            <div class="article-img"><%= image_tag("post-ar-3.jpg") %></div>
-            <div class="article-title">New Product research is...</div>
-            <div class="article-date">June 14,2015</div>
-          </div>
-          <div class="article-wrap">
-            <div class="article-img"><%= image_tag("post-ar-4.jpg") %></div>
-            <div class="article-title">Reflection on the fiber...</div>
-            <div class="article-date">June 14,2015</div>
-          </div>
-          <div class="article-wrap">
-            <div class="article-img"><%= image_tag("post-ar-5.jpg") %></div>
-            <div class="article-title">OB-RYT0 Product Specs ..</div>
-            <div class="article-date">June 14,2015</div>
-          </div>
+            <% @popular_blogs.each do |blog| %>
+              <div class="article-wrap">
+                <%= link_to "/#{blog.slug}" do %>
+                <div class="article-img"><%= image_tag("#{blogs_image(blog)}") %></div>
+                <div class="article-title"><%= robo_news_blog_title(blog, 25) %></div>
+                <div class="article-date"><%= date_format blog.published_date %></div>
+              </div>
+            <% end %>
+          <% end %>
         </div>
         <div class="archive-section">
           <h4>Archives</h4>

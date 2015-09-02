@@ -16,9 +16,11 @@ class BlogPost < ActiveRecord::Base
 
   scope :published_ordered, -> { order('blog_posts.published_date DESC') }
   scope :ordered, -> { order('blog_posts.created_at DESC') }
+  scope :views_ordered, -> { order('blog_posts.views DESC') }
+  scope :last_month, -> { where("blog_posts.published_date > ?", Date.today - 30.days) }
 
   TOKENS = ['Technology', 'Events', 'Video', 'Healthcare', 'Drones', 'Manufacturing', 'Logistics Automation', 'Remotely Operated Vehicles', 'Self Driving Cars', 'Agriculture', 'Consumer Products', '3D Printing']
-  PER_PAGE_RECORDS = 10
+  PER_PAGE_RECORDS = 20
 
   paginates_per PER_PAGE_RECORDS
 
