@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150901075300) do
+ActiveRecord::Schema.define(version: 20150902134427) do
 
   create_table "attachments", force: :cascade do |t|
     t.string   "image_file_name",    limit: 255
@@ -62,13 +62,11 @@ ActiveRecord::Schema.define(version: 20150901075300) do
 
   create_table "embedded_attachments", force: :cascade do |t|
     t.text     "embed_code",      limit: 65535
-    t.integer  "attachable_id",   limit: 4
-    t.string   "attachable_type", limit: 32
     t.datetime "created_at",                    null: false
     t.datetime "updated_at",                    null: false
+    t.string   "attachable_type", limit: 255
+    t.integer  "attachable_id",   limit: 4
   end
-
-  add_index "embedded_attachments", ["attachable_type", "attachable_id"], name: "index_embedded_attachments_on_attachable_type_and_attachable_id", using: :btree
 
   create_table "file_correlations", force: :cascade do |t|
     t.integer  "pdf_attachment_id", limit: 4
@@ -97,8 +95,6 @@ ActiveRecord::Schema.define(version: 20150901075300) do
   end
 
   create_table "pdf_attachments", force: :cascade do |t|
-    t.integer  "doc_id",                limit: 4
-    t.string   "doc_type",              limit: 255
     t.string   "document_file_name",    limit: 255
     t.string   "document_content_type", limit: 255
     t.integer  "document_file_size",    limit: 4
@@ -106,8 +102,6 @@ ActiveRecord::Schema.define(version: 20150901075300) do
     t.datetime "created_at",                        null: false
     t.datetime "updated_at",                        null: false
   end
-
-  add_index "pdf_attachments", ["doc_type", "doc_id"], name: "index_pdf_attachments_on_doc_type_and_doc_id", using: :btree
 
   create_table "subscribers", force: :cascade do |t|
     t.string   "email",      limit: 50, null: false
