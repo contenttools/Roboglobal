@@ -17,8 +17,16 @@ pages.each do |page|
 end
 puts 'Pages created'
 
-PageEmbed.where(role: 'home_embedded_video').first_or_create
-PageEmbed.where(role: 'home_embedded_stock_chart').first_or_create
-PageEmbed.where(role: 'robo_news_embedded_video').first_or_create
+PageEmbed.where(role: 'home_embedded_video').first_or_create do |page_embed|
+  page_embed.title = 'Home Video'
+end
+
+PageEmbed.where(role: 'home_embedded_stock_chart').first_or_create do |page_embed|
+  page_embed.title = 'Home Stock Chart'
+end
+
+PageEmbed.where(role: 'robo_news_embedded_video').first_or_create do |page_embed|
+  page_embed.title = 'Robo News Video'
+end
 
 puts 'Page Embeds created.'
