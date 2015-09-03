@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150902134427) do
+ActiveRecord::Schema.define(version: 20150903064140) do
 
   create_table "attachments", force: :cascade do |t|
     t.string   "image_file_name",    limit: 255
@@ -61,11 +61,9 @@ ActiveRecord::Schema.define(version: 20150902134427) do
   end
 
   create_table "embedded_attachments", force: :cascade do |t|
-    t.text     "embed_code",      limit: 65535
-    t.datetime "created_at",                    null: false
-    t.datetime "updated_at",                    null: false
-    t.string   "attachable_type", limit: 255
-    t.integer  "attachable_id",   limit: 4
+    t.text     "embed_code", limit: 65535
+    t.datetime "created_at",               null: false
+    t.datetime "updated_at",               null: false
   end
 
   create_table "file_correlations", force: :cascade do |t|

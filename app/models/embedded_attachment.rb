@@ -1,5 +1,4 @@
 class EmbeddedAttachment < ActiveRecord::Base
-  belongs_to :attachable, :polymorphic => true
   has_many :video_correlations
   has_many :blog_posts, :through => :video_correlations, :source => :video, :source_type => 'BlogPost'
 
