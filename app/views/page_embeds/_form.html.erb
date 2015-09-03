@@ -1,0 +1,19 @@
+<div style="display:none">
+  <div id="<%= page_embed.id %>">
+    <h3><%= "Edit #{page_embed.role.humanize}" %></h3>
+    <%= form_for page_embed do |f| %>
+      <div class="form-group">
+        <%= f.text_field :title, placeholder: "Title", required: true, class: "form-control" %>
+      </div>
+      <div class="form-group">
+        <%= f.text_area :description, row: 2, placeholder: "Description", class: "form-control" %>
+      </div>
+      <%= f.text_area :embed_code, placeholder: "Embed Code", required: true, rows:3, class: "form-control" %>
+      <div class="row">
+        <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4 button-area">
+          <%= f.submit "Submit", class: "default-buttons" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>

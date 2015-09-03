@@ -1,0 +1,2 @@
+module PageEmbedsHelper
+end

@@ -19,6 +19,7 @@ Rails.application.routes.draw do
     resources :attachments
     resources :pdf_attachments
     resources :embedded_attachments
+    resources :page_embeds, only: [:index, :update]
   end
 
   get '/admin' => 'admin#dashboard'

@@ -1,0 +1,14 @@
+<h2>Page Embed Codes</h2>
+<% @page_embeds.each do |page_embed| %>
+  <div class="page-embed-block">
+    <h3><%= page_embed.role.humanize %></h3>
+    <strong>Title</strong>
+    <p><%= page_embed.title %><p>
+    <strong>Description</strong>
+    <p><%= page_embed.description %><p>
+    <strong>Embed Code</strong>
+    <p><%= raw page_embed.embed_code %><p>
+  </div>
+  <%= link_to "Edit #{page_embed.role.humanize}", "##{page_embed.id}", class: "btn btn-primary colorbox-inline", :data => {colorbox: true, colorbox_height: '600px', colorbox_width: '550px', colorbox_inline:true } %>
+  <%= render partial: 'form', locals: { page_embed: page_embed } %>
+<% end %>

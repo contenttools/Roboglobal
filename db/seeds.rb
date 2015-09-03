@@ -16,3 +16,9 @@ pages.each do |page|
   Page.where(title: page).first_or_create
 end
 puts 'Pages created'
+
+PageEmbed.where(role: 'home_embedded_video').first_or_create
+PageEmbed.where(role: 'home_embedded_stock_chart').first_or_create
+PageEmbed.where(role: 'robo_news_embedded_video').first_or_create
+
+puts 'Page Embeds created.'

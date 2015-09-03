@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
   def home
-    @video = Page.home.embedded_attachment.try(:embed_code)
+    @video = PageEmbed.home_page_embed_video
     @subscriber = Subscriber.new
     @latest_blogs = BlogPost.includes(:attachment, :pdf_attachment).published_ordered.ordered.first(3)
     @contact = Contact.new

@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150903064140) do
+ActiveRecord::Schema.define(version: 20150903064730) do
 
   create_table "attachments", force: :cascade do |t|
     t.string   "image_file_name",    limit: 255
@@ -85,6 +85,15 @@ ActiveRecord::Schema.define(version: 20150903064140) do
   end
 
   add_index "image_correlations", ["imageable_type", "imageable_id"], name: "index_image_correlations_on_imageable_type_and_imageable_id", using: :btree
+
+  create_table "page_embeds", force: :cascade do |t|
+    t.string   "title",       limit: 255
+    t.text     "description", limit: 65535
+    t.text     "embed_code",  limit: 65535
+    t.string   "role",        limit: 255
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
+  end
 
   create_table "pages", force: :cascade do |t|
     t.string   "title",      limit: 32
