@@ -1688,7 +1688,7 @@ a.post-tags:hover {
 }
 
 @media screen and (min-width: 320px) and (max-width: 530px) {
-  ul.tech-tabs li {
+ ul.app-tabs li, ul.tech-tabs li {
     margin-right: 5px;
   }
   .footer-nav ul li a {
