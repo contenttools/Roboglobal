@@ -15,7 +15,7 @@ class BlogPostsController < ApplicationController
   def show
     BlogPost.update_counters(@blog_post.id, views: 1)
     @archives = BlogPost.archives_list
-    @popular_blogs = BlogPost.includes(:attachment, :pdf_attachment).last_month.views_ordered.published_ordered.first("5")
+    @popular_blogs = BlogPost.includes(:attachment, :pdf_attachment).last_month.views_ordered.published_ordered.first("6")
     @next_blog, @previous_blog = @blog_post.next_and_previous_blogs
   end
 
