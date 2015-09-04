@@ -22,6 +22,7 @@ class BlogPost < ActiveRecord::Base
 
   TOKENS = ['Technology', 'Events', 'Video', 'Healthcare', 'Drones', 'Manufacturing', 'Logistics Automation', 'Remotely Operated Vehicles', 'Self Driving Cars', 'Agriculture', 'Consumer Products', '3D Printing']
   PER_PAGE_RECORDS = 20
+  ROBO_NEWS_PER_PAGE_RECORDS = 6
 
   paginates_per PER_PAGE_RECORDS
 
