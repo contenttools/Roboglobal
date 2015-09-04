@@ -1,6 +1,7 @@
 class Subscriber < ActiveRecord::Base
   validates_presence_of :email
   validates_uniqueness_of :email
+  validates_format_of :email, :with => /([\w.-]+)@([\w.-]+)\.([a-zA-Z.]{2,6})/i
 
   def self.to_csv
     column_names = %w{id email created_at}
