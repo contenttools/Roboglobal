@@ -113,6 +113,7 @@ class BlogPostsController < ApplicationController
     @latest_blogs = BlogPost.includes(:attachment, :pdf_attachment).where("tags LIKE ?", "%#{@token}\n%").published_ordered.ordered.first(6)
     @archives = BlogPost.archives_list
     @video = PageEmbed.robo_news_embed_video
+    @twitter_feed = PageEmbed.robo_news_twitter_feed
   end
 
   private

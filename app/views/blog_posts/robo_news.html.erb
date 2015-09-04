@@ -51,7 +51,9 @@
             <%= link_to "#{token}", robo_news_path(token: token), class: "post-tags" %>
           <% end %>
         </div>
-        <div class="tweets-section"><%= image_tag("twitter.jpg") %></div>
+        <div class="tweets-section">
+          <%= raw @twitter_feed %>
+        </div>
         <div class="archive-section">
           <h4>Archives</h4>
           <ul>

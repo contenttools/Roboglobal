@@ -14,4 +14,8 @@ class PageEmbed < ActiveRecord::Base
   def self.home_page_stock_chart
     where(role: 'home_embedded_stock_chart').first.embed_code
   end
+
+  def self.robo_news_twitter_feed
+    where(role: 'robo_news_twitter_feed').first.embed_code
+  end
 end

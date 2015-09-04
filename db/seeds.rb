@@ -17,16 +17,11 @@ pages.each do |page|
 end
 puts 'Pages created'
 
-PageEmbed.where(role: 'home_embedded_video').first_or_create do |page_embed|
-  page_embed.title = 'Home Video'
-end
 
-PageEmbed.where(role: 'home_embedded_stock_chart').first_or_create do |page_embed|
-  page_embed.title = 'Home Stock Chart'
+PAGE_EMBED_ROLES = [['home_embedded_video', 'Home Video'], ['home_embedded_stock_chart', 'Home Stock Chart'], ['robo_news_embedded_video', 'Robo News Video'], ['robo_news_twitter_feed', 'Robo News Twitter Feed']]
+PAGE_EMBED_ROLES.each do |page_embed_object|
+  PageEmbed.where(role: page_embed_object[0]).first_or_create do |page_embed|
+    page_embed.title = page_embed_object[1]
+  end
 end
-
-PageEmbed.where(role: 'robo_news_embedded_video').first_or_create do |page_embed|
-  page_embed.title = 'Robo News Video'
-end
-
 puts 'Page Embeds created.'

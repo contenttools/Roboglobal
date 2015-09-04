@@ -8,7 +8,7 @@
     <p><%= page_embed.description %><p>
     <strong>Embed Code</strong>
     <p><%= raw page_embed.embed_code %><p>
-  </div>
-  <%= link_to "Edit #{page_embed.role.humanize}", "##{page_embed.id}", class: "btn btn-primary colorbox-inline", :data => {colorbox: true, colorbox_height: '600px', colorbox_width: '550px', colorbox_inline:true } %>
+    <%= link_to "Edit #{page_embed.role.humanize}", "##{page_embed.id}", class: "btn btn-primary colorbox-inline", :data => {colorbox: true, colorbox_height: '600px', colorbox_width: '550px', colorbox_inline:true } %>
   <%= render partial: 'form', locals: { page_embed: page_embed } %>
+  </div>
 <% end %>
