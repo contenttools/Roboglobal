@@ -1,4 +1,4 @@
-a {
+sea {
     -webkit-transition: all .25s ease;
   -moz-transition: all .25s ease;
   -ms-transition: all .25s ease;
@@ -526,6 +526,149 @@ div#map {
   float: left;
   width: 100%;
   padding-top: 30px;
+}
+#sectors {
+  float: left;
+  width: 100%;
+  position: relative;
+}
+.sector-circule {
+  float: left;
+  width: 100px;
+  height: 100px;
+  border-radius: 1000px;
+  position:absolute;
+  text-align: center;
+  line-height: 100px;
+  background-color: #ccc;
+  -webkit-transition: all .2s ease;
+  -moz-transition: all .2s ease;
+  transition: all .2s ease;
+}
+#sectors a {
+  font-size: 16px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+}
+.overlay {
+  background-color: #333;
+  width: 100px;
+  height: 100px;
+  float: left;
+  opacity: 0.5;
+  border-radius: 1000px;
+}
+.text:hover {
+  background-color: blue;
+  opacity: 0.5;
+  border-radius: 100%;
+}
+span.text {
+  color: white;
+  font-size: 16px;
+  position: absolute;
+  display: block;
+  width: 100%;
+}
+.sector-effect:hover {
+  -webkit-transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  transform: scale(1.1);
+}
+.speedtesting {
+  background: #ccc image-url("Actuation.jpg") no-repeat;
+  background-size: cover;
+  top: 542px;
+  left: 102px;
+}
+.EPRfects {
+  background: image-url("Sensing.jpg") no-repeat;
+  background-size: cover;
+  top: 466px;
+  left: 0px;
+}
+.human {
+  background: image-url("Agriculture.jpg") no-repeat;
+  background-size: cover;
+  top: 350px;
+  left: -49px;
+}
+.roboticscamp {
+  background: image-url("Computing.jpg") no-repeat;
+  background-size: cover;
+  top: 350px;
+  left: -48px;
+}
+.robonetworking {
+  background: image-url("Processing.jpg") no-repeat;
+  background-size: cover;
+    top: 225px;
+  left: -48px;
+}
+.producteficency {
+  background: image-url("Integration.jpg") no-repeat;
+  background-size: cover;
+  top: 112px;
+  left: 4px;
+}
+.models {
+  background: image-url("Healthcare.jpg") no-repeat;
+  background-size: cover;
+  top: 37px;
+  left: 103px;
+}
+.automation {
+  background: image-url("Manufacturing.jpg") no-repeat;
+  background-size: cover;
+  top: 7px;
+  left: 228px;
+}
+.analytics {
+  background: image-url("3DPrinting.jpg") no-repeat;
+  background-size: cover;
+  top: 37px;
+  left: 349px;
+}
+.producteficency2 {
+  background: image-url("Consumer.jpg") no-repeat;
+  background-size: cover;
+  top: 123px;
+  right: 99px;
+}
+.printing {
+  background: image-url("Logistics.jpg") no-repeat;
+  background-size: cover;
+  top: 233px;
+  right: 41px;
+}
+.mechanics {
+  background: image-url("Logistics.jpg") no-repeat;
+  background-size: cover;
+    top: 351px;
+  right: 39px;
+}
+.speedtest2 {
+  background: image-url("Logistics.jpg") no-repeat;
+  background-size: cover;
+  top: 457px;
+  right: 103px;
+}
+.analytics2 {
+  background: image-url("3DPrinting.jpg") no-repeat;
+  background-size: cover;
+  top: 548px;
+  left: 349px;
+}
+.circule-logo {
+  background: image-url("circule-image.jpg") no-repeat center;
+  width: 100px;
+  height: 100px;
+  width: 127px;
+  height: 125px;
+  position: absolute;
+  top: 264px;
+  left: 202px;
 }
 /* ==========================================================================
    Index Heighlights
