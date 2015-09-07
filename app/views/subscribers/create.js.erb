@@ -2,7 +2,8 @@
   $('.subscriber-form')[0].reset();
   $('.field-error-message').html('');
   $('#subscriber_email').removeClass('error-field');
-  $('.subscriber-success').text("Subscribed successfully!")
+  $('.subscriber-success').text("Subscribed successfully!");
+  $(".subscriber-success").fadeOut(5000);
 <% else %>
   $('.subsribers-container').replaceWith("<%= escape_javascript(render('subscribers/form')) %>")
 <% end %>
