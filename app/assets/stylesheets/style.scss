@@ -1540,6 +1540,21 @@ a.post-tags:hover {
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .nav > li {
+    margin-right: 0px;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .nav > li {
+    margin-right: 0px;
+  }
+  .navbar-default .navbar-nav > li > a {
+    font-size: 14px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1175px) {
   .legal-banner .us-heading-container h1 {
     font-size: 46px;
@@ -1570,11 +1585,11 @@ a.post-tags:hover {
 
 @media screen and (min-width: 768px) and (max-width: 1000px) {
   .navbar-brand > img {
-    width: 180px;
-    margin-top: 17px;
+    width: 150px;
+    margin-top: 15px;
   }
   .white-header .navbar-brand.not-show img {
-    margin-top: -15px;
+    margin-top: -13px;
   }
   .post-section h2 {
     font-size: 26px;
@@ -1624,15 +1639,8 @@ a.post-tags:hover {
   .navbar-default .navbar-toggle:hover span.icon-bar {
     background: #000;
   }
-  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
-    background: white;
-    border-bottom: 1px solid #ccc;
-  }
   .navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
     background: transparent;
-  }
-  .navbar-default .navbar-nav > li > a {
-    color: black;
   }
   .navbar-toggle {
     margin-top: 13px;
@@ -1665,6 +1673,32 @@ a.post-tags:hover {
   ul.tech-tabs li {
     margin-bottom: 25px;
   }
+
+  .legal-info-section {
+    padding: 50px 0px 60px 0px;
+  }
+  .post-share-bar {
+    margin-top: 0px;
+  }
+  .post-right-section {
+    padding-top: 0px;
+  }
+  .post-section h2 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+  .main-navigation {
+    margin-top: 6px;
+  }
+}/*End 768*/
+@media screen and (min-width: 320px) and (max-width: 767px)  {
+  .navbar-default .navbar-collapse, .navbar-default .navbar-form {
+    background: white;
+    border-bottom: 1px solid #ccc;
+  }
+    .navbar-default .navbar-nav > li > a {
+    color: black;
+  }
   .navbar-default .navbar-toggle {
     border: 0px;
   }
@@ -1689,21 +1723,7 @@ a.post-tags:hover {
   .nav-mobile-menu .main-navigation .dropdown-menu > li > a:hover, .main-navigation .dropdown-menu > li > a:focus {
     color: #000;
   }
-  .legal-info-section {
-    padding: 50px 0px 60px 0px;
-  }
-  .post-share-bar {
-    margin-top: 0px;
-  }
-  .post-right-section {
-    padding-top: 0px;
-  }
-  .post-section h2 {
-    font-size: 26px;
-    line-height: 32px;
-  }
-}/*End 768*/
-
+}
 @media screen and (min-width: 640px) and (max-width: 768px)  {
   .main-banner h1, .us-banner h1, .about-banner h1 {
     font-size: 50px;
