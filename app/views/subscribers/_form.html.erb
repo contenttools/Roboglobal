@@ -2,6 +2,7 @@
   <%= form_for @subscriber, remote: true, :authenticity_token => true, html: {class: "subscriber-form"} do |f| %>
     <%= error_message_for(@subscriber, :email) %>
     <span class="subscriber-success"></span>
+    <div class="clearfix"></div>
     <%= f.email_field :email, placeholder: "Enter your Email", class: field_class(@subscriber, :email) %>
     <%= f.submit "", class: "input-arrow" %>
   <% end %>
