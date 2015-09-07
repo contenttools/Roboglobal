@@ -1,6 +1,6 @@
 <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-55dd6a077af5bb75" async="async"></script>
 <div class="legal-banner">
-  <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-centered">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-centered">
     <div class="blog-heading-container">
       <h1>POST</h1>
       <div class="punch-line"> <%= @blog_post.title %></div>
@@ -10,7 +10,7 @@
 <div class="clearfix"></div>
 <div class="container">
   <div class="row">
-    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9">
+    <div class="col-xs-12 col-sm-7 col-md-9 col-lg-9">
       <div class="post-section">
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
@@ -20,10 +20,10 @@
           </div>
         </div>
         <div class="row">
-          <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10">
             <h2><%= @blog_post.title %></h2>
           </div>
-          <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
             <div class="post-share-bar">
               <div class="addthis_sharing_toolbox" data-url="<%= [request.domain, "/", @blog_post.slug].join %>" data-title="<%= @blog_post.title %>"></div>
             </div>
@@ -75,7 +75,7 @@
         </div>
       </div>
     </div>
-    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
+    <div class="col-xs-12 col-sm-5 col-md-3 col-lg-3">
       <div class="post-right-section">
         <div class="post-subscribe">
           <div class="sub-wrapper">

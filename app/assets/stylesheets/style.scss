@@ -127,6 +127,15 @@ nav.white-header {
   top: -14px;
   left: 250px;
 }
+.blue_x {
+  display: none !important;
+}
+.white-header .white_x {
+  display: none !important;
+}
+.white-header .blue_x {
+  display: block !important;
+}
 /*===========================================*/
 .footer-dropdown .dropdown-menu {
   background: #00aff0;
@@ -198,6 +207,15 @@ nav.white-header {
   -o-background-size: cover;
   background-size: cover;
 }
+.us-banner h1 {
+  font-size: 50px;
+  line-height: normal;
+  text-align: center;
+  color: white;
+  text-transform: uppercase;
+  font-size: 75px;
+  padding-top: 80px;
+}
 .col-centered {
   float: none;
   margin: 0 auto;
@@ -211,7 +229,9 @@ nav.white-header {
 .us-heading-container {
   text-align: center;
   display: block;
-  padding-top: 80px;
+  padding-top: 0px;
+  display: table;
+  width: 100%;
 }
 .blog-heading-container {
   text-align: center;
@@ -219,7 +239,6 @@ nav.white-header {
   padding-top: 80px;
 }
 .main-banner h1,
-.us-banner h1,
 .about-banner h1,
 .legal-banner h1 {
   font-size: 50px;
@@ -228,6 +247,7 @@ nav.white-header {
   color: white;
   text-transform: uppercase;
   font-size: 75px;
+  vertical-align: middle;
 }
 .punch-line {
   font-size: 20px;
@@ -1068,7 +1088,7 @@ ul.app-tabs li.epr:hover {
   background: image-url("about-banner.jpg") no-repeat center top;
   width: 100%;
   float: left;
-  min-height: 427px;
+  height: 427px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1348,6 +1368,7 @@ a.post-tags:hover {
   height: 437px;
   padding-right: 35px;
   padding-left: 15px;
+  background-size: cover;
 }
 .sub-wrapper {
   position: relative;
@@ -1388,7 +1409,7 @@ a.post-tags:hover {
 .archive-section {
   float: left;
   width: 100%;
-  padding: 26px 35px 0px 15px;
+  padding: 26px 0px 0px 15px;
 }
 .papulor-article .article-wrap {
   float: left;
@@ -1519,6 +1540,19 @@ a.post-tags:hover {
   }
 }
 
+@media screen and (min-width: 768px) and (max-width: 1175px) {
+  .legal-banner .us-heading-container h1 {
+    font-size: 46px;
+    height: 250px;
+  }
+  .legal-banner {
+    height: 250px;
+  }
+  .post-share-bar {
+    margin-top: 0px;
+  }
+}
+
 @media screen and (min-width: 768px) and (max-width: 1002px) {
   .footer-social-icon {
     float: left;
@@ -1542,6 +1576,10 @@ a.post-tags:hover {
   .white-header .navbar-brand.not-show img {
     margin-top: -15px;
   }
+  .post-section h2 {
+    font-size: 26px;
+    line-height: 32px;
+  }
 }
 
 @media screen and (min-width: 768px) and (max-width: 896px) {
@@ -1555,7 +1593,17 @@ a.post-tags:hover {
     background: image-url("mobile-banner.jpg") no-repeat center top;
     width: 100%;
     float: left;
-    min-height: 427px;
+    height: 427px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+  .legal-banner {
+    background: image-url("mobile-banner.jpg") no-repeat center top;
+    width: 100%;
+    float: left;
+    height: 250px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1641,20 +1689,39 @@ a.post-tags:hover {
   .nav-mobile-menu .main-navigation .dropdown-menu > li > a:hover, .main-navigation .dropdown-menu > li > a:focus {
     color: #000;
   }
+  .legal-info-section {
+    padding: 50px 0px 60px 0px;
+  }
+  .post-share-bar {
+    margin-top: 0px;
+  }
+  .post-right-section {
+    padding-top: 0px;
+  }
+  .post-section h2 {
+    font-size: 26px;
+    line-height: 32px;
+  }
 }/*End 768*/
 
 @media screen and (min-width: 640px) and (max-width: 768px)  {
-  .main-banner h1, .us-banner h1, .about-banner h1, .legal-banner h1 {
+  .main-banner h1, .us-banner h1, .about-banner h1 {
     font-size: 50px;
   }
   .banner-for-mobile {
     min-height: 290px;
   }
+  .legal-banner h1 {
+    font-size: 44px;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 736px) {
-  .main-banner h1, .us-banner h1, .about-banner h1, .legal-banner h1, {
+  .main-banner h1, .us-banner h1, .about-banner h1, {
     font-size: 32px;
+  }
+  .legal-banner h1 {
+    font-size: 28px;
   }
   .banner-for-mobile {
     min-height: 260px;
@@ -1736,6 +1803,14 @@ a.post-tags:hover {
   }
   .bellweather {
     margin: 0px;
+  }
+  .post-pre,
+  .post-next {
+    font-size: 14px;
+  }
+  .post-section h2 {
+    font-size: 18px;
+    line-height: 24px;
   }
 }
 
