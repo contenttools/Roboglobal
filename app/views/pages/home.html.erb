@@ -124,69 +124,141 @@
     <div class="sector-inner">
       <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
         <div id="sectors">
-          <%= link_to "#", class: "sector-circule speedtesting sector-effect" do %>
+          <%= link_to 'javascript:;', class: "sensing sector-circule sector-effect" do %>
             <span class="overlay"></span>
-            <span class="text">Speed Tesing</span>
+            <span class="text">Sensing</span>
           <% end %>
-          <%= link_to "#", class: "sector-circule EPRfects sector-effect" do %>
+          <%= link_to 'javascript:;', class: "processing sector-circule sector-effect" do %>
             <span class="overlay"></span>
-            <span class="text">Speed Tesing</span>
+            <span class="text">Processing</span>
           <% end %>
-          <%= link_to "#", class: "sector-circule human sector-effect" do %>
+          <%= link_to 'javascript:;', class: "actuation sector-circule sector-effect" do %>
             <span class="overlay"></span>
-            <span class="text">Speed Tesing</span>
+            <span class="text">Actuation</span>
           <% end %>
-          <%= link_to "#", class: "sector-circule roboticscamp sector-effect" do %>
+          <%= link_to 'javascript:;', class: "computing sector-circule sector-effect" do %>
             <span class="overlay"></span>
-            <span class="text">Speed Tesing</span>
+            <span class="text">Computing</span>
           <% end %>
-          <%= link_to "#", class: "sector-circule robonetworking sector-effect" do %>
+          <%= link_to 'javascript:;', class: "integration sector-circule sector-effect" do %>
             <span class="overlay"></span>
-            <span class="text">Speed Tesing</span>
+            <span class="text">Integration</span>
           <% end %>
-          <%= link_to "#", class: "sector-circule producteficency sector-effect" do %>
+          <%= link_to 'javascript:;', class: "manufacturing sector-circule sector-effect" do %>
             <span class="overlay"></span>
-            <span class="text">Speed Tesing</span>
+            <span class="text">Manufacturing</span>
           <% end %>
-          <%= link_to "#", class: "sector-circule models sector-effect" do %>
+          <%= link_to 'javascript:;', class: "printing sector-circule sector-effect" do %>
             <span class="overlay"></span>
-            <span class="text">Speed Tesing</span>
+            <span class="text">3D Printing</span>
           <% end %>
-          <%= link_to "#", class: "sector-circule automation sector-effect" do %>
+          <%= link_to 'javascript:;', class: "logistics sector-circule sector-effect" do %>
             <span class="overlay"></span>
-            <span class="text">Speed Tesing</span>
+            <span class="text">Logistics Automation</span>
           <% end %>
-          <%= link_to "#", class: "sector-circule analytics sector-effect" do %>
+          <%= link_to 'javascript:;', class: "agriculture sector-circule sector-effect" do %>
             <span class="overlay"></span>
-            <span class="text">Speed Tesing</span>
+            <span class="text">Agriculture</span>
           <% end %>
-          <%= link_to "#", class: "sector-circule producteficency2 sector-effect" do %>
+          <%= link_to 'javascript:;', class: "military sector-circule sector-effect" do %>
             <span class="overlay"></span>
-            <span class="text">Speed Tesing</span>
+            <span class="text">Military</span>
           <% end %>
-          <%= link_to "#", class: "sector-circule printing sector-effect" do %>
+          <%= link_to 'javascript:;', class: "energy sector-circule sector-effect" do %>
             <span class="overlay"></span>
-            <span class="text">Speed Tesing</span>
+            <span class="text">Energy</span>
           <% end %>
-          <%= link_to "#", class: "sector-circule mechanics sector-effect" do %>
+           <%= link_to 'javascript:;', class: "healthcare sector-circule sector-effect" do %>
             <span class="overlay"></span>
-            <span class="text">Speed Tesing</span>
+            <span class="text">Healthcare</span>
           <% end %>
-           <%= link_to "#", class: "sector-circule speedtest2 sector-effect" do %>
+          <%= link_to 'javascript:;', class: "consumer sector-circule sector-effect", target: "_blank" do %>
             <span class="overlay"></span>
-            <span class="text">Speed Tesing</span>
-          <% end %>
-          <%= link_to "#", class: "sector-circule analytics2 sector-effect" do %>
-            <span class="overlay"></span>
-            <span class="text">Speed Tesing</span>
+            <span class="text">Consumer</span>
           <% end %>
           <div class="circule-logo"></div>
         </div>
       </div>
       <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5">
-        <div class="tab-img"><%= image_tag("hand.png", :alt => "hand") %></div>
-        <div class="sector-title"><h3>Mecahnics Build Up</h3></div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum...</p>
+
+        <div class="active-content sensing-content">
+          <div class="tab-img"><%= image_tag("Sensing.jpg", :alt => "Sensing") %></div>
+          <div class="sector-title"><h3>Sensing</h3></div>
+          <p>In order for a system to exhibit autonomy, it must be able to sense its environment, in addition to determining its own internal state.  For human beings, these are called exteroception and proprioception.   Sensing is important for the same reasons that our exteroceptive senses (sight, sound, etc.), and our proprioceptive senses (ability to know where our limbs are and what they are doing without directly observing them) are important for human beings.  For robotic systems, however, we are not limited to the standard senses. Almost anything that can be measured can be made into a sensor.</p>
+        </div>
+
+        <div class="hidden-content processing-content">
+          <div class="tab-img"><%= image_tag("Processing.jpg", :alt => "Processing") %></div>
+          <div class="sector-title"><h3>Processing</h3></div>
+          <p>Autonomous systems must make decisions at various levels ranging from basic motion control to determining the state of the environment they are operating in and optimally planning actions.  Part of this processing is not only making sense of the information received from sensors, but also planning actions in order to achieve a desired objective.</p>
+        </div>
+
+        <div class="hidden-content actuation-content">
+          <div class="tab-img"><%= image_tag("Actuation.jpg", :alt => "Actuation") %></div>
+          <div class="sector-title"><h3>Actuation</h3></div>
+          <p>Actuation is the means by which machines interact with the physical world.  For human beings, this mainly refers to our limbs, and in particular, our hands. However, machines are not limited to manipulation.  Almost anything that has an effect on the physical world can be made into an actuator.  Actuation techniques include electric, hydraulic (compressed fluid), mechanical, and pneumatic (compressed air).</p>
+        </div>
+
+        <div class="hidden-content computing-content">
+          <div class="tab-img"><%= image_tag("Computing.jpg", :alt => "Computing") %></div>
+          <div class="sector-title"><h3>Computing</h3></div>
+          <p>The path from sensing, to processing, to actuation, requires computation.  It is analogous to our brain, and is what allows the processing of information to produce actuation.  Computing can vary from embedded systems smaller than a fingernail to server-farms implementing sophisticated algorithms.</p>
+        </div>
+
+        <div class="hidden-content integration-content">
+          <div class="tab-img"><%= image_tag("Integration.jpg", :alt => "Integration") %></div>
+          <div class="sector-title"><h3>Integration</h3></div>
+          <p>An autonomous system is made up of many components (sensors, actuators, and computational units), which can be distributed over large spaces.  Integration consists of architecting a system – figuring out how to put all of these components together – to achieve the desired objective in a robust, high performance, and cost-efficient way.</p>
+        </div>
+
+        <div class="hidden-content manufacturing-content">
+          <div class="tab-img"><%= image_tag("Manufacturing.jpg", :alt => "Manufacturing") %></div>
+          <div class="sector-title"><h3>Manufacturing</h3></div>
+          <p>Broadly speaking, this is the main way in which companies take raw materials through a manufacturing process to create products.  It is also the earliest successful application for robotics and automation – for example, automobile assembly - and continues to be one of its largest growth areas.</p>
+        </div>
+
+        <div class="hidden-content printing-content">
+          <div class="tab-img"><%= image_tag("3DPrinting.jpg", :alt => "3DPrinting") %></div>
+          <div class="sector-title"><h3>3D Printing</h3></div>
+          <p>Traditionally, products are built either by assembling separate parts, or by removing material from a larger work-piece.   3D printing, also called additive manufacturing, adds yet another capability by depositing different types of materials where they are needed.   One of its main benefits is the potential for customization that is not economically feasible with traditional techniques.</p>
+        </div>
+
+        <div class="hidden-content logistics-content">
+          <div class="tab-img"><%= image_tag("Logistics.jpg", :alt => "Logistics") %></div>
+          <div class="source-title"><h3>Logistics Automation</h3></div>
+          <p>The manufacturing of items is incomplete without the material handling and distribution channels that bring the objects to their intended users.  The many economic advantages to speedy and error-free distribution, such as operating with low-inventory and being responsive to customer demands, is a significant growth area for robotics and automation. This is continually reducing the costs for end-users, both businesses and consumers.</p>
+        </div>
+
+        <div class="hidden-content agriculture-content">
+          <div class="tab-img"><%= image_tag("Agriculture.jpg", :alt => "Agriculture") %></div>
+          <div class="sector-title"><h3>Agriculture</h3></div>
+          <p>Feeding and sustaining the world continues to be one of our most important economic activities.  A new generation of autonomous systems is bringing precision and the elimination of rote labor to this domain.  For example, precision agriculture offers to greatly reduce costs and our environmental footprint by applying water and fertilizer on an as-needed basis.</p>
+        </div>
+
+        <div class="hidden-content military-content">
+          <div class="tab-img"><%= image_tag("Military.jpg", :alt => "Military") %></div>
+          <div class="sector-title"><h3>Miliatry/Security</h3></div>
+          <p>Removing people from harm’s way has always been a main driver for robotics research.  Up until recently, it has been difficult for machines to duplicate a human’s flexibility and cognitive skills.  However, with today’s technologies, unmanned aircraft and ground vehicles are now capable of detecting hazardous materials, disposing of bombs, operating in space and performing critical national defense functions (surveillance).</p>
+        </div>
+
+        <div class="hidden-content energy-content">
+          <div class="tab-img"><%= image_tag("Energy.jpg", :alt => "Energy") %></div>
+          <div class="sector-title"><h3>Energy</h3></div>
+          <p>Exploration, extraction, and the maintenance of the energy infrastructure require extensive and growing resources.  Robotics and automation continues to expand from structured environments, such as warehouses and factories, to unstructured ones, such as outdoors, underground, and underwater. The energy sector will reap the rewards of this transition with lower operational costs.</p>
+        </div>
+
+        <div class="hidden-content healthcare-content">
+          <div class="tab-img"><%= image_tag("Healthcare.jpg", :alt => "Healthcare") %></div>
+          <div class="sector-title"><h3>Healthcare</h3></div>
+          <p>As global healthcare costs continue to rise, robotics and automation is poised to provide a countering force to this trend.  Through rehabilitation, diagnostics, exoskeletons and elderly care, using robotics and autonomous systems promises to drastically reduce costs, while improving quality of life. In addition, robotics and automation can transcend cost-cutting by using robots for difficult surgeries and neurological treatments that were previously unfeasible.</p>
+        </div>
+
+        <div class="hidden-content consumer-content">
+          <div class="tab-img"><%= image_tag("Consumer.jpg", :alt => "Consumer") %></div>
+          <div class="sector-title"><h3>Consumer Products</h3></div>
+          <p>From interactive robots for entertainment to automating household chores, consumer companies work to make everyday lives easier and more enjoyable. The Internet of Things promises to usher in a new era of interconnectivity.  By communicating through the existing internet infrastructure, devices will no longer be isolated islands of limited capabilities.  This impact will be particularly pronounced for these types of consumer products, which need to be inexpensive for wide adoption.   Through the internet, consumer robotics will finally become broadly affordable to individuals.</p>
+        </div>
+
         <div class="clearfix"></div>
         <div class="news-section">
           <h3>In the News Headlines</h3>
