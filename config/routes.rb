@@ -26,8 +26,6 @@ Rails.application.routes.draw do
 
   devise_for :users
 
-  get 'home' => 'pages#home'
-
   get 'about-us' => 'pages#about_us'
 
   get 'legal-information' => 'pages#legal_information'
@@ -42,12 +40,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   #root 'pages#home'
-  authenticated :user do
-    root to: "admin#dashboard", as: :authenticated_root
-  end
-  unauthenticated do
-    root to: "pages#home", as: :unauthenticated_root
-  end
+  root to: "pages#home"
 
   resources :subscribers, only: :create
 
