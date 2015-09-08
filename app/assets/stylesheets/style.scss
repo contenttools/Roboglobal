@@ -1348,9 +1348,10 @@ ul.app-tabs li.epr:hover {
 .get-touch-right {
   float: left;
   background: image-url("get-touch.png") no-repeat left;
-  width: 369px;
+  width: 100%;
   height: 299px;
   padding: 45px 30px 0px 40px;
+  background-size: cover;
   -webkit-box-sizing: border-box;
      -moz-box-sizing: border-box;
           box-sizing: border-box;
@@ -2061,6 +2062,20 @@ a.post-tags:hover {
   }
   .about-wrapper {
     min-height: 0px;
+  }
+}
+@media screen and (min-width: 320px) and (max-width: 640px) {
+  .advisory-section {
+    padding: 30px 0px 260px 0px;
+  }
+  .advisory-section h2 {
+    padding-bottom: 0px;
+  }
+  .robo-about-top {
+    padding: 70px 0px 20px 0px;
+  }
+  .get-touch-section {
+    margin-bottom: 0px;
   }
 }
 
