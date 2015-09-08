@@ -214,7 +214,7 @@ nav.white-header {
   color: white;
   text-transform: uppercase;
   font-size: 75px;
-  padding-top: 80px;
+  padding-top: 0px;
 }
 .col-centered {
   float: none;
@@ -229,8 +229,7 @@ nav.white-header {
 .us-heading-container {
   text-align: center;
   display: block;
-  padding-top: 0px;
-  display: table;
+  padding-top: 80px;
   width: 100%;
 }
 .blog-heading-container {
@@ -1676,7 +1675,9 @@ a.post-tags:hover {
 .news-read-more a {
   color: #464646;
 }
-
+#basic_map {
+  width: 100% !important;
+}
 @media screen and (min-width: 320px) and (max-width: 1200px) {
   .footer-nav ul li {
     margin-right: 0px;
@@ -1689,7 +1690,7 @@ a.post-tags:hover {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 767px) and (max-width: 992px) {
   .nav > li {
     margin-right: 0px;
   }
@@ -1698,7 +1699,7 @@ a.post-tags:hover {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1175px) {
+@media screen and (min-width: 767px) and (max-width: 1175px) {
   .legal-banner .us-heading-container h1 {
     font-size: 46px;
     height: 250px;
@@ -1711,22 +1712,27 @@ a.post-tags:hover {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1002px) {
+@media screen and (min-width: 767px) and (max-width: 1002px) {
   .footer-social-icon {
     float: left;
     padding-left: 0;
     padding-top: 20px;
     margin-bottom: 100px;
   }
+  .advisory-team-img {
+    width: 100px;
+    height: 100px;
+    padding: 5px;
+  }
 }
 
-@media screen and (min-width: 640px) and (max-width: 768px) {
+@media screen and (min-width: 640px) and (max-width: 767px) {
   .copyrights-small {
     margin-top: 55px;
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 1000px) {
+@media screen and (min-width: 767px) and (max-width: 1000px) {
   .navbar-brand > img {
     width: 150px;
     margin-top: 15px;
@@ -1740,24 +1746,24 @@ a.post-tags:hover {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 896px) {
+@media screen and (min-width: 767px) and (max-width: 896px) {
   .main-banner h1, .us-banner h1, .about-banner h1, .legal-banner h1 {
     font-size: 60px;
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .banner-for-mobile {
     background: image-url("mobile-banner.jpg") no-repeat center top;
     width: 100%;
     float: left;
-    height: 427px;
+    min-height: 260px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
   }
-  .legal-banner {
+  .legal-banner, .about-banner, .legal-banner {
     background: image-url("mobile-banner.jpg") no-repeat center top;
     width: 100%;
     float: left;
@@ -1766,6 +1772,12 @@ a.post-tags:hover {
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
+  }
+  .about-banner .us-heading-container {
+    padding-top: 60px;
+  }
+  .about-banner-title {
+    font-size: 18px;
   }
   .nav > li {
     margin-right: 0px;
@@ -1833,7 +1845,27 @@ a.post-tags:hover {
   .main-navigation {
     margin-top: 6px;
   }
-}/*End 768*/
+  .about-des-wrapper {
+    min-height: 0px;
+    height: auto;
+  }
+  .about-wrapper {
+    float: left;
+    width: 100%;
+    padding-bottom: 30px;
+    padding-top: 30px;
+    border-bottom: 1px solid #ccc;
+  }
+  .about-wrapper.last {
+    border: 0px;
+  }
+  .advisory-team-img {
+    height: 80px;
+    width: 80px;
+    padding: 4px;
+  }
+}/*End 767*/
+
 @media screen and (min-width: 320px) and (max-width: 767px)  {
   .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     background: white;
@@ -1867,7 +1899,7 @@ a.post-tags:hover {
     color: #000;
   }
 }
-@media screen and (min-width: 640px) and (max-width: 768px)  {
+@media screen and (min-width: 640px) and (max-width: 767px)  {
   .main-banner h1, .us-banner h1, .about-banner h1 {
     font-size: 50px;
   }
@@ -1999,7 +2031,7 @@ a.post-tags:hover {
   }
 }
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 767px) and (max-width: 992px) {
   .about-team-img {
     margin-left: 0px;
     width: 100px;
@@ -2013,7 +2045,7 @@ a.post-tags:hover {
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
+@media screen and (min-width: 320px) and (max-width: 767px) {
   .about-team-img {
     margin-left: 0px;
     width: 60px;
@@ -2029,5 +2061,30 @@ a.post-tags:hover {
   }
   .about-wrapper {
     min-height: 0px;
+  }
+}
+
+/*Targeted CSS For Mobile Dvices*/
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2), only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1), only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1.5), only screen and (min-device-width: 360px) and (max-device-width: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
+  .advisory-wrapper .col-xs-8 {
+    width: 100%;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2), only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1), only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1.5) {
+  .advisory-wrapper .col-xs-8 {
+    width: 73%;
+  }
+}
+
+@media only screen and (min-device-width: 360px) and (max-device-width: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 3), only screen and (min-device-width: 360px) and (max-device-width: 640px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+  .advisory-wrapper .col-xs-8 {
+    width: 80%;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 580px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
+.advisory-wrapper .col-xs-8 {
+    width: 76%;
   }
 }
