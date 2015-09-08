@@ -9,24 +9,22 @@ Rails.application.routes.draw do
   mount Ckeditor::Engine => '/ckeditor'
 
   scope '/admin' do
-    resources :blog_posts, except: :show do
+    resources :blog_posts, path: "blog-posts", except: :show do
       member do
         get 'remove_image'
         get 'remove_file'
         get 'remove_video'
       end
     end
-    resources :attachments
-    resources :pdf_attachments
-    resources :embedded_attachments
-    resources :page_embeds, only: [:index, :update]
+    resources :attachments, path: 'images'
+    resources :pdf_attachments, path: 'files'
+    resources :embedded_attachments, path: 'videos'
+    resources :page_embeds, path: "page-embed", only: [:index, :update]
   end
 
   get '/admin' => 'admin#dashboard'
 
   devise_for :users
-
-  get 'home' => 'pages#home'
 
   get 'about-us' => 'pages#about_us'
 
@@ -42,12 +40,7 @@ Rails.application.routes.draw do
 
   # You can have the root of your site routed with "root"
   #root 'pages#home'
-  authenticated :user do
-    root to: "admin#dashboard", as: :authenticated_root
-  end
-  unauthenticated do
-    root to: "pages#home", as: :unauthenticated_root
-  end
+  root to: "pages#home"
 
   resources :subscribers, only: :create
 
