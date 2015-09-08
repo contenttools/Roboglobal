@@ -1758,7 +1758,7 @@ a.post-tags:hover {
     background: image-url("mobile-banner.jpg") no-repeat center top;
     width: 100%;
     float: left;
-    min-height: 260px;
+    min-height: 210px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1768,7 +1768,7 @@ a.post-tags:hover {
     background: image-url("mobile-banner.jpg") no-repeat center top;
     width: 100%;
     float: left;
-    height: 250px;
+    height: 210px;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -1865,9 +1865,25 @@ a.post-tags:hover {
     width: 80px;
     padding: 4px;
   }
-}/*End 767*/
-
-@media screen and (min-width: 320px) and (max-width: 767px)  {
+  .about-team-img {
+    margin-left: 0px;
+    width: 60px;
+    height: 60px;
+    padding: 4px;
+  }
+  .about-wrapper h3 {
+    margin-top: 0px;
+    font-size: 20px;
+  }
+  .about-wrapper h4 {
+    font-size: 15px;
+  }
+  .about-wrapper {
+    min-height: 0px;
+  }
+  .robo-about-top p {
+    font-size: 16px;
+  }
   .navbar-default .navbar-collapse, .navbar-default .navbar-form {
     background: white;
     border-bottom: 1px solid #ccc;
@@ -1899,7 +1915,9 @@ a.post-tags:hover {
   .nav-mobile-menu .main-navigation .dropdown-menu > li > a:hover, .main-navigation .dropdown-menu > li > a:focus {
     color: #000;
   }
-}
+}/*End 767*/
+
+
 @media screen and (min-width: 640px) and (max-width: 767px)  {
   .main-banner h1, .us-banner h1, .about-banner h1 {
     font-size: 50px;
@@ -2046,24 +2064,6 @@ a.post-tags:hover {
   }
 }
 
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .about-team-img {
-    margin-left: 0px;
-    width: 60px;
-    height: 60px;
-    padding: 4px;
-  }
-  .about-wrapper h3 {
-    margin-top: 0px;
-    font-size: 20px;
-  }
-  .about-wrapper h4 {
-    font-size: 15px;
-  }
-  .about-wrapper {
-    min-height: 0px;
-  }
-}
 @media screen and (min-width: 320px) and (max-width: 640px) {
   .advisory-section {
     padding: 30px 0px 260px 0px;
@@ -2076,6 +2076,9 @@ a.post-tags:hover {
   }
   .get-touch-section {
     margin-bottom: 0px;
+  }
+  .get-touch-right {
+    margin-bottom: 20px;
   }
 }
 
