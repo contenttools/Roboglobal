@@ -71,22 +71,41 @@
       <div class="row">
         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <ul class="tech-tabs">
-            <li class="models"></li>
-            <li class="auto-processing"></li>
-            <li class="analytics"></li>
-            <li class="speed-testing"></li>
-            <li class="robo-champ"></li>
-            <li class="butterfly"></li>
+            <li class="sensing technologies models"></li>
+            <li class="processing technologies auto-processing"></li>
+            <li class="actuation technologies analytics"></li>
+            <li class="computing technologies robo-champ"></li>
+            <li class="integration technologies butterfly"></li>
           </ul>
           <div class="tech-info">
             <div class="row">
               <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
-                <%= image_tag("3d-model.jpg", :alt => "3d-model") %>
+                <%= image_tag("Sensing.jpg", class: "sensing-technology active-technology", :alt => "Sensing") %>
+                <%= image_tag("Processing.jpg", class: "processing-technology hidden-technology", :alt => "Processing") %>
+                <%= image_tag("Actuation.jpg", class: "actuation-technology hidden-technology", :alt => "Actuation") %>
+                <%= image_tag("Computing.jpg", class: "computing-technology hidden-technology", :alt => "Computing") %>
+                <%= image_tag("Integration.jpg", class: "integration-technology hidden-technology", :alt => "Integration") %>
               </div>
               <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
-                <div class="tab-info-wrapper">
-                  <div class="tab-info-title">3D Models</div>
-                  <p>This is just a dummy tect to have  demo for the sub heading here that will have some value  for the overall website. Os just a dummy tect to have  demo for the sub heading here that will have some value  for the overall website is just a dummy tect to have  demo for the sub heading here that will have some value  for the overall website. For is just a dummy tect to have  demo for the sub heading here that will have some value  for the overall website...</p>
+                <div class="tab-info-wrapper sensing-technology active-technology">
+                  <div class="tab-info-title">Sensing</div>
+                  <p>In order for a system to exhibit autonomy, it must be able to sense its environment, in addition to determining its own internal state.  For human beings, these are called exteroception and proprioception.   Sensing is important for the same reasons that our exteroceptive senses (sight, sound, etc.), and our proprioceptive senses (ability to know where our limbs are and what they are doing without directly observing them) are important for human beings.  For robotic systems, however, we are not limited to the standard senses. Almost anything that can be measured can be made into a sensor.</p>
+                </div>
+                <div class="tab-info-wrapper processing-technology hidden-technology">
+                  <div class="tab-info-title">Processing</div>
+                  <p>Autonomous systems must make decisions at various levels ranging from basic motion control to determining the state of the environment they are operating in and optimally planning actions.  Part of this processing is not only making sense of the information received from sensors, but also planning actions in order to achieve a desired objective.</p>
+                </div>
+                <div class="tab-info-wrapper actuation-technology hidden-technology">
+                  <div class="tab-info-title">Actuation</div>
+                  <p>Actuation is the means by which machines interact with the physical world.  For human beings, this mainly refers to our limbs, and in particular, our hands. However, machines are not limited to manipulation.  Almost anything that has an effect on the physical world can be made into an actuator.  Actuation techniques include electric, hydraulic (compressed fluid), mechanical, and pneumatic (compressed air).</p>
+                </div>
+                <div class="tab-info-wrapper computing-technology hidden-technology">
+                  <div class="tab-info-title">Computing</div>
+                  <p>The path from sensing, to processing, to actuation, requires computation.  It is analogous to our brain, and is what allows the processing of information to produce actuation.  Computing can vary from embedded systems smaller than a fingernail to server-farms implementing sophisticated algorithms.</p>
+                </div>
+                <div class="tab-info-wrapper integration-technology hidden-technology">
+                  <div class="tab-info-title">Integration</div>
+                  <p>An autonomous system is made up of many components (sensors, actuators, and computational units), which can be distributed over large spaces.  Integration consists of architecting a system – figuring out how to put all of these components together – to achieve the desired objective in a robust, high performance, and cost-efficient way.</p>
                 </div>
               </div>
             </div>
@@ -103,23 +122,54 @@
         <h2>APPLICATIONS</h2>
         <div class="sub-title">This is just a dummy text to have  demo for the sub heading here that will have some value </div>
         <ul class="app-tabs">
-          <li class="models"></li>
-          <li class="auto-processing"></li>
-          <li class="analytics"></li>
-          <li class="speed-testing"></li>
-          <li class="robo-champ"></li>
-          <li class="butterfly"></li>
-          <li class="epr"></li>
+          <li class="manufacturing applications models"></li>
+          <li class="printing applications auto-processing"></li>
+          <li class="logistics applications analytics"></li>
+          <li class="agriculture applications speed-testing"></li>
+          <li class="military applications robo-champ"></li>
+          <li class="energy applications butterfly"></li>
+          <li class="healthcare applications epr"></li>
         </ul>
         <div class="app-info">
           <div class="row">
             <div class="col-xs-12 col-sm-7 col-md-7 col-lg-7">
-              <%= image_tag("application-tool.jpg", :alt => "application-tool") %>
+              <%= image_tag("Manufacturing.jpg", class: "manufacturing-application active-application", :alt => "Manufacturing") %>
+              <%= image_tag("3DPrinting.jpg", class: "printing-application hidden-application", :alt => "3DPrinting") %>
+              <%= image_tag("Logistics.jpg", class: "logistics-application hidden-application", :alt => "Logistics") %>
+              <%= image_tag("Agriculture.jpg", class: "agriculture-application hidden-application", :alt => "Agriculture") %>
+              <%= image_tag("Military.jpg", class: "military-application hidden-application", :alt => "Military") %>
+              <%= image_tag("Energy.jpg", class: "energy-application hidden-application", :alt => "Energy") %>
+              <%= image_tag("Healthcare.jpg", class: "healthcare-application hidden-application", :alt => "Healthcare") %>
+              <%= image_tag("Consumer.jpg", class: "consumer-application hidden-application", :alt => "Consumer") %>
             </div>
             <div class="col-xs-12 col-sm-5 col-md-5 col-lg-5">
-              <div class="app-info-wrapper">
+              <div class="app-info-wrapper manufacturing-application active-application">
+                <div class="app-info-title">Manufacturing</div>
+                <p>The manufacturing of items is incomplete without the material handling and distribution channels that bring the objects to their intended users.  The many economic advantages to speedy and error-free distribution, such as operating with low-inventory and being responsive to customer demands, is a significant growth area for robotics and automation. This is continually reducing the costs for end-users, both businesses and consumers.</p>
+              </div>
+              <div class="app-info-wrapper printing-application hidden-application">
                 <div class="app-info-title">3D Models</div>
-                <p>This is just a dummy tect to have  demo for the sub heading here that will have some value  for the overall website. Os just a dummy tect to have  demo for the sub heading here that will have some value  for the overall website is just a dummy tect to have  demo for the sub heading here that will have some value  for the overall website. For is just a dummy tect to have  demo for the sub heading here that will have some value  for the overall website...</p>
+                <p>Traditionally, products are built either by assembling separate parts, or by removing material from a larger work-piece.   3D printing, also called additive manufacturing, adds yet another capability by depositing different types of materials where they are needed.   One of its main benefits is the potential for customization that is not economically feasible with traditional techniques.</p>
+              </div>
+              <div class="app-info-wrapper logistics-application hidden-application">
+                <div class="app-info-title">Logistics Automation</div>
+                <p>The manufacturing of items is incomplete without the material handling and distribution channels that bring the objects to their intended users.  The many economic advantages to speedy and error-free distribution, such as operating with low-inventory and being responsive to customer demands, is a significant growth area for robotics and automation. This is continually reducing the costs for end-users, both businesses and consumers.</p>
+              </div>
+              <div class="app-info-wrapper agriculture-application hidden-application">
+                <div class="app-info-title">Agriculture</div>
+                <p>Feeding and sustaining the world continues to be one of our most important economic activities.  A new generation of autonomous systems is bringing precision and the elimination of rote labor to this domain.  For example, precision agriculture offers to greatly reduce costs and our environmental footprint by applying water and fertilizer on an as-needed basis.</p>
+              </div>
+              <div class="app-info-wrapper military-application hidden-application">
+                <div class="app-info-title">Military/Security</div>
+                <p>Removing people from harm’s way has always been a main driver for robotics research.  Up until recently, it has been difficult for machines to duplicate a human’s flexibility and cognitive skills.  However, with today’s technologies, unmanned aircraft and ground vehicles are now capable of detecting hazardous materials, disposing of bombs, operating in space and performing critical national defense functions (surveillance).</p>
+              </div>
+              <div class="app-info-wrapper energy-application hidden-application">
+                <div class="app-info-title">Energy</div>
+                <p>Exploration, extraction, and the maintenance of the energy infrastructure require extensive and growing resources.  Robotics and automation continues to expand from structured environments, such as warehouses and factories, to unstructured ones, such as outdoors, underground, and underwater. The energy sector will reap the rewards of this transition with lower operational costs.</p>
+              </div>
+              <div class="app-info-wrapper healthcare-application hidden-application">
+                <div class="app-info-title">Healthcare</div>
+                <p>As global healthcare costs continue to rise, robotics and automation is poised to provide a countering force to this trend.  Through rehabilitation, diagnostics, exoskeletons and elderly care, using robotics and autonomous systems promises to drastically reduce costs, while improving quality of life. In addition, robotics and automation can transcend cost-cutting by using robots for difficult surgeries and neurological treatments that were previously unfeasible.</p>
               </div>
             </div>
           </div>
@@ -160,4 +210,5 @@
 </div>
 <% content_for :js_init do %>
   HeaderScroll.init();
+  OurSectors.init();
 <% end %>
