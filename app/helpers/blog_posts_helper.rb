@@ -39,6 +39,7 @@ module BlogPostsHelper
   end
 
   def robo_news_blog_attachment(blog)
+    return raw("#{blog.embedded_attachment.embed_code}") if blog.embedded_attachment.present?
     return image_tag("#{blog.attachment.image}") if blog.attachment.present?
     return image_tag("#{blog.pdf_attachment.document.url(:pdf_normal)}") if blog.pdf_attachment.present?
     return image_tag('/robo_missing_400.jpeg')
