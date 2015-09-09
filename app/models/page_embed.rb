@@ -8,11 +8,11 @@ class PageEmbed < ActiveRecord::Base
   end
 
   def self.robo_news_embed_video
-    where(role: 'embed_stock_chart_on_home').first.embed_code
+    where(role: 'embed_video_on_robo_news').first.embed_code
   end
 
   def self.home_page_stock_chart
-    where(role: 'embed_video_on_robo_news').first.embed_code
+    where(role: 'embed_stock_chart_on_home').first
   end
 
   def self.robo_news_twitter_feed

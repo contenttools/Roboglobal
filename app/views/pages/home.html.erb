@@ -279,9 +279,8 @@
     </div>
     <div class="drive-system">
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-        <h3>HARMONIC DRIVE SYSTEM INC</h3>
-        <div class="index-title">This is jsut a dummy tect to have  demo for the sub heading here that will be.</div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+        <h3><%= @stock_chart.title %></h3>
+        <div class="index-title"><p><%= @stock_chart.description %></p></div>
         <div class="row">
           <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3">
             <div class="about-btn-shell">
@@ -291,7 +290,7 @@
         </div>
       </div>
       <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 stock-chart">
-        <%= raw @stock_chart %>
+        <%= raw @stock_chart.embed_code %>
       </div>
     </div>
   </div>
