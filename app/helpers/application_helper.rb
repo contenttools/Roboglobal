@@ -23,7 +23,7 @@ module ApplicationHelper
   end
 
   def show_archive(archive)
-    "#{Date::MONTHNAMES[archive[0][1]]}, #{archive[0][0]} (#{archive[1]})"
+    link_to "#{Date::MONTHNAMES[archive[0][1]]}, #{archive[0][0]} (#{archive[1]})", robo_news_path(month: archive[0][1], year: archive[0][0])
   end
 
   def field_class(resource, field_name)
