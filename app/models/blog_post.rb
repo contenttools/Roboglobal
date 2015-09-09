@@ -19,6 +19,7 @@ class BlogPost < ActiveRecord::Base
   scope :asc_ordered, -> { order('blog_posts.created_at ASC') }
   scope :views_ordered, -> { order('blog_posts.views DESC') }
   scope :last_month, -> { where("blog_posts.published_date > ?", Date.today - 30.days) }
+  scope :by_year_and_month, ->(month, year){ where("year(published_date) = ? and month(published_date) = ? ", year, month) if year.present? && month.present? }
 
   TOKENS = ['Technology', 'Events', 'Video', 'Healthcare', 'Drones', 'Manufacturing', 'Logistics Automation', 'Remotely Operated Vehicles', 'Self Driving Cars', 'Agriculture', 'Consumer Products', '3D Printing']
   PER_PAGE_RECORDS = 20
@@ -75,5 +76,9 @@ class BlogPost < ActiveRecord::Base
     previous_blog = BlogPost.where("published_date < ?", self.published_date).published_ordered.ordered.first
     return self if previous_blog.blank?
     return previous_blog
+  end
+
+  def self.latest_blogs(params)
+    self.includes(:attachment, :pdf_attachment).by_year_and_month(params[:month], params[:year]).where("tags LIKE ?", "%#{@token}\n%").published_ordered.ordered.page(params[:page]).per(BlogPost::ROBO_NEWS_PER_PAGE_RECORDS)
   end
 end
