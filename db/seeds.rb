@@ -18,7 +18,7 @@ end
 puts 'Pages created'
 
 
-PAGE_EMBED_ROLES = [['home_embedded_video', 'Home Video'], ['home_embedded_stock_chart', 'Home Stock Chart'], ['robo_news_embedded_video', 'Robo News Video'], ['robo_news_twitter_feed', 'Robo News Twitter Feed']]
+PAGE_EMBED_ROLES = [['embed_video_on_home', 'Home Video'], ['embed_stock_chart_on_home', 'Home Stock Chart'], ['embed_video_on_robo_news', 'Robo News Video'], ['twitter_widget', 'Twitter Widget']]
 PAGE_EMBED_ROLES.each do |page_embed_object|
   PageEmbed.where(role: page_embed_object[0]).first_or_create do |page_embed|
     page_embed.title = page_embed_object[1]
