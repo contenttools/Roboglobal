@@ -68,14 +68,10 @@ class BlogPost < ActiveRecord::Base
 
   def get_next_blog
     next_blog = BlogPost.where("published_date > ?", self.published_date).published_ordered.last
-    return self if next_blog.blank?
-    return next_blog
   end
 
   def get_previous_blog
     previous_blog = BlogPost.where("published_date < ?", self.published_date).published_ordered.ordered.first
-    return self if previous_blog.blank?
-    return previous_blog
   end
 
   def self.latest_blogs(params)
