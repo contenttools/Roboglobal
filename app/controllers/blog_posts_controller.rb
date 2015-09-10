@@ -110,7 +110,7 @@ class BlogPostsController < ApplicationController
   end
 
   def robo_news
-    @latest_blogs = BlogPost.latest_blogs(params)
+    @latest_blogs = BlogPost.latest_blogs(params, @token)
     @archives = BlogPost.archives_list
     @video = PageEmbed.robo_news_embed_video
     @twitter_feed = PageEmbed.robo_news_twitter_feed
