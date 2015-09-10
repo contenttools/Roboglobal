@@ -576,11 +576,20 @@ div#map {
   border-radius: 100%;
   color: white;
 }
+.fixed-overlay {
+  background-color: #00adef;
+  opacity: 0.4;
+  border-radius: 100%;
+  color: white;
+}
 span.text {
   color: white;
   font-size: 14px;
   position: absolute;
   display: block;
+  top: 38px;
+  width: 100%;
+  text-align: center;
 }
 .sector-effect:hover {
   -webkit-transform: scale(1.3);

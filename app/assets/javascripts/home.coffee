@@ -13,13 +13,25 @@ bind_our_sector_content = ->
     $(".active-content").removeClass("active-content").addClass("hidden-content")
     $(".#{target_content}").removeClass("hidden-content").addClass("active-content")
 
+sector_hover_in = ->
+  $(this).siblings('span').addClass 'fixed-overlay'
+  return
+
+sector_hover_out = ->
+  $(this).siblings('span').removeClass 'fixed-overlay'
+  return
+
+bind_our_sector_hover = ->
+  $('.sector-effect .text').hover sector_hover_in, sector_hover_out
+
 (($) ->
   window.Home || (window.Home = {})
 
   Home.init = ->
     init_controls()
-    bind_our_sector_content()
 
   init_controls = ->
     bind_scroll_bar()
+    bind_our_sector_content()
+    bind_our_sector_hover()
 ).call(this)
