@@ -23,10 +23,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse nav-mobile-menu" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right main-navigation">
-        <li><%= link_to "Robo News", robo_news_path %></li>
-        <li><%= link_to 'US Index', us_index_path%></li>
-        <li><%= link_to 'EU Index', eu_index_path%></li>
-        <li><%= link_to 'About Us', about_us_path%></li>
+        <%= raw headers %>
         <li class="dropdown">
           <a class="dropdown-toggle" data-toggle="" role="button" aria-haspopup="true" aria-expanded="false">Robo ETF</a>
           <ul class="dropdown-menu">
@@ -39,7 +36,7 @@
           </ul>
         </li>
         <% if user_signed_in? %>
-        <li><%= link_to 'Dashboard', admin_path%></li>
+        <li class="<%= dashboard_active %>"><%= link_to 'Dashboard', admin_path %></li>
         <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
         <% end %>
       </ul>
