@@ -566,12 +566,12 @@ div#map {
 }
 span.text {
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   position: absolute;
   display: block;
   width: 100px;
   height: 100px;
-  padding: 37px 10px;
+  padding: 37px 5px;
 }
 .sector-effect:hover {
   -webkit-transform: scale(1.1);
@@ -990,7 +990,7 @@ a.white-btn:hover {
 }
 ul.tech-tabs {
   padding: 0px;
-  max-width: 500px;
+  max-width: 375px;
   margin: 0 auto;
   width: 100%;
 }
@@ -999,62 +999,69 @@ ul.tech-tabs li {
   padding: 0px;
   margin: 0px;
   list-style: none;
-  width: 66px;
+  width: 62px;
   margin-right: 15px;
-  height: 108px;
+  height: 90px;
   cursor: pointer;
 }
+ul.tech-tabs li.butterfly {
+  margin-right: 0px;
+}
 ul.tech-tabs li.models {
-  background:  image-url("technology-tabs.png") no-repeat  0px -112px;
+  background:  image-url("technology-tabs.jpg") no-repeat  0px -98px;
   float: left;
 }
 ul.tech-tabs li.auto-processing {
-  background:  image-url("technology-tabs.png") no-repeat  -80px -112px;
+  background:  image-url("technology-tabs.jpg") no-repeat  -80px -98px;
   float: left;
 }
 ul.tech-tabs li.analytics {
-  background:  image-url("technology-tabs.png") no-repeat  -160px -112px;
+  background:  image-url("technology-tabs.jpg") no-repeat  -160px -98px;
   float: left;
 }
 ul.tech-tabs li.speed-testing {
-  background:  image-url("technology-tabs.png") no-repeat  -240px -112px;
+  background:  image-url("technology-tabs.jpg") no-repeat  -236px -98px;
   float: left;
 }
 ul.tech-tabs li.robo-champ {
-  background:  image-url("technology-tabs.png") no-repeat  -317px -112px;
+  background:  image-url("technology-tabs.jpg") no-repeat  -236px -98px;
   float: left;
 }
 ul.tech-tabs li.butterfly {
-  background:  image-url("technology-tabs.png") no-repeat  -395px -112px;
+  background:  image-url("technology-tabs.jpg") no-repeat  -318px -98px;
   float: left;
 }
 /*============================HOVER=======================================*/
 ul.tech-tabs li.models:hover {
-  background:  image-url("technology-tabs.png") no-repeat  0px 0px;
+  background:  image-url("technology-tabs.jpg") no-repeat  0px -1px;
   float: left;
 }
 ul.tech-tabs li.auto-processing:hover {
-  background:  image-url("technology-tabs.png") no-repeat  -80px 0px;
+  background:  image-url("technology-tabs.jpg") no-repeat  -80px -1px;
   float: left;
 }
 ul.tech-tabs li.analytics:hover {
-  background:  image-url("technology-tabs.png") no-repeat  -160px 0px;
+  background:  image-url("technology-tabs.jpg") no-repeat  -160px -1px;
   float: left;
 }
 ul.tech-tabs li.speed-testing:hover {
-  background:  image-url("technology-tabs.png") no-repeat  -240px 0px;
+  background:  image-url("technology-tabs.jpg") no-repeat  -236px -1px;
   float: left;
 }
 ul.tech-tabs li.robo-champ:hover {
-  background:  image-url("technology-tabs.png") no-repeat  -317px 0px;
+  background:  image-url("technology-tabs.jpg") no-repeat  -236px -1px;
   float: left;
 }
 ul.tech-tabs li.butterfly:hover {
-  background:  image-url("technology-tabs.png") no-repeat  -395px 0px;
+  background:  image-url("technology-tabs.jpg") no-repeat  -318px -1px;
   float: left;
 }
 .tech-info {
   float: left;
+  width: 100%;
+  padding-top: 60px;
+}
+.tech-info img {
   width: 100%;
 }
 .tab-info-wrapper {
@@ -1078,7 +1085,7 @@ ul.tech-tabs li.butterfly:hover {
 }
 ul.app-tabs {
   padding: 0px;
-  max-width: 570px;
+  max-width: 660px;
   margin: 0 auto;
   width: 100%;
 }
@@ -1087,66 +1094,82 @@ ul.app-tabs li {
   padding: 0px;
   margin: 0px;
   list-style: none;
-  width: 66px;
+  width: 82px;
   margin-right: 15px;
   height: 108px;
   cursor: pointer;
 }
 ul.app-tabs li.models {
-  background:  image-url("application-tabs.png") no-repeat  0px -112px;
+  background:  image-url("application-tabs.jpg") no-repeat  0px -108px;
   float: left;
 }
 ul.app-tabs li.auto-processing {
-  background:  image-url("application-tabs.png") no-repeat  -80px -112px;
+  background:  image-url("application-tabs.jpg") no-repeat  -95px -108px;
   float: left;
+  width: 62px;
 }
 ul.app-tabs li.analytics {
-  background:  image-url("application-tabs.png") no-repeat  -160px -112px;
+  background:  image-url("application-tabs.jpg") no-repeat  -176px -108px;
   float: left;
+  width: 67px;
 }
 ul.app-tabs li.speed-testing {
-  background:  image-url("application-tabs.png") no-repeat  -238px -112px;
+  background:  image-url("application-tabs.jpg") no-repeat  -261px -108px;
   float: left;
+  width: 64px;
 }
 ul.app-tabs li.robo-champ {
-  background:  image-url("application-tabs.png") no-repeat  -317px -112px;
+  background:  image-url("application-tabs.jpg") no-repeat  -331px -108px;
   float: left;
+  width: 90px;
 }
 ul.app-tabs li.butterfly {
-  background:  image-url("application-tabs.png") no-repeat  -395px -112px;
+  background:  image-url("application-tabs.jpg") no-repeat  -427px -108px;
   float: left;
+  width: 60px;
 }
 ul.app-tabs li.epr {
-  background:  image-url("application-tabs.png") no-repeat  -473px -112px;
+  background:  image-url("application-tabs.jpg") no-repeat  -510px -108px;
   float: left;
+  width: 64px;
+}
+ul.app-tabs li.consumer {
+  background:  image-url("application-tabs.jpg") no-repeat  -594px -108px;
+  float: left;
+  width: 62px;
+  margin-right: 0px;
 }
 /*============================HOVER=======================================*/
 ul.app-tabs li.models:hover {
-  background:  image-url("application-tabs.png") no-repeat  0px 0px;
+  background:  image-url("application-tabs.jpg") no-repeat  0px 0px;
   float: left;
 }
 ul.app-tabs li.auto-processing:hover {
-  background:  image-url("application-tabs.png") no-repeat  -80px 0px;
+  background:  image-url("application-tabs.jpg") no-repeat  -95px 0px;
   float: left;
 }
 ul.app-tabs li.analytics:hover {
-  background:  image-url("application-tabs.png") no-repeat  -160px 0px;
+  background:  image-url("application-tabs.jpg") no-repeat  -176px 0px;
   float: left;
 }
 ul.app-tabs li.speed-testing:hover {
-  background:  image-url("application-tabs.png") no-repeat  -238px 0px;
+  background:  image-url("application-tabs.jpg") no-repeat  -261px 0px;
   float: left;
 }
 ul.app-tabs li.robo-champ:hover {
-  background:  image-url("application-tabs.png") no-repeat  -317px 0px;
+  background:  image-url("application-tabs.jpg") no-repeat  -331px 0px;
   float: left;
 }
 ul.app-tabs li.butterfly:hover {
-  background:  image-url("application-tabs.png") no-repeat  -395px 0px;
+  background:  image-url("application-tabs.jpg") no-repeat  -427px 0px;
   float: left;
 }
 ul.app-tabs li.epr:hover {
-  background:  image-url("application-tabs.png") no-repeat  -473px 0px;
+  background:  image-url("application-tabs.jpg") no-repeat  -510px 0px;
+  float: left;
+}
+ul.app-tabs li.consumer:hover {
+  background:  image-url("application-tabs.jpg") no-repeat  -594px 0px;
   float: left;
 }
 .app-info {
