@@ -74,7 +74,7 @@ class BlogPost < ActiveRecord::Base
     previous_blog = BlogPost.where("published_date < ?", self.published_date).published_ordered.ordered.first
   end
 
-  def self.latest_blogs(params)
-    self.includes(:attachment, :pdf_attachment).by_year_and_month(params[:month], params[:year]).where("tags LIKE ?", "%#{@token}\n%").published_ordered.ordered.page(params[:page]).per(BlogPost::ROBO_NEWS_PER_PAGE_RECORDS)
+  def self.latest_blogs(params, token)
+    self.includes(:attachment, :pdf_attachment).by_year_and_month(params[:month], params[:year]).where("tags LIKE ?", "%#{token}\n%").published_ordered.ordered.page(params[:page]).per(BlogPost::ROBO_NEWS_PER_PAGE_RECORDS)
   end
 end
