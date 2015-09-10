@@ -36,6 +36,13 @@
         </div>
         <div class="row">
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <div class="featured-video">
+              <% if @blog_post.embedded_attachment.present? %>
+              <div class="embed-container">
+                <%= raw @blog_post.embedded_attachment.embed_code %>
+              </div>
+              <% end %>
+            </div>
             <div class="featured-content">
               <%= image_tag(@blog_post.attachment.image.url(:large)) if @blog_post.attachment.present? %>
             </div>
@@ -44,13 +51,6 @@
               <%= link_to @blog_post.pdf_attachment.document.url, target: "_blank" do %>
               <%= image_tag @blog_post.pdf_attachment.document.url(:pdf_mini) %>
               <% end %>
-              <% end %>
-            </div>
-            <div class="featured-video">
-              <% if @blog_post.embedded_attachment.present? %>
-              <div class="embed-container">
-                <%= raw @blog_post.embedded_attachment.embed_code %>
-              </div>
               <% end %>
             </div>
           </div>
