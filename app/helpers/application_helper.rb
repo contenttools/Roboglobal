@@ -61,4 +61,8 @@ module ApplicationHelper
   def dashboard_active
     'active' if request.env['PATH_INFO'] =~ /admin/
   end
+
+  def legal_active
+    'active' if request.env['PATH_INFO'] == legal_information_path
+  end
 end
