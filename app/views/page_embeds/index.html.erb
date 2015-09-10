@@ -1,7 +1,7 @@
 <h2>All Page Embeds</h2>
 <% @page_embeds.each do |page_embed| %>
   <div class="page-embed-block">
-    <h3><%= page_embed.role.humanize %></h3>
+    <h3><%= page_embed.role.titleize %></h3>
     <strong>Title</strong>
     <p><%= page_embed.title %><p>
     <strong>Description</strong>

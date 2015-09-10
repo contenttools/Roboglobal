@@ -1,6 +1,6 @@
 <div style="display:none">
   <div id="<%= page_embed.id %>">
-    <h3><%= "Edit #{page_embed.role.humanize}" %></h3>
+    <h3><%= "Edit #{page_embed.role.titleize}" %></h3>
     <%= form_for page_embed do |f| %>
       <div class="form-group">
         <%= f.text_field :title, placeholder: "Title", required: true, class: "form-control" %>
