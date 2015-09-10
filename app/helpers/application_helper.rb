@@ -42,4 +42,23 @@ module ApplicationHelper
       "<span class='field-error-message'>#{field_name.to_s.humanize} #{options[:prepend_text]} #{error_message.last}</span>".html_safe
     end
   end
+
+  def headers
+    html = ''
+    header_content = [['Robo News', robo_news_path], ['US Index', us_index_path], ['EU Index', eu_index_path], ['About Us', about_us_path]]
+    header_content.each do |header|
+      html += content_tag :li, class: active_header_tab(header[1]) do
+        link_to header[0], header[1]
+      end
+    end
+    html
+  end
+
+  def active_header_tab(path)
+    'active' if request.env['PATH_INFO'] == path
+  end
+
+  def dashboard_active
+    'active' if request.env['PATH_INFO'] =~ /admin/
+  end
 end
