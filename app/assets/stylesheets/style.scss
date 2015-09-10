@@ -416,7 +416,7 @@ nav.white-header {
   width: 100%;
   margin-top: 25px;
   position: relative;
-  height: 770px;
+  height: auto;
 }
 .map-img img {
   width: 100%;
@@ -1705,9 +1705,15 @@ a.post-tags:hover {
 #basic_map {
   width: 100% !important;
 }
+.our-team-wrapper {
+  float: left;
+}
 @media screen and (min-width: 320px) and (max-width: 1200px) {
   .footer-nav ul li {
     margin-right: 0px;
+  }
+  .sector-section {
+    display: none;
   }
 }
 
@@ -1737,6 +1743,21 @@ a.post-tags:hover {
   .post-share-bar {
     margin-top: 0px;
   }
+  .map-section {
+    padding: 0px;
+  }
+  .tech-section {
+    padding: 20px 0px 50px 0px;
+  }
+  .automation-tech-section {
+    padding: 50px 0px 0px 0px;
+  }
+  .video-post-section {
+    padding-top: 25px;
+  }
+  .get-news {
+    margin-top: 20px;
+  }
 }
 
 @media screen and (min-width: 767px) and (max-width: 1002px) {
@@ -1757,6 +1778,9 @@ a.post-tags:hover {
   .copyrights-small {
     margin-top: 55px;
   }
+  .post-wrapper .post-inner {
+    width: 80%;
+  }
 }
 
 @media screen and (min-width: 767px) and (max-width: 1000px) {
@@ -1770,6 +1794,33 @@ a.post-tags:hover {
   .post-section h2 {
     font-size: 26px;
     line-height: 32px;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 1200px) {
+  .team-wrapper h3 {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 1000px) and (max-width: 1199px) {
+  .brand-section img {
+    margin-right: 15px;
+    max-width: 18%;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 999px) {
+  .brand-section img {
+    margin-right: 15px;
+    max-width: 14%;
+  }
+}
+
+@media screen and (min-width: 320px) and (max-width: 767px) {
+  .brand-section img {
+    margin-right: 15px;
+    max-width: 10%;
   }
 }
 
@@ -1948,6 +1999,19 @@ a.post-tags:hover {
     background: #23d74d;
     color: white;
   }
+  .get-news {
+    margin-top: 0px;
+    background: transparent;
+    background-color: #00bbf2;
+    height: auto;
+    padding: 30px 15px;
+  }
+  .news-sub-title {
+    width: 100%;
+  }
+  .news-wrapper {
+    padding: 0;
+  }
 }/*End 767*/
 
 
@@ -1976,6 +2040,9 @@ a.post-tags:hover {
   .tech-tab-section h2, .application-tabs-section h2, .protfolio-section h2, .holding-metho-section h2, .index-perfor-section h2, .management-section h2, .advisory-section h2, .age-auto-section h2 {
     font-size: 26px;
   }
+  .question-section h2 {
+    font-size: 22px;
+  }
   .navbar-brand > img {
     width: 150px;
     margin-top: 16px;
@@ -1985,6 +2052,30 @@ a.post-tags:hover {
   }
   .navbar-toggle {
     margin-top: 9px;
+  }
+  .sector-section {
+    display: none;
+  }
+  .automation-tech-section h2, .map-section h2, .blog-section h2, .team-section h2, .featured-in-section h2, .heighlights-section h2, .sector-section h2 {
+    font-size: 21px;
+    line-height: 30px;
+  }
+  .tech-section {
+    padding: 0px;
+  }
+  .map-section {
+    padding-top: 0px;
+  }
+  .main-banner {
+    min-height: 250px;
+  }
+  .text-container {
+    padding-top: 50px;
+  }
+  .automation-tech-section,
+  .blog-section,
+  .video-post-section {
+    padding-top: 25px;
   }
 }
 
@@ -2113,12 +2204,58 @@ a.post-tags:hover {
   .get-touch-right {
     margin-bottom: 20px;
   }
+  .post-wrapper .post-inner {
+    width: 70%;
+  }
+  .stock-chart {
+    height: 250px;
+  }
+  .our-team-img {
+    width: 80px;
+    height: 80px;
+    padding: 4px;
+  }
 }
 
 /*Targeted CSS For Mobile Dvices*/
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2), only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1), only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1.5), only screen and (min-device-width: 360px) and (max-device-width: 640px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 3) {
   .advisory-wrapper .col-xs-8 {
     width: 100%;
+  }
+  .post-img {
+    width: 50px;
+  }
+  .automation-tech-section h2, .map-section h2, .blog-section h2, .team-section h2, .featured-in-section h2, .heighlights-section h2, .sector-section h2 {
+    font-size: 24px;
+    line-height: 26px;
+  }
+  .video-post-section h3 {
+    font-size: 18px;
+  }
+  .post-title {
+    font-size: 14px;
+  }
+  .blog-section {
+    padding: 70px 0px 20px 0px;
+  }
+  .white-btn,
+  .default-buttons,
+  .button-area button[type="submit"] {
+    padding: 12px 5px;
+    font-size: 11px;
+  }
+  .drive-system {
+    padding-top: 20px;
+  }
+  .team-wrapper h3 {
+    font-size: 16px;
+    margin-top: 12px;
+  }
+  .team-wrapper h4 {
+    font-size: 14px;
+  }
+  .tech-title {
+    font-size: 20px;
   }
 }
 
