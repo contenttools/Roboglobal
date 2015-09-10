@@ -78,11 +78,15 @@ nav.white-header {
   font-size: 16px;
 }
 .navbar-default .navbar-nav li a:hover,
+.navbar-default .navbar-nav li.active a,
 .navbar-default .navbar-nav > .open > a,
 .navbar-default .navbar-nav > .open > a:hover,
 .navbar-default .navbar-nav > .open > a:focus {
 	background: #23d74d;
 	color: white;
+}
+.navbar-default .navbar-nav > li > a:focus {
+  color: white;
 }
 .navbar-nav > li > a {
 	line-height: 10px;
@@ -1937,6 +1941,13 @@ a.post-tags:hover {
   }
   .nav-mobile-menu .main-navigation .dropdown-menu > li > a:hover, .main-navigation .dropdown-menu > li > a:focus {
     color: #000;
+  }
+  .navbar-default .navbar-nav li a:hover, .navbar-default .navbar-nav li.active a, .navbar-default .navbar-nav > .open > a, .navbar-default .navbar-nav > .open > a:hover, .navbar-default .navbar-nav > .open > a:focus {
+    border-radius: 0px;
+  }
+  .navbar-default .navbar-nav > .active > a, .navbar-default .navbar-nav > .active > a:hover, .navbar-default .navbar-nav > .active > a:focus {
+    background: #23d74d;
+    color: white;
   }
 }/*End 767*/
 
