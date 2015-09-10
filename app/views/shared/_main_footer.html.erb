@@ -4,7 +4,9 @@
       <div class="row">
         <div class="col-xs-12 col-sm-4 col-md-5 col-lg-5">
           <div class="logo-container">
-            <a class="footer-logo" href="#"><%= image_tag("footer-logo.png", :alt => "footer-Logo") %></a>
+            <%= link_to root_path, class: "footer-logo" do %>
+              <%= image_tag("footer-logo.png", :alt => "footer-Logo") %>
+            <% end %>
           </div>
           <div class="footer-social-icon">
             <a target="_blank" href="https://www.linkedin.com/company/3653959?trk=tyah&trkInfo=tarId%3A1413231811281%2Ctas%3Arobots%2Cidx%3A2-1-6"><i class="fa fa-linkedin-square"></i></a>
