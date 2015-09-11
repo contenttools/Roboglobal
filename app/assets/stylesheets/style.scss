@@ -24,6 +24,7 @@ h2 {
 }
 h1, h2, h3, h4, h5, h6 {
   color: black;
+  font-weight: 100;
 }
 h2 {
   line-height: 40px;
@@ -255,6 +256,9 @@ nav.white-header {
   text-transform: uppercase;
   font-size: 75px;
   vertical-align: middle;
+}
+.about-banner h1 {
+  padding-top: 10px;
 }
 .punch-line {
   font-size: 20px;
@@ -803,7 +807,8 @@ a.default-buttons {
   color: white;
 }
 a.default-buttons:hover,
-.button-area button[type="submit"]:hover {
+.button-area button[type="submit"]:hover,
+.button-area input[type="submit"]:hover {
   text-decoration: none;
   background-color: #1fae64;
 }
@@ -831,7 +836,8 @@ a.white-btn {
 }
 a.white-btn:hover {
   text-decoration: none;
-  background-color: #d8dee0;
+  background-color: #23d74d;
+  color: white;
 }
 /* ==========================================================================
    Featrued In
@@ -950,17 +956,15 @@ a.white-btn:hover {
   padding: 60px 0px 10px 0px;
 }
 .us-banner-bottom-text {
-  background:  image-url("face-sheet.jpg") no-repeat center;
-  height: 80px;
-  min-width: 80px;
-  width: 100%;
+  background:  image-url("robo-us-icon.jpg") no-repeat 15px 14px;
   margin-bottom: 15px;
-}
-.us-banner-bottom span {
-  font-size: 20px;
-  text-align: center;
+  border: 2px solid #000;
+  border-radius: 8px;
+  font-size: 16px;
+  float: left;
   width: 100%;
-  display: block;
+  padding: 15px 15px 15px 44px;
+  font-weight: 600;
 }
 /* ==========================================================================
    Age of Automation
@@ -1283,7 +1287,7 @@ ul.app-tabs li.consumer:hover {
   background: image-url("about-banner.jpg") no-repeat center top;
   width: 100%;
   float: left;
-  height: 427px;
+  height: 300px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -1766,6 +1770,10 @@ a.post-tags:hover {
   .sector-section {
     display: none;
   }
+  .us-banner-bottom-text {
+    font-size: 12px;
+    font-weight: 600;
+  }
 }
 
 @media screen and (min-width: 992px) and (max-width: 1200px) {
@@ -2139,6 +2147,15 @@ a.post-tags:hover {
   }
   .graph-container {
     display: none;
+  }
+  .heighlights-section h2 {
+    padding-top: 20px;
+  }
+  .drive-system {
+    padding-top: 0px;
+  }
+  .about-btn-shell{
+    margin-bottom: 15px;
   }
 }
 
