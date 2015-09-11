@@ -144,7 +144,6 @@ nav.white-header {
 .white-header .blue_x {
   display: block !important;
 }
-/*===========================================*/
 .footer-dropdown .dropdown-menu {
   background: #00aff0;
   border-radius: 5px;
@@ -230,7 +229,7 @@ nav.white-header {
 }
 .text-container {
   float: left;
-  padding-top: 170px;
+  padding-top: 100px;
   text-align: center;
   width: 100%;
 }
@@ -250,6 +249,7 @@ nav.white-header {
 .legal-banner h1 {
   font-size: 50px;
   line-height: normal;
+  font-weight: 100;
   text-align: center;
   color: white;
   text-transform: uppercase;
@@ -262,6 +262,20 @@ nav.white-header {
   text-align: center;
   color: white;
   text-transform: capitalize;
+}
+.graph-container {
+  position: relative;
+}
+.graph-container img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  top: 500px;
 }
 /* ==========================================================================
    Footer
@@ -405,6 +419,9 @@ nav.white-header {
   width: 100%;
   text-align: center;
   padding-top: 15px;
+}
+.MR-38 {
+  margin-left: 38px;
 }
 /* ==========================================================================
    Map Section
@@ -2119,6 +2136,9 @@ a.post-tags:hover {
   .blog-section,
   .video-post-section {
     padding-top: 25px;
+  }
+  .graph-container {
+    display: none;
   }
 }
 
