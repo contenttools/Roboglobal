@@ -45,6 +45,7 @@ gem 'friendly_id'
 gem 'nokogiri'
 gem 'underscore-rails'
 gem 'gmaps4rails'
+gem 'mapbox-rails'
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
