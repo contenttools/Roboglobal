@@ -549,6 +549,8 @@ div#map {
 .tab-img {
   margin-top: 50px;
   float: left;
+  height: 300px;
+  overflow: hidden;
 }
 .tabs-title {
   padding-bottom: 15px;
@@ -2162,6 +2164,9 @@ a.post-tags:hover {
   }
   .main-banner {
     min-height: 160px;
+  }
+  .home-main {
+    min-height: 210px;
   }
   .text-container {
     padding-top: 50px;
