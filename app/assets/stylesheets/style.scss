@@ -1718,6 +1718,27 @@ a.post-tags:hover {
 .our-team-wrapper {
   float: left;
 }
+.pager span.pagi-title {
+  font-size: 14px;
+  padding-right: 25px;
+}
+.pager span a {
+  padding: 4px 8px 4px 9px;
+}
+.pager span a:hover,
+.pager span a:focus {
+  text-decoration: none;
+}
+.pager span.current {
+  background: #00afee;
+  color: white;
+  padding: 4px 8px 4px 9px;
+  border-radius: 100%;
+  text-align: center;
+}
+.pagination {
+  margin: 0px;
+}
 @media screen and (min-width: 320px) and (max-width: 1200px) {
   .footer-nav ul li {
     margin-right: 0px;
