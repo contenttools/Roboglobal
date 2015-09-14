@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150903064730) do
+ActiveRecord::Schema.define(version: 20150914130028) do
 
   create_table "attachments", force: :cascade do |t|
     t.string   "image_file_name",    limit: 255
@@ -20,6 +20,42 @@ ActiveRecord::Schema.define(version: 20150903064730) do
     t.datetime "image_updated_at"
     t.datetime "created_at",                     null: false
     t.datetime "updated_at",                     null: false
+  end
+
+  create_table "bb_dailies", force: :cascade do |t|
+    t.string   "fund_id",             limit: 255
+    t.string   "fund_name",           limit: 255
+    t.string   "class_name",          limit: 255
+    t.string   "net_asset_value",     limit: 255
+    t.string   "one_day_change_dlr",  limit: 255
+    t.string   "one_day_change_prct", limit: 255
+    t.datetime "created_at",                      null: false
+    t.datetime "updated_at",                      null: false
+  end
+
+  create_table "black_bars", force: :cascade do |t|
+    t.string   "parent_id",             limit: 255
+    t.string   "fund_id",               limit: 255
+    t.string   "exchange",              limit: 255
+    t.string   "name",                  limit: 255
+    t.string   "class_name",            limit: 255
+    t.string   "assets",                limit: 255
+    t.string   "shares_outstanding",    limit: 255
+    t.string   "inception_date",        limit: 255
+    t.string   "yield_sec_30",          limit: 255
+    t.string   "one_month_m",           limit: 255
+    t.string   "three_month_m",         limit: 255
+    t.string   "since_inception_cum_m", limit: 255
+    t.string   "one_year_m",            limit: 255
+    t.string   "since_inception_m",     limit: 255
+    t.string   "since_inception_cum_q", limit: 255
+    t.string   "one_year_q",            limit: 255
+    t.string   "since_inception_q",     limit: 255
+    t.string   "premium_discount_dlr",  limit: 255
+    t.string   "greatest_prem_prct",    limit: 255
+    t.string   "greatest_disc_prct",    limit: 255
+    t.datetime "created_at",                        null: false
+    t.datetime "updated_at",                        null: false
   end
 
   create_table "blog_posts", force: :cascade do |t|
@@ -85,6 +121,13 @@ ActiveRecord::Schema.define(version: 20150903064730) do
   end
 
   add_index "image_correlations", ["imageable_type", "imageable_id"], name: "index_image_correlations_on_imageable_type_and_imageable_id", using: :btree
+
+  create_table "index_records", force: :cascade do |t|
+    t.string   "value",      limit: 16
+    t.date     "index_date"
+    t.datetime "created_at",            null: false
+    t.datetime "updated_at",            null: false
+  end
 
   create_table "page_embeds", force: :cascade do |t|
     t.string   "title",       limit: 255

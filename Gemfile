@@ -46,6 +46,8 @@ gem 'nokogiri'
 gem 'underscore-rails'
 gem 'gmaps4rails'
 gem 'mapbox-rails'
+gem 'whenever', require: false
+gem "spreadsheet"
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console
