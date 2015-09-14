@@ -41,7 +41,9 @@
               <div class="row">
                 <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 pull-right">
                   <div class="pager pull-right">
-                    <span class="pagi-title">Pages</span>
+                    <% if @latest_blogs.total_count > BlogPost::ROBO_NEWS_PER_PAGE_RECORDS %>
+                      <span class="pagi-title">Pages</span>
+                    <% end %>
                     <%= paginate @latest_blogs %>
                   </div>
                 </div>
