@@ -7,6 +7,7 @@ class IndexRecord < ActiveRecord::Base
     ftp = connect_ftp
 
     begin
+      ftp.size(file_name)
       ftp.getbinaryfile(file_name)
       index = parse_file_and_return_index
       save_index(index)
