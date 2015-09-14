@@ -1,6 +1,6 @@
 require 'active_support/all'
 
-set :output, "/logs/cron_log.log"
+set :output, "path/to/logs/cron_log.log"
 
 Time.zone = 'Berlin'
 
