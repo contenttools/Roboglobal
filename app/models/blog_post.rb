@@ -31,7 +31,7 @@ class BlogPost < ActiveRecord::Base
 
   def self.archives_list
     hash = BlogPost.group("year(published_date)").group("month(published_date)").count
-    Hash[hash.to_a.reverse] if hash.present?
+    hash.present? ? Hash[hash.to_a.reverse] : []
   end
 
   def set_content
