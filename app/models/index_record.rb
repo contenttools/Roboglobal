@@ -42,6 +42,7 @@ class IndexRecord < ActiveRecord::Base
     ftp = Net::FTP.new
     ftp.connect(SERVER, 21)
     ftp.login(USERNAME, PASSWORD)
+    ftp.passive = true
     ftp
   end
 
