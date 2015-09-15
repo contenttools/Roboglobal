@@ -56,18 +56,20 @@ h2 {
 }
 nav.white-header {
   border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
 }
 .navbar {
 	margin-bottom: 0px;
 }
 .main-navigation {
-	margin-top: 12px;
+	margin-top: 17px;
 }
 .nav > li a {
   border-radius: 5px;
 }
 .navbar-brand > img {
   margin-top: 11px;
+  width: 120px;
 }
 .not-show {
   display: none;
@@ -76,7 +78,7 @@ nav.white-header {
   display: block;
 }
 .white-header .navbar-brand.not-show img {
-  margin-top: -26px;
+  margin-top: 11px;
 }
 .white-header .navbar-brand.show {
   display: none !important;
@@ -207,7 +209,7 @@ nav.white-header {
    Main Banner
    ========================================================================== */
 .main-banner {
-	background: image-url("banner.jpg") no-repeat center top;
+	background: image-url("index-banner.jpg") no-repeat center -166px;
 	width: 100%;
 	float: left;
 	min-height: 710px;
@@ -1863,15 +1865,18 @@ a.post-tags:hover {
 
 @media screen and (min-width: 767px) and (max-width: 1000px) {
   .navbar-brand > img {
-    width: 150px;
+    width: 120px;
     margin-top: 15px;
   }
   .white-header .navbar-brand.not-show img {
-    margin-top: -13px;
+    margin-top: 6px;
   }
   .post-section h2 {
     font-size: 26px;
     line-height: 32px;
+  }
+  .main-navigation {
+    margin-top: 14px;
   }
 }
 
@@ -2142,11 +2147,11 @@ a.post-tags:hover {
     font-size: 22px;
   }
   .navbar-brand > img {
-    width: 150px;
+    width: 100px;
     margin-top: 16px;
   }
   .white-header .navbar-brand.not-show img {
-    margin-top: -11px;
+    margin-top: 10px;
   }
   .navbar-toggle {
     margin-top: 9px;
@@ -2169,6 +2174,8 @@ a.post-tags:hover {
   }
   .home-main {
     min-height: 210px;
+    background: image-url("index-banner.jpg") no-repeat center -72px;
+    background-size: cover;
   }
   .text-container {
     padding-top: 50px;
