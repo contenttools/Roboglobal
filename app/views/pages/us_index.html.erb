@@ -20,13 +20,19 @@
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-centered">
         <div class="row">
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <div class="us-banner-bottom-text">Fact Sheet</div>
+            <div class="us-banner-bottom-text">
+              <%= link_to 'Fact Sheet', 'http://www.robostox.com/Data/Sites/18/docs/RoboStox_Fact_Sheet.pdf', target: '_blank' %>
+            </div>
           </div>
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <div class="us-banner-bottom-text">Index Holdings</div>
+            <div class="us-banner-bottom-text">
+              <%= link_to 'Index Holdings', 'http://www.robostox.com/Data/Sites/18/docs/ROBO-STOX_Holdings_Summary.pdf', target: '_blank' %>
+            </div>
           </div>
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <div class="us-banner-bottom-text">Deletions &amp; Additions</div>
+            <div class="us-banner-bottom-text">
+              <%= link_to 'Deletions & Additions', 'http://www.robostox.com/Data/Sites/18/docs/index_additions_and_deletions_history.pdf', target: '_blank' %>
+            </div>
           </div>
         </div>
       </div>
@@ -40,7 +46,6 @@
           <div class="sub-title">Content about the mission statement of Robo-Global where we will say things about how it is the future etc</div>
         </div>
       </div>
-      <div class="tipping-points"><%= image_tag("tipping-points.jpg", :alt => "tipping-points") %></div>
     </div>
     <div class="automation-wrapper">
       <div class="row">
@@ -210,10 +215,6 @@
           <p>At the quarterly rebalance, the index is comprised of bellwether (40%) and non-bellwether (60%) stocks, with bellwether stocks having approximately double the weight of non-bellwether stocks. Bellwether stocks are companies which derive the majority of their revenues from robotics and automation or are a market share leader. Whereas non-bellwether stocks are securities that have a distinct segment of their business involved in robotics and automation that is expected to drive revenues higher as such products and/or services expand</p>
         </div>
       </div>
-    </div>
-    <div class="index-perfor-section">
-      <h2>INDEX PERFORMANCE</h2>
-      <div class="index-perfor-section"><%= image_tag("index-performance.jpg", :alt => "index-performance") %></div>
     </div>
   </div>
 </div>
