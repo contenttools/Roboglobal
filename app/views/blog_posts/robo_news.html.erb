@@ -38,7 +38,7 @@
                   </div>
                 </div>
               <% end %>
-              <div class="row">
+              <div class="row show-for-large">
                 <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 pull-right">
                   <div class="pager pull-right">
                     <% if @latest_blogs.total_count > BlogPost::ROBO_NEWS_PER_PAGE_RECORDS %>
@@ -85,6 +85,16 @@
             <P>For further information please contact the team at<span> enquiries@robostox.com</span></P>
           </div>
           </div>
+      </div>
+    </div>
+    <div class="show-for-small">
+      <div class="col-xs-12 col-sm-12 col-md-10 col-lg-10 pull-right">
+        <div class="pager pull-right">
+          <% if @latest_blogs.total_count > BlogPost::ROBO_NEWS_PER_PAGE_RECORDS %>
+            <span class="pagi-title">Pages</span>
+          <% end %>
+          <%= paginate @latest_blogs %>
+        </div>
       </div>
     </div>
   </div>

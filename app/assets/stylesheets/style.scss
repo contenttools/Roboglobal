@@ -1803,6 +1803,9 @@ a.post-tags:hover {
 .pagination {
   margin: 0px;
 }
+.show-for-small {
+  display: none;
+}
 @media screen and (min-width: 320px) and (max-width: 1200px) {
   .footer-nav ul li {
     margin-right: 0px;
@@ -2028,7 +2031,6 @@ a.post-tags:hover {
   ul.tech-tabs li {
     margin-bottom: 25px;
   }
-
   .legal-info-section {
     padding: 50px 0px 60px 0px;
   }
@@ -2087,7 +2089,7 @@ a.post-tags:hover {
     background: white;
     border-bottom: 1px solid #ccc;
   }
-    .navbar-default .navbar-nav > li > a {
+  .navbar-default .navbar-nav > li > a {
     color: black;
   }
   .navbar-default .navbar-toggle {
@@ -2133,6 +2135,22 @@ a.post-tags:hover {
   }
   .news-wrapper {
     padding: 0;
+  }
+  .blog-news-post,
+  .blog-news-des {
+    display: none;
+  }
+  .blog-news-section {
+    padding-bottom: 0px;
+  }
+  .blog-news-right {
+    padding-top: 0px;
+  }
+  .show-for-small {
+    display: block;
+  }
+  .show-for-large {
+    display: none;
   }
 }/*End 767*/
 
@@ -2190,6 +2208,8 @@ a.post-tags:hover {
   }
   .main-banner {
     min-height: 160px;
+    background-position: center;
+    background-size: cover;
   }
   .home-main {
     min-height: 210px;
