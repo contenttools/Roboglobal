@@ -1302,10 +1302,29 @@ ul.app-tabs li.consumer:hover, ul.app-tabs li.consumer.active {
 .robo-about-top p {
   font-size: 18px;
 }
-.about-banner,
-.legal-banner,
-.news-banner {
+.legal-banner  {
   background: image-url("about-banner.jpg") no-repeat center top;
+  width: 100%;
+  float: left;
+  height: 300px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+.about-banner {
+  background: image-url("team-banner.jpg") no-repeat center;
+  width: 100%;
+  float: left;
+  height: 300px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.news-banner {
+  background: image-url("news-banner.jpg") no-repeat center;
   width: 100%;
   float: left;
   height: 300px;
@@ -1933,7 +1952,7 @@ a.post-tags:hover {
     -o-background-size: cover;
     background-size: cover;
   }
-  .legal-banner, .about-banner, .legal-banner {
+  .legal-banner {
     background: image-url("mobile-banner.jpg") no-repeat center top;
     width: 100%;
     float: left;
@@ -1943,8 +1962,8 @@ a.post-tags:hover {
     -o-background-size: cover;
     background-size: cover;
   }
-  .news-banner {
-    background: image-url("mobile-banner.jpg") no-repeat center top;
+  .news-banner,
+  .about-banner {
     width: 100%;
     float: left;
     height: 210px;
@@ -2174,7 +2193,6 @@ a.post-tags:hover {
   }
   .home-main {
     min-height: 210px;
-    background: image-url("index-banner.jpg") no-repeat center -72px;
     background-size: cover;
   }
   .text-container {
