@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'documents/download_file'
+
   resources :contacts, only: :create
 
   namespace :admin do

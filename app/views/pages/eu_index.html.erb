@@ -20,23 +20,23 @@
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-centered">
         <div class="row">
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <%= link_to 'http://www.robostox.com/Data/Sites/18/docs/RoboStox_Fact_Sheet.pdf', target: '_blank' do %>
+            <%= link_to documents_download_file_path(file_name: 'fact_sheet'), target: '_blank' do %>
               <div class="us-banner-bottom-text">
                 Fact Sheet
               </div>
             <% end %>
           </div>
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <%= link_to 'http://www.robostox.com/Data/Sites/18/docs/ROBO-STOX_Holdings_Summary.pdf', target: '_blank' do %>
+            <%= link_to documents_download_file_path(file_name: 'holdings'), target: '_blank' do %>
               <div class="us-banner-bottom-text">
                 Index Holdings
               </div>
             <% end %>
           </div>
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <%= link_to 'http://www.robostox.com/Data/Sites/18/docs/index_additions_and_deletions_history.pdf', target: '_blank' do %>
+            <%= link_to documents_download_file_path(file_name: 'classifications'), target: '_blank' do %>
               <div class="us-banner-bottom-text">
-                Deletions &amp; Additions
+                Classification
               </div>
             <% end %>
           </div>
