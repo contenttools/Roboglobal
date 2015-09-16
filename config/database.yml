@@ -52,3 +52,9 @@ production:
   database: robostox_production
   username: root
   password: 
+
+staging:
+  <<: *default
+  database: robostox_staging
+  username: root
+  password: 
