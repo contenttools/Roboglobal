@@ -20,23 +20,23 @@
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-centered">
         <div class="row">
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <%= link_to documents_download_file_path(file_name: 'fact_sheet') do %>
+            <%= link_to 'http://www.robostox.com/Data/Sites/18/docs/RoboStox_Fact_Sheet.pdf', target: '_blank' do %>
               <div class="us-banner-bottom-text">
                 Fact Sheet
               </div>
             <% end %>
           </div>
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <%= link_to documents_download_file_path(file_name: 'holdings') do %>
+            <%= link_to 'http://www.robostox.com/Data/Sites/18/docs/ROBO-STOX_Holdings_Summary.pdf', target: '_blank' do %>
               <div class="us-banner-bottom-text">
                 Index Holdings
               </div>
             <% end %>
           </div>
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <%= link_to documents_download_file_path(file_name: 'classifications') do %>
+            <%= link_to 'http://www.robostox.com/Data/Sites/18/docs/index_additions_and_deletions_history.pdf', target: '_blank' do %>
               <div class="us-banner-bottom-text">
-                Classification
+                Deletions &amp; Additions
               </div>
             <% end %>
           </div>
@@ -201,29 +201,29 @@
           </div>
           <div class="composition-img">
             <div class="row padding-bottom-20">
-              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+              <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                 <%= image_tag("Breakdown-Sectors.png", :alt => "Breakdown Sectors") %>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <%= image_tag("Geographic-Breakdown.png", :alt => "Geographic Breakdown") %>
-              </div>
-            </div>
-            <div class="row padding-top-20">
-              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 margin-top-36">
-                <%= image_tag("Market-Capitalization-Breakdown.png", :alt => "Market Capitalization Breakdown") %>
-              </div>
-              <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-                <%= image_tag("Pie-Chart-Layout.png", :alt => "Pie Chart Layout") %>
+                <div class="padding-top-50">
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                      <%= image_tag("Geographic-Breakdown.png", :alt => "Geographic Breakdown") %>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                      <%= image_tag("Market-Capitalization-Breakdown.png", :alt => "Market Capitalization Breakdown") %>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+    </div>
     <div class="holding-metho-section">
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <h2>Holding Methodology</h2>
         <div class="portfolio-des">
-          <p>The Index is made up of “bellwether” (40%) and “non-bellwether” (60%) companies. Bellwether companies (BWs) are well established leading players, whose core business is directly related to robotics & automation. Non-bellwether companies (NBWs) have a distinct portion of their business and revenue in robotics & automation and have the potential to grow through innovation and/or market adoption of their products and/or services. Within BW and NBW each constituent is equally weighted. This approach avoids the large capitalisation and “buy high, sell low” biases of market capitalization indices and ensures that the Index provides exposure to companies in the early stages of new innovation and technologies as well as the more established players. The 40/60 weighting results in each BW having roughly twice the weight of each NBW. Index constituents are initially selected from the ROBO Global Classification in accordance with predetermined rules and objective criteria including minimum market capitalization and average daily value traded. At each quarterly rebalance the Index constituents are reweighted and any additions or deletions are made as determined by the Advisory Index Committee at ROBO Global®. </p>
+          <p>The Index is made up of “bellwether” (40%) and “non-bellwether” (60%) companies. Bellwether companies (BWs) are well established leading players, whose core business is directly related to robotics & automation. Non-bellwether companies (NBWs) have a distinct portion of their business and revenue in robotics & automation and have the potential to grow through innovation and/or market adoption of their products and/or services. Within BW and NBW each constituent is equally weighted. This approach avoids the large capitalisation and “buy high, sell low” biases of market capitalization indices and ensures that the Index provides exposure to companies in the early stages of new innovation and technologies as well as the more established players. The 40/60 weighting results in each BW having roughly twice the weight of each NBW. Index constituents are initially selected from the ROBO Global Classification in accordance with predetermined rules and objective criteria including minimum market capitalization and average daily value traded. At each quarterly rebalance the Index constituents are reweighted and any additions or deletions are made as determined by the Advisory Index Committee at ROBO Global®.</p>
         </div>
       </div>
     </div>
