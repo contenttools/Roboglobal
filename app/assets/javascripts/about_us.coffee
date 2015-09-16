@@ -9,11 +9,13 @@ bind_map = ->
     markers = handler.addMarkers([ {
       'lat': 32.7933870
       'lng': -96.8046520
-      'zoom': 8
-    } ])
+    },{
+      'lat': 51.527731
+      'lng': -0.090011
+      } ])
     handler.bounds.extendWith markers
     handler.fitMapToBounds()
-    handler.getMap().setZoom(17);
+    handler.getMap().setZoom(3);
 
 
 (($) ->

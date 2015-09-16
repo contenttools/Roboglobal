@@ -2,8 +2,8 @@
 <div class="news-banner home-main">
   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-centered">
     <div class="blog-heading-container">
-      <h1>ROBO-NEWS</h1>
-      <div class="punch-line">Delivering Cutting Edge Industry Insight and Competitive Intelligence</div>
+      <h1>ROBO NEWS</h1>
+      <div class="punch-line">INSIDE THE WORLD OF ROBOTICS</div>
     </div>
   </div>
 </div>
@@ -18,8 +18,8 @@
               <%= raw @video %>
             </div>
             <div class="latest-article-section">
-              <h2>LATEST RESEARCH ARTICLES</h2>
-              <div class="sub-heading">This is jsut a dummy tect to have  demo for the sub heading here that will have some value  for the overall website info </div>
+              <h2>LATEST NEWS AND DEVELOPMENTS</h2>
+              <div class="sub-heading">In the constantly evolving space of robotics and automation, ROBO brings you the need to know news. </div>
               <% if @latest_blogs.length == 0 %>
                 <h3>No Blog posts match searched criteria.</h3>
               <% end %>
@@ -63,14 +63,6 @@
         </div>
         <div class="tweets-section">
           <%= raw @twitter_feed %>
-        </div>
-        <div class="archive-section">
-          <h4>Archives</h4>
-          <ul>
-            <% @archives.each do |archive| %>
-              <li><%= show_archive(archive) %></li>
-            <% end %>
-          </ul>
         </div>
         <div class="post-subscribe blog-news-subscribe">
           <div class="sub-wrapper">
