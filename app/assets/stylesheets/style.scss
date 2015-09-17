@@ -284,18 +284,13 @@ nav.white-header {
   text-transform: capitalize;
 }
 .graph-container {
-  position: relative;
+  padding-top: 50px;
 }
 .graph-container img {
   max-width: 100%;
   width: 100%;
   display: block;
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
   margin: auto;
-  top: 500px;
 }
 /* ==========================================================================
    Footer
@@ -313,10 +308,11 @@ nav.white-header {
 }
 .footer-logo {
   float: left;
+  width: 120px;
 }
 .logo-container {
   float: left;
-  padding-top: 50px;
+  padding-top: 40px;
 }
 .s-icons {
   float: right;
@@ -558,8 +554,6 @@ div#map {
 .tab-img {
   margin-top: 50px;
   float: left;
-  height: 300px;
-  overflow: hidden;
 }
 .tabs-title {
   padding-bottom: 15px;
@@ -1944,12 +1938,9 @@ a.post-tags:hover {
     margin-right: 15px;
     max-width: 14%;
   }
-}
-
-@media screen and (min-width: 320px) and (max-width: 767px) {
-  .brand-section img {
-    margin-right: 10px;
-    max-width: 10%;
+   .logo-container {
+    padding-top: 10px;
+    padding-right: 10px;
   }
 }
 
@@ -2176,6 +2167,16 @@ a.post-tags:hover {
   .protfolio-section {
     padding: 0px;
   }
+  .get-touch-section {
+    margin-bottom: 0px;
+  }
+  .get-touch-right {
+    margin-bottom: 20px;
+  }
+  .brand-section img {
+    margin-right: 10px;
+    max-width: 10%;
+  }
 }/*End 767*/
 
 
@@ -2289,10 +2290,12 @@ a.post-tags:hover {
     padding: 3px;
     font-size: 9px;
   }
-  .logo-container,
   .footer-nav {
     padding-top: 20px;
   }
+  .logo-container {
+      padding-top: 12px;
+    }
   .footer-social-icon {
     padding-left: 0px;
     float: right;
@@ -2315,7 +2318,7 @@ a.post-tags:hover {
     left: 206px;
   }
   .footer-logo {
-    width: 150px;
+    width: 100px;
   }
   #footer,
   .footer-inner {
@@ -2372,6 +2375,7 @@ a.post-tags:hover {
   .about-des-wrapper {
     height: 367px;
   }
+
 }
 
 @media screen and (min-width: 320px) and (max-width: 640px) {
@@ -2383,12 +2387,6 @@ a.post-tags:hover {
   }
   .robo-about-top {
     padding: 70px 0px 20px 0px;
-  }
-  .get-touch-section {
-    margin-bottom: 0px;
-  }
-  .get-touch-right {
-    margin-bottom: 20px;
   }
   .post-wrapper .post-inner {
     width: 70%;
