@@ -65,4 +65,16 @@ module ApplicationHelper
   def legal_active
     'active' if request.env['PATH_INFO'] == legal_information_path
   end
+
+  def linkedin_link(url)
+    link_to url, target: '_blank' do
+      image_tag("linkedin.png", :alt => "linkedin")
+    end
+  end
+
+  def mail_to_link(email)
+    mail_to email do
+      image_tag("msg.png", :alt => "msg")
+    end
+  end
 end
