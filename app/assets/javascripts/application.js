@@ -14,6 +14,7 @@
 //= require bootstrap-sprockets
 //= require jquery_ujs
 //= require jquery.remotipart
+//= require highstock
 //= require ckeditor/init
 //= require bootstrap-datepicker
 //= require colorbox-rails
