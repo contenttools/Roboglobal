@@ -48,6 +48,8 @@ gem 'gmaps4rails'
 gem 'mapbox-rails'
 gem 'whenever', require: false
 gem "spreadsheet"
+gem "highstocks-rails"
+gem "rubyXL"
 
 group :development, :test do
   # Call 'debugger' anywhere in the code to stop execution and get a debugger console

@@ -84,6 +84,8 @@ GEM
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     gmaps4rails (2.1.2)
+    highstocks-rails (2.1.5)
+      railties (>= 3.1)
     i18n (0.7.0)
     jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
@@ -152,6 +154,10 @@ GEM
     responders (2.1.0)
       railties (>= 4.2.0, < 5)
     ruby-ole (1.2.11.8)
+    rubyXL (3.3.12)
+      nokogiri (>= 1.4.4)
+      rubyzip (>= 1.1.6)
+    rubyzip (1.1.7)
     sass (3.4.16)
     sass-rails (5.0.3)
       railties (>= 4.0.0, < 5.0)
@@ -206,6 +212,7 @@ DEPENDENCIES
   font-awesome-sass (~> 4.4.0)
   friendly_id
   gmaps4rails
+  highstocks-rails
   jbuilder (~> 2.0)
   jquery-rails
   kaminari
@@ -215,6 +222,7 @@ DEPENDENCIES
   paperclip (~> 4.3)
   rails (= 4.2.0)
   remotipart (~> 1.2)
+  rubyXL
   sass-rails (~> 5.0)
   sdoc (~> 0.4.0)
   spreadsheet

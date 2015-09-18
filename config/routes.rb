@@ -1,6 +1,7 @@
 Rails.application.routes.draw do
 
   get 'documents/download_file'
+  get 'index_records/stock_chart_data'
 
   resources :contacts, only: :create
 
