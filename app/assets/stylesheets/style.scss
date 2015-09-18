@@ -1,4 +1,4 @@
-sea {
+a {
     -webkit-transition: all .25s ease;
   -moz-transition: all .25s ease;
   -ms-transition: all .25s ease;
@@ -284,7 +284,7 @@ nav.white-header {
   text-transform: capitalize;
 }
 .graph-container {
-  padding-top: 50px;
+  padding-top: 35px;
 }
 .graph-container img {
   max-width: 100%;
@@ -1811,6 +1811,9 @@ a.post-tags:hover {
 }
 .show-for-small {
   display: none;
+}
+.font-size-18 {
+  font-size: 18px !important;
 }
 @media screen and (min-width: 320px) and (max-width: 1200px) {
   .footer-nav ul li {
