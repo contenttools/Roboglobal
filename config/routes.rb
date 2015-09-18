@@ -30,11 +30,10 @@ Rails.application.routes.draw do
   devise_for :users
 
   get 'about-us' => 'pages#about_us'
-
   get 'legal-information' => 'pages#legal_information'
-
   get 'us-index' => 'pages#us_index'
   get 'eu-index' => 'pages#eu_index'
+  get 'stock-picking-challenge' => 'pages#stock_picking_challenge'
 
   get 'robo-news' => 'blog_posts#robo_news'
 

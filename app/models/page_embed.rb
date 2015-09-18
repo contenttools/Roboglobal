@@ -18,4 +18,8 @@ class PageEmbed < ActiveRecord::Base
   def self.robo_news_twitter_feed
     where(role: 'twitter_widget').first.embed_code
   end
+
+  def self.stock_picking_challenge
+    where(role: 'stock_picking_challenge').first.embed_code
+  end
 end
