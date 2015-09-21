@@ -2469,3 +2469,41 @@ a.post-tags:hover {
     width: 76%;
   }
 }
+/*MAP Styling*/
+#menu-ui {
+  width: 360px;
+  background: black;
+  top: 0px;
+  right: 0px;
+  min-height: 600px;
+}
+#menu-ui a {
+  background: transparent;
+  float: left;
+  width: 100%;
+  text-align: left;
+  padding-left: 100px;
+  font-size: 16px;
+}
+#menu-ui h2 {
+  color: white;
+}
+#menu-ui a:nth-child(2) {
+  background: image-url("1.jpg") no-repeat 68px 11px;
+}
+
+#menu-ui a:nth-child(3) {
+  background: image-url("2.jpg") no-repeat 68px 11px;
+}
+#menu-ui a:nth-child(4) {
+  background: image-url("3.jpg") no-repeat 68px 11px;
+}
+#menu-ui a:nth-child(5) {
+  background: image-url("4.jpg") no-repeat 68px 11px;
+}
+#menu-ui a:nth-child(6) {
+  background: image-url("5.jpg") no-repeat 68px 11px;
+}
+#menu-ui a:nth-child(7) {
+  background: image-url("1.jpg") no-repeat 68px 11px;
+}
