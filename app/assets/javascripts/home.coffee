@@ -112,5 +112,5 @@ bind_our_sector_hover = ->
     bind_scroll_bar()
     bind_our_sector_content()
     bind_our_sector_hover()
-    #bind_map_box()
+    bind_map_box()
 ).call(this)

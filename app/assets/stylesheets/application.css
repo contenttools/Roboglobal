@@ -11,6 +11,7 @@
  * file per style scope.
  *
  *= require bootstrap-datepicker3
+ *= require mapbox
  *= require colorbox-rails
  *= require_tree .
  *= require_self

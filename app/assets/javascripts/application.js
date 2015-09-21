@@ -16,6 +16,7 @@
 //= require jquery.remotipart
 //= require highstock
 //= require ckeditor/init
+//= require mapbox.js
 //= require bootstrap-datepicker
 //= require colorbox-rails
 //= require underscore
