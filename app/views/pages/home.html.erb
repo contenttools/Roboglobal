@@ -110,15 +110,15 @@
 <div class="sector-section">
   <div class="container">
     <div class="row">
-      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-10 col-centered">
+      <div class="col-xs-12 col-sm-10 col-md-10 col-lg-10 col-centered">
         <h2>BEHIND THE MACHINES</h2>
       </div>
       <div class="clearfix"></div>
-      <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-centered">
+      <div class="col-xs-12 col-sm-8 col-md-8 col-lg-8 col-centered">
         <div class="sub-title">The ROBO industry classification system for identifying robotics and automation companies currently has 13 sub-sectors which fall under either Technology or Applications.</div>
       </div>
     </div>
-    <div class="sector-inner">
+    <div class="sector-inner hide-for-small">
       <div class="col-xs-7 col-sm-7 col-md-8 col-lg-7">
         <div id="sectors">
           <%= link_to 'javascript:;', class: "sensing sector-circule sector-effect" do %>
@@ -275,6 +275,181 @@
           <div class="clearfix"></div>
           <%= link_to "Read More", "#" %>
         </div>
+      </div>
+    </div><!-- sector-inner -->
+    <div class="bs-example hide-for-large show-for-small accrodian">
+      <div class="panel-group" id="accordion">
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne"><h3>Sensing</h3></a>
+            </h4>
+          </div>
+          <div id="collapseOne" class="panel-collapse collapse in">
+            <div class="panel-body">
+              <p>In order for a system to exhibit autonomy, it must be able to sense its environment, in addition to determining its own internal state.&nbsp; For human&nbsp;beings, these are called exteroception and proprioception.&nbsp;&nbsp; Sensing is important for the same reasons that our exteroceptive senses (sight, sound, etc.), and our proprioceptive senses (ability to know where our limbs are and what they are doing without directly observing them) are important for human beings.&nbsp; For robotic systems, however, we are not limited to the standard senses. Almost anything that can be measured can be made into a sensor.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo"><h3>Processing</h3></a>
+            </h4>
+          </div>
+          <div id="collapseTwo" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p>Autonomous systems must make decisions at various levels ranging from basic motion control to determining the state of the environment they are operating in and optimally planning actions.&nbsp; Part of this processing is not only making sense of the information received from sensors, but also planning actions in order to achieve a desired objective.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><h3>Actuation</h3></a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p>Actuation is the means by which machines interact with the physical world.&nbsp; For human beings, this mainly refers to our limbs, and in particular, our hands. However, machines are not limited to manipulation.&nbsp; Almost anything that has an effect on the physical world can be made into an actuator. &nbsp;Actuation techniques include electric, hydraulic (compressed fluid), mechanical, and pneumatic (compressed air).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><h3>Computing</h3></a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p>The path from sensing, to processing, to actuation, requires computation.&nbsp; It is analogous to our brain, and is what allows the processing of information to produce actuation.&nbsp; Computing can vary from embedded systems smaller than a fingernail to server-farms implementing sophisticated algorithms.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><h3>Integration</h3></a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p>An autonomous system is made up of many components (sensors, actuators, and computational units), which can be distributed over large spaces.&nbsp; Integration consists of architecting a system – figuring out how to put all of these components together – to achieve the desired objective in a robust, high performance, and cost-efficient way.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><h3>Manufacturing</h3></a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p>Broadly speaking, this is the main way in which companies take raw materials through a manufacturing process to create products.&nbsp; It is also the earliest successful application for robotics and automation – for example, automobile assembly - and continues to be one of its largest growth areas.</p>
+            </div>
+          </div>
+        </div>
+
+         <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><h3>3D Printing</h3></a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p>Traditionally, products are built either by assembling separate parts, or by removing material from a larger work-piece.&nbsp;&nbsp; 3D printing, also called additive manufacturing, adds yet another capability by depositing different types of materials where they are needed.&nbsp;&nbsp; One of its main benefits is the potential for customization that is not economically feasible with traditional techniques.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><h3>Logistics Automation</h3></a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p>The manufacturing of items is incomplete without the material handling and distribution channels that bring the objects to their intended users.&nbsp; The many economic advantages to speedy and error-free distribution, such as operating with low-inventory and being&nbsp;responsive to customer demands, is a significant growth area for robotics and automation. This is continually reducing the costs for end-users, both businesses and consumers.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><h3>Agriculture</h3></a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p>Feeding and sustaining the world continues to be one of our most important economic activities.&nbsp; A new generation of autonomous systems is bringing precision and the elimination of rote labor to this domain.&nbsp; For example, precision agriculture offers to greatly reduce costs and our environmental footprint by applying water and fertilizer on an as-needed basis.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><h3>Miliatry/Security</h3></a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p>Removing people from harm’s way has always been a main driver for robotics research.&nbsp; Up until recently, it has been difficult for machines to duplicate a human’s flexibility and cognitive skills.&nbsp;&nbsp;However, with today’s technologies, unmanned aircraft and ground vehicles are now capable of detecting hazardous materials, disposing of bombs, operating in space and performing critical national defense functions (surveillance).</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><h3>Energy</h3></a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p>Exploration, extraction, and the maintenance of the energy infrastructure require extensive and growing resources.&nbsp; Robotics and automation continues to expand from structured</p>
+              <p>environments, such as warehouses and factories, to unstructured ones, such as outdoors, underground, and underwater. The energy sector will reap the rewards of this transition with lower operational costs.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><h3>Healthcare</h3></a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p>As global healthcare costs continue to rise, robotics and automation is poised to provide a countering force to this trend.&nbsp;&nbsp;Through rehabilitation, diagnostics, exoskeletons and elderly care, using robotics and autonomous systems promises to drastically reduce costs, while improving quality of life. In addition, robotics and automation can transcend cost-cutting by using robots for difficult surgeries and neurological treatments that were previously unfeasible.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+            <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree"><h3>Consumer Products</h3></a>
+            </h4>
+          </div>
+          <div id="collapseThree" class="panel-collapse collapse">
+            <div class="panel-body">
+              <p>From interactive robots for entertainment to automating household chores, consumer companies work to make everyday lives easier and more enjoyable. The Internet of Things promises to usher in a new era of interconnectivity.&nbsp; By communicating through the existing internet infrastructure, devices will no longer be isolated islands of limited capabilities.&nbsp; This impact will be particularly pronounced for these types of consumer products, which need to be inexpensive for wide adoption.&nbsp;&nbsp; Through the internet, consumer robotics will finally become broadly affordable to individuals.</p>
+            </div>
+          </div>
+        </div>
+
+
       </div>
     </div>
   </div>
