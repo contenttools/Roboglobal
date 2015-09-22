@@ -1820,9 +1820,6 @@ a.post-tags:hover {
   .footer-nav ul li {
     margin-right: 0px;
   }
-  .sector-section {
-    display: none;
-  }
   .us-banner-bottom-text {
     font-size: 12px;
     font-weight: 600;
@@ -2228,9 +2225,6 @@ a.post-tags:hover {
   .navbar-toggle {
     margin-top: 9px;
   }
-  .sector-section {
-    display: none;
-  }
   .automation-tech-section h2, .map-section h2, .blog-section h2, .team-section h2, .featured-in-section h2, .heighlights-section h2, .sector-section h2 {
     font-size: 21px;
     line-height: 30px;
@@ -2370,6 +2364,115 @@ a.post-tags:hover {
 @media screen and (min-width: 992px) and (max-width: 1200px) {
   .about-team-img {
     margin-left: 0px;
+  }
+}
+
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .overlay,
+  #sectors a {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1100px) {
+  #sectors {
+    margin-left: 25px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 992px) {
+  .overlay,
+  #sectors a {
+    height: 80px;
+    width: 80px;
+  }
+.sensing {
+  top: 424px;
+  left: 102px;
+}
+.processing {
+  top: 401px;
+  left: 14px;
+}
+.actuation {
+  top: 343px;
+  left: -60px;
+}
+.computing {
+  top: 258px;
+  left: -98px;
+}
+.integration {
+  top: 166px;
+  left: -97px;
+}
+.manufacturing {
+  top: 84px;
+  left: -59px;
+}
+.printing {
+  top: 25px;
+  left: 15px;
+}
+.logistics {
+  top: 4px;
+  left: 109px;
+}
+.agriculture {
+  top: 25px;
+  right: 110px;
+}
+.military {
+  top: 87px;
+  right: 36px
+}
+.energy {
+  top: 175px;
+  right: -1px
+}
+.healthcare {
+  top: 272px;
+  right: 1px;
+}
+.consumer {
+  top: 357px;
+  left: 261px;
+  }
+  .circule-logo {
+    top: 169px;
+    left: 79px;
+  }
+  .news-section h3 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  span.text {
+      color: white;
+      font-size: 12px;
+      position: absolute;
+      display: block;
+      top: 35px;
+      width: 100%;
+      text-align: center;
+      line-height: 12px;
+    }
+}
+@media screen and (min-width: 767px) and (max-width: 912px) {
+  #sectors {
+    margin-left: 70px;
+  }
+  .for-tablet {
+    position: relative;
+    left: 65px;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 767px) {
+  .sector-section {
+    display: none;
   }
 }
 
