@@ -18,12 +18,22 @@ bind_scroll_bar = ->
     else
       $('.navbar-fixed-top').removeClass('white-header')
 
+bind_enable_scroll = ->
+  $('.map-img').click ->
+    map.scrollWheelZoom.enable()
+
+bind_disable_scroll = ->
+  $('.map-img').mouseleave ->
+    map.scrollWheelZoom.disable()
+
 bind_map_box = ->
   L.mapbox.accessToken = 'pk.eyJ1IjoiY29udGVudHRvb2xzIiwiYSI6ImRjNzE0OTlkYjk2NGJkZWEwMTZmY2QwMTJlYjdjMGI1In0.qKp5IAUQySQHQoT8JBd3ew';
-  map = L.mapbox.map('map', 'examples.map-y7l23tes').setView([
+  @map = L.mapbox.map('map', 'examples.map-y7l23tes').setView([
     47.256595
     8.685179
   ], 4)
+
+  map.scrollWheelZoom.disable()
   layers = document.getElementById('menu-ui')
 
   addLayer = (layer, name, zIndex) ->
@@ -114,4 +124,6 @@ bind_our_sector_hover = ->
     bind_our_sector_content()
     bind_our_sector_hover()
     bind_map_box()
+    bind_enable_scroll()
+    bind_disable_scroll()
 ).call(this)
