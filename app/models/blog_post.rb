@@ -46,10 +46,12 @@ class BlogPost < ActiveRecord::Base
     keywords = self.tags.join(", ")
     seo_options = {
       title:       self.title,
-      image:       self.attachment.image.url(:medium),
       description: self.description,
       keywords:    keywords,
     }
+
+    seo_options[:image] = self.attachment.image.url(:medium) if self.attachment.present?
+    seo_options
   end
 
   def self.index_seo_options
