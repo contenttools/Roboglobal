@@ -105,6 +105,9 @@ nav.white-header {
   background: #23d74d;
   color: white;
 }
+.about-btn-shell li {
+  list-style: none;
+}
 .navbar-default .navbar-nav > li > a:focus {
   color: #000;
 }
@@ -117,7 +120,8 @@ nav.white-header {
 .nav > li {
 	margin-right: 20px;
 }
-.main-navigation .dropdown-menu {
+.main-navigation .dropdown-menu,
+.about-btn-shell .dropdown-menu  {
 	background: #23d74d;
 	border-radius: 5px;
 	color: white;
@@ -125,9 +129,13 @@ nav.white-header {
 	min-width: 300px;
 	top: 44px;
 }
-.main-navigation .dropdown-menu > li > a {
+.about-btn-shell .dropdown-menu {
+  top: 57px;
+}
+.main-navigation .dropdown-menu > li > a,
+.about-btn-shell .dropdown-menu > li > a {
 	color: #777;
-  text-align: right;
+  text-align: left;
   font-size: 13px;
 }
 .navbar-nav > li > .dropdown-menu {
@@ -136,11 +144,13 @@ nav.white-header {
 .main-navigation .dropdown-menu .divider {
 	display: none;
 }
-.main-navigation .dropdown-menu>li>a:hover, .main-navigation .dropdown-menu>li>a:focus {
+.main-navigation .dropdown-menu>li>a:hover, .main-navigation .dropdown-menu>li>a:focus,
+.about-btn-shell .dropdown-menu>li>a:hover, .about-btn-shell .dropdown-menu>li>a:focus {
   background-color: transparent;
   color: white;
 }
-.main-navigation.navbar-nav > li > .dropdown-menu:after {
+.main-navigation.navbar-nav > li > .dropdown-menu:after,
+.about-btn-shell > li > .dropdown-menu:after {
   content: "";
   position: absolute;
   width: 0;
@@ -150,6 +160,9 @@ nav.white-header {
   border-color: transparent transparent #23d74d transparent;
   top: -16px;
   left: 337px;
+}
+.about-btn-shell > li > .dropdown-menu:after {
+  left: 70px;
 }
 .blue_x {
   display: none !important;
