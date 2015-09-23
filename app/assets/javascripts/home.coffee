@@ -31,7 +31,7 @@ bind_map_box = ->
   @map = L.mapbox.map('map', 'examples.map-y7l23tes').setView([
     47.256595
     8.685179
-  ], 4)
+  ], 2)
 
   map.scrollWheelZoom.disable()
   layers = document.getElementById('menu-ui')
