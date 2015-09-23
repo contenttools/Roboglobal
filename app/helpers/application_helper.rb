@@ -45,7 +45,7 @@ module ApplicationHelper
 
   def headers
     html = ''
-    header_content = [['ROBO News', robo_news_path], ['US Index', us_index_path], ['EU Index', eu_index_path], ['About Us', about_us_path]]
+    header_content = [['Home', root_path], ['ROBO News', robo_news_path], ['US Index', us_index_path], ['EU Index', eu_index_path], ['About Us', about_us_path]]
     header_content.each do |header|
       html += content_tag :li, class: active_header_tab(header[1]) do
         link_to header[0], header[1]
