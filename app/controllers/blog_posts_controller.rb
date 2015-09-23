@@ -17,6 +17,8 @@ class BlogPostsController < ApplicationController
     @archives = BlogPost.archives_list
     @popular_blogs = BlogPost.includes(:attachment, :pdf_attachment).last_month.views_ordered.published_ordered.first("6")
     @next_blog, @previous_blog = @blog_post.next_and_previous_blogs
+
+    prepare_meta_tags(@blog_post.blog_seo_options)
   end
 
   # GET /blog_posts/new
@@ -113,6 +115,8 @@ class BlogPostsController < ApplicationController
     @latest_blogs = BlogPost.latest_blogs(params, @token)
     @video = PageEmbed.robo_news_embed_video
     @twitter_feed = PageEmbed.robo_news_twitter_feed
+
+    prepare_meta_tags(BlogPost.index_seo_options)
   end
 
   private

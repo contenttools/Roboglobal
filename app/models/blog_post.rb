@@ -42,6 +42,23 @@ class BlogPost < ActiveRecord::Base
     title_changed?
   end
 
+  def blog_seo_options
+    keywords = self.tags.join(", ")
+    seo_options = {
+      title:       self.title,
+      image:       self.attachment.image.url(:medium),
+      description: self.description,
+      keywords:    keywords,
+    }
+  end
+
+  def self.index_seo_options
+    seo_options = {
+      site:        "ROBO Global",
+      title:       "ROBO Global",
+    }
+  end
+
   def next_and_previous_blogs
     next_blog = nil
     previous_blog = nil

@@ -301,6 +301,7 @@ nav.white-header {
   float: left;
   min-height: 250px;
   clear: both;
+  margin-top: 25px;
 }
 .footer-inner {
   background: image-url("footer-bg.jpg") no-repeat 200px -1px;
@@ -1815,12 +1816,50 @@ a.post-tags:hover {
 .font-size-18 {
   font-size: 18px !important;
 }
+.hide-for-large {
+  display: none;
+}
+/*MAP Styling*/
+#menu-ui {
+  width: 360px;
+  background: black;
+  top: 0px;
+  right: 0px;
+  min-height: 600px;
+}
+#menu-ui a {
+  background: transparent;
+  float: left;
+  width: 100%;
+  text-align: left;
+  padding-left: 100px;
+  font-size: 16px;
+}
+#menu-ui h2 {
+  color: white;
+}
+#menu-ui a:nth-child(2) {
+  background: image-url("1.jpg") no-repeat 68px 11px;
+}
+#menu-ui a:nth-child(3) {
+  background: image-url("2.jpg") no-repeat 68px 11px;
+}
+#menu-ui a:nth-child(4) {
+  background: image-url("3.jpg") no-repeat 68px 11px;
+}
+#menu-ui a:nth-child(5) {
+  background: image-url("4.jpg") no-repeat 68px 11px;
+}
+#menu-ui a:nth-child(6) {
+  background: image-url("5.jpg") no-repeat 68px 11px;
+}
+#menu-ui a:nth-child(7) {
+  background: image-url("1.jpg") no-repeat 68px 11px;
+}
+
 @media screen and (min-width: 320px) and (max-width: 1200px) {
   .footer-nav ul li {
     margin-right: 0px;
-  }
-  .sector-section {
-    display: none;
   }
   .us-banner-bottom-text {
     font-size: 12px;
@@ -2227,9 +2266,6 @@ a.post-tags:hover {
   .navbar-toggle {
     margin-top: 9px;
   }
-  .sector-section {
-    display: none;
-  }
   .automation-tech-section h2, .map-section h2, .blog-section h2, .team-section h2, .featured-in-section h2, .heighlights-section h2, .sector-section h2 {
     font-size: 21px;
     line-height: 30px;
@@ -2372,6 +2408,124 @@ a.post-tags:hover {
   }
 }
 
+@media screen and (min-width: 992px) and (max-width: 1200px) {
+  .overlay,
+  #sectors a {
+    height: 80px;
+    width: 80px;
+  }
+}
+
+@media screen and (min-width: 993px) and (max-width: 1100px) {
+  #sectors {
+    margin-left: 25px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 992px) {
+  .overlay,
+  #sectors a {
+    height: 80px;
+    width: 80px;
+  }
+.sensing {
+  top: 424px;
+  left: 102px;
+}
+.processing {
+  top: 401px;
+  left: 14px;
+}
+.actuation {
+  top: 343px;
+  left: -60px;
+}
+.computing {
+  top: 258px;
+  left: -98px;
+}
+.integration {
+  top: 166px;
+  left: -97px;
+}
+.manufacturing {
+  top: 84px;
+  left: -59px;
+}
+.printing {
+  top: 25px;
+  left: 15px;
+}
+.logistics {
+  top: 4px;
+  left: 109px;
+}
+.agriculture {
+  top: 25px;
+  right: 110px;
+}
+.military {
+  top: 87px;
+  right: 36px
+}
+.energy {
+  top: 175px;
+  right: -1px
+}
+.healthcare {
+  top: 272px;
+  right: 1px;
+}
+.consumer {
+  top: 357px;
+  left: 261px;
+  }
+  .circule-logo {
+    top: 169px;
+    left: 79px;
+  }
+  .news-section h3 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 767px) and (max-width: 1024px) {
+  span.text {
+      color: white;
+      font-size: 12px;
+      position: absolute;
+      display: block;
+      top: 35px;
+      width: 100%;
+      text-align: center;
+      line-height: 12px;
+    }
+}
+@media screen and (min-width: 767px) and (max-width: 912px) {
+  #sectors {
+    margin-left: 70px;
+  }
+  .for-tablet {
+    position: relative;
+    left: 65px;
+  }
+}
+
+@media screen and (min-width: 300px) and (max-width: 767px) {
+  .hide-for-small {
+    display: none;
+  }
+  .show-for-small {
+    display: block !important;
+  }
+  .accrodian h3 {
+    margin: 0px;
+  }
+  #menu-ui {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 767px) and (max-width: 992px) {
   .about-team-img {
     margin-left: 0px;
@@ -2384,7 +2538,6 @@ a.post-tags:hover {
   .about-des-wrapper {
     height: 367px;
   }
-
 }
 
 @media screen and (min-width: 320px) and (max-width: 640px) {
@@ -2407,6 +2560,9 @@ a.post-tags:hover {
     width: 80px;
     height: 80px;
     padding: 4px;
+  }
+  .accrodian h3 {
+    font-size: 18px;
   }
 }
 
@@ -2467,5 +2623,36 @@ a.post-tags:hover {
 @media only screen and (min-device-width: 320px) and (max-device-width: 580px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
 .advisory-wrapper .col-xs-8 {
     width: 76%;
+  }
+}
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1) {
+  #menu-ui {
+    width: 200px;
+  }
+  #menu-ui h2 {
+    font-size: 20px;
+  }
+  #menu-ui a {
+    font-size: 14px;
+    padding-left: 40px;
+  }
+  #menu-ui a:nth-child(2) {
+  background: image-url("1.jpg") no-repeat 13px 11px;
+  }
+  #menu-ui a:nth-child(3) {
+    background: image-url("2.jpg") no-repeat 13px 11px;
+  }
+  #menu-ui a:nth-child(4) {
+    background: image-url("3.jpg") no-repeat 13px 11px;
+  }
+  #menu-ui a:nth-child(5) {
+    background: image-url("4.jpg") no-repeat 13px 11px;
+  }
+  #menu-ui a:nth-child(6) {
+    background: image-url("5.jpg") no-repeat 13px 11px;
+  }
+  #menu-ui a:nth-child(7) {
+    background: image-url("1.jpg") no-repeat 13px 11px;
   }
 }
