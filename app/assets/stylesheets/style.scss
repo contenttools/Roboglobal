@@ -1856,6 +1856,9 @@ a.post-tags:hover {
 #menu-ui a:nth-child(7) {
   background: image-url("1.jpg") no-repeat 68px 11px;
 }
+.advisory-mobile {
+  display: none;
+}
 
 @media screen and (min-width: 320px) and (max-width: 1200px) {
   .footer-nav ul li {
@@ -2623,6 +2626,19 @@ a.post-tags:hover {
 @media only screen and (min-device-width: 320px) and (max-device-width: 580px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2) {
 .advisory-wrapper .col-xs-8 {
     width: 76%;
+  }
+}
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2), only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 2), only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 2), only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1), only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1), only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: portrait) and (-webkit-device-pixel-ratio: 1.5), only screen and (min-device-width: 320px) and (max-device-width: 480px) and (orientation: landscape) and (-webkit-device-pixel-ratio: 1.5) {
+  .large-view h3 {
+    display: none;
+  }
+  .advisory-mobile {
+    display: block;
+  }
+  .advisory-mobile h3 {
+    font-size: 20px;
+    line-height: 80px;
   }
 }
 
