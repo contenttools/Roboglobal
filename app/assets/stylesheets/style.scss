@@ -375,7 +375,7 @@ nav.white-header {
 .footer-nav ul li {
   float: left;
   list-style: none;
-  margin-right: 30px;
+  margin-right: 20px;
 }
 .footer-nav ul li:last-child {
   margin-right: 0px;
@@ -2503,6 +2503,13 @@ a.post-tags:hover {
   .news-section h3 {
     font-size: 18px;
   }
+  .footer-nav ul li a {
+    padding: 6px;
+    font-size: 13px;
+  }
+  .footer-nav {
+    padding-top: 22px;
+  }
 }
 
 @media screen and (min-width: 767px) and (max-width: 1024px) {
@@ -2621,6 +2628,10 @@ a.post-tags:hover {
   }
   .tech-title {
     font-size: 20px;
+  }
+  #footer .container {
+    padding-left: 10px;
+    padding-right: 10px;
   }
 }
 
