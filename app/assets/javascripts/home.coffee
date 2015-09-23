@@ -18,12 +18,22 @@ bind_scroll_bar = ->
     else
       $('.navbar-fixed-top').removeClass('white-header')
 
+bind_enable_scroll = ->
+  $('.map-img').click ->
+    map.scrollWheelZoom.enable()
+
+bind_disable_scroll = ->
+  $('.map-img').mouseleave ->
+    map.scrollWheelZoom.disable()
+
 bind_map_box = ->
   L.mapbox.accessToken = 'pk.eyJ1IjoiY29udGVudHRvb2xzIiwiYSI6ImRjNzE0OTlkYjk2NGJkZWEwMTZmY2QwMTJlYjdjMGI1In0.qKp5IAUQySQHQoT8JBd3ew';
-  map = L.mapbox.map('map', 'examples.map-y7l23tes').setView([
+  @map = L.mapbox.map('map', 'examples.map-y7l23tes').setView([
     47.256595
     8.685179
-  ], 4)
+  ], 2)
+
+  map.scrollWheelZoom.disable()
   layers = document.getElementById('menu-ui')
 
   addLayer = (layer, name, zIndex) ->
@@ -47,7 +57,7 @@ bind_map_box = ->
     layers.appendChild link
     return
 
-  addfeatures = (feature_array, name) ->
+  addfeatures = (feature_array, name, color) ->
     myLayer = L.mapbox.featureLayer()
     features = []
     for val in feature_array
@@ -60,6 +70,7 @@ bind_map_box = ->
             val[1]
           ]
         properties:
+          'marker-color': color
           title: [
             val[0]
             name
@@ -70,12 +81,12 @@ bind_map_box = ->
       features: features
     return myLayer
 
-  healthcare_layer = addfeatures healthcare, 'Healthcare'
-  industry_layer = addfeatures industrials, 'Industrials'
-  information_technology_layer = addfeatures information_technology, 'Information Technology'
-  consumer_discretionary_layer = addfeatures consumer_discretionary, 'Consumer Discretionary'
-  energy_layer = addfeatures energy, 'Energy'
-  other_layer = addfeatures other, 'Other'
+  healthcare_layer = addfeatures healthcare, 'Healthcare', '#3B5576'
+  industry_layer = addfeatures industrials, 'Industrials', '#4C5D3B'
+  information_technology_layer = addfeatures information_technology, 'Information Technology', '#5D4521'
+  consumer_discretionary_layer = addfeatures consumer_discretionary, 'Consumer Discretionary', '#2B4C81'
+  energy_layer = addfeatures energy, 'Energy', '#3B7F32'
+  other_layer = addfeatures other, 'Other', '#3C5679'
 
   addLayer healthcare_layer, 'Healthcare', 1
   addLayer industry_layer, 'Industrials', 2
@@ -113,4 +124,6 @@ bind_our_sector_hover = ->
     bind_our_sector_content()
     bind_our_sector_hover()
     bind_map_box()
+    bind_enable_scroll()
+    bind_disable_scroll()
 ).call(this)
