@@ -13,6 +13,7 @@ class ApplicationController < ActionController::Base
     description = options[:description].present? ? ActionView::Base.full_sanitizer.sanitize(options[:description]) : "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Quisque velit nisi, pretium ut lacinia in, id enim."
 
     description = description.delete("&#13;").truncate(160)
+    options[:description] = description
     current_url = request.url
     defaults = {
       site:        site,
