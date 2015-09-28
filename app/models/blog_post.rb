@@ -50,14 +50,26 @@ class BlogPost < ActiveRecord::Base
       keywords:    keywords,
     }
 
-    seo_options[:image] = self.attachment.image.url(:medium) if self.attachment.present?
+    seo_options[:image] = self.blog_attachement
     seo_options
+  end
+
+  def blog_attachement
+    if self.embedded_attachment.present?
+      self.embedded_attachment.embed_code
+    elsif self.attachment.present?
+      self.attachment.image.url(:large)
+    elsif self.pdf_attachment.present?
+      self.pdf_attachment.document.url(:pdf_normal)
+    else
+      ActionController::Base.helpers.asset_path('/robo_missing_400.jpeg')
+    end
   end
 
   def self.index_seo_options
     seo_options = {
-      site:        "ROBO Global",
       title:       "ROBO Global",
+      image: ActionController::Base.helpers.asset_path("news-banner.jpg"),
     }
   end
 
