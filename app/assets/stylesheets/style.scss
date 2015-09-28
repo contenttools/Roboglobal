@@ -1834,6 +1834,9 @@ a.post-tags:hover {
 .hide-for-large {
   display: none;
 }
+.navbar-nav .hide-for-large {
+  display: none;
+}
 /*MAP Styling*/
 #menu-ui {
   width: 360px;
@@ -2368,17 +2371,17 @@ a.post-tags:hover {
     margin-top: 50px;
   }
   .footer-dropdown .dropdown-menu {
-    width: 240px;
+    width: 305px;
     min-width: 240px;
     top: 27px;
-    left: -309px;
+    left: -224px;
     padding: 8px 0px;
   }
   .footer-dropdown .dropdown-menu > li > a {
     font-size: 10px;
   }
   .footer-nav .dropdown-menu:after {
-    left: 206px;
+    left: 240px;
   }
   .footer-logo {
     width: 100px;
@@ -2544,6 +2547,9 @@ a.post-tags:hover {
   .hide-for-small {
     display: none;
   }
+  .navbar-nav .hide-for-small {
+    display: none;
+  }
   .show-for-small {
     display: block !important;
   }
@@ -2702,3 +2708,4 @@ a.post-tags:hover {
     background: image-url("1.jpg") no-repeat 13px 11px;
   }
 }
+
