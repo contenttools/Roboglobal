@@ -49,6 +49,7 @@ class PagesController < ApplicationController
   end
 
   def set_seo_options
+    @page_title = SEO_OPTIONS[params[:action]][:title]
     prepare_meta_tags(SEO_OPTIONS[params[:action]])
   end
 
