@@ -30,7 +30,7 @@ bind_map_box = ->
   L.mapbox.accessToken = 'pk.eyJ1IjoiY29udGVudHRvb2xzIiwiYSI6ImRjNzE0OTlkYjk2NGJkZWEwMTZmY2QwMTJlYjdjMGI1In0.qKp5IAUQySQHQoT8JBd3ew';
   @map = L.mapbox.map('map', 'examples.map-y7l23tes').setView([
     47.256595
-    8.685179
+    65.685179
   ], 2)
 
   map.scrollWheelZoom.disable()
@@ -74,7 +74,7 @@ bind_map_box = ->
           title: [
             val[0]
             name
-          ].join('\n')
+          ].join(', ')
 
     myLayer.setGeoJSON
       type: 'FeatureCollection'
