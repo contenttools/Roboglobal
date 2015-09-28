@@ -46,7 +46,7 @@ class BlogPost < ActiveRecord::Base
     keywords = self.tags.join(", ")
     seo_options = {
       title:       self.title,
-      description: self.description,
+      description: ActionView::Base.full_sanitizer.sanitize(self.description),
       keywords:    keywords,
     }
 
