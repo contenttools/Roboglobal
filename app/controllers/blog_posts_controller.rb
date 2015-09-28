@@ -13,6 +13,7 @@ class BlogPostsController < ApplicationController
   # GET /blog_posts/1
   # GET /blog_posts/1.json
   def show
+    @page_title = @blog_post.title
     BlogPost.update_counters(@blog_post.id, views: 1)
     @archives = BlogPost.archives_list
     @popular_blogs = BlogPost.includes(:attachment, :pdf_attachment).last_month.views_ordered.published_ordered.first("6")
@@ -112,6 +113,7 @@ class BlogPostsController < ApplicationController
   end
 
   def robo_news
+    @page_title = "ROBO NEWS"
     @latest_blogs = BlogPost.latest_blogs(params, @token)
     @video = PageEmbed.robo_news_embed_video
     @twitter_feed = PageEmbed.robo_news_twitter_feed
