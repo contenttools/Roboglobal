@@ -5,26 +5,32 @@ class PagesController < ApplicationController
   SEO_OPTIONS = {
     "home" => {
       title:       "ROBO Global",
+      image: ActionController::Base.helpers.asset_path('index-banner.jpg'),
     },
 
     "about_us" => {
       title:       "About Us",
+      image: ActionController::Base.helpers.asset_path("about-banner.jpg"),
     },
 
     "us_index" => {
       title:       "ROBO US Index",
+      image: ActionController::Base.helpers.asset_path('index-banner.jpg'),
     },
 
     "eu_index" => {
       title:       "ROBO EU Index",
+      image: ActionController::Base.helpers.asset_path('index-banner.jpg'),
     },
 
     "legal_information" => {
       title:       "Legal Information",
+      image: ActionController::Base.helpers.asset_path("about-banner.jpg"),
     },
 
     "stock_picking_challenge" => {
       title:       "Stock Challenge",
+      image: ActionController::Base.helpers.asset_path("about-banner.jpg"),
     },
   }
 
