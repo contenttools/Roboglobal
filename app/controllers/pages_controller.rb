@@ -8,23 +8,23 @@ class PagesController < ApplicationController
     },
 
     "about_us" => {
-      title:       "ABOUT US",
+      title:       "About Us",
     },
 
     "us_index" => {
-      title:       "ROBO US INDEX",
+      title:       "ROBO US Index",
     },
 
     "eu_index" => {
-      title:       "ROBO EU INDEX",
+      title:       "ROBO EU Index",
     },
 
     "legal_information" => {
-      title:       "LEGAL INFORMATION",
+      title:       "Legal Information",
     },
 
     "stock_picking_challenge" => {
-      title:       "STOCK CHALLENGE",
+      title:       "Stock Challenge",
     },
   }
 
