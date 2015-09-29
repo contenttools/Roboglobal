@@ -7,6 +7,6 @@ module PagesHelper
 
   def blog_description(blog)
     doc = Nokogiri(blog.description.gsub('&nbsp;', ' '))
-    truncate(doc.text.squeeze, length: 80)
+    truncate(doc.text.squeeze(" "), length: 80)
   end
 end

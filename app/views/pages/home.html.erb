@@ -286,7 +286,6 @@
           <div class="clearfix"></div>
           <p>From interactive robots for entertainment to automating household chores, consumer companies work to make everyday lives easier and more enjoyable. The Internet of Things promises to usher in a new era of interconnectivity.  By communicating through the existing internet infrastructure, devices will no longer be isolated islands of limited capabilities.  This impact will be particularly pronounced for these types of consumer products, which need to be inexpensive for wide adoption.   Through the internet, consumer robotics will finally become broadly affordable to individuals.</p>
         </div>
-
         <div class="clearfix"></div>
         <div class="news-section">
           <h3>In the News Headlines</h3>
@@ -482,40 +481,55 @@
       </div>
     </div>
     <div class="drive-system">
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
-        <h3><%= @stock_chart.title %></h3>
-        <div class="index-title"><p><%= @stock_chart.description %></p></div>
-        <div class="row">
-          <div class="col-xs-6 col-sm-5 col-md-4 col-lg-4">
-            <div class="about-btn-shell">
-              <li class="dropdown hide-for-small">
-                <%= link_to "ROBO ETFs", "javascript:;", class: "white-btn"%>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="#leave-site" data-colorbox="true" data-colorbox-height="62%" data-colorbox-width="35%" data-colorbox-inline="true">ROBO Global Robotics and Automation Index ETF (US)</a>
-                  </li>
-                  <li>
-                    <a href="#leave-site-eu" data-colorbox="true" data-colorbox-height="62%" data-colorbox-width="35%" data-colorbox-inline="true">ROBO Global Robotics and Automation GO UCITS ETF (Europe)</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="dropdown hide-for-large show-for-small">
-                <%= link_to "ROBO ETFs", "javascript:;", class: "white-btn"%>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a href="#leave-site" data-colorbox="true" data-colorbox-height="90%" data-colorbox-width="90%" data-colorbox-inline="true">ROBO Global Robotics and Automation Index ETF (US)</a>
-                  </li>
-                  <li>
-                    <a href="#leave-site-eu" data-colorbox="true" data-colorbox-height="90%" data-colorbox-width="90%" data-colorbox-inline="true">ROBO Global Robotics and Automation GO UCITS ETF (Europe)</a>
-                  </li>
-                </ul>
-              </li>
-            </div>
+      <div id="robostox-chart-slider" class="carousel slide" data-ride="carousel">
+        <% if @stock_charts.present? %>
+          <ol class="carousel-indicators">
+            <% @stock_charts.each_with_index do |stock_chart, index| %>
+              <li data-target="#robostox-chart-slider" data-slide-to="<%= index %>" class="<%= 'active' if index == 1 %>"></li>
+            <% end %>
+          </ol>
+          <div class="carousel-inner">
+            <% @stock_charts.each_with_index do |stock_chart, index| %>
+              <div class="item <%= 'active' if index == 1 %>">
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                  <h3><%= stock_chart.title %></h3>
+                  <div class="index-title"><p><%= stock_chart.description %></p></div>
+                  <div class="row">
+                    <div class="col-xs-6 col-sm-5 col-md-4 col-lg-4">
+                      <div class="about-btn-shell">
+                        <li class="dropdown hide-for-small">
+                          <%= link_to "ROBO ETFs", "javascript:;", class: "white-btn"%>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a href="#leave-site" data-colorbox="true" data-colorbox-height="40%" data-colorbox-width="35%" data-colorbox-inline="true">ROBO Global Robotics and Automation Index ETF (US)</a>
+                            </li>
+                            <li>
+                              <a href="#leave-site-eu" data-colorbox="true" data-colorbox-height="40%" data-colorbox-width="35%" data-colorbox-inline="true">ROBO Global Robotics and Automation GO UCITS ETF (Europe)</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li class="dropdown hide-for-large show-for-small">
+                          <%= link_to "ROBO ETFs", "javascript:;", class: "white-btn"%>
+                          <ul class="dropdown-menu">
+                            <li>
+                              <a href="#leave-site" data-colorbox="true" data-colorbox-height="90%" data-colorbox-width="90%" data-colorbox-inline="true">ROBO Global Robotics and Automation Index ETF (US)</a>
+                            </li>
+                            <li>
+                              <a href="#leave-site-eu" data-colorbox="true" data-colorbox-height="90%" data-colorbox-width="90%" data-colorbox-inline="true">ROBO Global Robotics and Automation GO UCITS ETF (Europe)</a>
+                            </li>
+                          </ul>
+                        </li>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 stock-chart">
+                  <%= raw stock_chart.embed_code %>
+                </div>
+              </div>
+            <% end %>
           </div>
-        </div>
-      </div>
-      <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6 stock-chart">
-        <%= raw @stock_chart.embed_code %>
+        <% end %>
       </div>
     </div>
   </div>
