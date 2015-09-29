@@ -68,7 +68,7 @@ class BlogPost < ActiveRecord::Base
 
   def self.index_seo_options
     seo_options = {
-      title:       "ROBO Global",
+      title:       "ROBO News",
       image: ActionController::Base.helpers.asset_path("news-banner.jpg"),
     }
   end
