@@ -32,7 +32,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 
-gem 'meta-tags'
+gem 'meta-tags', git: 'https://github.com/kpumuk/meta-tags'
 gem 'bootstrap-sass', '~> 3.3.5'
 gem 'devise', '~> 3.2'
 gem "paperclip", "~> 4.3"

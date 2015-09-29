@@ -8,18 +8,18 @@ class ApplicationController < ActionController::Base
   end
 
   def prepare_meta_tags(options = {})
-    site        = "ROBO Global"
-    title       = options[:title]
-    description = options[:description] || "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Quisque velit nisi, pretium ut lacinia in, id enim."
-    current_url = request.url
+    title       = options[:title].truncate(70)
+    description = options[:description].present? ? ActionView::Base.full_sanitizer.sanitize(options[:description]) : "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Quisque velit nisi, pretium ut lacinia in, id enim."
+
+    description = description.delete("&#13;").truncate(160)
+    options[:description] = description
 
     defaults = {
-      site:        site,
       title:       title,
       image:       options[:image],
       description: description,
 
-      twitter:     {site_name:   site,
+      twitter:     {title:       title,
                     description: description,
                     image:       options[:image]},
       og:

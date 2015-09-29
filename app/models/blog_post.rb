@@ -18,7 +18,7 @@ class BlogPost < ActiveRecord::Base
   scope :ordered, -> { order('blog_posts.created_at DESC') }
   scope :asc_ordered, -> { order('blog_posts.created_at ASC') }
   scope :views_ordered, -> { order('blog_posts.views DESC') }
-  scope :last_month, -> { where("blog_posts.published_date > ?", Date.today - 30.days) }
+  scope :last_three_month, -> { where("blog_posts.published_date > ?", Date.today - 3.months) }
   scope :by_year_and_month, ->(month, year){ where("year(published_date) = ? and month(published_date) = ? ", year, month) if year.present? && month.present? }
 
   TOKENS = ['Technology', 'Events', 'Video', 'Healthcare', 'Drones', 'Manufacturing', 'Logistics Automation', 'Remotely Operated Vehicles', 'Self Driving Cars', 'Agriculture', 'Consumer Products', '3D Printing']
@@ -46,18 +46,30 @@ class BlogPost < ActiveRecord::Base
     keywords = self.tags.join(", ")
     seo_options = {
       title:       self.title,
-      description: self.description,
+      description: ActionView::Base.full_sanitizer.sanitize(self.description),
       keywords:    keywords,
     }
 
-    seo_options[:image] = self.attachment.image.url(:medium) if self.attachment.present?
+    seo_options[:image] = self.blog_attachement
     seo_options
+  end
+
+  def blog_attachement
+    if self.embedded_attachment.present?
+      self.embedded_attachment.embed_code
+    elsif self.attachment.present?
+      self.attachment.image.url(:large)
+    elsif self.pdf_attachment.present?
+      self.pdf_attachment.document.url(:pdf_normal)
+    else
+      ActionController::Base.helpers.asset_path('/robo_missing_400.jpeg')
+    end
   end
 
   def self.index_seo_options
     seo_options = {
-      site:        "ROBO Global",
-      title:       "ROBO Global",
+      title:       "ROBO News",
+      image: ActionController::Base.helpers.asset_path("news-banner.jpg"),
     }
   end
 

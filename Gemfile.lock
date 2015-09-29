@@ -1,3 +1,10 @@
+GIT
+  remote: https://github.com/kpumuk/meta-tags
+  revision: 06db746666b11aa5a40323883b0751b8d232b42a
+  specs:
+    meta-tags (2.1.0.dev)
+      actionpack (>= 3.0.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -102,8 +109,6 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mapbox-rails (1.6.1.1)
-    meta-tags (2.0.0)
-      actionpack (>= 3.0.0)
     mime-types (2.6.1)
     mimemagic (0.3.0)
     mini_portile (0.6.2)
@@ -212,7 +217,7 @@ DEPENDENCIES
   jquery-rails
   kaminari
   mapbox-rails
-  meta-tags
+  meta-tags!
   mysql2
   nokogiri
   paperclip (~> 4.3)
@@ -227,6 +232,3 @@ DEPENDENCIES
   underscore-rails
   web-console (~> 2.0)
   whenever
-
-BUNDLED WITH
-   1.10.6
