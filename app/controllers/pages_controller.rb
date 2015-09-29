@@ -36,7 +36,7 @@ class PagesController < ApplicationController
 
   def home
     @video = PageEmbed.home_page_embed_video
-    @stock_chart = PageEmbed.home_page_stock_chart
+    @stock_charts = PageEmbed.home_page_stock_charts
     @subscriber = Subscriber.new
     @latest_blogs = BlogPost.includes(:attachment, :pdf_attachment).published_ordered.ordered.first(3)
     @contact = Contact.new
