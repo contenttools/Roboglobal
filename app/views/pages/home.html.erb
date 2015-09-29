@@ -484,12 +484,12 @@
         <% if @stock_charts.present? %>
           <ol class="carousel-indicators">
             <% @stock_charts.each_with_index do |stock_chart, index| %>
-              <li data-target="#robostox-chart-slider" data-slide-to="<%= index %>" class="<%= 'active' if index == 1 %>"></li>
+              <li data-target="#robostox-chart-slider" data-slide-to="<%= index %>" class="<%= 'active' if index == 0 %>"></li>
             <% end %>
           </ol>
           <div class="carousel-inner">
             <% @stock_charts.each_with_index do |stock_chart, index| %>
-              <div class="item <%= 'active' if index == 1 %>">
+              <div class="item <%= 'active' if index == 0 %>">
                 <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
                   <h3><%= stock_chart.title %></h3>
                   <div class="index-title"><p><%= stock_chart.description %></p></div>
