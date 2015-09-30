@@ -24,9 +24,9 @@ class IndexRecord < ActiveRecord::Base
     ftp = connect_ftp
 
     begin
-      ftp.size(file_name)
-      ftp.getbinaryfile(file_name)
-      index = parse_file_and_return_index(file_name)
+      ftp.size(file_name_us)
+      ftp.getbinaryfile(file_name_us)
+      index = parse_file_and_return_index(file_name_us)
       save_index(index, 'us')
       destroy_file(file_name_us)
     rescue => e
@@ -36,8 +36,8 @@ class IndexRecord < ActiveRecord::Base
     ftp.close
   end
 
-  def self.file_name
-    ['Closing_Values_ROBOT_', Date.today.strftime("%Y%m%d"), '.xls'].join
+  def self.file_name_us
+    ['Closing_Values_ROBOTR_', Date.today.strftime("%Y%m%d"), '.xls'].join
   end
 
   def self.file_name_eu
