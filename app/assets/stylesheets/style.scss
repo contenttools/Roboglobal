@@ -1985,6 +1985,11 @@ a.post-tags:hover {
   .latest-article-section {
     padding-top: 0px;
   }
+  .blog-news-subscribe {
+    float: none;
+    margin: 0 auto;
+    clear: both;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 1200px) {
@@ -2218,6 +2223,7 @@ a.post-tags:hover {
   }
   .blog-news-section {
     padding-bottom: 0px;
+    padding-top: 0px;
   }
   .blog-news-right {
     padding-top: 0px;
@@ -2257,6 +2263,12 @@ a.post-tags:hover {
   }
   .carousel-inner {
     height: auto !important;
+  }
+  .blog-news-social {
+    padding-bottom: 25px;
+  }
+  .latest-article-section .sub-heading {
+    padding-bottom: 10px;
   }
 }/*End 767*/
 
