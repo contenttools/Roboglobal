@@ -68,7 +68,8 @@ class BlogPost < ActiveRecord::Base
 
   def self.index_seo_options
     seo_options = {
-      title:       "ROBO News",
+      title:       "Need to Know Robotics and Automation Industry News",
+      description: "Keep up with current events and news in robotics and automation",
       image: ActionController::Base.helpers.asset_path("news-banner.jpg"),
     }
   end
