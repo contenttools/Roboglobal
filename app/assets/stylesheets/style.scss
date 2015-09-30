@@ -314,7 +314,7 @@ nav.white-header {
   float: left;
   min-height: 250px;
   clear: both;
-  margin-top: 25px;
+  margin-top: 0px;
 }
 .footer-inner {
   background: image-url("footer-bg.jpg") no-repeat 200px -1px;
@@ -555,6 +555,7 @@ div#map {
   padding: 100px 0px 80px 0px;
   float: left;
   width: 100%;
+  margin-bottom: 80px;
 }
 .sector-section img {
   width: 100%;
@@ -1966,7 +1967,7 @@ a.post-tags:hover {
 @media screen and (min-width: 767px) and (max-width: 1000px) {
   .navbar-brand > img {
     width: 120px;
-    margin-top: 15px;
+    margin-top: 6px;
   }
   .white-header .navbar-brand.not-show img {
     margin-top: 6px;
@@ -2245,6 +2246,17 @@ a.post-tags:hover {
   .brand-section img {
     margin-right: 10px;
     max-width: 10%;
+  }
+  .heighlights-section {
+    min-height: 0px;
+    background-size: cover;
+    padding-bottom: 50px;
+  }
+  .carousel-indicators {
+    bottom: -50px;
+  }
+  .carousel-inner {
+    height: auto !important;
   }
 }/*End 767*/
 
