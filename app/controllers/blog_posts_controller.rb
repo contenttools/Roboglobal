@@ -113,7 +113,7 @@ class BlogPostsController < ApplicationController
   end
 
   def robo_news
-    @page_title = "ROBO News"
+    @page_title = "Need to Know Robotics and Automation Industry News"
     @latest_blogs = BlogPost.latest_blogs(params, @token)
     @video = PageEmbed.robo_news_embed_video
     @twitter_feed = PageEmbed.robo_news_twitter_feed
