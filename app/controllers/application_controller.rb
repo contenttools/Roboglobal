@@ -21,7 +21,7 @@ class ApplicationController < ActionController::Base
 
     description = description.delete("&#13;").truncate(160)
     options[:description] = description
-    options[:image] = absolute_url(options[:image])
+    options[:image] = absolute_url(options[:image].to_s)
 
     defaults = {
       title:       title,
