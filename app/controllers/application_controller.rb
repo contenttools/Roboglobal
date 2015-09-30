@@ -7,12 +7,21 @@ class ApplicationController < ActionController::Base
     admin_path
   end
 
+  def absolute_url(path)
+    if path.first == '/'
+      URI.join(root_url, path)
+    else
+      Nokogiri(path).at_css('iframe').present? ? Nokogiri(path).at_css('iframe').attr('src') : path
+    end
+  end
+
   def prepare_meta_tags(options = {})
     title       = options[:title].truncate(70)
     description = options[:description].present? ? ActionView::Base.full_sanitizer.sanitize(options[:description]) : "Mauris blandit aliquet elit, eget tincidunt nibh pulvinar a. Quisque velit nisi, pretium ut lacinia in, id enim."
 
     description = description.delete("&#13;").truncate(160)
     options[:description] = description
+    options[:image] = absolute_url(options[:image])
 
     defaults = {
       title:       title,
