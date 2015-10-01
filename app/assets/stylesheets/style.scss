@@ -232,7 +232,15 @@ nav.white-header {
 	width: 100%;
 	float: left;
 	min-height: 710px;
-  background-size: cover;
+}
+video#home_vid {
+  width: 100%;
+  background: #2aafdc;
+}
+.video-banner {
+  position: absolute;
+  max-width: 1170px;
+  z-index: 1;
 }
 .us-banner {
   background: image-url("robo-us-banner.jpg") no-repeat center top;
@@ -277,7 +285,8 @@ nav.white-header {
 .main-banner h1,
 .about-banner h1,
 .legal-banner h1,
-.news-banner h1 {
+.news-banner h1,
+.video-banner h1 {
   font-size: 50px;
   line-height: normal;
   font-weight: 100;
@@ -2019,10 +2028,13 @@ a.post-tags:hover {
     padding-top: 10px;
     padding-right: 10px;
   }
+  .sector-section {
+    margin-bottom: 0px;
+  }
 }
 
 @media screen and (min-width: 767px) and (max-width: 896px) {
-  .main-banner h1, .us-banner h1, .about-banner h1, .legal-banner h1, .news-banner h1 {
+  .main-banner h1, .us-banner h1, .about-banner h1, .legal-banner h1, .news-banner h1, .video-banner h1 {
     font-size: 60px;
   }
 }
@@ -2276,7 +2288,7 @@ a.post-tags:hover {
 
 
 @media screen and (min-width: 640px) and (max-width: 767px)  {
-  .main-banner h1, .us-banner h1, .about-banner h1, .news-banner h1 {
+  .main-banner h1, .us-banner h1, .about-banner h1, .news-banner h1, .video-banner h1 {
     font-size: 50px;
   }
   .banner-for-mobile {
@@ -2288,7 +2300,7 @@ a.post-tags:hover {
 }
 
 @media screen and (min-width: 320px) and (max-width: 736px) {
-  .main-banner h1, .us-banner h1, .about-banner h1, .news-banner h1 {
+  .main-banner h1, .us-banner h1, .about-banner h1, .news-banner h1, .video-banner h1  {
     font-size: 32px;
   }
   .legal-banner h1 {
@@ -2362,7 +2374,7 @@ a.post-tags:hover {
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .main-banner h1, .us-banner h1, .about-banner h1, .legal-banner h1, .news-banner h1 {
+  .main-banner h1, .us-banner h1, .about-banner h1, .legal-banner h1, .news-banner h1, .video-banner h1 {
     font-size: 24px;
   }
   .banner-for-mobile {
@@ -2464,6 +2476,12 @@ a.post-tags:hover {
     height: 80px;
     width: 80px;
   }
+  .graph-container {
+    padding-top: 0px;
+  }
+  .graph-container img {
+    width: 90%;
+  }
 }
 
 @media screen and (min-width: 993px) and (max-width: 1100px) {
@@ -2548,18 +2566,27 @@ a.post-tags:hover {
     width: 100px;
     height: 100px;
   }
+  .graph-container img {
+    width: 90%;
+  }
 }
 
 @media screen and (min-width: 767px) and (max-width: 1024px) {
   span.text {
-      color: white;
-      font-size: 12px;
-      position: absolute;
-      display: block;
-      top: 35px;
-      width: 100%;
-      text-align: center;
-      line-height: 12px;
+    color: white;
+    font-size: 12px;
+    position: absolute;
+    display: block;
+    top: 35px;
+    width: 100%;
+    text-align: center;
+    line-height: 12px;
+    }
+    .graph-container {
+      padding-top: 0px;
+    }
+    .graph-container img {
+      width: 88%;
     }
 }
 @media screen and (min-width: 767px) and (max-width: 912px) {
@@ -2602,6 +2629,9 @@ a.post-tags:hover {
   .about-des-wrapper {
     height: 367px;
   }
+  .main-banner {
+    min-height: 510px;
+  }
 }
 
 @media screen and (min-width: 320px) and (max-width: 640px) {
@@ -2626,6 +2656,9 @@ a.post-tags:hover {
     padding: 4px;
   }
   .accrodian h3 {
+    font-size: 18px;
+  }
+  .punch-line {
     font-size: 18px;
   }
 }
