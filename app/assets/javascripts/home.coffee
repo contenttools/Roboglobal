@@ -22,6 +22,8 @@ printing = [["3D SYSTEMS", 34.924867, -81.025078], ["ARCAM AB", 57.670376, 12.00
 
 logistics_automation = [["CARGOTEC CORP", 60.164443, 24.909423], ["DAIFUKU CO", 34.717683, 135.455692], ["JOHN BEAN TECHNOLOGIES", 41.882323, -87.630142], ["KARDEX AG", 47.414932, 8.552296], ["SFA Engineering", 37.20691, 127.108277]]
 
+computing = [["ADLINK TECHNOLOGIES", 42.586548, -71.322771], ["ADVANTECH CO", 60.164443, 24.909423], ["ATMEL CORP", 37.364516, -121.915254], ["HOLLYSYS", 39.801904, 116.505262], ["MICROCHIP TECHNOLOGY INC", 33.30439, -111.882168], ["MITSUBISHI ELECTRIC CORP", 35.681183, 139.76377], ["TOPCON CORPORATION", 35.773226, 139.703638], ["YOKOGAWA ELECTRIC", 35.707305, 139.565119]]
+
 bind_scroll_bar = ->
   window.addEventListener 'scroll', (e) ->
     distanceY = window.pageYOffset || document.documentElement.scrollTop
@@ -123,6 +125,7 @@ bind_map_box = ->
   energy_layer = addfeatures energy, 'Energy', '#3C5679'
   printing_layer = addfeatures printing, '3D Printing', '#3C5679'
   logistics_automation_layer = addfeatures logistics_automation, 'Logistics Automation', '#3C5679'
+  computing_layer = addfeatures computing, 'Computing', '#3C5679'
 
   addLayer healthcare_layer, 'Healthcare', 1
   addLayer agriculture_layer, 'Agriculture', 2
@@ -136,7 +139,7 @@ bind_map_box = ->
   addLayer energy_layer, 'Energy', 10
   addLayer printing_layer, '3D Printing', 11
   addLayer logistics_automation_layer, 'Logistics Automation', 12
-
+  addLayer computing_layer, 'Computing', 13
 
 bind_our_sector_content = ->
   $(".sector-circule").click (e) ->
