@@ -1,5 +1,11 @@
+html, body {
+  height: 100%;
+}
+.main-shell {
+  min-height: 100%;
+}
 a {
-    -webkit-transition: all .25s ease;
+  -webkit-transition: all .25s ease;
   -moz-transition: all .25s ease;
   -ms-transition: all .25s ease;
   -o-transition: all .25s ease;
