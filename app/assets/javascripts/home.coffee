@@ -113,19 +113,19 @@ bind_map_box = ->
       features: features
     return myLayer
 
-  healthcare_layer = addfeatures healthcare, 'Healthcare', '#3B5576'
-  agriculture_layer = addfeatures agriculture, 'Agriculture', '#4C5D3B'
-  integrations_technology_layer = addfeatures integrations, 'Integrations', '#5D4521'
-  surveillance_security_layer = addfeatures surveillance_security, 'Surveillance/Security', '#2B4C81'
-  processing_layer = addfeatures processing, 'Processing', '#3B7F32'
-  manufacturing_industrial_automation_layer = addfeatures manufacturing_industrial_automation, 'Manufacturing & Industrial Automation', '#3C5679'
-  actuation_layer = addfeatures actuation, 'Actuation', '#3C5679'
-  consumer_products_layer = addfeatures consumer_products, 'Consumer Products', '#3C5679'
-  sensing_layer = addfeatures sensing, 'Sensing', '#3C5679'
-  energy_layer = addfeatures energy, 'Energy', '#3C5679'
-  printing_layer = addfeatures printing, '3D Printing', '#3C5679'
-  logistics_automation_layer = addfeatures logistics_automation, 'Logistics Automation', '#3C5679'
-  computing_layer = addfeatures computing, 'Computing', '#3C5679'
+  healthcare_layer = addfeatures healthcare, 'Healthcare', '#FFFFFF'
+  agriculture_layer = addfeatures agriculture, 'Agriculture', '#3B5577'
+  integrations_technology_layer = addfeatures integrations, 'Integrations', '#4C5D3B'
+  surveillance_security_layer = addfeatures surveillance_security, 'Surveillance/Security', '#5D4422'
+  processing_layer = addfeatures processing, 'Processing', '#2A4C80'
+  manufacturing_industrial_automation_layer = addfeatures manufacturing_industrial_automation, 'Manufacturing & Industrial Automation', '#33446E'
+  actuation_layer = addfeatures actuation, 'Actuation', '#3B7F33'
+  consumer_products_layer = addfeatures consumer_products, 'Consumer Products', '#442255'
+  sensing_layer = addfeatures sensing, 'Sensing', '#44557F'
+  energy_layer = addfeatures energy, 'Energy', '#5B1638'
+  printing_layer = addfeatures printing, '3D Printing', '#AE9833'
+  logistics_automation_layer = addfeatures logistics_automation, 'Logistics Automation', '#44ACCA'
+  computing_layer = addfeatures computing, 'Computing', '#CA4447'
 
   addLayer healthcare_layer, 'Healthcare', 1
   addLayer agriculture_layer, 'Agriculture', 2
