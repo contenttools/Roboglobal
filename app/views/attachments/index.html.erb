@@ -1,33 +1,49 @@
-<%- model_class = Attachment -%>
-<div class="page-header">
-  <h1>All Images</h1>
-  <%= link_to 'Add Image', new_attachment_path, :class => 'btn btn-primary' %>
+<div class="about-banner">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-centered">
+    <div class="us-heading-container">
+      <h1>All Images</h1>
+    </div>
+  </div>
 </div>
-<%= paginate @attachments %>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Image File</th>
-      <th>Thumbnail</th>
-      <th>Date</th>
-      <th><%=t '.actions', :default => t("helpers.actions") %></th>
-    </tr>
-  </thead>
-  <tbody>
-    <% @attachments.each do |attachment| %>
-      <tr>
-        <td><%= attachment.image_file_name %></td>
-        <td><%= image_tag attachment.image.url(:thumb) %></td>
-        <td><%= date_format(attachment.created_at) %></td>
-        <td>
-          <%= link_to "Show", attachment_path(attachment) %>
-          <%= link_to "Edit", edit_attachment_path(attachment) %>
-          <%= link_to "Delete", attachment_path(attachment),
-                      :title => "Delete",
-                      :method => :delete,
-                      :data => { :confirm => "Are you sure?" } %>
-        </td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="clearfix"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <%- model_class = Attachment -%>
+      <div class="page-header">
+        <%= link_to 'Add Image', new_attachment_path, :class => 'btn btn-primary' %>
+      </div>
+      <%= paginate @attachments %>
+      <table class="table table-striped">
+        <thead>
+          <tr>
+            <th>Image File</th>
+            <th>Thumbnail</th>
+            <th>Date</th>
+            <th><%=t '.actions', :default => t("helpers.actions") %></th>
+          </tr>
+        </thead>
+        <tbody>
+          <% @attachments.each do |attachment| %>
+          <tr>
+            <td><%= attachment.image_file_name %></td>
+            <td><%= image_tag attachment.image.url(:thumb) %></td>
+            <td><%= date_format(attachment.created_at) %></td>
+            <td>
+              <%= link_to "Show", attachment_path(attachment) %>
+              <%= link_to "Edit", edit_attachment_path(attachment) %>
+              <%= link_to "Delete", attachment_path(attachment),
+              :title => "Delete",
+              :method => :delete,
+              :data => { :confirm => "Are you sure?" } %>
+            </td>
+          </tr>
+          <% end %>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+<% content_for :js_init do %>
+HeaderScroll.init();
+<% end %>
