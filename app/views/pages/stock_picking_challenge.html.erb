@@ -1,8 +1,12 @@
-<div class="legal-banner">
-  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-centered">
-    <div class="us-heading-container">
-      <h1>Stock Challenge</h1>
+<div class="clearfix"></div>
+<div class="stock-banner">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-centered padding-top-80">
+    <div class="row">
+      <div class="col-xs-8 col-sm-5 col-md-4 col-lg-4 col-centered">
+        <%= image_tag("stocking-logo.png", :alt => "Logo") %>
+      </div>
     </div>
+    <h1>Stock Picking Challenge</h1>
   </div>
 </div>
 <div class="container">
@@ -13,5 +17,5 @@
   </div>
 </div>
 <% content_for :js_init do %>
-  HeaderScroll.init();
+HeaderScroll.init();
 <% end %>
