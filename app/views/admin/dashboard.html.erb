@@ -1,7 +1,26 @@
-<h2>Admin Dashboard<h2>
-<%= link_to 'Images', attachments_path, :class => 'btn btn-primary' %>
-<%= link_to 'Files', pdf_attachments_path, :class => 'btn btn-primary' %>
-<%= link_to 'Videos', embedded_attachments_path, :class => 'btn btn-primary' %>
-<%= link_to 'Blog Posts', blog_posts_path, :class => 'btn btn-primary' %>
-<%= link_to 'Export Subscribers', admin_subscribers_path(format: :csv), class: 'btn btn-primary' %>
-<%= link_to 'Page Embeds', page_embeds_path, :class => 'btn btn-primary' %>
+<div class="about-banner">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-centered">
+    <div class="us-heading-container">
+      <h1>Admin Dashboard</h1>
+    </div>
+  </div>
+</div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-top-20">
+          <%= link_to 'Images', attachments_path, :class => 'btn btn-primary' %>
+          <%= link_to 'Files', pdf_attachments_path, :class => 'btn btn-primary' %>
+          <%= link_to 'Videos', embedded_attachments_path, :class => 'btn btn-primary' %>
+          <%= link_to 'Blog Posts', blog_posts_path, :class => 'btn btn-primary' %>
+          <%= link_to 'Export Subscribers', admin_subscribers_path(format: :csv), class: 'btn btn-primary' %>
+          <%= link_to 'Page Embeds', page_embeds_path, :class => 'btn btn-primary' %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<% content_for :js_init do %>
+HeaderScroll.init();
+<% end %>
