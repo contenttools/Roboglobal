@@ -6,14 +6,16 @@
   </div>
 </div>
 <div class="clearfix"></div>
-<div class="container">
+<div class="container dashboard-icon margin-bottom-40">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <div class="padding-top-50 edit-file">
         <div data-no-turbolink>
           <%= link_to 'Add Blog Post', new_blog_post_path, :class => 'btn btn-primary' %>
         </div>
-        <%= paginate @blog_posts %>
+        <div class="pager pull-right">
+          <%= paginate @blog_posts %>
+        </div>
         <table class="table table-striped">
           <thead>
             <tr>
@@ -31,9 +33,15 @@
               <td><%= "'#{blog_post.tags.join("' , '")}'" %></td>
               <td><%= date_format(blog_post.published_date) %></td>
               <td><%= blog_post.views %></td>
-              <td><a href="/<%= blog_post.slug%>">Show</a></td>
-              <td data-no-turbolink><%= link_to 'Edit', edit_blog_post_path(blog_post) %></td>
-              <td><%= link_to 'Delete', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><a href="/<%= blog_post.slug%>"><i class="fa fa-eye"></i></a></td>
+              <td data-no-turbolink><%= link_to edit_blog_post_path(blog_post) do %>
+                <i class="fa fa-pencil-square-o"></i>
+              <% end %>
+              </td>
+              <td><%= link_to blog_post, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="fa fa-trash-o"></i>
+              <% end %>
+              </td>
             </tr>
             <% end %>
           </tbody>
