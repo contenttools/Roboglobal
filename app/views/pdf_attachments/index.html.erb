@@ -6,13 +6,17 @@
   </div>
 </div>
 <div class="clearfix"></div>
-<div class="container">
+<div class="container dashboard-icon">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <div class="padding-top-50 edit-file">
-        <%- model_class = PdfAttachment -%>
+        <div class="pager pull-right padding-top-20 padding-bottom-20">
+          <%- model_class = PdfAttachment -%>
+        </div>
         <%= link_to 'Add File', new_pdf_attachment_path, :class => 'btn btn-primary' %>
-        <%= paginate @pdf_attachments %>
+        <div class="pager pull-right">
+          <%= paginate @pdf_attachments %>
+        </div>
         <table class="table table-striped">
           <thead>
             <tr>
@@ -28,9 +32,16 @@
               <td><%= pdf_attachment.document_file_name %></td>
               <td><%= image_tag pdf_attachment.document.url(:pdf_mini) %></td>
               <td><%= date_format(pdf_attachment.created_at) %></td>
-              <td><%= link_to 'Show', pdf_attachment %></td>
-              <td><%= link_to 'Edit', edit_pdf_attachment_path(pdf_attachment) %></td>
-              <td><%= link_to 'Delete', pdf_attachment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+              <td><%= link_to pdf_attachment do %>
+                <i class="fa fa-eye"></i>
+                <% end %>
+                <%= link_to edit_pdf_attachment_path(pdf_attachment) do %>
+                <i class="fa fa-pencil-square-o"></i>
+                <% end %>
+                <%= link_to pdf_attachment, method: :delete, data: { confirm: 'Are you sure?' }  do %>
+                <i class="fa fa-trash-o"></i>
+                <% end %>
+              </td>
             </tr>
             <% end %>
           </tbody>
