@@ -30,7 +30,7 @@ module BlogPostsHelper
   end
 
   def robo_news_blog_title(blog, length)
-    truncate(blog.title, length: length)
+    truncate(blog.title, length: length, separator: ' ')
   end
 
   def robo_news_blog_description(blog)
