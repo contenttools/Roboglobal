@@ -9,7 +9,7 @@
 <div class="container">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <div class="padding-top-50">
+      <div class="padding-top-50 edit-file">
         <%- model_class = PdfAttachment -%>
         <%= link_to 'Add File', new_pdf_attachment_path, :class => 'btn btn-primary' %>
         <%= paginate @pdf_attachments %>
@@ -39,3 +39,6 @@
     </div>
   </div>
 </div>
+<% content_for :js_init do %>
+HeaderScroll.init();
+<% end %>

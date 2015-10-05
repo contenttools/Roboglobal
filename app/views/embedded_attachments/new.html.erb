@@ -1,5 +1,21 @@
-<h1>New Video</h1>
-
-<%= render :partial => 'form', locals: {remote: false} %>
-
-<%= link_to 'Back', embedded_attachments_path %>
+<div class="about-banner">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-centered">
+    <div class="us-heading-container">
+      <h1>New Video</h1>
+    </div>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="padding-top-50 edit-file">
+        <%= render :partial => 'form', locals: {remote: false} %>
+        <%= link_to 'Back', embedded_attachments_path, :class => 'btn btn-default' %>
+      </div>
+    </div>
+  </div>
+</div>
+<% content_for :js_init do %>
+HeaderScroll.init();
+<% end %>

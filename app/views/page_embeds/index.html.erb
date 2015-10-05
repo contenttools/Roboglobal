@@ -1,14 +1,38 @@
-<h2>All Page Embeds</h2>
-<% @page_embeds.each do |page_embed| %>
-  <div class="page-embed-block">
-    <h3><%= page_embed.role.titleize %></h3>
-    <strong>Title</strong>
-    <p><%= page_embed.title %><p>
-    <strong>Description</strong>
-    <p><%= page_embed.description %><p>
-    <strong>Embed Code</strong>
-    <p><%= raw page_embed.embed_code %><p>
-    <%= link_to "Update", "##{page_embed.id}", class: "btn btn-primary colorbox-inline", :data => {colorbox: true, colorbox_height: '600px', colorbox_width: '550px', colorbox_inline:true } %>
-  <%= render partial: 'form', locals: { page_embed: page_embed } %>
+<div class="about-banner">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-centered">
+    <div class="us-heading-container">
+      <h1>All Page Embeds</h1>
+    </div>
   </div>
+</div>
+<div class="clearfix"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 margin-bottom-50">
+      <div class="row">
+        <div class="padding-top-50 edit-file">
+          <% @page_embeds.each do |page_embed| %>
+          <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+            <div class="page-embed-block">
+              <h3><%= page_embed.role.titleize %></h3>
+              <div><%= raw page_embed.embed_code %></div>
+              <strong>Title</strong>
+              <p><%= page_embed.title %></p>
+              <strong>Description</strong>
+              <p><%= page_embed.description %></p>
+              <strong>Embed Code</strong>
+              <div class="clearfix"></div>
+              <%= link_to "Update", "##{page_embed.id}", class: "btn btn-primary colorbox-inline margin-top-20", :data => {colorbox: true, colorbox_height: '600px', colorbox_width: '550px', colorbox_inline:true } %>
+              <%= render partial: 'form', locals: { page_embed: page_embed } %>
+            </div>
+          </div>
+          <% end %>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</div>
+<% content_for :js_init do %>
+HeaderScroll.init();
 <% end %>

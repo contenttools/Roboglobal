@@ -1937,6 +1937,12 @@ a.post-tags:hover {
 .margin-top-70 {
   margin-top: 70px;
 }
+.margin-bottom-50 {
+  margin-bottom: 50px;
+}
+.margin-top-20 {
+  margin-top: 20px;
+}
 .margin-top-40 {
   margin-top: 40px;
 }
@@ -2006,6 +2012,13 @@ a.post-tags:hover {
 .login-container label {
   font-size: 18px;
   font-weight: normal;
+}
+.edit-file input[type="file"],
+.edit-file input[type="submit"] {
+  margin-bottom: 20px;
+}
+.edit-file textarea {
+  width: 100%;
 }
 @media screen and (min-width: 320px) and (max-width: 1200px) {
   .footer-nav ul li {
