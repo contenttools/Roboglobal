@@ -171,6 +171,12 @@ sector_hover_out = ->
 bind_our_sector_hover = ->
   $('.sector-effect .text').hover sector_hover_in, sector_hover_out
 
+bind_complete_load_video = ->
+  video_element = document.getElementById('home_vid')
+  video_element.oncanplay = ->
+    video_element.play()
+    return
+
 (($) ->
   window.Home || (window.Home = {})
 
@@ -185,4 +191,5 @@ bind_our_sector_hover = ->
     bind_enable_scroll()
     bind_disable_scroll()
     bind_disable_drag_for_mobile()
+    bind_complete_load_video()
 ).call(this)
