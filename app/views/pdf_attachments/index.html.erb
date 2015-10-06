@@ -13,7 +13,7 @@
         <div class="pager pull-right padding-top-20 padding-bottom-20">
           <%- model_class = PdfAttachment -%>
         </div>
-        <%= link_to 'Add File', new_pdf_attachment_path, :class => 'btn btn-primary' %>
+        <div><%= link_to 'Add File', new_pdf_attachment_path, :class => 'btn btn-primary' %></div>
         <div class="pager pull-right">
           <%= paginate @pdf_attachments %>
         </div>
