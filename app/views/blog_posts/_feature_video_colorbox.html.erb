@@ -1,12 +1,13 @@
 <div style="display:none;">
   <div id="featured_video_model">
+    <h2>Featured Video</h2>
     <div class="tabbable">
       <ul class="nav nav-pills">
         <li class="active" role="presentation"><a href="#video_one" data-toggle="tab">Select Video</a></li>
         <li><a href="#video_two" data-toggle="tab" role="presentation">Add New Video</a></li>
       </ul>
       <div class="tab-content">
-        <div class="tab-pane active" id="video_one">
+        <div class="tab-pane active padding-top-20" id="video_one">
           <div class="select-file">
             <div id="paginator_video">
               <%= paginate @embedded_attachments, remote: true, param_name: 'page_vid' %>

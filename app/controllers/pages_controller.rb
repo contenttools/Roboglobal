@@ -6,37 +6,37 @@ class PagesController < ApplicationController
     "home" => {
       title:       "ROBO Global: The Leading Robotics and Automation Index for Investors",
       description: "ROBO Global: tracking robotics, automation, and enabling technology stocks",
-      image: '/index-banner.jpg',
+      image: '/index.jpg',
     },
 
     "about_us" => {
       title:       "ROBO Global: Financial and Robotics Experts",
       description: "Team of ROBO advisors",
-      image: "/about-banner.jpg",
+      image: "/OurTeam.jpg",
     },
 
     "us_index" => {
       title:       "ROBO Global: Tracking the Global Growth of the Investable Robotics Market",
       description: "Global stock portfolio for 3d printing, drones, energy, healthcare, technology and manufacturing",
-      image: '/index-banner.jpg',
+      image: '/index.jpg',
     },
 
     "eu_index" => {
       title:       "ROBO Global: Tracking the Global Growth of the Investable Robotics Market",
       description: "Global stock portfolio for 3d printing, drones, energy, healthcare, technology and manufacturing",
-      image: '/index-banner.jpg',
+      image: '/index.jpg',
     },
 
     "legal_information" => {
       title:       "Legal Information",
       description: "Redistribution, reproduction and/or photocopying in whole or in part are prohibited without written permission. This document does not constitute an offer of services in jurisdictions where ROBO Global does not have the necessary licenses.",
-      image: "/about-banner.jpg",
+      image: "/index.jpg",
     },
 
     "stock_picking_challenge" => {
       title:       "ROBO Global: Robotics Stock Picking Contest",
       description: "Win a free drone from ROBO by choosing a portfolio of robotics and automation stocks",
-      image: "/about-banner.jpg",
+      image: "/index.jpg",
     },
   }
 
@@ -60,9 +60,12 @@ class PagesController < ApplicationController
   def eu_index
   end
 
+  def stock_picking_challenge
+    @stock_challenge = PageEmbed.stock_picking_challenge
+  end
+
   def set_seo_options
     @page_title = SEO_OPTIONS[params[:action]][:title]
     prepare_meta_tags(SEO_OPTIONS[params[:action]])
   end
-
 end

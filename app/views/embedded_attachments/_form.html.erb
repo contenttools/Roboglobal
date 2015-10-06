@@ -1,21 +1,20 @@
 <%= form_for(@embedded_attachment, remote: remote, authenticity_token: true) do |f| %>
-  <% if @embedded_attachment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@embedded_attachment.errors.count, "error") %> prohibited this embedded_attachment from being saved:</h2>
-
-      <ul>
-      <% @embedded_attachment.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="field">
-    <%= f.label :embed_code %><br>
-    <%= f.text_area :embed_code, required:true %>
-  </div>
-  <div class="actions">
-    <%= f.submit submit_text(f.object, "Video") %>
-  </div>
+<% if @embedded_attachment.errors.any? %>
+<div id="error_explanation">
+  <h2><%= pluralize(@embedded_attachment.errors.count, "error") %> prohibited this embedded_attachment from being saved:</h2>
+  <ul>
+    <% @embedded_attachment.errors.full_messages.each do |message| %>
+    <li><%= message %></li>
+    <% end %>
+  </ul>
+</div>
+<% end %>
+<div class="form-group">
+  <%= f.label :embed_code %>
+  <%= f.text_area :embed_code, required:true, class: "form-control" %>
+</div>
+<div class="actions pull-left form-group">
+  <%= f.submit submit_text(f.object, "Video"), class: "btn btn-success" %>
+</div>
+<div class="clearfix"></div>
 <% end %>

@@ -1,85 +1,99 @@
 <%= form_for(@blog_post) do |f| %>
-  <%= hidden_field_tag 'attached_image_id' %>
-  <%= hidden_field_tag 'attached_file_id' %>
-  <%= hidden_field_tag 'attached_video_id' %>
-
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title, required: true %>
-  </div>
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.cktext_area :description, :cols => 40, :rows=>80, :ckeditor => {:toolbar => [
-    { name: 'document', groups: [ 'mode', 'document', 'doctools' ], items: [ 'Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-' ] },
-    { name: 'clipboard', groups: [ 'clipboard', 'undo' ], items: [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ] },
-    { name: 'editing', groups: [ 'find', 'selection', 'spellchecker' ], items: [ 'Find', 'Replace', '-', 'SelectAll', '-', 'Scayt' ] },
-    { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat' ] },
-    '/',
-    { name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ], items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl' ] },
-    { name: 'links', items: [ 'Link', 'Unlink', 'Anchor' ] },
-    { name: 'insert', items: ['oembed', 'Image', 'Video', 'Flash', 'Table', 'HorizontalRule', 'SpecialChar', 'PageBreak', 'Iframe' ] },
-    '/',
-    { name: 'styles', items: [ 'Styles', 'Format', 'Font', 'FontSize' ] },
-    { name: 'colors', items: [ 'TextColor', 'BGColor' ] },
-    { name: 'tools', items: [ 'Maximize', 'ShowBlocks' ] },
-    { name: 'others', items: [ '-' ] },
-    { name: 'about', items: [ 'About' ] }
-    ]}  %>
-  </div>
-  <div class="field">
-    <%= f.label :tags %><br>
-    <%= select_tag 'blog_post[tags][]', options_for_select(BlogPost::TOKENS, f.object.tags), {:multiple => true} %>
-  </div>
-  <div class="field">
-    <%= f.label :published_date, 'Published Date' %><br>
-    <%= f.text_field :published_date, class: "datepicker", required: true %>
-  </div><br>
-
-  <div class="field" data-no-turbolink>
-    <%= label_tag 'Featured Image' %><br>
-    <% if @current_attachment.present? %>
-      <%= image_tag(@current_attachment.image.url(:thumb), class: "attached_image") %><br>
-    <% else %>
-      <%= image_tag('', class: "attached_image") %><br>
-    <% end %>
-    <%= link_to "Attach Featured Image", "#featured_image_model", :data => { :colorbox => true, :colorbox_height => '800px', :colorbox_width => '900px', colorbox_inline:true }, class: "colorbox-inline btn btn-primary" %>
-
-    <%= link_to "Remove Attachment", remove_image_route, class: "btn btn-danger remove_image" + show_remove_attachment_link, remote: true %>
-  </div><br>
-
-  <div class="field" data-no-turbolink>
-    <%= label_tag 'Featured File' %><br>
-    <% if @current_pdf_attachment.present? %>
-      <%= image_tag(@current_pdf_attachment.document.url(:pdf_mini), class: "attached_file_pdf") %><br>
-    <% else %>
-      <%= image_tag('', class: "attached_file_pdf") %><br>
-    <% end %>
-    <%= link_to "Attach Featured File", "#featured_file_model", :data => { :colorbox => true, :colorbox_height => '800px', :colorbox_width => '900px', colorbox_inline:true }, class: "colorbox-inline btn btn-primary" %>
-
-    <%= link_to "Remove File", remove_file_route, class: "btn btn-danger remove_file" + show_file_attachment_link, remote: true %>
-  </div><br>
-
-  <div class="field" data-no-turbolink>
-    <%= label_tag 'Featured Video' %><br>
+<%= hidden_field_tag 'attached_image_id' %>
+<%= hidden_field_tag 'attached_file_id' %>
+<%= hidden_field_tag 'attached_video_id' %>
+<div class="login-container margin-bottom-40">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 padding-top-20 padding-bottom-20">
+    <div class="form-group">
+      <%= f.label :title %>
+      <%= f.text_field :title, required: true, class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :description %><br>
+      <%= f.cktext_area :description, :cols => 40, :rows=>80, :ckeditor => {:toolbar => [
+      { name: 'document', groups: [ 'mode', 'document', 'doctools' ], items: [ 'Source', '-', 'Save', 'NewPage', 'Preview', 'Print', '-' ] },
+      { name: 'clipboard', groups: [ 'clipboard', 'undo' ], items: [ 'Cut', 'Copy', 'Paste', 'PasteText', 'PasteFromWord', '-', 'Undo', 'Redo' ] },
+      { name: 'editing', groups: [ 'find', 'selection', 'spellchecker' ], items: [ 'Find', 'Replace', '-', 'SelectAll', '-', 'Scayt' ] },
+      { name: 'basicstyles', groups: [ 'basicstyles', 'cleanup' ], items: [ 'Bold', 'Italic', 'Underline', 'Strike', 'Subscript', 'Superscript', '-', 'RemoveFormat' ] },
+      '/',
+      { name: 'paragraph', groups: [ 'list', 'indent', 'blocks', 'align', 'bidi' ], items: [ 'NumberedList', 'BulletedList', '-', 'Outdent', 'Indent', '-', 'Blockquote', 'CreateDiv', '-', 'JustifyLeft', 'JustifyCenter', 'JustifyRight', 'JustifyBlock', '-', 'BidiLtr', 'BidiRtl' ] },
+      { name: 'links', items: [ 'Link', 'Unlink', 'Anchor' ] },
+      { name: 'insert', items: ['oembed', 'Image', 'Video', 'Flash', 'Table', 'HorizontalRule', 'SpecialChar', 'PageBreak', 'Iframe' ] },
+      '/',
+      { name: 'styles', items: [ 'Styles', 'Format', 'Font', 'FontSize' ] },
+      { name: 'colors', items: [ 'TextColor', 'BGColor' ] },
+      { name: 'tools', items: [ 'Maximize', 'ShowBlocks' ] },
+      { name: 'others', items: [ '-' ] },
+      { name: 'about', items: [ 'About' ] }
+      ]}  %>
+    </div>
+    <div class="row admin-date-picker">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 padding-top-40">
+        <div class="field form-group">
+          <%= f.label :tags %>
+          <div class="clearfix"></div>
+          <%= select_tag 'blog_post[tags][]', options_for_select(BlogPost::TOKENS, f.object.tags), {:multiple => true, class: 'form-control'} %>
+        </div>
+      </div>
+      <div class="clearfix"></div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-4 padding-top-40">
+        <div class="field form-group">
+          <%= f.label :published_date, 'Published Date' %><br>
+          <%= f.text_field :published_date, class: "datepicker form-control", required: true  %>
+        </div>
+      </div>
+    </div>
+    <div class="clearfix"></div>
+    <div class="field padding-bottom-40 margin-top-40" data-no-turbolink>
+      <%= label_tag 'Featured Image' %>
+      <div class="clearfix"></div>
+      <% if @current_attachment.present? %>
+      <%= image_tag(@current_attachment.image.url(:thumb), class: "attached_image margin-bottom-20") %><br>
+      <% else %>
+      <%= image_tag('', class: "attached_image") %>
+      <% end %>
+      <%= link_to "Attach Featured Image", "#featured_image_model", :data => { :colorbox => true, :colorbox_height => '800px', :colorbox_width => '900px', colorbox_inline:true }, class: "colorbox-inline btn btn-primary" %>
+      <%= link_to "Remove Attachment", remove_image_route, class: "btn btn-danger remove_image" + show_remove_attachment_link, remote: true %>
+    </div>
+    <div class="clearfix"></div>
+    <div class="field padding-bottom-40" data-no-turbolink>
+      <%= label_tag 'Featured File' %>
+      <div class="clearfix"></div>
+      <% if @current_pdf_attachment.present? %>
+      <%= image_tag(@current_pdf_attachment.document.url(:pdf_mini), class: "attached_file_pdf margin-bottom-20") %><br>
+      <% else %>
+      <%= image_tag('', class: "attached_file_pdf") %>
+      <% end %>
+      <%= link_to "Attach Featured File", "#featured_file_model", :data => { :colorbox => true, :colorbox_height => '800px', :colorbox_width => '900px', colorbox_inline:true }, class: "colorbox-inline btn btn-primary" %>
+      <%= link_to "Remove File", remove_file_route, class: "btn btn-danger remove_file" + show_file_attachment_link, remote: true %>
+    </div>
+    <div class="clearfix"></div>
+    <div class="field padding-bottom-40" data-no-turbolink>
+      <%= label_tag 'Featured Video' %>
+      <div class="clearfix"></div>
       <div class="attached_video_embedded">
         <% if @current_embedded_attachment.present? && @current_embedded_attachment.embed_code.present? %>
-          <%= raw(@current_embedded_attachment.embed_code) %>
+        <%= raw(@current_embedded_attachment.embed_code) %>
         <% else %>
-          <iframe src="about:blank"></iframe>
+        <iframe src="about:blank"></iframe>
         <% end %>
       </div>
-    <%= link_to "Attach Featured Video", "#featured_video_model", :data => { :colorbox => true, :colorbox_height => '800px', :colorbox_width => '900px', colorbox_inline:true }, class: "colorbox-inline btn btn-primary" %>
-
-    <%= link_to "Remove Video", remove_video_route, class: "btn btn-danger remove_video" + show_video_attachment_link, remote: true %>
-  </div><br>
-
-  <div class="actions">
-    <%= f.submit submit_text(f.object, "Blog Post"), class: "btn btn-success" %>
+      <%= link_to "Attach Featured Video", "#featured_video_model", :data => { :colorbox => true, :colorbox_height => '800px', :colorbox_width => '900px', colorbox_inline:true }, class: "colorbox-inline btn btn-primary" %>
+      <%= link_to "Remove Video", remove_video_route, class: "btn btn-danger remove_video" + show_video_attachment_link, remote: true %>
+    </div><br>
+    <div class="row">
+      <div class="col-xs-6 col-sm-4 col-md-3 col-lg-2">
+        <div class="actions">
+          <%= f.submit submit_text(f.object, "Blog Post"), class: "btn btn-success" %>
+        </div>
+      </div>
+    </div>
+    <% end %>
   </div>
-<% end %>
+</div>
 <%= render 'feature_image_colorbox' %>
 <%= render 'feature_file_colorbox' %>
 <%= render 'feature_video_colorbox' %>
 <% content_for :js_init do %>
-  Blog.init();
+Blog.init();
 <% end %>

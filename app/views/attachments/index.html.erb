@@ -6,15 +6,17 @@
   </div>
 </div>
 <div class="clearfix"></div>
-<div class="container">
+<div class="container dashboard-icon">
   <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <%- model_class = Attachment -%>
-      <div class="page-header">
+      <div class="padding-top-50 edit-file">
         <%= link_to 'Add Image', new_attachment_path, :class => 'btn btn-primary' %>
       </div>
-      <%= paginate @attachments %>
-      <table class="table table-striped">
+      <div class="pager pull-right">
+        <%= paginate @attachments %>
+      </div>
+      <table class="table table-striped margin-bottom-30">
         <thead>
           <tr>
             <th>Image File</th>
@@ -30,12 +32,18 @@
             <td><%= image_tag attachment.image.url(:thumb) %></td>
             <td><%= date_format(attachment.created_at) %></td>
             <td>
-              <%= link_to "Show", attachment_path(attachment) %>
-              <%= link_to "Edit", edit_attachment_path(attachment) %>
-              <%= link_to "Delete", attachment_path(attachment),
+              <%= link_to attachment_path(attachment) do %>
+                <i class="fa fa-eye"></i>
+              <% end %>
+              <%= link_to edit_attachment_path(attachment) do %>
+                <i class="fa fa-pencil-square-o"></i>
+              <% end %>
+              <%= link_to attachment_path(attachment),
               :title => "Delete",
               :method => :delete,
-              :data => { :confirm => "Are you sure?" } %>
+              :data => { :confirm => "Are you sure?" } do %>
+                <i class="fa fa-trash-o"></i>
+              <% end %>
             </td>
           </tr>
           <% end %>

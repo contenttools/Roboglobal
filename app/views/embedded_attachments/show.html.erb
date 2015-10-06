@@ -1,9 +1,25 @@
-<p>
-  <strong>Embed code:</strong>
-  <div class="embed-container">
-    <%= raw @embedded_attachment.embed_code %>
+<div class="about-banner">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-centered">
+    <div class="us-heading-container">
+      <h1>Edit Video</h1>
+    </div>
   </div>
-</p>
-
-<%= link_to 'Edit', edit_embedded_attachment_path(@embedded_attachment) %> |
-<%= link_to 'Back', embedded_attachments_path %>
+</div>
+<div class="clearfix"></div>
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="padding-top-50 edit-file">
+        <strong>Embed code:</strong>
+        <div class="embed-container">
+          <%= raw @embedded_attachment.embed_code %>
+        </div>
+        <%= link_to 'Edit', edit_embedded_attachment_path(@embedded_attachment), :class => 'btn btn-default' %>
+        <%= link_to 'Back', embedded_attachments_path, :class => 'btn btn-default' %>
+      </div>
+    </div>
+  </div>
+</div>
+<% content_for :js_init do %>
+HeaderScroll.init();
+<% end %>

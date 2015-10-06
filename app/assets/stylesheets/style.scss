@@ -1893,28 +1893,67 @@ a.post-tags:hover {
   color: white;
 }
 #menu-ui a:nth-child(2) {
-  background: image-url("1.jpg") no-repeat 68px 11px;
+  background: image-url("m-1.png") no-repeat 68px 8px;
 }
 #menu-ui a:nth-child(3) {
-  background: image-url("2.jpg") no-repeat 68px 11px;
+  background: image-url("m-2.png") no-repeat 68px 8px;
 }
 #menu-ui a:nth-child(4) {
-  background: image-url("3.jpg") no-repeat 68px 11px;
+  background: image-url("m-3.png") no-repeat 68px 8px;
 }
 #menu-ui a:nth-child(5) {
-  background: image-url("4.jpg") no-repeat 68px 11px;
+  background: image-url("m-4.png") no-repeat 68px 8px;
 }
 #menu-ui a:nth-child(6) {
-  background: image-url("5.jpg") no-repeat 68px 11px;
+  background: image-url("m-5.png") no-repeat 68px 8px;
 }
 #menu-ui a:nth-child(7) {
-  background: image-url("1.jpg") no-repeat 68px 11px;
+  background: image-url("m-6.png") no-repeat 68px 8px;
+}
+#menu-ui a:nth-child(8) {
+  background: image-url("m-7.png") no-repeat 68px 8px;
+}
+#menu-ui a:nth-child(9) {
+  background: image-url("m-8.png") no-repeat 68px 8px;
+}
+#menu-ui a:nth-child(10) {
+  background: image-url("m-9.png") no-repeat 68px 8px;
+}
+#menu-ui a:nth-child(11) {
+  background: image-url("m-10.png") no-repeat 68px 8px;
+}
+#menu-ui a:nth-child(12) {
+  background: image-url("m-11.png") no-repeat 68px 8px;
+}
+#menu-ui a:nth-child(13) {
+  background: image-url("m-12.png") no-repeat 68px 8px;
+}
+#menu-ui a:nth-child(14) {
+  background: image-url("m-13.png") no-repeat 68px 8px;
 }
 .advisory-mobile {
   display: none;
 }
 .margin-top-70 {
   margin-top: 70px;
+}
+.margin-top-40 {
+  margin-top: 40px;
+}
+.margin-top-30 {
+  margin-top: 30px;
+}
+.margin-bottom-50 {
+  margin-bottom: 50px;
+}
+.margin-bottom-20 {
+  margin-bottom: 20px;
+}
+.margin-bottom-40 {
+  margin-bottom: 40px;
+}
+.margin-top-20 {
+  margin-top: 20px;
 }
 .margin-top-40 {
   margin-top: 40px;
@@ -1974,18 +2013,44 @@ a.post-tags:hover {
 }
 .login-container input[type="submit"] {
   width: 100%;
-  font-size: 20px;
   padding: 8px 16px;
 }
 .login-container {
-  background: #effbff;
-  border: 1px solid #cdf3ff;
+  background: #f5f5f5;
+  border: 1px solid #ccc;
   border-radius: 3px;
+  width: 100%;
+  float: left;
+}
+.user-login {
+  background: #f5f5f5;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+.user-login input[type="submit"] {
+  font-size: 20px;
 }
 .login-container label {
   font-size: 18px;
   font-weight: normal;
 }
+.edit-file input[type="file"] {
+  margin-bottom: 20px;
+}
+.edit-file textarea {
+  width: 100%;
+}
+.admin-date-picker select,
+.admin-date-picker input[type="text"] {
+  width: 100%;
+}
+.admin-date-picker select {
+  min-height: 150px;
+}
+.dashboard-icon .fa {
+  padding: 0px 6px;
+}
+
 @media screen and (min-width: 320px) and (max-width: 1200px) {
   .footer-nav ul li {
     margin-right: 0px;
@@ -2010,7 +2075,7 @@ a.post-tags:hover {
     margin-right: 0px;
   }
   .navbar-default .navbar-nav > li > a {
-    font-size: 14px;
+    font-size: 13px;
   }
   .get-touch-right .phone {
     font-size: 14px;
@@ -2383,6 +2448,9 @@ a.post-tags:hover {
   .latest-article-section .sub-heading {
     padding-bottom: 10px;
   }
+  .breake {
+    clear: both;
+  }
 }/*End 767*/
 
 
@@ -2471,6 +2539,12 @@ a.post-tags:hover {
   }
   .sector-section {
     margin-bottom: 0px;
+  }
+  .map-section {
+    display: none;
+  }
+  .admin-tabs {
+    margin-bottom: 15px;
   }
 }
 
@@ -2733,8 +2807,7 @@ a.post-tags:hover {
   .about-des-wrapper {
     height: 367px;
   }
-  .main-banner,
-  .main-banner2 {
+  .main-banner {
     min-height: 510px;
   }
 }
@@ -2857,23 +2930,48 @@ a.post-tags:hover {
     padding-left: 40px;
   }
   #menu-ui a:nth-child(2) {
-  background: image-url("1.jpg") no-repeat 13px 11px;
+  background: image-url("m-1.png") no-repeat 13px 11px;
   }
   #menu-ui a:nth-child(3) {
-    background: image-url("2.jpg") no-repeat 13px 11px;
+    background: image-url("m-2.png") no-repeat 13px 11px;
   }
   #menu-ui a:nth-child(4) {
-    background: image-url("3.jpg") no-repeat 13px 11px;
+    background: image-url("m-3.png") no-repeat 13px 11px;
   }
   #menu-ui a:nth-child(5) {
-    background: image-url("4.jpg") no-repeat 13px 11px;
+    background: image-url("m-4.png") no-repeat 13px 11px;
   }
   #menu-ui a:nth-child(6) {
-    background: image-url("5.jpg") no-repeat 13px 11px;
+    background: image-url("m-5.png") no-repeat 13px 11px;
   }
   #menu-ui a:nth-child(7) {
-    background: image-url("1.jpg") no-repeat 13px 11px;
+    background: image-url("m-6.png") no-repeat 13px 11px;
   }
+  #menu-ui a:nth-child(8) {
+    background: image-url("m-7.png") no-repeat 13px 11px;
+  }
+  #menu-ui a:nth-child(9) {
+    background: image-url("m-8.png") no-repeat 13px 11px;
+  }
+  #menu-ui a:nth-child(10) {
+    background: image-url("m-9.png") no-repeat 13px 11px;
+  }
+  #menu-ui a:nth-child(11) {
+    background: image-url("m-10.png") no-repeat 13px 11px;
+  }
+  #menu-ui a:nth-child(12) {
+    background: image-url("m-11.png") no-repeat 13px 11px;
+  }
+  #menu-ui a:nth-child(13) {
+    background: image-url("m-12.png") no-repeat 13px 11px;
+  }
+  #menu-ui a:nth-child(14) {
+    background: image-url("m-13.png") no-repeat 13px 11px;
+  }
+}
+
+.carousel-inner {
+  height: 370px;
 }
 
 .carousel-inner {
