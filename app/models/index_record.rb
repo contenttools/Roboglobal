@@ -69,6 +69,6 @@ class IndexRecord < ActiveRecord::Base
 
   def self.stock_chart_data(record_type)
     return unless record_type.in? ["us", "eu"]
-    IndexRecord.where(record_type: record_type).order("index_date ASC").pluck(:value, :index_date).each_cons(2).collect {|record|   {x: record[0][1].to_datetime.to_i*1000, y: record[0][0].to_f, percentage: ((record[0][0].to_f - record[1][0].to_f)/record[1][0].to_f).round(4)}}
+    IndexRecord.where(record_type: record_type).order("index_date ASC").pluck(:value, :index_date).each_cons(2).collect {|record|   {x: record[1][1].to_datetime.to_i*1000, y: record[0][0].to_f, percentage: ((record[0][0].to_f - record[1][0].to_f)/record[1][0].to_f).round(4)}}
   end
 end
