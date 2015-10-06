@@ -9,7 +9,7 @@ bind_stock_chart = ->
               selected: 1
 
             title:
-              text: "Robo"
+              text: ""
             plotOptions:
               line:
                 turboThreshold: 0
