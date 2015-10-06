@@ -173,9 +173,9 @@ bind_our_sector_hover = ->
 
 bind_complete_load_video = ->
   video_element = document.getElementById('home_vid')
-  video_element.oncanplay = ->
+  setTimeout (->
     video_element.play()
-    return
+  ), 2000
 
 (($) ->
   window.Home || (window.Home = {})
