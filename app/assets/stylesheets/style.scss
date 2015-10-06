@@ -2050,6 +2050,7 @@ a.post-tags:hover {
 .dashboard-icon .fa {
   padding: 0px 6px;
 }
+
 @media screen and (min-width: 320px) and (max-width: 1200px) {
   .footer-nav ul li {
     margin-right: 0px;
@@ -2074,7 +2075,7 @@ a.post-tags:hover {
     margin-right: 0px;
   }
   .navbar-default .navbar-nav > li > a {
-    font-size: 14px;
+    font-size: 13px;
   }
   .get-touch-right .phone {
     font-size: 14px;
@@ -2447,6 +2448,9 @@ a.post-tags:hover {
   .latest-article-section .sub-heading {
     padding-bottom: 10px;
   }
+  .breake {
+    clear: both;
+  }
 }/*End 767*/
 
 
@@ -2538,6 +2542,9 @@ a.post-tags:hover {
   }
   .map-section {
     display: none;
+  }
+  .admin-tabs {
+    margin-bottom: 15px;
   }
 }
 
