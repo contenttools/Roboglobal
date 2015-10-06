@@ -1,30 +1,55 @@
-<h1>All Blog Posts</h1>
-<div data-no-turbolink>
-  <%= link_to 'Add Blog Post', new_blog_post_path, :class => 'btn btn-primary' %>
+<div class="about-banner">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-centered">
+    <div class="us-heading-container">
+      <h1>All Blog Posts</h1>
+    </div>
+  </div>
 </div>
-<%= paginate @blog_posts %>
-<table class="table table-striped">
-  <thead>
-    <tr>
-      <th>Title</th>
-      <th>Tags</th>
-      <th>Published Date</th>
-      <th>Views</th>
-      <th colspan="3">Actions</th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @blog_posts.each do |blog_post| %>
-      <tr>
-        <td><%= blog_post.title %></td>
-        <td><%= "'#{blog_post.tags.join("' , '")}'" %></td>
-        <td><%= date_format(blog_post.published_date) %></td>
-        <td><%= blog_post.views %></td>
-        <td><a href="/<%= blog_post.slug%>">Show</a></td>
-        <td data-no-turbolink><%= link_to 'Edit', edit_blog_post_path(blog_post) %></td>
-        <td><%= link_to 'Delete', blog_post, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<div class="clearfix"></div>
+<div class="container dashboard-icon margin-bottom-40">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="padding-top-50 edit-file">
+        <div data-no-turbolink>
+          <%= link_to 'Add Blog Post', new_blog_post_path, :class => 'btn btn-primary' %>
+        </div>
+        <div class="pager pull-right">
+          <%= paginate @blog_posts %>
+        </div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>Title</th>
+              <th>Tags</th>
+              <th class="col-lg-2">Published Date</th>
+              <th>Views</th>
+              <th colspan="3">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @blog_posts.each do |blog_post| %>
+            <tr>
+              <td><%= blog_post.title %></td>
+              <td><%= "'#{blog_post.tags.join("' , '")}'" %></td>
+              <td><%= date_format(blog_post.published_date) %></td>
+              <td><%= blog_post.views %></td>
+              <td><a href="/<%= blog_post.slug%>"><i class="fa fa-eye"></i></a></td>
+              <td data-no-turbolink><%= link_to edit_blog_post_path(blog_post) do %>
+                <i class="fa fa-pencil-square-o"></i>
+              <% end %>
+              </td>
+              <td><%= link_to blog_post, method: :delete, data: { confirm: 'Are you sure?' } do %>
+                <i class="fa fa-trash-o"></i>
+              <% end %>
+              </td>
+            </tr>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+<% content_for :js_init do %>
+HeaderScroll.init();
+<% end %>

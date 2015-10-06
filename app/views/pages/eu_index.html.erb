@@ -231,9 +231,16 @@
         </div>
       </div>
     </div>
+    <div class="index-perfor-section">
+      <h2>INDEX PERFORMANCE</h2>
+      <div class="index-perfor-section">
+        <div id="eu_stock_chart"></div>
+      </div>
+    </div>
   </div>
 </div>
 <% content_for :js_init do %>
   HeaderScroll.init();
   OurSectors.init();
+  StockChart.init("eu");
 <% end %>

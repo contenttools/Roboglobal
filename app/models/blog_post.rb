@@ -70,7 +70,7 @@ class BlogPost < ActiveRecord::Base
     seo_options = {
       title:       "Need to Know Robotics and Automation Industry News",
       description: "Keep up with current events and news in robotics and automation",
-      image: ActionController::Base.helpers.asset_path("news-banner.jpg"),
+      image: ActionController::Base.helpers.asset_path("ROBONews.jpg"),
     }
   end
 
