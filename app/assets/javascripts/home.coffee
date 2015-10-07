@@ -174,12 +174,11 @@ bind_our_sector_hover = ->
 bind_complete_load_video = ->
   video_element = document.getElementById('home_vid')
   video_element.addEventListener 'progress', ->
-    bufferedEnd = video_element.buffered.end(video_element.buffered.length - 1)
-    duration = video_element.duration
-    console.log "bufferedEnd : " + bufferedEnd
-    if bufferedEnd > 10
-      video_element.play()
-      video_element.removeEventListener 'progress',self
+    if video_element.buffered.length > 0
+      bufferedEnd = video_element.buffered.end(video_element.buffered.length - 1)
+      duration = video_element.duration
+      if bufferedEnd > 5
+        video_element.play()
 
 (($) ->
   window.Home || (window.Home = {})
