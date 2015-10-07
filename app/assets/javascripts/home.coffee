@@ -171,20 +171,6 @@ sector_hover_out = ->
 bind_our_sector_hover = ->
   $('.sector-effect .text').hover sector_hover_in, sector_hover_out
 
-bind_complete_load_video = ->
-  video_element = document.getElementById('home_vid')
-  video_element.addEventListener 'progress', ->
-    if navigator.userAgent.indexOf('MSIE') != -1
-      setTimeout (->
-        video_element.play()
-      ), 2000
-    else
-      if video_element.buffered.length > 0
-        bufferedEnd = video_element.buffered.end(video_element.buffered.length - 1)
-        duration = video_element.duration
-        if bufferedEnd > 5
-          video_element.play()
-
 (($) ->
   window.Home || (window.Home = {})
 
@@ -199,5 +185,4 @@ bind_complete_load_video = ->
     bind_enable_scroll()
     bind_disable_scroll()
     bind_disable_drag_for_mobile()
-    bind_complete_load_video()
 ).call(this)
