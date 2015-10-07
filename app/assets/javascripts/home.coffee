@@ -171,6 +171,7 @@ sector_hover_out = ->
 bind_our_sector_hover = ->
   $('.sector-effect .text').hover sector_hover_in, sector_hover_out
 
+
 (($) ->
   window.Home || (window.Home = {})
 
