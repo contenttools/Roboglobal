@@ -6,7 +6,7 @@ bind_stock_chart = ->
         success: (data, textStatus, jqXHR) ->
           $("##{get_type()}_stock_chart").highcharts "StockChart",
             rangeSelector:
-              selected: 1
+              selected: 5
 
             title:
               text: ""
