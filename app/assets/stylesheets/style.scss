@@ -248,8 +248,13 @@ nav.white-header {
 }
 video#home_vid {
   width: 100%;
-  background: image-url("home.jpg") no-repeat center;
-  background-size: cover;
+}
+video { 
+  background: #2aafdc image-url('home.jpg') no-repeat 0 0; 
+  -webkit-background-size:cover; 
+  -moz-background-size:cover; 
+  -o-background-size:cover; 
+  background-size:cover; 
 }
 .video-banner {
   position: absolute;
