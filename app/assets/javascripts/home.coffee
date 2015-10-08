@@ -174,11 +174,16 @@ bind_our_sector_hover = ->
 bind_complete_load_video = ->
   video_element = document.getElementById('home_vid')
   video_element.addEventListener 'progress', ->
-    if video_element.buffered.length > 0
-      bufferedEnd = video_element.buffered.end(video_element.buffered.length - 1)
-      duration = video_element.duration
-      if bufferedEnd > 5
+    if navigator.userAgent.indexOf('MSIE') != -1
+      setTimeout (->
         video_element.play()
+      ), 2000
+    else
+      if video_element.buffered.length > 0
+        bufferedEnd = video_element.buffered.end(video_element.buffered.length - 1)
+        duration = video_element.duration
+        if bufferedEnd > 5
+          video_element.play()
 
 (($) ->
   window.Home || (window.Home = {})
