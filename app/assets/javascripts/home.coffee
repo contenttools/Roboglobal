@@ -173,7 +173,8 @@ bind_our_sector_hover = ->
 
 $(window).load (e) ->
   video = document.getElementById("home_vid")
-  video.play()
+  if video
+    video.play()
 
 (($) ->
   window.Home || (window.Home = {})
