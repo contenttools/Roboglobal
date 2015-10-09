@@ -79,10 +79,10 @@ module ApplicationHelper
   end
 
   def fetch_js(controller)
-    if controller == "pages" || controller == 'blog_posts'
-      javascript_include_tag 'pages', 'data-turbolinks-track' => false
-    else
+    if request.env['PATH_INFO'] =~ /admin/
       javascript_include_tag 'admin', 'data-turbolinks-track' => false
+    else
+      javascript_include_tag 'pages', 'data-turbolinks-track' => false
     end
   end
 end
