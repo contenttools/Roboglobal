@@ -3,6 +3,7 @@
   <head>
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => false %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track' => false %>
+    <%= fetch_js(params[:controller]) %>
     <%= csrf_meta_tags %>
     <%= display_meta_tags %>
     <script src="//use.typekit.net/qun2jvv.js"></script>
