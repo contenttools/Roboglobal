@@ -15,5 +15,6 @@
 //= require jquery_ujs
 //= require underscore
 //= require common
+//= require colorbox-rails
 //= style
 
