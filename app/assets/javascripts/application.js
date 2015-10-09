@@ -16,5 +16,9 @@
 //= require underscore
 //= require common
 //= require colorbox-rails
+//= require video_resize
+//= require scroll_header
+//= require email_validator
+//= require blog_posts
 //= style
 
