@@ -28,6 +28,10 @@ Rails.application.routes.draw do
   get '/admin' => 'admin#dashboard'
 
   devise_for :users
+  as :user do
+    get 'users/change_password' => 'registrations#edit', as: 'edit_user_registration'
+    patch 'users' => 'registrations#update', as: 'user_registration'
+  end
 
   get 'about-us' => 'pages#about_us'
   get 'legal-information' => 'pages#legal_information'
