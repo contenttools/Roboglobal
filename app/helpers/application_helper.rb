@@ -78,11 +78,15 @@ module ApplicationHelper
     end
   end
 
-  def fetch_js(controller)
+  def fetch_js(params)
     if request.env['PATH_INFO'] =~ /admin/
-      javascript_include_tag 'admin', 'data-turbolinks-track' => false
-    else
-      javascript_include_tag 'pages', 'data-turbolinks-track' => false
+      javascript_include_tag 'admin'
+    elsif params[:action] == 'home'
+      javascript_include_tag 'pages'
+    elsif params[:action] == 'about_us'
+      javascript_include_tag 'about_us'
+    elsif params[:action] == 'us_index' || params[:action] == 'eu_index'
+      javascript_include_tag 'index'
     end
   end
 end
