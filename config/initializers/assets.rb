@@ -5,7 +5,7 @@ Rails.application.config.assets.version = '1.0'
 Rails.application.config.assets.precompile += %w( ckeditor/* )
 Rails.application.config.assets.precompile += %w( icons-*.png )
 
-%w( admin pages ).each do |controller|
+%w( admin pages index about ).each do |controller|
   Rails.application.config.assets.precompile += ["#{controller}.js"]
 end
 # Add additional assets to the asset load path

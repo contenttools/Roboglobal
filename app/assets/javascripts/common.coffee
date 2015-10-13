@@ -4,7 +4,9 @@ menu_button = ->
     $(".nav_x").toggle();
 
 hide_notification = ->
-  $(".alert, .alert-success, alert-danger").fadeOut(5000)
+  setTimeout (->
+    $(".alert, .alert-success, alert-danger").fadeOut(500)
+  ), 4000
 
 $ ->
   menu_button()
