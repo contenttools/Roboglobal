@@ -84,7 +84,7 @@ module ApplicationHelper
     elsif params[:action] == 'home'
       javascript_include_tag 'pages'
     elsif params[:action] == 'about_us'
-      javascript_include_tag 'about_us'
+      javascript_include_tag 'about'
     elsif params[:action] == 'us_index' || params[:action] == 'eu_index'
       javascript_include_tag 'index'
     end
