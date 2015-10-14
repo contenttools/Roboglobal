@@ -16,7 +16,7 @@ bind_form_validator = ->
         return false
       emailPattern = /^([\w.-]+)@([\w.-]+)\.([a-zA-Z.]{2,6})$/i;
       if $('#contact_email').val().length == 0 or not $('#contact_email').val().match(emailPattern)
-        $('#contact_email').parent().before '<div class=\'validation\' style=\'color:red;margin-bottom: 10px;\'>Please enter a valid emaila address</div>'
+        $('#contact_email').parent().before '<div class=\'validation\' style=\'color:red;margin-bottom: 10px;\'>Please enter a valid email address</div>'
         return false
       if $('#contact_phone').val().length == 0
         $('#contact_phone').parent().before '<div class=\'validation\' style=\'color:red;margin-bottom: 10px;\'>Please enter phone number</div>'
