@@ -171,6 +171,12 @@ sector_hover_out = ->
 bind_our_sector_hover = ->
   $('.sector-effect .text').hover sector_hover_in, sector_hover_out
 
+
+$(window).load (e) ->
+  video = document.getElementById("home_vid")
+  if video
+    video.play()
+
 (($) ->
   window.Home || (window.Home = {})
 

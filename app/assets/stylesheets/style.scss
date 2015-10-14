@@ -2982,6 +2982,37 @@ a.post-tags:hover {
   height: 370px;
 }
 
-.carousel-inner {
-  height: 370px;
+.us-chart-image {
+  padding-bottom: 90px;
+  padding-top: 30px;
+}
+
+.main-navigation .dropdown-space {
+  top: 35px !important;
+  height: 50px;
+  background-color: transparent !important;
+  border-style: none !important;
+}
+
+.about-btn-shell .dropdown-space   {
+  display: block;
+  top: -15px !important;
+  height: 10px;
+  position: relative;
+  background-color: transparent !important;
+  border-style: none !important;
+}
+
+.footer-dropdown .dropdown-space {
+  display: block;
+  top: -15px !important;
+  height: 10px;
+  position: relative;
+  background-color: transparent !important;
+  border-style: none !important;
+}
+
+.dropdown-space:after {
+  background: transparent !important;
+  border-style: none !important;
 }
