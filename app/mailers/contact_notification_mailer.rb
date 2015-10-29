@@ -1,5 +1,5 @@
 class ContactNotificationMailer < ApplicationMailer
-  default from: "admin@robostox.com"
+  default from: "admin@roboglobal.com"
   def contact_notification(contact)
     @contact = contact
     email = ['erica@roboglobal.com']
