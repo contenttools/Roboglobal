@@ -60,6 +60,9 @@ class PagesController < ApplicationController
   def eu_index
   end
 
+  def video_page
+  end
+
   def stock_picking_challenge
     @stock_challenge = PageEmbed.stock_picking_challenge
   end
