@@ -34,7 +34,6 @@ Rails.application.routes.draw do
   end
 
   get 'about-us' => 'pages#about_us'
-  get 'video' => 'pages#video_page'
   get 'legal-information' => 'pages#legal_information'
   get 'us-index' => 'pages#us_index'
   get 'eu-index' => 'pages#eu_index'
