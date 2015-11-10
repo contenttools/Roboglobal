@@ -87,6 +87,8 @@ module ApplicationHelper
       javascript_include_tag 'about'
     elsif params[:action] == 'us_index' || params[:action] == 'eu_index'
       javascript_include_tag 'index'
+    elsif params[:action] == 'video_page'
+      javascript_include_tag 'video'
     end
   end
 end
