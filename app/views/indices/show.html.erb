@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Index type:</strong>
+  <%= @index.index_type %>
+</p>
+
+<p>
+  <strong>Category:</strong>
+  <%= @index.category %>
+</p>
+
+<%= link_to 'Edit', edit_index_path(@index) %> |
+<%= link_to 'Back', indices_path %>

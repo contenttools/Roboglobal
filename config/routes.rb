@@ -23,6 +23,8 @@ Rails.application.routes.draw do
     resources :pdf_attachments, path: 'files'
     resources :embedded_attachments, path: 'videos'
     resources :page_embeds, path: "page-embed", only: [:index, :update]
+
+    resources :indices
   end
 
   get '/admin' => 'admin#dashboard'
