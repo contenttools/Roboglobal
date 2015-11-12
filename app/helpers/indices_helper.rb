@@ -16,4 +16,9 @@ def show_attachment_file_link
   def is_us_index?
     session[:referrer_index] == "us"
   end
+
+  def back_path
+    session[:referrer_index] == "eu" ? eu_index_indices_path : us_index_indices_path
+  end
+
 end
