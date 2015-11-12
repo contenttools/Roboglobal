@@ -24,7 +24,15 @@ Rails.application.routes.draw do
     resources :embedded_attachments, path: 'videos'
     resources :page_embeds, path: "page-embed", only: [:index, :update]
 
-    resources :indices
+    resources :indices, except: :index do
+      member do
+        get 'remove_file'
+      end
+      collection do
+        get 'us-index' => 'indices#us_index'
+        get 'eu-index' => 'indices#eu_index'
+      end
+    end
   end
 
   get '/admin' => 'admin#dashboard'
