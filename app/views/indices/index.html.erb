@@ -1,0 +1,70 @@
+<div class="about-banner">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-centered">
+    <div class="us-heading-container">
+      <h1> <%= get_index_name %> Index</h1>
+    </div>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div class="container dashboard-icon">
+  <div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="padding-top-50 edit-file">
+        <div class="pager pull-right padding-top-20 padding-bottom-20">
+          <%- model_class = Index -%>
+        </div>
+        <div>
+          <% if is_us_index? %>
+            <div class="pull-left add-button"><%= link_to 'Fact Sheet', new_index_path(category: 'fact_sheet'), :class => 'btn btn-primary' %></div>
+            <div class="pull-left add-button"><%= link_to 'Index Holdings', new_index_path(category: 'index_holdings'), :class => 'btn btn-primary' %></div>
+            <div class="pull-left"><%= link_to 'Industry Classification', new_index_path(category: 'industry_classification'), :class => 'btn btn-primary' %></div>
+          <% else %>
+            <div class="pull-left add-button"><%= link_to 'Index Methodology', new_index_path(category: 'index_methodology'), :class => 'btn btn-primary' %></div>
+            <div class="pull-left"><%= link_to 'Industry Classification', new_index_path(category: 'industry_classification'), :class => 'btn btn-primary' %></div>
+          <% end %>
+        </div>
+        <div class="pager pull-right">
+          <%= paginate @indices %>
+        </div>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+              <th>File Name</th>
+              <th>Category</th>
+              <th>Preview</th>
+              <th>Date</th>
+              <th colspan="3">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @indices.each do |index| %>
+              <% if index.pdf_attachment.present? %>
+                <tr>
+                  <td><%= index.pdf_attachment.document_file_name %></td>
+                  <td><%= index.category.titleize %></td>
+                  <td><%= image_tag index.pdf_attachment.document.url(:pdf_mini) %></td>
+                  <td><%= date_format(index.pdf_attachment.created_at) %></td>
+                  <td>
+                    <%= link_to index_path(index) do %>
+                      <i class="fa fa-eye"></i>
+                    <% end %>
+                    <%= link_to edit_index_path(index) do %>
+                      <i class="fa fa-pencil-square-o"></i>
+                    <% end %>
+                    <%= link_to index_path(index), method: :delete, data: { confirm: 'Are you sure?' }  do %>
+                      <i class="fa fa-trash-o"></i>
+                    <% end %>
+                  </td>
+                </tr>
+              <% end %>
+            <% end %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</div>
+
+<% content_for :js_init do %>
+  HeaderScroll.init();
+<% end %>

@@ -23,6 +23,16 @@ Rails.application.routes.draw do
     resources :pdf_attachments, path: 'files'
     resources :embedded_attachments, path: 'videos'
     resources :page_embeds, path: "page-embed", only: [:index, :update]
+
+    resources :indices, except: :index do
+      member do
+        get 'remove_file'
+      end
+      collection do
+        get 'us-index' => 'indices#us_index'
+        get 'eu-index' => 'indices#eu_index'
+      end
+    end
   end
 
   get '/admin' => 'admin#dashboard'
@@ -34,7 +44,6 @@ Rails.application.routes.draw do
   end
 
   get 'about-us' => 'pages#about_us'
-  get 'video' => 'pages#video_page'
   get 'legal-information' => 'pages#legal_information'
   get 'us-index' => 'pages#us_index'
   get 'eu-index' => 'pages#eu_index'
