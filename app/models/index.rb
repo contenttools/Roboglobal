@@ -11,6 +11,10 @@ class Index < ActiveRecord::Base
     self.index_type(type).category(category).last.present? ? self.index_type(type).category(category).last.pdf_attachment.document.url : "#"
   end
 
+  def index_category
+    self.category.titleize
+  end
+
   PER_PAGE_RECORDS = 10
   paginates_per PER_PAGE_RECORDS
 end

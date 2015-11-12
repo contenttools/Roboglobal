@@ -21,4 +21,8 @@ def show_attachment_file_link
     session[:referrer_index] == "eu" ? eu_index_indices_path : us_index_indices_path
   end
 
+  def get_button_text
+   button_text = @index.persisted? ? "Update " : "Add "
+   button_text + @index.index_category
+  end
 end
