@@ -7,6 +7,10 @@ class Index < ActiveRecord::Base
   scope :category, -> (category) { where(category: category) }
   scope :index_type, -> (type) {where(index_type: type)}
 
+  def self.pdf_file(type, category)
+    self.index_type(type).category(category).last.present? ? self.index_type(type).category(category).last.pdf_attachment.document.url : "#"
+  end
+
   PER_PAGE_RECORDS = 10
   paginates_per PER_PAGE_RECORDS
 end

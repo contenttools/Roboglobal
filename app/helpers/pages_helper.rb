@@ -9,4 +9,28 @@ module PagesHelper
     doc = Nokogiri(blog.description.gsub('&nbsp;', ' '))
     truncate(doc.text.squeeze(" "), length: 80)
   end
+
+  def get_us_fact_sheet
+    Index.pdf_file("us", "fact_sheet")
+  end
+
+  def get_us_index_holdings
+    Index.pdf_file("us", "index_holdings")
+  end
+
+  def get_us_industry_classification
+    Index.pdf_file("us", "industry_classification")
+  end
+
+  def get_eu_fact_sheet
+    Index.pdf_file("eu", "fact_sheet")
+  end
+
+  def get_eu_index_methodology
+    Index.pdf_file("eu", "index_methodology")
+  end
+
+  def get_eu_industry_classification
+    Index.pdf_file("eu", "industry_classification")
+  end
 end
