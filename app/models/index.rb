@@ -8,7 +8,8 @@ class Index < ActiveRecord::Base
   scope :index_type, -> (type) {where(index_type: type)}
 
   def self.pdf_file(type, category)
-    self.index_type(type).category(category).last.pdf_attachment.present? ? self.index_type(type).category(category).last.pdf_attachment.document.url : "#"
+    latest_index = self.index_type(type).category(category).last
+    (latest_index.present? && latest_index.pdf_attachment.present?) ? latest_index.pdf_attachment.document.url : "#"
   end
 
   def index_category
