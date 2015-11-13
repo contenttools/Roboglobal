@@ -1,10 +1,11 @@
 class DocumentsController < ApplicationController
   def download_file
-    @file = Index.pdf_file(params[:index_type], params[:category])
-    unless @file == "#"
-      send_file "#{Rails.root}/public" + @file.split("?").first, type: "pdf", x_sendfile: true
-    else
+    begin
+      @file = CGI::unescape Index.pdf_file(params[:index_type], params[:category])
+      return (send_file "#{Rails.root}/public" + @file.split("?").first, type: "pdf", x_sendfile: true) unless @file == "#"
       redirect_to eu_index_url
-     end
+    rescue
+      redirect_to eu_index_url
+    end
   end
 end
