@@ -25,21 +25,21 @@
       <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-centered">
         <div class="row">
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <%= link_to get_eu_fact_sheet do %>
+            <%= link_to documents_download_file_path(index_type: "eu", category: "fact_sheet") do %>
               <div class="us-banner-bottom-text">
                 Fact Sheet
               </div>
             <% end %>
           </div>
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <%= link_to get_eu_index_methodology do %>
+            <%= link_to documents_download_file_path(index_type: "eu", category: "index_methodology") do %>
               <div class="us-banner-bottom-text">
                 Index Methodology
               </div>
             <% end %>
           </div>
           <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
-            <%= link_to get_eu_industry_classification do %>
+            <%= link_to documents_download_file_path(index_type: "eu", category: "industry_classification") do %>
               <div class="us-banner-bottom-text">
                 Industry Classification
               </div>
