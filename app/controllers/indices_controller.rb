@@ -95,19 +95,18 @@ class IndicesController < ApplicationController
   def download_eu_factsheet
     @index = Index.new
     begin
-      @pdf_attachment = PdfAttachment.new(document: params[:attachments]['0'])
-    rescue
-       Rails.logger.info params[:attachments]
-    end
-    @index.pdf_attachment = @pdf_attachment if @pdf_attachment.present?
-    @index.index_type =  "eu"
-    @index.category = "fact_sheet"
-    respond_to do |format|
+      @pdf_attachment = PdfAttachment.new(document: params[:attachments]['0']) if params[:attachments].present?
+      @index.pdf_attachment = @pdf_attachment if @pdf_attachment.present?
+      @index.index_type =  "eu"
+      @index.category = "fact_sheet"
       if @index.save
         render text: 'success', status: 200
       else
         render text: @index.errors.full_messages.to_sentence, status: 422
       end
+    rescue Exception => e
+       Rails.logger.info params
+       Rails.logger.info e
     end
   end
 
