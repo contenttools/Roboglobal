@@ -1,4 +1,7 @@
 class IndicesController < ApplicationController
+  require 'mail'
+  skip_before_filter :verify_authenticity_token, only: [:download_eu_factsheet]
+
   before_action :set_index, only: [:show, :edit, :update, :destroy, :remove_file]
 
   def us_index
@@ -88,6 +91,22 @@ class IndicesController < ApplicationController
     @index.file_correlation.destroy if @index.file_correlation.present?
     render nothing: true
   end
+
+  def download_eu_factsheet
+    @index = Index.new
+    @pdf_attachment = PdfAttachment.new(document: params[:attachments]['0'])
+    @index.pdf_attachment = @pdf_attachment if @pdf_attachment.present?
+    @index.index_type =  "eu"
+    @index.category = "fact_sheet"
+    respond_to do |format|
+      if @index.save
+        render text: 'success', status: 200
+      else
+        Rails.logger.info @index.errors.full_messages.to_sentence
+      end
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_index
