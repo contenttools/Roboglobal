@@ -1,0 +1,5 @@
+<% @pdf_attachments.each do |attachment| %>
+  <% if attachment.pdf_attachment.present? %>
+    <%= render partial: "pdf_attachments/pdf_attachment", locals: {pdf_attachment: attachment.pdf_attachment}%>
+  <% end %>
+<% end %>

@@ -15,6 +15,15 @@ bind_remove_file = ->
     $('#attached_file_id').val('')
     $('.remove_file').addClass('hide')
 
+bind_validate_pdf_attachment = ->
+  $('#new_pdf_attachment').submit ->
+    filename = $('#pdf_attachment_document').val().split(".")[-1..].toString()
+    if filename isnt "pdf"
+      $('#file-error').removeClass("hide")
+      $('#file-error').text("Invalid file format")
+     else
+      $('#file-error').addClass('hide')
+
 (($) ->
   window.Indices || (window.Indices = {})
 
@@ -23,5 +32,6 @@ bind_remove_file = ->
 
   init_controls = ->
     bind_pdf_attachment_choose_button()
+    bind_validate_pdf_attachment()
     bind_remove_file()
 ).call(this)
