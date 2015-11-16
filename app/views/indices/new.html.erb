@@ -1,7 +1,7 @@
 <div class="about-banner">
   <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-centered">
     <div class="us-heading-container">
-      <h1>New <%= params[:category].titleize %></h1>
+      <h1>New <%= params[:category].titleize if  params[:category].present? %></h1>
     </div>
   </div>
 </div>
