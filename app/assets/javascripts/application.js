@@ -20,5 +20,6 @@
 //= require scroll_header
 //= require email_validator
 //= require blog_posts
+//= require map_load
 //= style
 
