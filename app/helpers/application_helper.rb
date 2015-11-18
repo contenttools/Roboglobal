@@ -17,6 +17,10 @@ module ApplicationHelper
     "white-header" if request.original_url =~ /admin/
   end
 
+  def add_margin_class
+    "header-nav" if (params[:controller] =~ /pages/ && params[:action] =~ /eu_index|us_index|home/) || (params[:controller] =~ /blog_posts/ && params[:action] =~ /robo_news/)
+  end
+
   def submit_text(object, action)
     return ["Update ", action].join if object.persisted?
     return ["Add ", action].join
