@@ -42,6 +42,7 @@ class PagesController < ApplicationController
 
   def home
     @video = PageEmbed.home_page_embed_video
+    @stock_charts = PageEmbed.home_page_stock_charts
     @subscriber = Subscriber.new
     @latest_blogs = BlogPost.includes(:attachment, :pdf_attachment).published_ordered.ordered.first(3)
     @contact = Contact.new
@@ -54,11 +55,9 @@ class PagesController < ApplicationController
   end
 
   def us_index
-    @stock_charts = PageEmbed.home_page_stock_charts
   end
 
   def eu_index
-    @stock_charts = PageEmbed.home_page_stock_charts
   end
 
   def stock_picking_challenge
