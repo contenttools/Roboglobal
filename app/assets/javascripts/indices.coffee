@@ -20,7 +20,6 @@ bind_validate_pdf_attachment = ->
     filename = $('#pdf_attachment_document').val().split(".")[-1..].toString()
     if filename isnt "pdf"
       $('#file-error').removeClass("hide")
-      $('#file-error').text("Invalid file format kindly Attach PDF file")
      else
       $('#file-error').addClass('hide')
 

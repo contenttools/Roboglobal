@@ -33,6 +33,8 @@ class PdfAttachmentsController < ApplicationController
         format.html { redirect_to @pdf_attachment, notice: 'File was successfully created.' }
         format.js
       else
+        @errors_pdf = @pdf_attachment.errors.full_messages.to_sentence
+        format.js
         format.html { render :new }
         format.json { render json: @pdf_attachment.errors, status: :unprocessable_entity }
       end
