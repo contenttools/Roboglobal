@@ -50,6 +50,7 @@
     </div>
   </div>
 </div>
+<%= render partial: 'map' %>
 <div class="container">
   <div class="age-auto-section">
     <div class="automation-wrapper">
@@ -227,6 +228,7 @@
     </div>
   </div>
 </div>
+<%= render partial: 'index_highlight' %>
 <div class="container">
   <div class="row">
     <div class="holding-metho-section">
@@ -251,4 +253,5 @@
   HeaderScroll.init();
   OurSectors.init();
   StockChart.init("eu");
+  MapLoad.init();
 <% end %>
