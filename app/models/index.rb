@@ -8,7 +8,7 @@ class Index < ActiveRecord::Base
   scope :index_type, -> (type) {where(index_type: type)}
 
   def self.pdf_file(type, category)
-    latest_index = self.index_type(type).category(category).last
+    latest_index = Index.index_type(type).category(category).includes(:file_correlation).where.not('file_correlations.pdf_attachment_id' => nil).last
     (latest_index.present? && latest_index.pdf_attachment.present?) ? latest_index.pdf_attachment.document.url : "#"
   end
 

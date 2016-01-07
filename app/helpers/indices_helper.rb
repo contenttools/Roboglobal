@@ -25,4 +25,17 @@ def show_attachment_file_link
    button_text = @index.persisted? ? "Update " : "Add "
    button_text + @index.index_category
   end
+
+  def get_document_type
+    @pdf_attachment.present? ? @pdf_attachment.document_file_name : 'No Document Type Present'
+  end
+
+  def display_documnet_preview
+    return 'No Document Preview' unless @pdf_attachment.present?
+
+    link_to @pdf_attachment.document.url, target: "_blank" do
+      image_tag @pdf_attachment.document.url(:pdf_mini)
+    end
+  end
+
 end
