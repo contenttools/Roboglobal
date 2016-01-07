@@ -13,13 +13,11 @@
         <%- model_class = PdfAttachment -%>
         <p>
           <strong>Doc:</strong>
-          <%= link_to @pdf_attachment.document.url, target: "_blank" do %>
-          <%= image_tag @pdf_attachment.document.url(:pdf_mini) %>
-          <% end %>
+          <%= display_documnet_preview %>
         </p>
         <p>
           <strong>Doc type:</strong>
-          <%= @pdf_attachment.document_file_name %>
+          <%= get_document_type %>
         </p>
         <p>
           <strong>Category:</strong>
