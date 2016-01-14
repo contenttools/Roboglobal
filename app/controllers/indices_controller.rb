@@ -95,15 +95,17 @@ class IndicesController < ApplicationController
   def download_eu_factsheet
     @index = Index.new
     begin
+      return render text: 'Invalid Attachment', status: 422 unless is_valid_attachment?
       @pdf_attachment = PdfAttachment.new(document: params[:attachments]['0']) if params[:attachments].present?
-      @index.pdf_attachment = @pdf_attachment if @pdf_attachment.present?
-      @index.index_type =  "eu"
-      @index.category = "fact_sheet"
-      if @index.save
-        render text: 'success', status: 200
-      else
-        render text: @index.errors.full_messages.to_sentence, status: 422
+
+      if @pdf_attachment.save
+        @index.pdf_attachment = @pdf_attachment if @pdf_attachment.present?
+        @index.index_type =  "eu"
+        @index.category = "fact_sheet"
+        return render text: 'success', status: 200 if @index.save
       end
+
+      render text: (@pdf_attachment.errors.full_messages.to_sentence + @index.errors.full_messages.to_sentence), status: 422
     rescue Exception => e
        Rails.logger.info params
        Rails.logger.info e
@@ -133,6 +135,11 @@ class IndicesController < ApplicationController
 
     def get_return_path
       session[:referrer_index] == "eu" ? eu_index_indices_path : us_index_indices_path
+    end
+
+    def is_valid_attachment?
+      attachments = params[:attachments]['0']
+      ((attachments.content_type.split('/').last =~ /octet-stream|pdf|x-pdf/) && (attachments.original_filename.split('.').last == 'pdf')) ? true : false
     end
 
 end
