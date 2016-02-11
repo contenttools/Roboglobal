@@ -46,7 +46,7 @@ gem 'friendly_id'
 gem 'nokogiri'
 gem 'underscore-rails'
 gem 'gmaps4rails'
-gem 'mapbox-rails'
+gem 'mapbox-rails', github: 'hassanakram/mapbox-rails'
 gem 'whenever', require: false
 gem "spreadsheet"
 gem "highstocks-rails"
