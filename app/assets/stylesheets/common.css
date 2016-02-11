@@ -4,3 +4,7 @@
   color: #fff;
   width: 20px;
 }
+
+.mapbox-logo, .leaflet-control-attribution {
+  display: none;
+}
