@@ -5,6 +5,9 @@
   width: 20px;
 }
 
+.mapbox-logo, .leaflet-control-attribution {
+  display: none;
+}
 
 .leaflet-container.dark .leaflet-bar a {
   color: #F3F3F3;
