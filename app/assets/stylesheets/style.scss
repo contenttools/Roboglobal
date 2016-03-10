@@ -1473,7 +1473,7 @@ ul.app-tabs li.consumer:hover, ul.app-tabs li.consumer.active {
   white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 280px;
+  height: 290px;
 }
 /* ==========================================================================
    Advisory Section
@@ -2836,6 +2836,16 @@ a.post-tags:hover {
   }
   .main-banner {
     min-height: 510px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .clear-mobile {
+    clear: both;
+  }
+
+  .about-des-wrapper {
+    height: auto;
   }
 }
 
