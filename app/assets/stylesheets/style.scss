@@ -309,7 +309,8 @@ video {
 .legal-banner h1,
 .news-banner h1,
 .video-banner h1,
-.stock-banner h1 {
+.stock-banner h1,
+.industry-report-banner h1 {
   font-size: 50px;
   line-height: normal;
   font-weight: 100;
@@ -857,6 +858,11 @@ span.text {
 .about-btn {
   padding-top: 35px;
 }
+
+.industry-report-btn {
+  padding-top: 10px;
+}
+
 .default-buttons,
 .button-area button[type="submit"] {
   background-color: #25d278;
@@ -1401,7 +1407,7 @@ ul.app-tabs li.consumer:hover, ul.app-tabs li.consumer.active {
 }
 
 .industry-report-banner {
-  background: image-url("news-banner.jpg") no-repeat center;
+  background: image-url("team-banner.jpg") no-repeat center;
   width: 100%;
   float: left;
   height: 300px;
@@ -1413,10 +1419,14 @@ ul.app-tabs li.consumer:hover, ul.app-tabs li.consumer.active {
 
 .text-left {
   text-align: left;
+  font-size: 27px;
+  font-weight: 500;
+  margin-top: 0px;
 }
 
-.industry-report-text {
+.robo-about-top .industry-report-text {
   text-align: justify;
+  font-size: 15px;
 }
 /* ==========================================================================
    Management Section
@@ -2261,6 +2271,30 @@ a.post-tags:hover {
     -o-background-size: cover;
     background-size: cover;
   }
+
+  .industry-report-banner {
+    background: image-url("team-banner.jpg") no-repeat center;
+    width: 100%;
+    float: left;
+    height: 210px;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+  .text-left {
+    text-align: left;
+    font-size: 24px;
+    font-weight: 500;
+    margin-top: 10px;
+  }
+
+  .robo-about-top .industry-report-text {
+    text-align: justify;
+    font-size: 14px;
+  }
+
   .about-banner .us-heading-container,
   .legal-banner .us-heading-container {
     padding-top: 45px;
@@ -2482,7 +2516,7 @@ a.post-tags:hover {
 
 
 @media screen and (min-width: 640px) and (max-width: 767px)  {
-  .main-banner h1, .us-banner h1, .about-banner h1, .news-banner h1, .video-banner h1, .main-banner2 h1, .stock-banner h1 {
+  .main-banner h1, .us-banner h1, .about-banner h1, .news-banner h1, .video-banner h1, .main-banner2 h1, .stock-banner h1, .industry-report-banner h1 {
     font-size: 50px;
   }
   .banner-for-mobile {
@@ -2494,7 +2528,7 @@ a.post-tags:hover {
 }
 
 @media screen and (min-width: 320px) and (max-width: 736px) {
-  .main-banner h1, .us-banner h1, .about-banner h1, .news-banner h1, .video-banner h1, .main-banner2 h1, .stock-banner h1  {
+  .main-banner h1, .us-banner h1, .about-banner h1, .news-banner h1, .video-banner h1, .main-banner2 h1, .stock-banner h1, .industry-report-banner h1  {
     font-size: 32px;
   }
   .legal-banner h1 {
@@ -2576,7 +2610,7 @@ a.post-tags:hover {
 }
 
 @media screen and (min-width: 320px) and (max-width: 480px) {
-  .main-banner h1, .us-banner h1, .about-banner h1, .legal-banner h1, .news-banner h1, .video-banner h1 {
+  .main-banner h1, .us-banner h1, .about-banner h1, .legal-banner h1, .news-banner h1, .video-banner h1, .industry-report-banner h1 {
     font-size: 24px;
   }
   .stock-banner h1  {
@@ -3044,4 +3078,8 @@ a.post-tags:hover {
 .dropdown-space:after {
   background: transparent !important;
   border-style: none !important;
+}
+
+.no-padding {
+  padding-left: 0px;
 }
