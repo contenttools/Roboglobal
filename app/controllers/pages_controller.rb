@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  before_filter :set_seo_options, only: [:home, :about_us, :legal_information, :us_index, :eu_index, :stock_picking_challenge]
+  before_filter :set_seo_options, only: [:home, :about_us, :legal_information, :us_index, :eu_index, :stock_picking_challenge, :industry_report]
 
   SEO_OPTIONS = {
     "home" => {
@@ -38,6 +38,10 @@ class PagesController < ApplicationController
       description: "Win a free drone from ROBO by choosing a portfolio of robotics and automation stocks",
       image: "/index.jpg",
     },
+
+    "industry_report" => {
+      title: "ROBO Industry Report"
+    }
   }
 
   def home

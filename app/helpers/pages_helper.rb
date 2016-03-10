@@ -33,4 +33,8 @@ module PagesHelper
   def get_eu_industry_classification
     Index.pdf_file("eu", "industry_classification")
   end
+
+  def get_industry_report
+    Index.pdf_file("industry_report", "industry_report")
+  end
 end

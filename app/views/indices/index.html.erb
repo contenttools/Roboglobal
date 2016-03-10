@@ -18,9 +18,11 @@
             <div class="pull-left add-button"><%= link_to 'Fact Sheet', new_index_path(category: 'fact_sheet'), :class => 'btn btn-primary' %></div>
             <div class="pull-left add-button"><%= link_to 'Index Holdings', new_index_path(category: 'index_holdings'), :class => 'btn btn-primary' %></div>
             <div class="pull-left"><%= link_to 'Industry Classification', new_index_path(category: 'industry_classification'), :class => 'btn btn-primary' %></div>
-          <% else %>
+          <% elsif eu_index? %>
             <div class="pull-left add-button"><%= link_to 'Index Methodology', new_index_path(category: 'index_methodology'), :class => 'btn btn-primary' %></div>
             <div class="pull-left"><%= link_to 'Industry Classification', new_index_path(category: 'industry_classification'), :class => 'btn btn-primary' %></div>
+          <% else %>
+            <div class="pull-left add-button"><%= link_to 'Add Report', new_index_path(category: 'industry_report'), class: 'btn btn-primary' %></div>
           <% end %>
         </div>
         <div class="pager pull-right">

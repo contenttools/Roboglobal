@@ -1399,6 +1399,25 @@ ul.app-tabs li.consumer:hover, ul.app-tabs li.consumer.active {
   -o-background-size: cover;
   background-size: cover;
 }
+
+.industry-report-banner {
+  background: image-url("news-banner.jpg") no-repeat center;
+  width: 100%;
+  float: left;
+  height: 300px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.industry-report-text {
+  text-align: justify;
+}
 /* ==========================================================================
    Management Section
    ========================================================================== */
