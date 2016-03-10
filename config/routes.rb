@@ -31,6 +31,7 @@ Rails.application.routes.draw do
       collection do
         get 'us-index' => 'indices#us_index'
         get 'eu-index' => 'indices#eu_index'
+        get 'industry-report' => 'indices#industry_report'
       end
     end
   end
@@ -48,6 +49,7 @@ Rails.application.routes.draw do
   get 'us-index' => 'pages#us_index'
   get 'eu-index' => 'pages#eu_index'
   get 'stock-picking-challenge' => 'pages#stock_picking_challenge'
+  get 'industry-report' => 'pages#industry_report'
 
   get 'robo-news' => 'blog_posts#robo_news'
 

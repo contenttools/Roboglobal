@@ -1399,6 +1399,25 @@ ul.app-tabs li.consumer:hover, ul.app-tabs li.consumer.active {
   -o-background-size: cover;
   background-size: cover;
 }
+
+.industry-report-banner {
+  background: image-url("news-banner.jpg") no-repeat center;
+  width: 100%;
+  float: left;
+  height: 300px;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.text-left {
+  text-align: left;
+}
+
+.industry-report-text {
+  text-align: justify;
+}
 /* ==========================================================================
    Management Section
    ========================================================================== */
@@ -1454,7 +1473,7 @@ ul.app-tabs li.consumer:hover, ul.app-tabs li.consumer.active {
   white-space: normal;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: 280px;
+  height: 290px;
 }
 /* ==========================================================================
    Advisory Section
@@ -2817,6 +2836,16 @@ a.post-tags:hover {
   }
   .main-banner {
     min-height: 510px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .clear-mobile {
+    clear: both;
+  }
+
+  .about-des-wrapper {
+    height: auto;
   }
 }
 

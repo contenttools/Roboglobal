@@ -17,8 +17,18 @@ def show_attachment_file_link
     session[:referrer_index] == "us"
   end
 
+  def eu_index?
+    session[:referrer_index] == "eu"
+  end
+
   def back_path
-    session[:referrer_index] == "eu" ? eu_index_indices_path : us_index_indices_path
+    if session[:referrer_index] == "eu"
+      eu_index_indices_path
+    elsif session[:referrer_index] == "us"
+      us_index_indices_path
+    else
+      industry_report_indices_path
+    end
   end
 
   def get_button_text
