@@ -1,18 +1,28 @@
-<div class="industry-report-banner"></div>
+<div class="industry-report-banner">
+  <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8 col-centered">
+    <div class="us-heading-container">
+      <h1>Industry Report</h1>
+    </div>
+  </div>
+</div>
 <div class="container">
   <div class="row">
     <div class="robo-about-top">
-      <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
         <%= image_tag("ROBO-Investment-Case-Cover.jpg", alt: "ROBO-Investment", class: "img-responsive") %>
       </div>
-      <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+      <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
         <h2 class="text-left">
           The Robotics and Automation Investment Case
         </h2>
         <p class="industry-report-text">
           Robotics & Automation is enabling a technological revolution that will fundamentally change how we work and live. We are moving from an era of industrial automation to the use of advanced robotics across the global economy. ROBO Global, with unique industry insight, created and maintains the first global index tracking this megatrend.  The future is now, learn how ROBO Global defines the universe of robotics and automation for investors.Robotics & Automation is enabling a technological revolution that will fundamentally change how we work and live. We are moving from an era of industrial automation to the use of advanced robotics across the global economy. ROBO Global, with unique industry insight, created and maintains the first global index tracking this megatrend.  The future is now, learn how ROBO Global defines the universe of robotics and automation for investors.
         </p>
-        <%= link_to "View the Report", get_industry_report, target: "_blank" , class: "btn btn-lg btn-success" %>
+        <div class="col-xs-5 col-sm-4 col-md-5 col-lg-5 no-padding">
+          <div class="industry-report-btn">
+            <%= link_to "View the Report", get_industry_report, target: "_blank" , class: "default-buttons" %>
+          </div>
+        </div>
       </div>
     </div>
   </div>
