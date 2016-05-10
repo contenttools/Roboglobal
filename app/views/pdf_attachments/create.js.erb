@@ -1,0 +1,9 @@
+<% if @errors_pdf.present? %>
+  $("#file-error").removeClass("hide")
+  $("#file-error").text("<%= @errors_pdf.split("and").first %>")
+<% else %>
+  $.colorbox.close();
+  $('#attached_file_id').val(<%= @pdf_attachment.id %>)
+  $('.attached_file_pdf').attr('src','<%= @url %>')
+  $('.remove_file').removeClass("hide")
+<% end %>

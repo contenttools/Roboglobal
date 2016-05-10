@@ -4,7 +4,9 @@ class PdfAttachment < ActiveRecord::Base
   has_many :indices, :through => :file_correlations, :source => :document, :source_type => 'Index'
 
   has_attached_file :document, :styles => {:pdf_mini => ["100x100#", :png], :pdf_normal => ["400x400#", :png]}, :default_url => "/images/:style/missing.png"
-  validates_attachment_content_type :document, :content_type => ["application/pdf", "application/x-pdf", "application/octet-stream"]
+
+  validates_attachment_content_type :document, :message => "Invalid kindly attach PDF file", :content_type => ["application/pdf", "application/x-pdf", "application/octet-stream"]
+
   validates_attachment_presence :document
   validates_attachment_size :document, less_than: 50.megabytes
 
