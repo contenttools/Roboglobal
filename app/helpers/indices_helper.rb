@@ -26,8 +26,10 @@ def show_attachment_file_link
       eu_index_indices_path
     elsif session[:referrer_index] == "us"
       us_index_indices_path
-    else
+    elsif session[:referrer_index] == "industry_report"
       industry_report_indices_path
+    else
+      investment_case_indices_path
     end
   end
 
@@ -46,6 +48,10 @@ def show_attachment_file_link
     link_to @pdf_attachment.document.url, target: "_blank" do
       image_tag @pdf_attachment.document.url(:pdf_mini)
     end
+  end
+
+  def industry_report?
+    session[:referrer_index] == "industry_report"
   end
 
 end

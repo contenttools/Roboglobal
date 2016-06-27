@@ -21,8 +21,12 @@
           <% elsif eu_index? %>
             <div class="pull-left add-button"><%= link_to 'Index Methodology', new_index_path(category: 'index_methodology'), :class => 'btn btn-primary' %></div>
             <div class="pull-left"><%= link_to 'Industry Classification', new_index_path(category: 'industry_classification'), :class => 'btn btn-primary' %></div>
-          <% else %>
+          <% elsif industry_report? %>
             <div class="pull-left add-button"><%= link_to 'Add Report', new_index_path(category: 'industry_report'), class: 'btn btn-primary' %></div>
+          <% else %>
+            <div class="pull-left add-button"><%= link_to 'Investment Case', new_index_path(category: 'investment'), class: 'btn btn-primary' %></div>
+            <div class="pull-left add-button"><%= link_to 'ROBO Global Presentation', new_index_path(category: 'global_presentation'), class: 'btn btn-primary' %></div>
+            <div class="pull-left add-button"><%= link_to 'Research', new_index_path(category: 'research'), class: 'btn btn-primary' %></div>
           <% end %>
         </div>
         <div class="pager pull-right">

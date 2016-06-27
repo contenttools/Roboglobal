@@ -1,0 +1,61 @@
+<div class="main-banner">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 col-centered">
+    <div class="text-container">
+      <h1>Investment Case</h1>
+    </div>
+  </div>
+  <div class="clearfix"></div>
+  <div class="container">
+    <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8 col-centered">
+       <div class="graph-container">
+        <div class="row">
+          <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+            <h3>ROBO Index vs MSCI ACWI Performance</h3>
+          </div>
+        </div>
+        <%= image_tag("main-banner-graph.png", alt: "Graph") %>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="clearfix"></div>
+<div class="container">
+  <div class="us-banner-bottom">
+    <div class="row">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-10 col-centered">
+        <div class="row">
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <%= link_to documents_download_file_path(index_type: "investment_case", category: "investment") do %>
+              <div class="us-banner-bottom-text">
+               Investment Case
+              </div>
+              <div>
+                Robotics & Automation will be a driving force of the future across the global economy. The time to invest in this megatrend is now, find out why here.
+              </div>
+            <% end %>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <%= link_to documents_download_file_path(index_type: "investment_case", category: "global_presentation") do %>
+              <div class="us-banner-bottom-text">
+                ROBO Global Presentation
+              </div>
+              <div>
+                Take a look inside the index and learn how ROBO Global defines the universe of robotics and automation for investors in our quarterly presentation.
+              </div>
+            <% end %>
+          </div>
+          <div class="col-xs-12 col-sm-4 col-md-4 col-lg-4">
+            <%= link_to documents_download_file_path(index_type: "investment_case", category: "research") do %>
+              <div class="us-banner-bottom-text">
+                Research
+              </div>
+              <div>
+                Through the expertise of our leadership team and strategic advisors, see the most recent cutting-edge reports from our team.
+              </div>
+            <% end %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

@@ -22,6 +22,12 @@ class IndicesController < ApplicationController
     render :index
   end
 
+  def investment_case
+    session[:referrer_index] = "investment_case"
+    @indices = Index.index_type(session[:referrer_index]).page params[:page]
+    render :index
+  end
+
   # GET /indices/1
   # GET /indices/1.json
   def show
@@ -144,8 +150,10 @@ class IndicesController < ApplicationController
         eu_index_indices_path
       elsif session[:referrer_index] == "us"
         us_index_indices_path
-      else
+      elsif session[:referrer_index] == "industry_report"
         industry_report_indices_path
+      else
+        investment_case_indices_path
       end
     end
 
