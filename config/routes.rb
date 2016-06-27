@@ -32,6 +32,7 @@ Rails.application.routes.draw do
         get 'us-index' => 'indices#us_index'
         get 'eu-index' => 'indices#eu_index'
         get 'industry-report' => 'indices#industry_report'
+        get 'investment-case' => 'indices#investment_case'
       end
     end
   end
@@ -50,6 +51,7 @@ Rails.application.routes.draw do
   get 'eu-index' => 'pages#eu_index'
   get 'stock-picking-challenge' => 'pages#stock_picking_challenge'
   get 'industry-report' => 'pages#industry_report'
+  get 'investment-case' => 'pages#investment_case'
 
   get 'robo-news' => 'blog_posts#robo_news'
 
