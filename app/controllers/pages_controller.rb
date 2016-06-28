@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  before_filter :set_seo_options, only: [:home, :about_us, :legal_information, :us_index, :eu_index, :stock_picking_challenge, :industry_report]
+  before_filter :set_seo_options, only: [:home, :about_us, :legal_information, :us_index, :eu_index, :stock_picking_challenge, :industry_report, :investment_case]
 
   SEO_OPTIONS = {
     "home" => {
@@ -41,6 +41,10 @@ class PagesController < ApplicationController
 
     "industry_report" => {
       title: "ROBO Industry Report"
+    },
+
+    "investment_case" => {
+      title: "Investment Case"
     }
   }
 
