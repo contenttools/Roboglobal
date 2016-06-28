@@ -44,7 +44,9 @@ class PagesController < ApplicationController
     },
 
     "investment_case" => {
-      title: "Investment Case"
+      title: "ROBO Global: Tracking the Global Growth of the Investable Robotics Market",
+      description: "Global stock portfolio for 3d printing, drones, energy, healthcare, technology and manufacturing",
+      image: '/index.jpg',
     }
   }
 
