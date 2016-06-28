@@ -47,15 +47,22 @@ module ApplicationHelper
     end
   end
 
-  def headers
+  def header_footer_content(content)
     html = ''
-    header_content = [['Home', root_path], ['ROBO News', robo_news_path], ['Investment Case', investment_case_path], ['US Index', us_index_path], ['EU Index', eu_index_path], ['About Us', about_us_path]]
-    header_content.each do |header|
+    content.each do |header|
       html += content_tag :li, class: active_header_tab(header[1]) do
         link_to header[0], header[1]
       end
     end
     html
+  end
+
+  def headers
+   header_footer_content([['Home', root_path], ['ROBO News', robo_news_path], ['Investment Case', investment_case_path], ['US Index', us_index_path], ['EU Index', eu_index_path], ['About Us', about_us_path]])
+  end
+
+  def footers
+    header_footer_content([['Home', root_path], ['ROBO News', robo_news_path], ['US Index', us_index_path], ['EU Index', eu_index_path], ['About Us', about_us_path]])
   end
 
   def active_header_tab(path)
