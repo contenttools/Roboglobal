@@ -1,5 +1,6 @@
 class IndicesController < ApplicationController
   require 'mail'
+  before_action :authenticate_user!, except: [:download_eu_factsheet]
   skip_before_filter :verify_authenticity_token, only: [:download_eu_factsheet]
 
   before_action :set_index, only: [:show, :edit, :update, :destroy, :remove_file]
