@@ -37,4 +37,16 @@ module PagesHelper
   def get_industry_report
     Index.pdf_file("industry_report", "industry_report")
   end
+
+  def get_investment_case
+    Index.pdf_file("investment_case", "investment")
+  end
+
+  def get_global_presentation
+    Index.pdf_file("investment_case", "global_presentation")
+  end
+
+  def get_research
+    Index.pdf_file("investment_case", "research")
+  end
 end
