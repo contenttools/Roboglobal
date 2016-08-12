@@ -58,11 +58,11 @@ module ApplicationHelper
   end
 
   def headers
-   header_footer_content([['Home', root_path], ['ROBO News', robo_news_path], ['Investment Case', investment_case_path], ['US Index', us_index_path], ['EU Index', eu_index_path], ['About Us', about_us_path]])
+   header_footer_content([['Home', root_path], ['ROBO Global News', robo_news_path], ['Investment Case', investment_case_path], ['US Index', us_index_path], ['EU Index', eu_index_path], ['About Us', about_us_path]])
   end
 
   def footers
-    header_footer_content([['Home', root_path], ['ROBO News', robo_news_path], ['US Index', us_index_path], ['EU Index', eu_index_path], ['About Us', about_us_path]])
+    header_footer_content([['Home', root_path], ['ROBO Global News', robo_news_path], ['US Index', us_index_path], ['EU Index', eu_index_path], ['About Us', about_us_path]])
   end
 
   def active_header_tab(path)
