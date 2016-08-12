@@ -1,16 +1,16 @@
-healthcare = [["Accuray Inc", 37.410414, -122.001132], ["CYBERDYNE Inc", 36.077005, 140.08168], ["Elekta AB", 59.346241, 18.038848], ["Intuitive Surgical Inc", 37.373269, -121.991223], ["Mazor Robotics Ltd", 32.477805, 34.94547], ["QIAGEN NV", 51.367014, 6.169721], ["Tecan Group AG", 47.256595, 8.685179], ["TransEnterix Inc", 35.868457, -78.860792], ["Varian Medical Systems Inc", 37.417032, -122.142878]]
+healthcare = [['Accuray Inc', 37.410414, -122.001132], ['CYBERDYNE Inc', 36.077005, 140.08168], ['Elekta AB', 59.346241, 18.038848], ['Intuitive Surgical Inc', 37.373269, -121.991223], ['Mazor Robotics Ltd', 32.477805, 34.94547], ['QIAGEN NV', 51.367014, 6.169721], ['Tecan Group AG', 47.256595, 8.685179], ['Varian Medical Systems Inc', 37.417032, -122.142878]]
 
 agriculture = [["Deere & Co", 41.476831, -90.424373]]
 
 integrations = [["ABB Ltd", 47.411284, 8.541605], ["Rockwell Automation Inc", 43.018846, -87.912771], ["Schneider Electric SE", 48.891123, 2.172874], ["Siemens AG", 48.143861, 11.575224]]
 
-surveillance_security = [["Aerovironment Inc", 34.14093, -118.001949], ["MacDonald Dettwiler & Associates Ltd", 49.17537, -123.070419], ["Northrop Grumman Corp", 38.867543, -77.215661]]
+surveillance_security = [['Aerovironment Inc', 34.14093, -118.001949], ['MacDonald Dettwiler & Associates Ltd', 49.17537, -123.070419], ['Northrop Grumman Corp', 38.867543, -77.215661], ['Elbit Systems Limited', 32.789281, 34.958475]]
 
-processing = [["Cognex Corp", 42.302189, -71.355679], ["Dassault Systemes", 48.786258, 2.21106], ["e2v technologies PLC", 51.731779, 0.456254], ["FARO Technologies Inc", 28.738644, -81.362696], ["FLIR Systems Inc", 45.320195, -122.764604], ["Isra Vision AG", 49.81857, 8.62686], ["Leoni AG", 49.44916, 11.08574], ["Mobileye NV", 31.803376, 35.213166], ["National Instruments Corp", 30.408382, -97.726244], ["Nuance Communications Inc", 42.484051, -71.193204], ["Trimble Navigation Ltd", 37.384982, -122.005501]]
+processing = [['Cognex Corp', 42.302189, -71.355679], ['Dassault Systemes', 48.786258, 2.21106], ['e2v technologies PLC', 51.731779, 0.456254], ['FARO Technologies Inc', 28.738644, -81.362696], ['FLIR Systems Inc', 45.320195, -122.764604], ['Isra Vision AG', 49.81857, 8.62686], ['Ambarella Inc.', 37.379131, -121.961327], ['Mobileye NV', 31.803376, 35.213166], ['National Instruments Corp', 30.408382, -97.726244], ['Nuance Communications Inc', 42.484051, -71.193204], ['Trimble Navigation Ltd', 37.384982, -122.005501]]
 
 manufacturing_industrial_automation =  [["Aida Engineering Ltd", 35.58706, 139.351539], ["ATS Automation Tooling Systems Inc", 43.41024, -80.373666], ["Brooks Automation Inc", 42.586548, -71.322771], ["Daihen Corp", 34.720012, 135.473579], ["Denso Corp", 34.996688, 137.006406], ["FANUC Corp", 35.445783, 138.841059], ["Krones AG", 48.984076, 12.191563], ["KUKA AG", 48.36905, 10.934], ["Nachi-Fujikoshi Corp", 36.684318, 137.233606], ["Nordson Corp", 41.468993, -81.936681], ["Teradyne Inc", 34.20247, -118.874143], ["Toshiba Machine Co Ltd", 35.113689, 138.872164], ["Yaskawa Electric Corp", 33.86888, 130.765404], ["Yushin Precision Equipment Co Ltd", 34.947147, 135.724585]]
 
-actuation = [["Airtac International Group", 25.054159, 121.563862], ["Harmonic Drive Systems Inc", 35.592966, 139.734547], ["Hiwin Technologies Corp", 24.147736, 120.673648], ["IPG Photonics Corp", 42.081183, -71.88113], ["Jenoptik AG", 50.928097, 11.580822], ["Johnson Electric Holdings Ltd", 22.427025, 114.212244], ["Lincoln Electric Holdings Inc", 41.588128, -81.519953], ["Nabtesco Corp", 35.680806, 139.740295], ["SMC Corp/Japan", 35.700947, 139.769602], ["Teco Electric and Machinery Co Ltd", 25.031235, 121.611195], ["THK Co Ltd", 35.627076, 139.715387]]
+actuation = [['Airtac International Group', 25.054159, 121.563862], ['Harmonic Drive Systems Inc', 35.592966, 139.734547], ['Hiwin Technologies Corp', 24.147736, 120.673648], ['IPG Photonics Corp', 42.081183, -71.88113], ['Jenoptik AG', 50.928097, 11.580822], ['Lincoln Electric Holdings Inc', 41.588128, -81.519953], ['Nabtesco Corp', 35.680806, 139.740295], ['SMC Corp/Japan', 35.700947, 139.769602], ['Teco Electric and Machinery Co Ltd', 25.031235, 121.611195], ['THK Co Ltd', 35.627076, 139.715387], ['Delta Electronics Inc.', 24.9852237, 121.32377910000002]]
 
 consumer_products = [["iRobot Corp", 42.504495, -71.244294], ["Parrot SA", 48.879072, 2.367493]]
 
@@ -20,9 +20,9 @@ energy = [["FMC Technologies Inc", 29.93588, -95.51281], ["Helix Energy Solution
 
 printing = [["3D Systems Corp", 34.924867, -81.025078], ["Arcam AB", 57.670376, 12.0074], ["SLM Solutions Group AG", 53.86444, 10.61371], ["Stratasys Ltd", 44.864977, -93.463442]]
 
-logistics_automation = [["Cargotec Oyj", 60.164443, 24.909423], ["Daifuku Co Ltd", 34.716295, 135.457769], ["John Bean Technologies Corp", 41.882323, -87.630142], ["Kardex AG", 47.414932, 8.552296], ["SFA Engineering Corp", 37.20691, 127.108277]]
+logistics_automation = [["Cargotec Oyj", 60.164443, 24.909423], ["Daifuku Co Ltd", 34.716295, 135.457769], ["John Bean Technologies Corp", 41.882323, -87.630142], ["Kardex AG", 47.414932, 8.552296], ['Amano Corp', 35.513131, 139.629494], ['Zebra Technologies', 42.187720, -87.933466]]
 
-computing = [["Adlink Technology Inc", 24.994446, 121.497029], ["Atmel Corp", 37.364516, -121.915254], ["Hollysys Automation Technologies Ltd", 39.801904, 116.505262], ["Microchip Technology Inc", 33.30439, -111.882168], ["Mitsubishi Electric Corp", 35.681183, 139.76377], ["Topcon Corp", 35.773226, 139.703638], ["Yokogawa Electric Corp", 35.707305, 139.565119]]
+computing = [['Adlink Technology Inc', 24.994446, 121.497029], ['NVdia Corp.', 37.370823, -121.964025], ['Hollysys Automation Technologies Ltd', 39.801904, 116.505262], ['Microchip Technology Inc', 33.30439, -111.882168], ['Mitsubishi Electric Corp', 35.681183, 139.76377], ['Topcon Corp', 35.773226, 139.703638], ['Yokogawa Electric Corp', 35.707305, 139.565119], ['Advantech Co. LTD', 25.072468, 121.577289]]
 
 bind_enable_scroll = ->
   $('.map-img').click ->
