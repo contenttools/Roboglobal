@@ -2242,6 +2242,9 @@ a.post-tags:hover {
 }
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
+  .about-wrapper.custom-padding-set {
+    padding-top:30px
+  }
   .banner-for-mobile {
     background: image-url("mobile-banner.jpg") no-repeat center top;
     width: 100%;
