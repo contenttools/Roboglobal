@@ -1860,7 +1860,28 @@ a.post-tags:hover {
 .blog-news-subscribe {
   float: left;
   margin-top: 70px;
+  margin-bottom: 20px;
 }
+
+.robotics-text {
+  color: #A32529;
+  margin-bottom: 20px;
+}
+
+.robot-report-text {
+  color: #A32529;
+  cursor: pointer;
+  font-size: x-small;
+}
+
+.robotics-text a:focus {
+  text-decoration: none !important;
+}
+
+.image-bottom-padding {
+  padding-bottom: 8px;
+}
+
 .new-idea-section {
   float: left;
   width: 100%;
