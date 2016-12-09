@@ -18,9 +18,6 @@ bind_form_validator = ->
       if $('#contact_email').val().length == 0 or not $('#contact_email').val().match(emailPattern)
         $('#contact_email').parent().before '<div class=\'validation\' style=\'color:red;margin-bottom: 10px;\'>Please enter a valid email address</div>'
         return false
-      if $('#contact_phone').val().length == 0
-        $('#contact_phone').parent().before '<div class=\'validation\' style=\'color:red;margin-bottom: 10px;\'>Please enter phone number</div>'
-        return false
       if $('#contact_message').val().length == 0
         $('#contact_message').before '<div class=\'validation\' style=\'color:red;margin-bottom: 10px;\'>Please type a message</div>'
         return false
