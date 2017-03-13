@@ -2886,12 +2886,17 @@ a.post-tags:hover {
 }
 
 img[alt="RBR Logo Image"] {
-  max-width: 140%;
+  max-width: 80px;
+  float: left;
 }
 
-.business-logo:nth-last-child {
-  border-right: 0px;
-  }
+.business-logo:nth-child(4n+4) {
+    border-right: 0px;
+}
+
+.business-logo:nth-of-type(7) {
+    border-right: 0px;
+}
 
 @media screen and (min-width: 320px) and (max-width: 767px) {
   .about-wrapper.custom-padding-set {
@@ -3184,5 +3189,8 @@ img[alt="RBR Logo Image"] {
   }
   .business-logo:nth-last-child {
     border-right: 0px;
+  }
+  .ml-conditional-20 {
+     margin-left: 0px; 
   }
 }/*End 767*/
