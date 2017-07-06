@@ -1,9 +1,14 @@
 <div class="subsribers-container" >
   <%= form_for @subscriber, remote: true, :authenticity_token => true, html: {class: "subscriber-form"} do |f| %>
-    <%= error_message_for(@subscriber, :email) %>
     <span class="subscriber-success"></span>
     <div class="clearfix"></div>
+    <%= f.text_field :firstname, placeholder: 'First Name' %>
+    <div class='clearfix'></div>
+    <%= f.text_field :lastname, placeholder: 'Last Name' %>
+    <div class='clearfix'></div>
+    <%= error_message_for(@subscriber, :email) %>
     <%= f.email_field :email, placeholder: "Enter your Email", class: field_class(@subscriber, :email) %>
-    <%= f.submit "", class: "input-arrow" %>
+    <div class='clearfix'></div>
+    <%= f.submit 'Submit', class: 'default-buttons subscriber-submit-btn' %>
   <% end %>
 </div>
