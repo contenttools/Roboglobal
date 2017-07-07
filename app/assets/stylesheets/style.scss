@@ -959,7 +959,7 @@ a.white-btn:hover {
   text-transform: uppercase;
 }
 .get-news {
-  background: image-url("question.jpg") no-repeat center center;
+  background: image-url("question.jpg") no-repeat center right;
   background-size: cover;
   width: 100%;
   float: left;
@@ -968,8 +968,8 @@ a.white-btn:hover {
 .news-wrapper {
   float: left;
   width: 100%;
-  padding: 80px 0px 0px 15px;
-  margin: 10px;
+  padding: 80px 0px 0px 10px;
+  margin: 28px 0 10px 0;
   position: relative;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
