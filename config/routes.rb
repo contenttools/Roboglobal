@@ -47,6 +47,7 @@ Rails.application.routes.draw do
 
   get 'about-us' => 'pages#about_us'
   get 'legal-information' => 'pages#legal_information'
+  get 'disclaimer' => 'pages#disclaimer'
   get 'us-index' => 'pages#us_index'
   get 'eu-index' => 'pages#eu_index'
   get 'stock-picking-challenge' => 'pages#stock_picking_challenge'

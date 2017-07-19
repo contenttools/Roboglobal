@@ -77,6 +77,10 @@ module ApplicationHelper
     'active' if request.env['PATH_INFO'] == legal_information_path
   end
 
+  def disclaimer_active
+    'active' if request.env['PATH_INFO'] == disclaimer_path
+  end
+
   def linkedin_link(url)
     link_to url, target: '_blank' do
       image_tag("linkedin.png", :alt => "linkedin")
