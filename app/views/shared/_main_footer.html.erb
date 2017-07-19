@@ -16,37 +16,39 @@
           <div class="copyrights-large">&copy; <%= Time.now.year %> ROBO Global. All rights reserved.</div>
         </div>
         <div class="col-xs-12 col-sm-8 col-md-7 col-lg-9">
-          <div class="footer-nav">
-            <ul>
-              <%= raw footers %>
-              <li class="footer-dropdown dropdown hide-for-small">
-                <a class="dropdown-toggle" data-toggle="" role="button" aria-haspopup="true" aria-expanded="false">ROBO Global ETFs</a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-toggle dropdown-space"></a>
-                    <a href="#leave-site" data-colorbox="true" data-colorbox-height="62%" data-colorbox-width="60%" data-colorbox-inline="true">ROBO Global Robotics and Automation Index ETF (US)</a>
-                  </li>
-                  <li>
-                    <a href="#leave-site-eu" data-colorbox="true" data-colorbox-height="62%" data-colorbox-width="60%" data-colorbox-inline="true">ROBO Global Robotics and Automation GO UCITS ETF (Europe)</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="footer-dropdown dropdown hide-for-large show-for-small">
-                <a class="dropdown-toggle" data-toggle="" role="button" aria-haspopup="true" aria-expanded="false">ROBO Global ETFs</a>
-                <ul class="dropdown-menu">
-                  <li>
-                    <a class="dropdown-toggle dropdown-space"></a>
-                    <a href="#leave-site" data-colorbox="true" data-colorbox-height="90%" data-colorbox-width="90%" data-colorbox-inline="true">ROBO Global Robotics and Automation Index ETF (US)</a>
-                  </li>
-                  <li>
-                    <a href="#leave-site-eu" data-colorbox="true" data-colorbox-height="90%" data-colorbox-width="90%" data-colorbox-inline="true">ROBO Global Robotics and Automation GO UCITS ETF (Europe)</a>
-                  </li>
-                </ul>
-              </li>
-              <li class="<%= legal_active %>"><%= link_to 'Legal', legal_information_path%></li>
-              <li class="<%= disclaimer_active %>"><%= link_to 'Disclaimer', disclaimer_path%></li>
-              <li><a href="#privacy-policy" data-colorbox="true" data-colorbox-height="90%" data-colorbox-width="45%" data-colorbox-inline="true">Privacy</a></li>
-            </ul>
+          <div class='row'>
+            <div class="footer-nav">
+              <ul>
+                <%= raw footers %>
+                <li class="footer-dropdown dropdown hide-for-small">
+                  <a class="dropdown-toggle" data-toggle="" role="button" aria-haspopup="true" aria-expanded="false">ROBO Global ETFs</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-toggle dropdown-space"></a>
+                      <a href="#leave-site" data-colorbox="true" data-colorbox-height="62%" data-colorbox-width="60%" data-colorbox-inline="true">ROBO Global Robotics and Automation Index ETF (US)</a>
+                    </li>
+                    <li>
+                      <a href="#leave-site-eu" data-colorbox="true" data-colorbox-height="62%" data-colorbox-width="60%" data-colorbox-inline="true">ROBO Global Robotics and Automation GO UCITS ETF (Europe)</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="footer-dropdown dropdown hide-for-large show-for-small">
+                  <a class="dropdown-toggle" data-toggle="" role="button" aria-haspopup="true" aria-expanded="false">ROBO Global ETFs</a>
+                  <ul class="dropdown-menu">
+                    <li>
+                      <a class="dropdown-toggle dropdown-space"></a>
+                      <a href="#leave-site" data-colorbox="true" data-colorbox-height="90%" data-colorbox-width="90%" data-colorbox-inline="true">ROBO Global Robotics and Automation Index ETF (US)</a>
+                    </li>
+                    <li>
+                      <a href="#leave-site-eu" data-colorbox="true" data-colorbox-height="90%" data-colorbox-width="90%" data-colorbox-inline="true">ROBO Global Robotics and Automation GO UCITS ETF (Europe)</a>
+                    </li>
+                  </ul>
+                </li>
+                <li class="<%= legal_active %>"><%= link_to 'Legal', legal_information_path%></li>
+                <li class="<%= disclaimer_active %>"><%= link_to 'Disclaimer', disclaimer_path%></li>
+                <li><a href="#privacy-policy" data-colorbox="true" data-colorbox-height="90%" data-colorbox-width="45%" data-colorbox-inline="true">Privacy</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
