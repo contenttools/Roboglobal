@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  before_filter :set_seo_options, only: [:home, :about_us, :legal_information, :us_index, :eu_index, :stock_picking_challenge, :industry_report, :investment_case]
+  before_filter :set_seo_options, only: [:home, :about_us, :legal_information, :us_index, :eu_index, :stock_picking_challenge, :industry_report, :investment_case, :disclaimer]
 
   SEO_OPTIONS = {
     "home" => {
@@ -46,6 +46,11 @@ class PagesController < ApplicationController
     "investment_case" => {
       title: "ROBO Global: Tracking the Global Growth of the Investable Robotics Market",
       description: "Global stock portfolio for 3d printing, drones, energy, healthcare, technology and manufacturing",
+      image: '/index.jpg',
+    },
+
+    "disclaimer" => {
+      title: "Disclaimer",
       image: '/index.jpg',
     }
   }
