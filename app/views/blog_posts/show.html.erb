@@ -25,7 +25,7 @@
           </div>
           <div class="col-xs-12 col-sm-12 col-md-12 col-lg-2">
             <div class="post-share-bar">
-              <div class="addthis_sharing_toolbox" data-url="<%= [request.domain, "/", @blog_post.slug].join %>" data-title="<%= @blog_post.title %>"></div>
+              <div class="addthis_sharing_toolbox" data-url="<%= [request.domain, "/", @blog_post.slug].join %>" data-title="<%= @blog_post.title %>" data-description="<%= @blog_post.description.truncate(50) %>"></div>
             </div>
           </div>
         </div>
