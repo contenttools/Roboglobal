@@ -19,7 +19,9 @@
                 <h2>LATEST NEWS AND DEVELOPMENTS</h2>
                 <div class='sub-heading'>In the constantly evolving space of robotics and automation, ROBO Global brings you the need to know news. </div>
               </div>
-              <%= raw @video %>
+              <div class='robo-news-iframe-video'>
+                <%= raw @video %>
+              </div>
             </div>
             <div class="latest-article-section">
               <% if @latest_blogs.length == 0 %>
