@@ -3208,3 +3208,15 @@ img[alt="RBR Logo Image"] {
 div.robo-news-iframe-video iframe {
   height: 480px;
 }
+
+.post-subscribe.blog-news-subscribe {
+  min-height: 660px;
+  background-size: cover;
+}
+.blog-news-subscribe div.subsribers-container iframe {
+  height: 320px;
+}
+.post-subscribe.blog-news-subscribe {
+  float: left;
+  width: 325px;
+}
