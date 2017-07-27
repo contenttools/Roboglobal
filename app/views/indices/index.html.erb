@@ -48,7 +48,7 @@
               <tr>
                 <% if index.pdf_attachment.present? %>
                   <td><%= index.pdf_attachment.document_file_name %></td>
-                  <td><%= [request.base_url, index.pdf_attachment.document.url].join %></td>
+                  <td><%= ShortURL.shorten([request.base_url, index.pdf_attachment.try(:document).try(:url)].join) %></td>
                   <td><%= index.category.titleize %></td>
                   <td><%= image_tag index.pdf_attachment.document.url(:pdf_mini) %></td>
                   <td><%= date_format(index.pdf_attachment.created_at) %></td>
