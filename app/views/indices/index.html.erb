@@ -36,6 +36,7 @@
           <thead>
             <tr>
               <th>File Name</th>
+              <th>PDF URL</th>
               <th>Category</th>
               <th>Preview</th>
               <th>Date</th>
@@ -47,11 +48,13 @@
               <tr>
                 <% if index.pdf_attachment.present? %>
                   <td><%= index.pdf_attachment.document_file_name %></td>
+                  <td><%= [request.base_url, index.pdf_attachment.document.url].join %></td>
                   <td><%= index.category.titleize %></td>
                   <td><%= image_tag index.pdf_attachment.document.url(:pdf_mini) %></td>
                   <td><%= date_format(index.pdf_attachment.created_at) %></td>
                 <% else %>
                   <td>File Absent</td>
+                  <td>File URL Absent</td>
                   <td><%= index.category.titleize %></td>
                   <td>No Preview Avalible</td>
                   <td><%= date_format(index.created_at) %></td>
