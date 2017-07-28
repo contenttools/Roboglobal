@@ -3219,13 +3219,37 @@ div.robo-news-iframe-video iframe {
 }
 
 .post-subscribe.blog-news-subscribe {
-  min-height: 660px;
+  min-height: 425px;
   background-size: cover;
 }
+
 .blog-news-subscribe div.subsribers-container iframe {
   height: 320px;
 }
+
 .post-subscribe.blog-news-subscribe {
   float: left;
   width: 325px;
+}
+
+.get-news {
+  background: #00aff0;
+  width: 80%;
+}
+
+.get-news .news-wrapper {
+  padding: 0px 0px 15px 15px;
+  min-height: 275px;
+  margin: 15px 0px;
+}
+
+.post-subscribe {
+  background: #00aff0;
+  height: 350px;
+  margin-bottom: 30px;
+}
+
+.post-subscribe .sub-wrapper {
+  top: 50px;
+  padding: 0px;
 }
