@@ -3234,12 +3234,13 @@ div.robo-news-iframe-video iframe {
 
 .get-news {
   background: #00aff0;
-  width: 80%;
+  width: 65%;
+  margin-top: 50px;
 }
 
 .get-news .news-wrapper {
   padding: 0px 0px 15px 15px;
-  min-height: 275px;
+  min-height: 285px;
   margin: 15px 0px;
 }
 
@@ -3252,4 +3253,8 @@ div.robo-news-iframe-video iframe {
 .post-subscribe .sub-wrapper {
   top: 50px;
   padding: 0px;
+}
+
+.post-subscribe .post-subscribe-subs {
+  padding-bottom: 0px;
 }
