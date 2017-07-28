@@ -3240,7 +3240,7 @@ div.robo-news-iframe-video iframe {
 
 .get-news .news-wrapper {
   padding: 0px 0px 15px 15px;
-  min-height: 285px;
+  min-height: 250px;
   margin: 15px 0px;
 }
 
@@ -3257,4 +3257,8 @@ div.robo-news-iframe-video iframe {
 
 .post-subscribe .post-subscribe-subs {
   padding-bottom: 0px;
+}
+
+.get-news .news-sub-title {
+  width: inherit;
 }
