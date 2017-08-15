@@ -978,6 +978,8 @@ a.white-btn:hover {
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
+  min-height: 360px;
+
 }
 .subscriber-submit-btn {
   width: 80px;
@@ -2114,6 +2116,13 @@ a.post-tags:hover {
 .dashboard-icon .fa {
   padding: 0px 6px;
 }
+.news-wrapper .subsribers-container > iframe {
+  max-width: 100%;
+  width: 100%;
+  height: 205px;
+  position: absolute;
+  left: -80px;
+}
 
 @media screen and (min-width: 320px) and (max-width: 1200px) {
   .footer-nav ul li {
@@ -3207,4 +3216,49 @@ img[alt="RBR Logo Image"] {
 }/*End 767*/
 div.robo-news-iframe-video iframe {
   height: 480px;
+}
+
+.post-subscribe.blog-news-subscribe {
+  min-height: 425px;
+  background-size: cover;
+}
+
+.blog-news-subscribe div.subsribers-container iframe {
+  height: 320px;
+}
+
+.post-subscribe.blog-news-subscribe {
+  float: left;
+  width: 325px;
+}
+
+.get-news {
+  background: #00aff0;
+  width: 65%;
+  margin-top: 50px;
+}
+
+.get-news .news-wrapper {
+  padding: 0px 0px 15px 15px;
+  min-height: 250px;
+  margin: 15px 0px;
+}
+
+.post-subscribe {
+  background: #00aff0;
+  height: 350px;
+  margin-bottom: 30px;
+}
+
+.post-subscribe .sub-wrapper {
+  top: 50px;
+  padding: 0px;
+}
+
+.post-subscribe .post-subscribe-subs {
+  padding-bottom: 0px;
+}
+
+.get-news .news-sub-title {
+  width: inherit;
 }
