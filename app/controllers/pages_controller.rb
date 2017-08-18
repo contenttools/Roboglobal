@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  before_filter :set_seo_options, only: [:home, :about_us, :legal_information, :us_index, :eu_index, :stock_picking_challenge, :industry_report, :investment_case, :disclaimer]
+  before_filter :set_seo_options, only: [:home, :about_us, :legal_information, :us_index, :eu_index, :stock_picking_challenge, :industry_report, :investment_case, :disclaimer, :iosco]
 
   SEO_OPTIONS = {
     "home" => {
