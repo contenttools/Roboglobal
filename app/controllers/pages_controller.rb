@@ -52,7 +52,12 @@ class PagesController < ApplicationController
     "disclaimer" => {
       title: "Disclaimer",
       image: '/index.jpg',
-    }
+    },
+
+    'iosco' => {
+      title: 'IOSCO',
+      image: '/index.jpg',
+    },
   }
 
   def home

@@ -81,6 +81,10 @@ module ApplicationHelper
     'active' if request.env['PATH_INFO'] == disclaimer_path
   end
 
+  def iosco_active
+    'active' if request.env['PATH_INFO'] == iosco_path
+  end
+
   def linkedin_link(url)
     link_to url, target: '_blank' do
       image_tag("linkedin.png", :alt => "linkedin")
