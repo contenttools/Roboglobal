@@ -11,6 +11,8 @@ class DocumentsController < ApplicationController
 
   private
     def get_redirect_path
-      params[:index_type] == "eu" ? eu_index_url : investment_case_url
+      return eu_index_url if params[:index_type] == 'eu'
+      return us_index_url if params[:index_type] == 'us'
+      return investment_case_url
     end
 end
