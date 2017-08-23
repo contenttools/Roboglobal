@@ -67,6 +67,7 @@ Rails.application.routes.draw do
   resources :subscribers, only: :create
 
   post 'download-eu-factsheet' => 'indices#download_eu_factsheet'
+  post 'download-us-factsheet' => 'indices#download_us_factsheet'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
