@@ -1,7 +1,7 @@
 class IndicesController < ApplicationController
   require 'mail'
-  before_action :authenticate_user!, except: [:download_eu_factsheet, :download_us_factsheet]
-  skip_before_filter :verify_authenticity_token, only: [:download_eu_factsheet, :download_us_factsheet]
+  before_action :authenticate_user!, except: [:download_factsheet]
+  skip_before_filter :verify_authenticity_token, only: [:download_factsheet]
 
   before_action :set_index, only: [:show, :edit, :update, :destroy, :remove_file]
 
@@ -105,7 +105,7 @@ class IndicesController < ApplicationController
     render nothing: true
   end
 
-  def download_eu_factsheet
+  def download_factsheet
     @index = Index.new
     begin
       return render text: 'Invalid Attachment', status: 422 unless is_valid_attachment?
@@ -113,27 +113,9 @@ class IndicesController < ApplicationController
 
       if @pdf_attachment.save
         @index.pdf_attachment = @pdf_attachment if @pdf_attachment.present?
-        @index.index_type =  "eu"
-        @index.category = "fact_sheet"
-        return render text: 'success', status: 200 if @index.save
-      end
-
-      render text: (@pdf_attachment.errors.full_messages.to_sentence + @index.errors.full_messages.to_sentence), status: 422
-    rescue Exception => e
-       Rails.logger.info params
-       Rails.logger.info e
-    end
-  end
-
-  def download_us_factsheet
-    @index = Index.new
-    begin
-      return render text: 'Invalid Attachment', status: 422 unless is_valid_attachment?
-      @pdf_attachment = PdfAttachment.new(document: params[:attachments]['0']) if params[:attachments].present?
-
-      if @pdf_attachment.save
-        @index.pdf_attachment = @pdf_attachment if @pdf_attachment.present?
-        @index.index_type =  "us"
+        index_type = 'eu' if params['headers']['Subject'] == 'EU Fact Sheet'
+        index_type = 'us' if params['headers']['Subject'] == 'US Fact Sheet'
+        @index.index_type =  index_type
         @index.category = "fact_sheet"
         return render text: 'success', status: 200 if @index.save
       end
