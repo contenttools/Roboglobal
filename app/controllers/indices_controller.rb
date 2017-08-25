@@ -113,8 +113,8 @@ class IndicesController < ApplicationController
 
       if @pdf_attachment.save
         @index.pdf_attachment = @pdf_attachment if @pdf_attachment.present?
-        index_type = 'eu' if params['headers']['Subject'] == 'EU Fact Sheet'
-        index_type = 'us' if params['headers']['Subject'] == 'US Fact Sheet'
+        index_type = 'eu' if params['headers']['Subject'] == Index::EU_FACTSHEET_SUBJECT
+        index_type = 'us' if params['headers']['Subject'] == Index::US_FACTSHEET_SUBJECT
         @index.index_type =  index_type
         @index.category = "fact_sheet"
         return render text: 'success', status: 200 if @index.save

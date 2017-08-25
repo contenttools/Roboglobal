@@ -7,6 +7,9 @@ class Index < ActiveRecord::Base
   scope :category, -> (category) { where(category: category) }
   scope :index_type, -> (type) {where(index_type: type)}
 
+  US_FACTSHEET_SUBJECT = 'The ROBO Global Robotics and Automation US Index Factsheet'
+  EU_FACTSHEET_SUBJECT = 'The ROBO Global Robotics and Automation UCITS Index Factsheet'
+
   def self.pdf_file(type, category)
     latest_index = Index.index_type(type).category(category).includes(:file_correlation).where.not('file_correlations.pdf_attachment_id' => nil).last
     (latest_index.present? && latest_index.pdf_attachment.present?) ? latest_index.pdf_attachment.document.url : "#"
