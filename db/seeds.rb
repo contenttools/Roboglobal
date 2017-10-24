@@ -11,7 +11,7 @@ user.save!
 puts 'New Admin created: ' << user.email
 
 
-pages = ['home', 'about_us', 'legal_information', 'us_index', 'eu_index', 'disclaimer']
+pages = ['home', 'about_us', 'legal_information', 'us_index', 'eu_index', 'disclaimer', 'esg_policy']
 pages.each do |page|
   Page.where(title: page).first_or_create
 end

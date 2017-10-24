@@ -54,6 +54,7 @@ Rails.application.routes.draw do
   get 'stock-picking-challenge' => 'pages#stock_picking_challenge'
   get 'industry-report' => 'pages#industry_report'
   get 'investment-case' => 'pages#investment_case'
+  get 'esg-policy' => 'pages#esg_policy'
 
   get 'robo-news' => 'blog_posts#robo_news'
 
