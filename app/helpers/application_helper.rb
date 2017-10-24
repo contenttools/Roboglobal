@@ -108,4 +108,8 @@ module ApplicationHelper
       javascript_include_tag 'index'
     end
   end
+
+  def esg_policy_active
+    'active' if request.env['PATH_INFO'] == esg_policy_path
+  end
 end

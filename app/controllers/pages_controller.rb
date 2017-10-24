@@ -1,6 +1,6 @@
 class PagesController < ApplicationController
 
-  before_filter :set_seo_options, only: [:home, :about_us, :legal_information, :us_index, :eu_index, :stock_picking_challenge, :industry_report, :investment_case, :disclaimer, :iosco]
+  before_filter :set_seo_options, only: [:home, :about_us, :legal_information, :us_index, :eu_index, :stock_picking_challenge, :industry_report, :investment_case, :disclaimer, :iosco, :esg_policy]
 
   SEO_OPTIONS = {
     "home" => {
@@ -58,6 +58,11 @@ class PagesController < ApplicationController
       title: 'IOSCO',
       image: '/index.jpg',
     },
+
+    'esg_policy' => {
+      title: 'ESG Policy',
+      image: '/index.jpg',
+    },
   }
 
   def home
@@ -91,5 +96,8 @@ class PagesController < ApplicationController
   end
 
   def investment_case
+  end
+
+  def esg_policy
   end
 end
